@@ -94,3 +94,11 @@ sudo systemctl start tor
 sudo systemctl enable tor
 ```
 {% endcode %}
+
+
+
+{% code title="Хост SOCKS" overflow="wrap" %}
+```
+127.0.0.1:9050
+```
+{% endcode %}
