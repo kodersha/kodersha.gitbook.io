@@ -51,8 +51,7 @@ RunAsDaemon 0
 # SOCKS-порт
 SocksPort 9050
 
-# Журналирование информации для отладки
-Log notice file /var/log/tor/notices.log
+DataDirectory /var/lib/tor
 ```
 {% endtab %}
 {% endtabs %}
