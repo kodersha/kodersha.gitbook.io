@@ -1,6 +1,6 @@
 # Пользовательский репозиторий AUR
 
-Yay это менеджер пакетов AUR - [Arch User Repository](#user-content-fn-1)[^1].
+Yay - менеджер пакетов AUR: [Arch User Repository](#user-content-fn-1)[^1].
 
 {% code overflow="wrap" %}
 ```bash

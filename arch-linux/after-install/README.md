@@ -1,10 +1,8 @@
 ---
-description: Установка полезного, удаление ненужного
+description: Первичная настройка
 ---
 
 # После установки
-
-
 
 {% content-ref url="aur.md" %}
 [aur.md](aur.md)
