@@ -6,10 +6,10 @@ description: Установка полезного, удаление ненуж�
 
 
 
-{% content-ref url="polzovatelskii-repozitorii-aur.md" %}
-[polzovatelskii-repozitorii-aur.md](polzovatelskii-repozitorii-aur.md)
+{% content-ref url="aur.md" %}
+[aur.md](aur.md)
 {% endcontent-ref %}
 
-{% content-ref url="nastroika-gnome.md" %}
-[nastroika-gnome.md](nastroika-gnome.md)
+{% content-ref url="gnome.md" %}
+[gnome.md](gnome.md)
 {% endcontent-ref %}

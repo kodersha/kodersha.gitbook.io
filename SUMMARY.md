@@ -6,5 +6,5 @@
 
 * [Команды терминала](arch-linux/komandy-terminala.md)
 * [После установки](arch-linux/after-install/README.md)
-  * [Пользовательский репозиторий AUR](arch-linux/after-install/polzovatelskii-repozitorii-aur.md)
-  * [Настройка GNOME](arch-linux/after-install/nastroika-gnome.md)
+  * [Пользовательский репозиторий AUR](arch-linux/after-install/aur.md)
+  * [Настройка GNOME](arch-linux/after-install/gnome.md)
