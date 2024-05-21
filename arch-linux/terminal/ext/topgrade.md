@@ -26,6 +26,9 @@ nano ~/.config/topgrade.toml
 ```
 {% endcode %}
 
+***
+
+{% code title="Моя конфигурация topgrade" %}
 ```toml
 # Include any additional configuration file(s)
 
@@ -61,3 +64,4 @@ upgrade = false
 [distrobox]
 use_root = false
 ```
+{% endcode %}
