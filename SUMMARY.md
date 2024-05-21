@@ -8,3 +8,4 @@
 * [После установки](arch-linux/after-install/README.md)
   * [Пользовательский репозиторий AUR](arch-linux/after-install/aur.md)
   * [Настройка GNOME](arch-linux/after-install/gnome.md)
+* [Тор](arch-linux/tor.md)
