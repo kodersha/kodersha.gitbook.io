@@ -10,5 +10,7 @@
   * [Настройка GNOME](arch-linux/after-install/gnome.md)
 * [Терминал](arch-linux/terminal/README.md)
   * [Базовые команды терминала](arch-linux/terminal/cmd.md)
+  * [Расширения](arch-linux/terminal/ext/README.md)
+    * [topgrade](arch-linux/terminal/ext/topgrade.md)
 * [Сервисы](arch-linux/service/README.md)
   * [tor](arch-linux/service/tor.md)
