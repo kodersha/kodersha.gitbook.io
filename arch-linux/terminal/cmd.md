@@ -1,28 +1,34 @@
-# Команды терминала
-
-
+# Базовые команды терминала
 
 ### Менеджер пакетов pacman
 
-{% code title="Обновить все пакеты" overflow="wrap" %}
+Обновить все пакеты
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -Syu
 ```
 {% endcode %}
 
-{% code title="Установить пакет" overflow="wrap" %}
+Установить пакет
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -S ...
 ```
 {% endcode %}
 
-{% code title="Найти пакет" overflow="wrap" %}
+Найти пакет
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -Ss ...
 ```
 {% endcode %}
 
-{% code title="Удалить пакет" overflow="wrap" %}
+Удалить пакет
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -Rsc ...
 ```

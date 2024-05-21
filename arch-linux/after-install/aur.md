@@ -6,7 +6,9 @@ description: >-
 
 # Пользовательский репозиторий AUR
 
-{% code title="Установка yay - менеджера пакетов AUR." overflow="wrap" %}
+Установка yay - менеджера пакетов AUR.
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```

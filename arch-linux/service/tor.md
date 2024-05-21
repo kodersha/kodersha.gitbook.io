@@ -14,7 +14,9 @@ layout:
 
 # tor
 
-{% code title="Установка пакетов" overflow="wrap" %}
+Установка пакетов
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -S tor
 yay -S obfs4proxy
@@ -56,7 +58,9 @@ DataDirectory /var/lib/tor
 {% endtab %}
 {% endtabs %}
 
-{% code title="Создание пользователя" overflow="wrap" %}
+Создание пользователя
+
+{% code overflow="wrap" %}
 ```bash
 sudo useradd -m -d /var/lib/tor -s /bin/false toruser
 sudo chown -R toruser:toruser /var/lib/tor
@@ -82,13 +86,17 @@ Group=toruser
 {% endtab %}
 {% endtabs %}
 
-{% code title="Перезапуск systemd" overflow="wrap" %}
+Перезапуск systemd
+
+{% code overflow="wrap" %}
 ```bash
 sudo systemctl daemon-reload
 ```
 {% endcode %}
 
-{% code title="Запуск сервиса" overflow="wrap" %}
+Запуск tor сервиса
+
+{% code overflow="wrap" %}
 ```bash
 sudo systemctl start tor
 sudo systemctl enable tor

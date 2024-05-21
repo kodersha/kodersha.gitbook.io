@@ -6,19 +6,25 @@ description: >-
 
 # Flatpak
 
-{% code title="Установка flatpak" overflow="wrap" %}
+Установка flatpak
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -S flatpak
 ```
 {% endcode %}
 
-{% code title="Добавление репозитория flathub для system" overflow="wrap" %}
+Добавление репозитория flathub для system
+
+{% code overflow="wrap" %}
 ```bash
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 {% endcode %}
 
-{% code title="Добавление репозитория flathub для user" overflow="wrap" %}
+Добавление репозитория flathub для user
+
+{% code overflow="wrap" %}
 ```bash
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
