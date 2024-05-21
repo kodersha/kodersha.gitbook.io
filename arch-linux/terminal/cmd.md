@@ -2,33 +2,25 @@
 
 ### Менеджер пакетов pacman
 
-Обновить все пакеты
-
-{% code overflow="wrap" %}
+{% code title="Обновить все пакеты" overflow="wrap" %}
 ```bash
 sudo pacman -Syu
 ```
 {% endcode %}
 
-Установить пакет
-
-{% code overflow="wrap" %}
+{% code title="Установить пакет" overflow="wrap" %}
 ```bash
 sudo pacman -S ...
 ```
 {% endcode %}
 
-Найти пакет
-
-{% code overflow="wrap" %}
+{% code title="Найти пакет" overflow="wrap" %}
 ```bash
 sudo pacman -Ss ...
 ```
 {% endcode %}
 
-Удалить пакет
-
-{% code overflow="wrap" %}
+{% code title="Удалить пакет" overflow="wrap" %}
 ```bash
 sudo pacman -Rsc ...
 ```
