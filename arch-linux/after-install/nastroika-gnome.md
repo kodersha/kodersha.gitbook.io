@@ -1,4 +1,4 @@
-# Минимизация GNOME
+# Настройка GNOME
 
 
 
@@ -96,3 +96,18 @@ sudo pacman -Rsc baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-
 ```
 {% endcode %}
 
+
+
+### Смена раскладки клавиатуры
+
+{% code title="Shift + Alt" overflow="wrap" %}
+```bash
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift>Alt_L']"
+```
+{% endcode %}
+
+{% code title="Alt + Shift" overflow="wrap" %}
+```bash
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
+```
+{% endcode %}
