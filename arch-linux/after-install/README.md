@@ -4,7 +4,7 @@ layout:
   title:
     visible: true
   description:
-    visible: true
+    visible: false
   tableOfContents:
     visible: true
   outline:
@@ -15,10 +15,3 @@ layout:
 
 # После установки
 
-{% content-ref url="aur.md" %}
-[aur.md](aur.md)
-{% endcontent-ref %}
-
-{% content-ref url="gnome.md" %}
-[gnome.md](gnome.md)
-{% endcontent-ref %}
