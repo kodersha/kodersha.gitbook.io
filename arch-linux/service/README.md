@@ -3,17 +3,14 @@ layout:
   title:
     visible: true
   description:
-    visible: true
+    visible: false
   tableOfContents:
     visible: true
   outline:
-    visible: true
+    visible: false
   pagination:
     visible: false
 ---
 
 # Сервисы
 
-{% content-ref url="tor.md" %}
-[tor.md](tor.md)
-{% endcontent-ref %}
