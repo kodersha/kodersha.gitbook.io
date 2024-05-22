@@ -1,5 +1,5 @@
 ---
-description: Обновление всех пакетов одной командой.
+description: Обновление всех пакетов pacman, yay, flatpak и так далее - одной командой.
 ---
 
 # topgrade
