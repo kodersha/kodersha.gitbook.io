@@ -16,12 +16,22 @@ layout:
 
 Установка пакетов
 
+{% tabs %}
+{% tab title="fedora" %}
+```
+sudo dnf install tor obfs4
+```
+{% endtab %}
+
+{% tab title="arch" %}
 {% code overflow="wrap" %}
 ```bash
 sudo pacman -S tor
 yay -S obfs4proxy
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 {% tabs %}
 {% tab title="Конфигурация torrc" %}
@@ -34,7 +44,7 @@ sudo nano /etc/tor/torrc
 
 {% tab title="→" %}
 ```editorconfig
-## Пример конфигурации Tor для использования мостов
+## Конфигурация tor для использования мостов
 
 # Разрешить использование мостов
 UseBridges 1
@@ -58,6 +68,10 @@ DataDirectory /var/lib/tor
 {% endtab %}
 {% endtabs %}
 
+<details>
+
+<summary>arch</summary>
+
 Создание пользователя
 
 {% code overflow="wrap" %}
@@ -68,23 +82,21 @@ sudo chmod 700 /var/lib/tor
 ```
 {% endcode %}
 
-{% tabs %}
-{% tab title="Конфигурация tor.service" %}
+Конфигурация tor.service
+
 {% code overflow="wrap" %}
 ```bash
 sudo nano /lib/systemd/system/tor.service
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="→" %}
 ```systemd
 [Service]
 User=toruser
 Group=toruser
 ```
-{% endtab %}
-{% endtabs %}
+
+</details>
 
 Перезапуск systemd
 
