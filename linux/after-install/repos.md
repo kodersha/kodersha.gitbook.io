@@ -2,7 +2,7 @@
 
 {% tabs %}
 {% tab title="fedora" %}
-Подключаем репозитории rpmfusion free и nonfree.
+Подключите репозитории rpmfusion free и nonfree:
 
 {% code overflow="wrap" %}
 ```bash
@@ -12,9 +12,9 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 {% endtab %}
 
 {% tab title="arch" %}
-Пользовательский репозиторий Arch (Arch User Repository, AUR) — поддерживаемое сообществом хранилище программ для пользователей Arch.
+Пользовательский репозиторий Arch (Arch User Repository, AUR) - поддерживаемое сообществом хранилище программ для пользователей Arch.
 
-Установим yay - менеджер пакетов AUR.
+Установите yay - менеджер пакетов AUR.
 
 {% code overflow="wrap" %}
 ```bash
