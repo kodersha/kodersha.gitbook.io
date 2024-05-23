@@ -14,3 +14,5 @@
     * [fastfetch](linux/terminal/ext/fastfetch.md)
 * [Сервисы](linux/service/README.md)
   * [tor](linux/service/tor.md)
+* [Программы](linux/programmy/README.md)
+  * [visual studio code](linux/programmy/visual-studio-code.md)
