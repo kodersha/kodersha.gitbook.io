@@ -16,17 +16,20 @@ sudo pacman -S fastfetch
 
 ***
 
-{% code title="Создание пользоваткльской конфигурации" overflow="wrap" %}
+Создайте файл пользовательской конфигурации:
+
+{% code overflow="wrap" %}
 ```bash
 fastfetch --gen-config-force
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="config.jsonc" %}
 ```bash
 nano ~/.config/fastfetch/config.jsonc
 ```
 
-{% code title="config.jsonc" %}
 ```json
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
@@ -167,15 +170,15 @@ nano ~/.config/fastfetch/config.jsonc
     ]
 }
 ```
-{% endcode %}
+{% endtab %}
 
+{% tab title="logo.txt" %}
 {% code overflow="wrap" %}
 ```bash
 nano ~/.config/fastfetch/logo.txt
 ```
 {% endcode %}
 
-{% code title="logo.txt" %}
 ```asciidoc
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠟⣛⢛⠻⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠋⠉⠉⣡⣴⡞⣿⣿⣿⡟⢿⣿⣶⣦⣍⡛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
@@ -207,4 +210,5 @@ nano ~/.config/fastfetch/logo.txt
 ⣿⣿⠿⠟⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡿⠿⠿⠛⠻⠿⣿⣿⠁⠀⠈⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠂⠀⠀⠈⠛⢿
 ⠋⠀⠀⠀⠈⠉⠛⠛⠳⠦⠤⢄⣀⠀⠀⠀⠀⠀⢠⡤⠴⠶⠾⠷⢤⢀⠁⠀⠀⠀⠀⣠⠴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
