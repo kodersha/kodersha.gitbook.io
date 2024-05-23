@@ -1,4 +1,20 @@
-# visual studio code
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Программы
+
+### visual studio code
 
 {% tabs %}
 {% tab title="fedora" %}
@@ -33,3 +49,17 @@ yay -S visual-studio-code-bin
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+
+
+### spotify
+
+```bash
+flatpak install spotify
+```
+
+Опционально AdBlock для Spotify:
+
+```bash
+bash <(curl -sSL https://spotx-official.github.io/run.sh)
+```
