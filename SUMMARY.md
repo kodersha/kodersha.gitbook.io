@@ -2,15 +2,15 @@
 
 * [👋 Welcome!](README.md)
 
-## 🐧 Arch linux
+## 🐧 linux
 
-* [После установки](arch-linux/after-install/README.md)
-  * [Репозитории](arch-linux/after-install/aur.md)
-  * [Настройка GNOME](arch-linux/after-install/gnome.md)
-* [Терминал](arch-linux/terminal/README.md)
-  * [Базовые команды терминала](arch-linux/terminal/cmd.md)
-  * [Расширения](arch-linux/terminal/ext/README.md)
-    * [topgrade](arch-linux/terminal/ext/topgrade.md)
-    * [fastfetch](arch-linux/terminal/ext/fastfetch.md)
-* [Сервисы](arch-linux/service/README.md)
-  * [tor](arch-linux/service/tor.md)
+* [После установки](linux/after-install/README.md)
+  * [Репозитории](linux/after-install/repos.md)
+  * [Настройка GNOME](linux/after-install/gnome.md)
+* [Терминал](linux/terminal/README.md)
+  * [Базовые команды терминала](linux/terminal/cmd.md)
+  * [Расширения](linux/terminal/ext/README.md)
+    * [topgrade](linux/terminal/ext/topgrade.md)
+    * [fastfetch](linux/terminal/ext/fastfetch.md)
+* [Сервисы](linux/service/README.md)
+  * [tor](linux/service/tor.md)
