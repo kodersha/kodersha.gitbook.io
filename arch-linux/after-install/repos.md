@@ -1,4 +1,4 @@
-# Пользовательские репозитории
+# Репозитории
 
 {% tabs %}
 {% tab title="fedora" %}
@@ -14,7 +14,7 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 {% tab title="arch" %}
 Пользовательский репозиторий Arch (Arch User Repository, AUR) — поддерживаемое сообществом хранилище программ для пользователей Arch.
 
-Установка yay - менеджера пакетов AUR.
+Установим yay - менеджер пакетов AUR.
 
 {% code overflow="wrap" %}
 ```bash
@@ -23,3 +23,19 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+***
+
+### Flatpak
+
+{% code title="Репозиторий flathub для system" overflow="wrap" %}
+```bash
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+{% endcode %}
+
+{% code title="Репозиторий flathub для user" overflow="wrap" %}
+```bash
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+{% endcode %}
