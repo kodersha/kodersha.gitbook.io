@@ -100,8 +100,6 @@ sudo setenforce 0
 
 #### Откройте порты в брандмауэре Fedora
 
-Для obfs4 в файле torrc:
-
 ```bash
 sudo firewall-cmd --add-port 9050/tcp --permanent
 ```
