@@ -14,7 +14,7 @@ sudo pacman -S fastfetch
 
 {% code overflow="wrap" %}
 ```bash
-fastfecth --gen-config-force
+fastfetch --gen-config-force
 ```
 {% endcode %}
 
