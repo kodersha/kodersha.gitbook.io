@@ -5,7 +5,7 @@
 ## 🐧 Arch linux
 
 * [После установки](arch-linux/after-install/README.md)
-  * [Пользовательский репозиторий AUR](arch-linux/after-install/aur.md)
+  * [Пользовательские репозитории](arch-linux/after-install/aur.md)
   * [Flatpak](arch-linux/after-install/flatpak.md)
   * [Настройка GNOME](arch-linux/after-install/gnome.md)
 * [Терминал](arch-linux/terminal/README.md)
