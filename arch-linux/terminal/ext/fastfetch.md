@@ -2,6 +2,8 @@
 
 
 
+<figure><img src="../../../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
+
 {% tabs %}
 {% tab title="fedora" %}
 sudo dnf install fastfetch
