@@ -86,14 +86,13 @@ getenforce
 Если установлено значение `enforcing`, измените статус на `permissive`:
 
 ```bash
-setenforce 0
+sudo setenforce 0
 ```
 
 Чтобы сделать изменения постоянными:
 
-```bash
-nano /etc/selinux/config
-```
+<pre class="language-bash"><code class="lang-bash"><strong>sudo nano /etc/selinux/config
+</strong></code></pre>
 
 И измените `SELINUX=enforcing` на `SELINUX=permissive`.
 
@@ -104,13 +103,13 @@ nano /etc/selinux/config
 Для obfs4 в файле torrc:
 
 ```bash
-firewall-cmd --add-port 9050/tcp --permanent
+sudo firewall-cmd --add-port 9050/tcp --permanent
 ```
 
 После выполните команду:
 
 ```bash
-firewall-cmd --reload
+sudo firewall-cmd --reload
 ```
 {% endtab %}
 
