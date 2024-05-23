@@ -68,10 +68,46 @@ DataDirectory /var/lib/tor
 {% endtab %}
 {% endtabs %}
 
-<details>
+{% tabs %}
+{% tab title="fedora" %}
+#### Отключите SeLinux
 
-<summary>arch</summary>
+Проверьте, установлено ли для SeLinux значение `enforcing`:
 
+```
+getenforce
+```
+
+Если установлено значение `enforcing`, измените статус на `permissive`:
+
+```
+setenforce 0
+```
+
+Чтобы сделать изменения постоянными:
+
+```
+nano /etc/selinux/config
+```
+
+И измените `SELINUX=enforcing` на `SELINUX=permissive`.
+
+#### Откройте порты в брандмауэре Fedora
+
+Для obfs4 в файле torrc:
+
+```
+firewall-cmd --add-port 9050/tcp --permanent
+```
+
+После того как вы сделали это для портов, выполните команду:
+
+```
+firewall-cmd --reload
+```
+{% endtab %}
+
+{% tab title="arch" %}
 Создание пользователя
 
 {% code overflow="wrap" %}
@@ -82,7 +118,7 @@ sudo chmod 700 /var/lib/tor
 ```
 {% endcode %}
 
-Конфигурация tor.service
+Конфигурация `tor.service`
 
 {% code overflow="wrap" %}
 ```bash
@@ -90,13 +126,15 @@ sudo nano /lib/systemd/system/tor.service
 ```
 {% endcode %}
 
+Добавить в `[Service]`
+
 ```systemd
 [Service]
 User=toruser
 Group=toruser
 ```
-
-</details>
+{% endtab %}
+{% endtabs %}
 
 Перезапуск systemd
 
