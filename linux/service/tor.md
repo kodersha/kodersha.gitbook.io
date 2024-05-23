@@ -27,6 +27,11 @@ sudo dnf install tor obfs4
 {% code overflow="wrap" %}
 ```bash
 sudo pacman -S tor
+```
+{% endcode %}
+
+{% code overflow="wrap" %}
+```bash
 yay -S obfs4proxy
 ```
 {% endcode %}
@@ -74,35 +79,37 @@ DataDirectory /var/lib/tor
 
 Проверьте, установлено ли для SeLinux значение `enforcing`:
 
-```
+```bash
 getenforce
 ```
 
 Если установлено значение `enforcing`, измените статус на `permissive`:
 
-```
+```bash
 setenforce 0
 ```
 
 Чтобы сделать изменения постоянными:
 
-```
+```bash
 nano /etc/selinux/config
 ```
 
 И измените `SELINUX=enforcing` на `SELINUX=permissive`.
 
+
+
 #### Откройте порты в брандмауэре Fedora
 
 Для obfs4 в файле torrc:
 
-```
+```bash
 firewall-cmd --add-port 9050/tcp --permanent
 ```
 
-После того как вы сделали это для портов, выполните команду:
+После выполните команду:
 
-```
+```bash
 firewall-cmd --reload
 ```
 {% endtab %}
