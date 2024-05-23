@@ -12,7 +12,9 @@ sudo pacman -S fastfetch
 {% endtab %}
 {% endtabs %}
 
-{% code overflow="wrap" %}
+***
+
+{% code title="Создание пользоваткльской конфигурации" overflow="wrap" %}
 ```bash
 fastfetch --gen-config-force
 ```
@@ -21,8 +23,6 @@ fastfetch --gen-config-force
 ```bash
 nano ~/.config/fastfetch/config.jsonc
 ```
-
-***
 
 {% code title="config.jsonc" %}
 ```json
