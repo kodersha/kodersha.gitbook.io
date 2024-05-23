@@ -12,5 +12,6 @@
   * [Базовые команды терминала](arch-linux/terminal/cmd.md)
   * [Расширения](arch-linux/terminal/ext/README.md)
     * [topgrade](arch-linux/terminal/ext/topgrade.md)
+    * [fastfetch](arch-linux/terminal/ext/fastfetch.md)
 * [Сервисы](arch-linux/service/README.md)
   * [tor](arch-linux/service/tor.md)
