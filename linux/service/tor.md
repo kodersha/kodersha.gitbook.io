@@ -152,15 +152,12 @@ sudo systemctl daemon-reload
 
 Запустите tor сервис
 
-{% code overflow="wrap" %}
-```bash
-systemctl enable --now tor
-```
-{% endcode %}
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><strong>sudo systemctl enable --now tor
+</strong></code></pre>
 
 
 
-{% code title="Хост SOCKS" overflow="wrap" %}
+{% code title="Хост подключения SOCKS" overflow="wrap" %}
 ```
 127.0.0.1:9050
 ```
