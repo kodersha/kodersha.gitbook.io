@@ -14,7 +14,7 @@ layout:
 
 # tor
 
-Установка пакетов
+Установите пакеты
 
 {% tabs %}
 {% tab title="fedora" %}
@@ -39,7 +39,7 @@ yay -S obfs4proxy
 {% endtabs %}
 
 {% tabs %}
-{% tab title="Конфигурация torrc" %}
+{% tab title="Отредактируйте torrc" %}
 {% code overflow="wrap" %}
 ```bash
 sudo nano /etc/tor/torrc
@@ -115,7 +115,7 @@ firewall-cmd --reload
 {% endtab %}
 
 {% tab title="arch" %}
-Создание пользователя
+Создайте пользователя:
 
 {% code overflow="wrap" %}
 ```bash
@@ -125,7 +125,7 @@ sudo chmod 700 /var/lib/tor
 ```
 {% endcode %}
 
-Конфигурация `tor.service`
+Отредактируйте `tor.service`:
 
 {% code overflow="wrap" %}
 ```bash
@@ -133,7 +133,7 @@ sudo nano /lib/systemd/system/tor.service
 ```
 {% endcode %}
 
-Добавить в `[Service]`
+Добавьте пользователя в раздел`[Service]`:
 
 ```systemd
 [Service]
@@ -143,7 +143,7 @@ Group=toruser
 {% endtab %}
 {% endtabs %}
 
-Перезапуск systemd
+Перезапутите systemd
 
 {% code overflow="wrap" %}
 ```bash
@@ -151,12 +151,11 @@ sudo systemctl daemon-reload
 ```
 {% endcode %}
 
-Запуск tor сервиса
+Запустите tor сервис
 
 {% code overflow="wrap" %}
 ```bash
-sudo systemctl start tor
-sudo systemctl enable tor
+systemctl enable --now tor
 ```
 {% endcode %}
 
