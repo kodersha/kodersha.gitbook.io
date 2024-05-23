@@ -26,7 +26,7 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 ***
 
-### Flatpak
+### flatpak
 
 {% code title="Репозиторий flathub для system" overflow="wrap" %}
 ```bash

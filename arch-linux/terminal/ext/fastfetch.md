@@ -1,5 +1,17 @@
 # fastfetch
 
+
+
+{% tabs %}
+{% tab title="fedora" %}
+sudo dnf install fastfetch
+{% endtab %}
+
+{% tab title="arch" %}
+sudo pacman -S fastfetch
+{% endtab %}
+{% endtabs %}
+
 {% code overflow="wrap" %}
 ```bash
 fastfecth --gen-config-force
