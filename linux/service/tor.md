@@ -14,7 +14,7 @@ layout:
 
 # tor
 
-Установите пакеты
+Установите пакеты:
 
 {% tabs %}
 {% tab title="fedora" %}
@@ -142,7 +142,7 @@ Group=toruser
 {% endtab %}
 {% endtabs %}
 
-Перезапутите systemd
+Перезапутите `systemd`:
 
 {% code overflow="wrap" %}
 ```bash
@@ -150,10 +150,16 @@ sudo systemctl daemon-reload
 ```
 {% endcode %}
 
-Запустите tor сервис
+Запустите `tor` сервис:
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><strong>sudo systemctl enable --now tor
 </strong></code></pre>
+
+Проверьте состояние:
+
+```bash
+sudo systemctl status tor
+```
 
 
 
