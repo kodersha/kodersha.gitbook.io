@@ -14,4 +14,5 @@
     * [fastfetch](linux/terminal/ext/fastfetch.md)
 * [Сервисы](linux/service/README.md)
   * [tor](linux/service/tor.md)
+  * [nodejs](linux/service/nodejs.md)
 * [Программы](linux/software.md)
