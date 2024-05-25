@@ -38,13 +38,13 @@ sudo nixos-rebuild swith --flake .#travkina
 
 {% code title="Очистка" overflow="wrap" %}
 ```bash
-sudo nix-collect-garbadge -d
+sudo nix-collect-garbage -d
 ```
 {% endcode %}
 
 {% code title="Удлаить устаревшие билды" overflow="wrap" %}
 ```bash
-sudo nix-env --delete-generationbs old
+sudo nix-env --delete-generations old
 ```
 {% endcode %}
 
