@@ -2,14 +2,8 @@
 
 ### bluetooth
 
-{% code title="Запустить сервис" overflow="wrap" %}
+{% code overflow="wrap" %}
 ```bash
-sudo systemctl start bluetooth
-```
-{% endcode %}
-
-{% code title="Автозапуск" overflow="wrap" %}
-```bash
-sudo systemctl enable bluetooth
+sudo systemctl enable --now bluetooth
 ```
 {% endcode %}

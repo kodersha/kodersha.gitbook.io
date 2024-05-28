@@ -14,13 +14,11 @@ layout:
 
 # Программы
 
-### visual studio code
+### firefox
 
-{% code overflow="wrap" %}
 ```bash
-yay -S visual-studio-code-bin
+sudo pacman -S firefox firefox-i18n-ru
 ```
-{% endcode %}
 
 ### spotify
 
@@ -38,9 +36,17 @@ yay -S spotify-adblock
 
 ### libre-menu-editor
 
-{% code title="Редактор иконок" overflow="wrap" %}
+{% code overflow="wrap" %}
 ```bash
 yay -S libre-menu-editor
+```
+{% endcode %}
+
+### visual studio code
+
+{% code overflow="wrap" %}
+```bash
+yay -S visual-studio-code-bin
 ```
 {% endcode %}
 
