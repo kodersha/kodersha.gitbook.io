@@ -120,6 +120,20 @@ sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-
 
 
 
+### Терминал вместо консоли
+
+{% code title="Удалите консоль" overflow="wrap" %}
+```bash
+sudo pacman -Rns gnome-console
+```
+{% endcode %}
+
+{% code title="Установите терминал" overflow="wrap" %}
+```bash
+sudo pacman -S gnome-terminal
+```
+{% endcode %}
+
 ### Менеджер расширений
 
 {% code overflow="wrap" %}

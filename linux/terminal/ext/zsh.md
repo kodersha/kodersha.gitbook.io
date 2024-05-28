@@ -6,6 +6,12 @@ sudo pacman -S zsh
 ```
 {% endcode %}
 
+{% code overflow="wrap" %}
+```bash
+nano ~/.config/.zshrc
+```
+{% endcode %}
+
 {% code title=".zshrc" %}
 ```bash
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
