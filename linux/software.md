@@ -22,8 +22,6 @@ yay -S visual-studio-code-bin
 ```
 {% endcode %}
 
-
-
 ### spotify
 
 {% code overflow="wrap" %}
@@ -32,25 +30,19 @@ yay -S spotify
 ```
 {% endcode %}
 
-{% code title="Опционально AdBlock для Spotify:" overflow="wrap" %}
+{% code title="Опционально AdBlock для Spotify" overflow="wrap" %}
 ```bash
 yay -S spotify-adblock
 ```
 {% endcode %}
 
-
-
 ### libre-menu-editor
 
-Редактор иконок
-
-{% code overflow="wrap" %}
+{% code title="Редактор иконок" overflow="wrap" %}
 ```bash
 yay -S libre-menu-editor
 ```
 {% endcode %}
-
-
 
 ### figma
 
