@@ -5,14 +5,14 @@
 ## 🐧 linux
 
 * [После установки](linux/after-install/README.md)
-  * [Репозитории](linux/after-install/repos.md)
+  * [Пользовательский репозиторий](linux/after-install/aur.md)
   * [Настройка GNOME](linux/after-install/gnome.md)
 * [Терминал](linux/terminal/README.md)
-  * [Базовые команды терминала](linux/terminal/cmd.md)
+  * [Команды](linux/terminal/cmd.md)
   * [Расширения](linux/terminal/ext/README.md)
     * [topgrade](linux/terminal/ext/topgrade.md)
     * [fastfetch](linux/terminal/ext/fastfetch.md)
+    * [zsh](linux/terminal/ext/zsh.md)
 * [Сервисы](linux/service/README.md)
   * [tor](linux/service/tor.md)
-  * [nodejs](linux/service/nodejs.md)
 * [Программы](linux/software.md)

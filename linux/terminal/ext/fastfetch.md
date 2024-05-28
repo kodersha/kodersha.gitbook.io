@@ -1,18 +1,12 @@
 # fastfetch
 
-
-
 <figure><img src="../../../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
 
-{% tabs %}
-{% tab title="fedora" %}
-sudo dnf install fastfetch
-{% endtab %}
-
-{% tab title="arch" %}
+{% code overflow="wrap" %}
+```bash
 sudo pacman -S fastfetch
-{% endtab %}
-{% endtabs %}
+```
+{% endcode %}
 
 ***
 

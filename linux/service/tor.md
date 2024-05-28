@@ -16,27 +16,11 @@ layout:
 
 Установите пакеты:
 
-{% tabs %}
-{% tab title="fedora" %}
-```
-sudo dnf install tor obfs4
-```
-{% endtab %}
-
-{% tab title="arch" %}
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S tor
+yay -S tor lyrebird-proxy
 ```
 {% endcode %}
-
-{% code overflow="wrap" %}
-```bash
-yay -S obfs4proxy
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
 
 {% tabs %}
 {% tab title="Отредактируйте torrc" %}
@@ -73,45 +57,6 @@ DataDirectory /var/lib/tor
 {% endtab %}
 {% endtabs %}
 
-{% tabs %}
-{% tab title="fedora" %}
-#### Отключите SeLinux
-
-Проверьте, установлено ли для SeLinux значение `enforcing`:
-
-```bash
-getenforce
-```
-
-Если установлено значение `enforcing`, измените статус на `permissive`:
-
-```bash
-sudo setenforce 0
-```
-
-Чтобы сделать изменения постоянными:
-
-<pre class="language-bash"><code class="lang-bash"><strong>sudo nano /etc/selinux/config
-</strong></code></pre>
-
-И измените `SELINUX=enforcing` на `SELINUX=permissive`.
-
-
-
-#### Откройте порты в брандмауэре Fedora
-
-```bash
-sudo firewall-cmd --add-port 9050/tcp --permanent
-```
-
-После выполните команду:
-
-```bash
-sudo firewall-cmd --reload
-```
-{% endtab %}
-
-{% tab title="arch" %}
 Создайте пользователя:
 
 {% code overflow="wrap" %}
@@ -137,8 +82,8 @@ sudo nano /lib/systemd/system/tor.service
 User=toruser
 Group=toruser
 ```
-{% endtab %}
-{% endtabs %}
+
+***
 
 Перезапутите `systemd`:
 
@@ -150,8 +95,11 @@ sudo systemctl daemon-reload
 
 Запустите `tor` сервис:
 
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><strong>sudo systemctl enable --now tor
-</strong></code></pre>
+{% code overflow="wrap" %}
+```bash
+sudo systemctl enable --now tor
+```
+{% endcode %}
 
 Проверьте состояние:
 
