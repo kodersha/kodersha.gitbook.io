@@ -1,112 +1,110 @@
 # Настройка GNOME
 
-### Удаление предустановленных программ
+### Удаление предустановленных пакетов
 
 Обычно я пользуюсь оболочкой GNOME и после установки ОС удаляю ненужные, предустановленные пакеты.
 
 ***
 
-Анализатор использования дисков
-
-{% code overflow="wrap" %}
+{% code title="Анализатор использования дисков" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc baobab
+sudo pacman -Rns baobab
 ```
 {% endcode %}
 
-Веб-брауpер
-
-{% code overflow="wrap" %}
+{% code title=" Веб-брауpер" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc epiphany
+sudo pacman -Rns epiphany
 ```
 {% endcode %}
 
-Видео
-
-{% code overflow="wrap" %}
+{% code title="Видео" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc totem
+sudo pacman -Rns totem
 ```
 {% endcode %}
 
-Камера
-
-{% code overflow="wrap" %}
+{% code title="Камера" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc snapshot
+sudo pacman -Rns snapshot
 ```
 {% endcode %}
 
-Карты
-
-{% code overflow="wrap" %}
+{% code title=" Карты" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc gnome-maps
+sudo pacman -Rns gnome-maps
 ```
 {% endcode %}
 
-Контакты
-
-{% code overflow="wrap" %}
+{% code title="Контакты" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc gnome-contacts
+sudo pacman -Rns gnome-contacts
 ```
 {% endcode %}
 
-Музыка
-
-{% code overflow="wrap" %}
+{% code title="Музыка" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc gnome-music
+sudo pacman -Rns gnome-music
 ```
 {% endcode %}
 
-Погода
-
-{% code overflow="wrap" %}
+{% code title="Погода" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc gnome-weather
+sudo pacman -Rns gnome-weather
 ```
 {% endcode %}
 
-Подключения
-
-{% code overflow="wrap" %}
+{% code title="Подключения" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc gnome-connections
+sudo pacman -Rns gnome-connections
 ```
 {% endcode %}
 
-Сканер документов
-
-{% code overflow="wrap" %}
+{% code title="Предустановленные расширения" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc simple-scan
+sudo pacman -Rns gnome-shell-extensions
 ```
 {% endcode %}
 
-Справка
-
-{% code overflow="wrap" %}
+{% code title="Родительский контроль" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc yelp
+sudo pacman -Rns malcontent
 ```
 {% endcode %}
 
-Текстовый редактор
-
-{% code overflow="wrap" fullWidth="false" %}
+{% code title="Сканер документов" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc gnome-text-editor
+sudo pacman -Rns simple-scan
 ```
 {% endcode %}
 
-Экскурсия
-
-{% code overflow="wrap" %}
+{% code title="Справка" overflow="wrap" %}
 ```bash
-sudo pacman -Rsc gnome-tour
+sudo pacman -Rns yelp
+```
+{% endcode %}
+
+{% code title="Текстовый редактор" overflow="wrap" fullWidth="false" %}
+```bash
+sudo pacman -Rns gnome-text-editor
+```
+{% endcode %}
+
+{% code title="Экскурсия" overflow="wrap" %}
+```bash
+sudo pacman -Rns gnome-tour
+```
+{% endcode %}
+
+{% code title="Центр приложений" overflow="wrap" %}
+```bash
+sudo pacman -Rns gnome-software
+```
+{% endcode %}
+
+{% code title="Часы" overflow="wrap" %}
+```bash
+sudo pacman -Rns gnome-clocks
 ```
 {% endcode %}
 
@@ -116,7 +114,17 @@ sudo pacman -Rsc gnome-tour
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rsc baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour
+sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks malcontent
+```
+{% endcode %}
+
+
+
+### Менеджер расширений
+
+{% code overflow="wrap" %}
+```bash
+yay -S extension-manager
 ```
 {% endcode %}
 
