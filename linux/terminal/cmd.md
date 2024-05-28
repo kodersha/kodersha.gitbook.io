@@ -10,7 +10,7 @@ sudo pacman -Syu
 
 {% code title="Установить пакет" overflow="wrap" %}
 ```bash
-sudo pacman -S ...top
+sudo pacman -S ...
 ```
 {% endcode %}
 
