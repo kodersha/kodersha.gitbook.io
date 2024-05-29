@@ -18,7 +18,13 @@ layout:
 
 {% code overflow="wrap" %}
 ```bash
-yay -S tor lyrebird-proxy
+sudo pacman -S tor
+```
+{% endcode %}
+
+{% code overflow="wrap" %}
+```bash
+yay -S obfs4proxy
 ```
 {% endcode %}
 
