@@ -30,7 +30,7 @@ yay -S spotify
 
 {% code title="Опционально AdBlock для Spotify" overflow="wrap" %}
 ```bash
-yay -S spotify-adblock
+bash <(curl -sSL https://spotx-official.github.io/run.sh)
 ```
 {% endcode %}
 
