@@ -72,6 +72,12 @@ sudo pacman -Rns malcontent
 ```
 {% endcode %}
 
+{% code title="Системный монитор" overflow="wrap" %}
+```bash
+sudo pacman -Rns gnome-system-monitor
+```
+{% endcode %}
+
 {% code title="Сканер документов" overflow="wrap" %}
 ```bash
 sudo pacman -Rns simple-scan
@@ -114,11 +120,9 @@ sudo pacman -Rns gnome-clocks
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks malcontent
+sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-system-monitor gcm-viewer malcontent
 ```
 {% endcode %}
-
-
 
 ### Терминал вместо консоли
 
