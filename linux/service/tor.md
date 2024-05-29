@@ -57,13 +57,10 @@ DataDirectory /var/lib/tor
 {% endtab %}
 {% endtabs %}
 
-Создайте пользователя:
-
 {% code overflow="wrap" %}
 ```bash
-sudo useradd -m -d /var/lib/tor -s /bin/false toruser
-sudo chown -R toruser:toruser /var/lib/tor
-sudo chmod 700 /var/lib/tor
+sudo chown -R tor:tor /var/lib/tor
+sudo chmod -R 700 /var/lib/tor
 ```
 {% endcode %}
 
@@ -79,8 +76,8 @@ sudo nano /lib/systemd/system/tor.service
 
 ```systemd
 [Service]
-User=toruser
-Group=toruser
+User=tor
+Group=tor
 ```
 
 ***
