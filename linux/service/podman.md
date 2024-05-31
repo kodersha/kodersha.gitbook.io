@@ -1,7 +1,7 @@
 # podman
 
 ```bash
-sudo pacman -S podman podman-compose
+sudo pacman -S podman podman-compose aardvark-dns
 ```
 
 ### Зеркало
