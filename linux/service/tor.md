@@ -78,7 +78,7 @@ sudo nano /lib/systemd/system/tor.service
 ```
 {% endcode %}
 
-Добавьте пользователя в раздел`[Service]`:
+Добавьте пользователя в раздел `[Service]`:
 
 ```systemd
 [Service]
