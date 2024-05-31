@@ -16,5 +16,6 @@
     * [zsh](linux/terminal/ext/zsh.md)
 * [Сервисы](linux/service/README.md)
   * [podman](linux/service/podman.md)
+  * [github](linux/service/github.md)
   * [tor](linux/service/tor.md)
 * [Программы](linux/software.md)
