@@ -15,5 +15,6 @@
     * [fastfetch](linux/terminal/ext/fastfetch.md)
     * [zsh](linux/terminal/ext/zsh.md)
 * [Сервисы](linux/service/README.md)
+  * [podman](linux/service/podman.md)
   * [tor](linux/service/tor.md)
 * [Программы](linux/software.md)

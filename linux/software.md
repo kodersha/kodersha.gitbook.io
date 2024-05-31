@@ -42,14 +42,6 @@ yay -S libre-menu-editor
 ```
 {% endcode %}
 
-### podman
-
-{% code overflow="wrap" %}
-```bash
-sudo pacman -S podman podman-compose
-```
-{% endcode %}
-
 ### visual studio code
 
 {% code overflow="wrap" %}
