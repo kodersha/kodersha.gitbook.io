@@ -18,4 +18,7 @@
   * [podman](linux/service/podman.md)
   * [github](linux/service/github.md)
   * [tor](linux/service/tor.md)
-* [Программы](linux/software.md)
+* [Игры](linux/games/README.md)
+  * [steam](linux/games/steam.md)
+* [Приложения](linux/software/README.md)
+  * [Разное](linux/software/other.md)

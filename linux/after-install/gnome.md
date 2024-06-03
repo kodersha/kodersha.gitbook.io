@@ -120,9 +120,13 @@ sudo pacman -Rns gnome-clocks
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-system-monitor gcm-viewer malcontent
+sudo pacman -Rnc baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-system-monitor malcontent
 ```
 {% endcode %}
+
+{% hint style="warning" %}
+Удаление пакета malcontent удаляет flatpak в качестве зависимости.
+{% endhint %}
 
 ### Терминал вместо консоли
 
@@ -159,3 +163,19 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
 ```
 {% endcode %}
+
+### Wayland
+
+{% tabs %}
+{% tab title="grub" %}
+Отредактируйте конфигурацию grub
+
+{% code overflow="wrap" %}
+```bash
+sudo nano /etc/default/grub
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+{% embed url="https://github.com/korvahannu/arch-nvidia-drivers-installation-guide" %}
