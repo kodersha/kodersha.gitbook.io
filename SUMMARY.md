@@ -7,6 +7,7 @@
 * [После установки](linux/after-install/README.md)
   * [Пользовательский репозиторий](linux/after-install/aur.md)
   * [Настройка GNOME](linux/after-install/gnome.md)
+  * [Шрифты](linux/after-install/fonts.md)
   * [Разное](linux/after-install/other.md)
 * [Терминал](linux/terminal/README.md)
   * [Команды](linux/terminal/cmd.md)

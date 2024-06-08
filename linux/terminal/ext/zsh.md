@@ -8,7 +8,7 @@ sudo pacman -S zsh
 
 {% code overflow="wrap" %}
 ```bash
-nano ~/.config/.zshrc
+nano ~/.zshrc
 ```
 {% endcode %}
 
@@ -32,7 +32,7 @@ fi
 source ~/.zplug/init.zsh
 
 # Theme
-zplug romkatv/powerlevel10k, as:theme
+zplug "romkatv/powerlevel10k", as:theme, depth:1
 
 # Aliases
 zplug "robbyrussell/oh-my-zsh", as:plugin, use:"lib/*.zsh"
@@ -50,9 +50,9 @@ zplug "plugins/git",               from:oh-my-zsh
 zplug "plugins/history",           from:oh-my-zsh
 
 zplug "zsh-users/zsh-autosuggestions"
-zplug "zdharma/fast-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
+zplug "zdharma/fast-syntax-highlighting"
 zplug "MichaelAquilina/zsh-you-should-use"
 
 zplug check || zplug install
