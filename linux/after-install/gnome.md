@@ -36,6 +36,12 @@ sudo pacman -Rns gnome-maps
 ```
 {% endcode %}
 
+{% code title="Календарь" overflow="wrap" %}
+```bash
+sudo pacman -Rns gnome-calendar
+```
+{% endcode %}
+
 {% code title="Контакты" overflow="wrap" %}
 ```bash
 sudo pacman -Rns gnome-contacts
@@ -120,7 +126,7 @@ sudo pacman -Rns gnome-clocks
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rnc baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-system-monitor malcontent
+sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-system-monitor gnome-user-docs malcontent
 ```
 {% endcode %}
 
@@ -165,17 +171,5 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift
 {% endcode %}
 
 ### Wayland
-
-{% tabs %}
-{% tab title="grub" %}
-Отредактируйте конфигурацию grub
-
-{% code overflow="wrap" %}
-```bash
-sudo nano /etc/default/grub
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
 
 {% embed url="https://github.com/korvahannu/arch-nvidia-drivers-installation-guide" %}
