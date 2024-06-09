@@ -127,7 +127,7 @@ sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-
 {% endcode %}
 
 {% hint style="warning" %}
-Удаление пакета `malcontent` удаляет `flatpak` в качестве зависимости. Если он всё же нужен, установите командой `sudo pacman -S flatpak` или `sudo aura -S flatpak`
+Удаление пакета `malcontent` удаляет `flatpak` в качестве зависимости. Если он всё же нужен, установите командой `sudo pacman -S flatpak`
 {% endhint %}
 
 ### Терминал вместо консоли
