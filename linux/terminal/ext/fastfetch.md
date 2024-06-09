@@ -33,134 +33,125 @@ nano ~/.config/fastfetch/config.jsonc
       "1": "blue"
     },
     "padding": {
-      "top": 3,
-      "left": 2
+      "top": 2,
+      "left": 1
     }
   },
   "display": {
-    "separator": "·   ",
+    "separator": "· ",
     "color": "blue"
   },
   "modules": [{
       "type": "title",
       "keyColor": "blue",
-      "format": "      {6}{7}{8}"
+      "format": "{6}{7}{8}"
     },
     "break",
     {
-      "type": "custom",
-      "format": "┌───────────────────────────── \u001b[1mSystem Information\u001b[0m ─────────────────────────────┐" // `\u001b` is `\033`, or `\e`
-    },
-    "break",
-    {
-      "key": "      OS           ",
+      "key": "OS         ",
       "keyColor": "blue",
       "type": "os"
     },
     {
-      "key": "      Kernel       ",
+      "key": "Kernel     ",
       "keyColor": "blue",
-      "type": "kernel"
+      "type": "kernel",
+      "format": "{1} {2}"
     },
     {
-      "key": "      Packages     ",
+      "key": "Packages   ",
       "keyColor": "blue",
       "type": "packages"
     },
     {
-      "key": "      Processes    ",
+      "key": "Processes  ",
       "keyColor": "blue",
       "type": "processes"
     },
     "break",
     {
-      "key": "      WM           ",
+      "key": "WM         ",
       "keyColor": "blue",
       "type": "wm"
     },
     {
-      "key": "      DE           ",
+      "key": "DE         ",
       "keyColor": "blue",
       "type": "de"
     },
     "break",
     {
-      "key": "      Shell        ",
+      "key": "Shell      ",
       "keyColor": "blue",
       "type": "shell"
     },
     {
-      "key": "      Terminal     ",
+      "key": "Terminal   ",
       "keyColor": "blue",
       "type": "terminal"
     },
     "break",
     {
-      "key": "      Board        ",
+      "key": "Board      ",
       "keyColor": "blue",
       "type": "board"
     },
     {
-      "key": "      BIOS         ",
+      "key": "BIOS       ",
       "keyColor": "blue",
       "type": "bios"
     },
     "break",
     {
-      "key": "      CPU          ",
+      "key": "CPU        ",
       "keyColor": "blue",
       "type": "cpu"
     },
     {
-      "key": "      GPU          ",
+      "key": "GPU        ",
       "keyColor": "blue",
-      "type": "gpu"
+      "type": "gpu",
+      "format": "{1} {2} ({3})"
     },
     "break",
     {
-      "key": "      Memory       ",
+      "key": "Memory     ",
       "keyColor": "blue",
       "type": "memory"
     },
     {
-      "key": "      Swap         ",
+      "key": "Swap       ",
       "keyColor": "blue",
       "type": "swap"
     },
     "break",
     {
-      "key": "      Disk         ",
+      "key": "Disk       ",
       "keyColor": "blue",
       "type": "disk"
     },
     "break",
     {
-      "key": "      Monitor      ",
+      "key": "Monitor    ",
       "keyColor": "blue",
       "type": "monitor",
       "format": "{1}"
     },
     {
-      "key": "      Resolution   ",
+      "key": "Resolution ",
       "keyColor": "blue",
       "type": "display",
       "compactType": "original-with-refresh-rate"
     },
     "break",
     {
-      "key": "      Uptime       ",
+      "key": "Uptime     ",
       "keyColor": "blue",
       "type": "uptime"
     },
     "break",
     {
-      "type": "custom",
-      "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
-    },
-    "break",
-    {
       "type": "colors",
-      "paddingLeft": 6,
       "symbol": "circle"
     }
   ]
