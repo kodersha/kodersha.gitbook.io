@@ -120,17 +120,27 @@ sudo pacman -Rns gnome-clocks
 
 #### Удалить всё одной командой:
 
+{% tabs %}
+{% tab title="pacman" %}
 {% code overflow="wrap" %}
 ```bash
 sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs malcontent
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="aura" %}
+{% code overflow="wrap" %}
+```bash
+sudo aura -Rsu baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs malcontent
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 {% hint style="warning" %}
 Удаление пакета `malcontent` удаляет `flatpak` в качестве зависимости. Если он всё же нужен, установите командой `sudo pacman -S flatpak` или `sudo aura -S flatpak`
 {% endhint %}
-
-***
 
 ### Терминал вместо консоли
 
@@ -174,8 +184,6 @@ sudo aura -Rsu gnome-console
 {% endtab %}
 {% endtabs %}
 
-***
-
 ### Менеджер расширений GNOME
 
 {% tabs %}
@@ -197,8 +205,6 @@ sudo aura -A extension-manager
 {% endtabs %}
 
 [mattjakeman.com/apps/extension-manager](https://mattjakeman.com/apps/extension-manager.html)
-
-***
 
 ### Смена раскладки клавиатуры на Shift Alt
 
