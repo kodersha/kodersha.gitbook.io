@@ -12,7 +12,7 @@
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -rsi && cd .. && rm -rf yay
 ```
 {% endcode %}
 
@@ -29,7 +29,7 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman --needed git base-devel && git clone https://aur.archlinux.org/aura-bin.git && cd aura-bin && makepkg -si
+sudo pacman --needed git base-devel && git clone https://aur.archlinux.org/aura-bin.git && cd aura-bin && makepkg -rsi && cd .. && rm -rf aura-bin
 ```
 {% endcode %}
 
@@ -39,6 +39,8 @@ sudo pacman --needed git base-devel && git clone https://aur.archlinux.org/aura-
 </code></pre>
 
 [github.com/fosskers/aura](https://github.com/fosskers/aura)
+
+***
 
 ### flatpak
 
