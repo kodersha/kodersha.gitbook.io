@@ -18,11 +18,8 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 Теперь можно устанавливать пакеты из репозитория AUR.
 
-{% code overflow="wrap" %}
-```bash
-yay -S <Название-пакета-aur>
-```
-{% endcode %}
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">yay -S <a data-footnote-ref href="#user-content-fn-1">pkg</a>
+</code></pre>
 
 [github.com/jguer/yay](https://github.com/Jguer/yay)
 
@@ -38,11 +35,8 @@ sudo pacman --needed git base-devel && git clone https://aur.archlinux.org/aura-
 
 Теперь можно устанавливать пакеты из репозитория AUR.
 
-{% code overflow="wrap" %}
-```bash
-sudo aura -A <Название-пакета-aur>
-```
-{% endcode %}
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo aura -A <a data-footnote-ref href="#user-content-fn-2">pkg</a>
+</code></pre>
 
 [github.com/fosskers/aura](https://github.com/fosskers/aura)
 
@@ -65,3 +59,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 {% endcode %}
+
+[^1]: Название пакета AUR
+
+[^2]: Название пакета AUR
