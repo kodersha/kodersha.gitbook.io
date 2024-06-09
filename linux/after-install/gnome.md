@@ -120,9 +120,7 @@ sudo pacman -Rns gnome-clocks
 ```
 {% endcode %}
 
-***
-
-Удалить всё одной командой:
+#### Удалить всё одной командой:
 
 {% code overflow="wrap" %}
 ```bash
@@ -133,6 +131,8 @@ sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-
 {% hint style="warning" %}
 Удаление пакета malcontent удаляет flatpak в качестве зависимости.
 {% endhint %}
+
+***
 
 ### Терминал вместо консоли
 
@@ -148,15 +148,33 @@ sudo pacman -Rns gnome-console
 ```
 {% endcode %}
 
-### Менеджер расширений
+***
 
+### Менеджер расширений GNOME
+
+{% tabs %}
+{% tab title="yay" %}
 {% code overflow="wrap" %}
 ```bash
 yay -S extension-manager
 ```
 {% endcode %}
+{% endtab %}
 
-### Смена раскладки клавиатуры
+{% tab title="aura" %}
+{% code overflow="wrap" %}
+```bash
+sudo aura -A extension-manager
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+[mattjakeman.com/apps/extension-manager](https://mattjakeman.com/apps/extension-manager.html)
+
+***
+
+### Смена раскладки клавиатуры на Shift Alt
 
 {% code title="Shift + Alt" overflow="wrap" %}
 ```bash
@@ -169,7 +187,3 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
 ```
 {% endcode %}
-
-### Wayland
-
-{% embed url="https://github.com/korvahannu/arch-nvidia-drivers-installation-guide" %}
