@@ -12,7 +12,7 @@
 * [Терминал](linux/terminal/README.md)
   * [Команды](linux/terminal/cmd.md)
   * [Расширения](linux/terminal/ext.md)
-* [Сервисы](linux/service.md)
+* [Сервисы](linux/service/README.md)
 * [Игры](linux/games.md)
 * [Приложения](linux/software.md)
 * [Разработка](linux/razrabotka.md)
