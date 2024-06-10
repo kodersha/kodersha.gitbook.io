@@ -122,13 +122,65 @@ sudo pacman -Rns gnome-clocks
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs malcontent
+sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs malcontent orca rygel tracker3-miners
 ```
 {% endcode %}
 
 {% hint style="warning" %}
 Удаление пакета `malcontent` удаляет `flatpak` в качестве зависимости. Если он всё же нужен, установите командой `sudo pacman -S flatpak`
 {% endhint %}
+
+### Отключение лишних служб
+
+{% code title="Служба графического планешта wacom" overflow="wrap" %}
+```bash
+systemctl --user mask org.gnome.SettingsDaemon.Wacom.service
+```
+{% endcode %}
+
+{% code title="Служба печати" overflow="wrap" %}
+```bash
+systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service:
+```
+{% endcode %}
+
+{% code title="Служба специальных возможностей" overflow="wrap" %}
+```bash
+systemctl --user mask org.gnome.SettingsDaemon.A11ySettings.service
+```
+{% endcode %}
+
+{% code title="Служба автоматической блокировки экрана" %}
+```bash
+systemctl --user mask org.gnome.SettingsDaemon.ScreensaverProxy.service
+```
+{% endcode %}
+
+{% code title="Служба автоматического отключения bluetooth" overflow="wrap" %}
+```bash
+systemctl --user mask org.gnome.SettingsDaemon.Rfkill.service
+```
+{% endcode %}
+
+{% code title="Служба общего доступа" %}
+```bash
+systemctl --user mask org.gnome.SettingsDaemon.Sharing.service
+```
+{% endcode %}
+
+{% code title="Служба интеграции с картридером" overflow="wrap" %}
+```bash
+systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
+```
+{% endcode %}
+
+### Патчи производительности
+
+{% code overflow="wrap" %}
+```bash
+yay -S gnome-shell-performance mutter-performance
+```
+{% endcode %}
 
 ### Терминал вместо консоли
 
