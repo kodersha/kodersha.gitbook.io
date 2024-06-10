@@ -14,6 +14,16 @@ layout:
 
 # Сервисы
 
+### bluetooth
+
+{% code overflow="wrap" %}
+```bash
+sudo systemctl enable --now bluetooth
+```
+{% endcode %}
+
+
+
 ### tor
 
 Установите tor и obfs4proxy:
