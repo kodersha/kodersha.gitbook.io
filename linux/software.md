@@ -1,4 +1,18 @@
-# Разное
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
+# Приложения
 
 ### firefox
 
@@ -19,25 +33,3 @@ yay -S spotify
 bash <(curl -sSL https://spotx-official.github.io/run.sh)
 ```
 {% endcode %}
-
-### libre-menu-editor
-
-{% code overflow="wrap" %}
-```bash
-yay -S libre-menu-editor
-```
-{% endcode %}
-
-### visual studio code
-
-{% code overflow="wrap" %}
-```bash
-yay -S visual-studio-code-bin
-```
-{% endcode %}
-
-### figma
-
-```bash
-yay -S figma-linux figma-agent-linux
-```

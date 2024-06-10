@@ -122,7 +122,7 @@ sudo pacman -Rns gnome-clocks
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs malcontent orca rygel tracker3-miners
+sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs malcontent orca rygel
 ```
 {% endcode %}
 
@@ -156,12 +156,6 @@ systemctl --user mask org.gnome.SettingsDaemon.ScreensaverProxy.service
 ```
 {% endcode %}
 
-{% code title="Служба автоматического отключения bluetooth" overflow="wrap" %}
-```bash
-systemctl --user mask org.gnome.SettingsDaemon.Rfkill.service
-```
-{% endcode %}
-
 {% code title="Служба общего доступа" %}
 ```bash
 systemctl --user mask org.gnome.SettingsDaemon.Sharing.service
@@ -184,17 +178,13 @@ yay -S gnome-shell-performance mutter-performance
 
 ### Терминал вместо консоли
 
-Установите терминал:
-
-{% code overflow="wrap" %}
+{% code title="Установите терминал" overflow="wrap" %}
 ```bash
 sudo pacman -S gnome-terminal
 ```
 {% endcode %}
 
-Удалите консоль:
-
-{% code overflow="wrap" %}
+{% code title="Удалите консоль" overflow="wrap" %}
 ```bash
 sudo pacman -Rns gnome-console
 ```
@@ -209,6 +199,16 @@ yay -S extension-manager
 {% endcode %}
 
 [mattjakeman.com/apps/extension-manager](https://mattjakeman.com/apps/extension-manager.html)
+
+### Редактор меню
+
+{% code overflow="wrap" %}
+```bash
+yay -S libre-menu-editor
+```
+{% endcode %}
+
+[codeberg.org/libre-menu-editor/libre-menu-editor](https://codeberg.org/libre-menu-editor/libre-menu-editor)
 
 ### Смена раскладки клавиатуры на Shift Alt
 

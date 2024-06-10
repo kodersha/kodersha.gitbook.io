@@ -12,5 +12,11 @@ layout:
     visible: false
 ---
 
-# Приложения
+# Игры
+
+### steam
+
+```bash
+sudo pacman -S steam
+```
 
