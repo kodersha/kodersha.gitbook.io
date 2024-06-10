@@ -18,15 +18,21 @@ layout:
 
 Установите tor и obfs4proxy:
 
+{% tabs %}
+{% tab title="tor " %}
 {% code overflow="wrap" %}
 ```bash
 sudo pacman -S tor
 ```
 {% endcode %}
+{% endtab %}
 
+{% tab title="obfs4proxy" %}
 ```bash
 yay -S obfs4proxy
 ```
+{% endtab %}
+{% endtabs %}
 
 ***
 
@@ -34,8 +40,7 @@ yay -S obfs4proxy
 
 {% code overflow="wrap" %}
 ```bash
-sudo chown -R tor:tor /var/lib/tor
-sudo chmod -R 700 /var/lib/tor
+sudo chown -R tor:tor /var/lib/tor && sudo chmod -R 700 /var/lib/tor
 ```
 {% endcode %}
 
@@ -96,13 +101,7 @@ DataDirectory /var/lib/tor
 
 {% code overflow="wrap" %}
 ```bash
-sudo systemctl daemon-reload
-```
-{% endcode %}
-
-{% code overflow="wrap" %}
-```bash
-sudo systemctl enable --now tor
+sudo systemctl daemon-reload && sudo systemctl enable --now tor
 ```
 {% endcode %}
 
@@ -114,10 +113,4 @@ sudo systemctl status tor
 ```
 {% endcode %}
 
-Адрес хоста подключения SOCKS5:
-
-{% code overflow="wrap" %}
-```bash
-127.0.0.1:9050
-```
-{% endcode %}
+Адрес хоста подключения SOCKS5: `127.0.0.1:9050`
