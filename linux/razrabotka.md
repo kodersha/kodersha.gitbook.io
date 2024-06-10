@@ -8,10 +8,16 @@ sudo pacman -S podman podman-compose aardvark-dns
 
 #### Зеркало docker
 
+На случай блокировки docker.io. Отредактируйте конфигурацию:
+
+{% tabs %}
+{% tab title="registries.conf" %}
 ```bash
 sudo nano /etc/containers/registries.conf
 ```
+{% endtab %}
 
+{% tab title="→" %}
 ```editorconfig
 unqualified-search-registries = ["docker.io", "quay.io"]
 
@@ -27,6 +33,10 @@ insecure = false
 prefix = ""
 location = "quay.io"
 ```
+{% endtab %}
+{% endtabs %}
+
+
 
 ### github
 
@@ -40,6 +50,8 @@ git config --global user.email johndoe@example.com
 git config --global core.compression 0
 ```
 
+
+
 ### visual studio code
 
 {% code overflow="wrap" %}
@@ -47,6 +59,8 @@ git config --global core.compression 0
 yay -S visual-studio-code-bin
 ```
 {% endcode %}
+
+
 
 ### figma
 
