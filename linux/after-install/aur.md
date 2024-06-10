@@ -23,23 +23,6 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 [github.com/jguer/yay](https://github.com/Jguer/yay)
 
-### aura
-
-Альтернативный, более безопасный, менеджер официальных и AUR пакетов.
-
-{% code overflow="wrap" %}
-```bash
-sudo pacman --needed git base-devel && git clone https://aur.archlinux.org/aura-bin.git && cd aura-bin && makepkg -rsi && cd .. && rm -rf aura-bin
-```
-{% endcode %}
-
-Теперь можно устанавливать пакеты из репозитория AUR.
-
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo aura -A <a data-footnote-ref href="#user-content-fn-2">pkg</a>
-</code></pre>
-
-[github.com/fosskers/aura](https://github.com/fosskers/aura)
-
 ***
 
 ### flatpak
@@ -63,5 +46,3 @@ flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/fl
 {% endcode %}
 
 [^1]: Название пакета AUR
-
-[^2]: Название пакета AUR
