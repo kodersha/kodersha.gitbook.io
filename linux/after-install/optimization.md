@@ -51,7 +51,7 @@ sudo nano /etc/systemd/system/cpupower.service
 {% endtab %}
 
 {% tab title="→" %}
-```editorconfig
+```ini
 [Unit]
 Description=Set CPU power governor to conservative
 After=multi-user.target
@@ -77,3 +77,84 @@ WantedBy=multi-user.target
 sudo systemctl enable --now cpupower.service
 ```
 {% endcode %}
+
+
+
+### zram
+
+<mark style="color:purple;">zram</mark> позволяет создать в оперативной памяти сжатый блок, который можно использовать как виртуальную память (swap). Основная идея заключается в том, что сжатие данных может позволить хранить больше данных в оперативной памяти, чем без сжатия.
+
+Проще говоря, она сжимает данные, чтобы вместить больше информации в этот блок памяти. Это особенно полезно на устройствах с ограниченным количеством ОЗУ, поскольку позволяет использовать память эффективнее.
+
+<mark style="color:purple;">zswap</mark> работает немного по-другому. Он добавляет уровень сжатия между оперативной памятью и дисковым swap. Когда системе нужно выгрузить данные из ОЗУ и записать их в swap, zswap сначала пытается сжать эти данные и хранить их в специальной области памяти. Если в этой области не хватает места, данные отправляются на диск (обычный swap).&#x20;
+
+{% hint style="warning" %}
+zram - создаёт сжатый блок памяти прямо в ОЗУ и использует его как swap.
+
+zswap - добавляет прослойку сжатия между ОЗУ и обычным swap на диске, чтобы снизить нагрузку на диск и улучшить производительность.
+{% endhint %}
+
+
+
+Перед установкой `zram` нужно отключить `zswap`, для этого отредактируйте параметры ядра. Например в `grub`:
+
+{% code overflow="wrap" %}
+```bash
+sudo nano /etc/default/grub
+```
+{% endcode %}
+
+Найдите строку, начинающуюся с `GRUB_CMDLINE_LINUX_DEFAULT`, и добавьте параметр `zswap.enabled=0`.
+
+{% code title="Пример" overflow="wrap" %}
+```ini
+GRUB_CMDLINE_LINUX_DEFAULT="quiet zswap.enabled=0"
+```
+{% endcode %}
+
+Обновите конфигурацию grub:
+
+```sh
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+
+
+Установите zram-generator:
+
+{% code overflow="wrap" %}
+```bash
+sudo pacman -S zram-generator
+```
+{% endcode %}
+
+Создайте файл конфигурации:
+
+{% tabs %}
+{% tab title="zram-generator.conf" %}
+```bash
+sudo nano /etc/systemd/zram-generator.conf
+```
+{% endtab %}
+
+{% tab title="→" %}
+```ini
+[zram0]
+zram-size = ram
+compression-algorithm = zstd
+swap-priority = 100
+fs-type = swap
+```
+
+* **`zram-size = ram`**: Размер zram будет установлен равным объему доступной оперативной памяти (RAM). Таким образом, вся оперативная память может быть использована для zram.
+* **`compression-algorithm = zstd`**: Указывает, какой алгоритм сжатия будет использоваться для сжатия данных в zram. В данном случае используется алгоритм `zstd`, который является одним из самых современных и эффективных алгоритмов сжатия.
+* **`swap-priority = 100`**: Эта настройка задаёт приоритет использования zram по сравнению с другими swap-устройствами. Чем выше значение, тем приоритетнее устройство. Значение «100» указывает на высокий приоритет использования zram по сравнению с другими возможными swap-устройствами (например, swap-файлом на диске).
+* **`fs-type = swap`**: Это указывает, что тип файловой системы, которая будет использоваться для zram — swap. То есть, zram будет использоваться как виртуальная память (swap-пространство).
+{% endtab %}
+{% endtabs %}
+
+Запустите сервис:
+
+```bash
+sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0.service
+```
