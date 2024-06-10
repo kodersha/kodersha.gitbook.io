@@ -9,32 +9,60 @@ layout:
   outline:
     visible: false
   pagination:
-    visible: true
+    visible: false
 ---
 
-# tor
+# Сервисы
 
-Установите пакеты:
+### tor
 
-{% code overflow="wrap" %}
+{% code title="Установите tor" overflow="wrap" %}
 ```bash
 sudo pacman -S tor
 ```
 {% endcode %}
 
-{% code overflow="wrap" %}
 ```bash
 yay -S obfs4proxy
 ```
+
+***
+
+{% code title="Назначьте пользователя" overflow="wrap" %}
+```bash
+sudo chown -R tor:tor /var/lib/tor
+```
 {% endcode %}
 
+{% code title="Обновите права на папку" overflow="wrap" %}
+```bash
+sudo chmod -R 700 /var/lib/tor
+```
+{% endcode %}
+
+{% code title="Отредактируйте tor.service" overflow="wrap" %}
+```bash
+sudo nano /lib/systemd/system/tor.service
+```
+{% endcode %}
+
+Добавьте пользователя в раздел `[Service]`:
+
+```editorconfig
+[Service]
+User=tor
+Group=tor
+```
+
+***
+
+Конфигурация мостов:
+
 {% tabs %}
-{% tab title="Отредактируйте torrc" %}
-{% code overflow="wrap" %}
+{% tab title="torrc" %}
 ```bash
 sudo nano /etc/tor/torrc
 ```
-{% endcode %}
 {% endtab %}
 
 {% tab title="→" %}
@@ -63,57 +91,28 @@ DataDirectory /var/lib/tor
 {% endtab %}
 {% endtabs %}
 
-{% code overflow="wrap" %}
-```bash
-sudo chown -R tor:tor /var/lib/tor
-sudo chmod -R 700 /var/lib/tor
-```
-{% endcode %}
-
-Отредактируйте `tor.service`:
-
-{% code overflow="wrap" %}
-```bash
-sudo nano /lib/systemd/system/tor.service
-```
-{% endcode %}
-
-Добавьте пользователя в раздел `[Service]`:
-
-```systemd
-[Service]
-User=tor
-Group=tor
-```
-
 ***
 
-Перезапутите `systemd`:
-
-{% code overflow="wrap" %}
+{% code title="Обновите конфигурацию" overflow="wrap" %}
 ```bash
 sudo systemctl daemon-reload
 ```
 {% endcode %}
 
-Запустите `tor` сервис:
-
-{% code overflow="wrap" %}
+{% code title="Запустите tor сервис" overflow="wrap" %}
 ```bash
 sudo systemctl enable --now tor
 ```
 {% endcode %}
 
-Проверьте состояние:
-
+{% code title="Проверьте состояние" overflow="wrap" %}
 ```bash
 sudo systemctl status tor
 ```
+{% endcode %}
 
-
-
-{% code title="Хост подключения SOCKS" overflow="wrap" %}
-```
+{% code title="Хост подключения SOCKS5" overflow="wrap" %}
+```bash
 127.0.0.1:9050
 ```
 {% endcode %}
