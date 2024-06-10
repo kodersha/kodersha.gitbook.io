@@ -8,20 +8,20 @@ sudo pacman -S adobe-source-sans-pro-fonts ttf-dejavu ttf-opensans noto-fonts fr
 ```
 {% endcode %}
 
-Или установите все шрифты:
-
-{% code overflow="wrap" %}
-```bash
-yay -S all-repository-fonts
-```
-{% endcode %}
-
-
-
 Набор шрифтов для терминала:
 
 {% code overflow="wrap" %}
 ```bash
 sudo pacman -S nerd-fonts
+```
+{% endcode %}
+
+
+
+Или установите все шрифты:
+
+{% code overflow="wrap" %}
+```bash
+yay -S all-repository-fonts
 ```
 {% endcode %}
