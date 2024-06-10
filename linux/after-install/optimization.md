@@ -33,53 +33,6 @@ cpupower frequency-info
 
 
 
-Например я использую планировщик `conservative` с настройками для плавного увеличения и уменьшения частоты процессора.
-
-```bash
-sudo cpupower frequency-set -g conservative
-```
-
-Дополнительно можно создать файл systemd-сервиса для автоматической настройки нужного планировщика при загрузке системы:
-
-{% tabs %}
-{% tab title="cpupower.service" %}
-{% code overflow="wrap" %}
-```bash
-sudo nano /etc/systemd/system/cpupower.service
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="→" %}
-```ini
-[Unit]
-Description=Set CPU power governor to conservative
-After=multi-user.target
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/cpupower frequency-set -g conservative
-ExecStart=/bin/bash -c 'echo "35" > /sys/devices/system/cpu/cpufreq/conservative/up_threshold'
-ExecStart=/bin/bash -c 'echo "20" > /sys/devices/system/cpu/cpufreq/conservative/down_threshold'
-ExecStart=/bin/bash -c 'echo "5" > /sys/devices/system/cpu/cpufreq/conservative/freq_step'
-ExecStart=/bin/bash -c 'echo "5" > /sys/devices/system/cpu/cpufreq/conservative/sampling_down_factor'
-
-[Install]
-WantedBy=multi-user.target
-```
-{% endtab %}
-{% endtabs %}
-
-Включите сервис:
-
-{% code overflow="wrap" %}
-```bash
-sudo systemctl enable --now cpupower.service
-```
-{% endcode %}
-
-
-
 ### zram
 
 <mark style="color:purple;">zram</mark> позволяет создать в оперативной памяти сжатый блок, который можно использовать как виртуальную память (swap). Основная идея заключается в том, что сжатие данных может позволить хранить больше данных в оперативной памяти, чем без сжатия.
