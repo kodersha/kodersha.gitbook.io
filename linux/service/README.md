@@ -16,7 +16,9 @@ layout:
 
 ### tor
 
-{% code title="Установите tor" overflow="wrap" %}
+Установите tor и obfs4proxy:
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -S tor
 ```
@@ -28,25 +30,22 @@ yay -S obfs4proxy
 
 ***
 
-{% code title="Назначьте пользователя" overflow="wrap" %}
+Назначьте пользователя и права на папку:
+
+{% code overflow="wrap" %}
 ```bash
 sudo chown -R tor:tor /var/lib/tor
-```
-{% endcode %}
-
-{% code title="Обновите права на папку" overflow="wrap" %}
-```bash
 sudo chmod -R 700 /var/lib/tor
 ```
 {% endcode %}
 
-{% code title="Отредактируйте tor.service" overflow="wrap" %}
+Отредактируйте tor.service и добавьте пользователя и группу в раздел `[Service]`:
+
+{% code overflow="wrap" %}
 ```bash
 sudo nano /lib/systemd/system/tor.service
 ```
 {% endcode %}
-
-Добавьте пользователя в раздел `[Service]`:
 
 ```editorconfig
 [Service]
@@ -93,25 +92,31 @@ DataDirectory /var/lib/tor
 
 ***
 
-{% code title="Обновите конфигурацию" overflow="wrap" %}
+Обновите конфигурацию и запустите tor сервис:
+
+{% code overflow="wrap" %}
 ```bash
 sudo systemctl daemon-reload
 ```
 {% endcode %}
 
-{% code title="Запустите tor сервис" overflow="wrap" %}
+{% code overflow="wrap" %}
 ```bash
 sudo systemctl enable --now tor
 ```
 {% endcode %}
 
-{% code title="Проверьте состояние" overflow="wrap" %}
+При необходимости проверьте состояние:
+
+{% code overflow="wrap" %}
 ```bash
 sudo systemctl status tor
 ```
 {% endcode %}
 
-{% code title="Хост подключения SOCKS5" overflow="wrap" %}
+Адрес хоста подключения SOCKS5:
+
+{% code overflow="wrap" %}
 ```bash
 127.0.0.1:9050
 ```
