@@ -128,7 +128,7 @@ sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0.se
 
 `ananicy-cpp` - утилита для автоматической приоритизации задач.
 
-{% embed url="https://github.com/CachyOS/ananicy-rules" %}
+{% embed url="https://gitlab.com/ananicy-cpp/ananicy-cpp" %}
 
 Основная задача `ananicy-cpp` - автоматическая настройка приоритетов процессов для улучшения отклика и производительности системы. Утилита использует правила для определения приоритетов процессов, основываясь на их имени, пути и прочем. Это позволяет эффективнее распределять системные ресурсы, что может повысить общую производительность и отзывчивость, особенно на системах с большим количеством активных процессов.
 
@@ -155,15 +155,17 @@ sudo systemctl enable --now ananicy-cpp
 ```
 {% endcode %}
 
-{% embed url="https://gitlab.com/ananicy-cpp/ananicy-cpp" %}
 
-Дополнительно можно установить `cachyos-ananicy-rules-git`, набор правил с оптимизацией для популярных процессов от CachyOS.
+
+Дополнительно можно установить `cachyos-ananicy-rules-git`, набор правил с оптимизацией процессов от CachyOS.
 
 {% code overflow="wrap" %}
 ```bash
 yay -S cachyos-ananicy-rules-git
 ```
 {% endcode %}
+
+{% embed url="https://github.com/CachyOS/ananicy-rules" %}
 
 
 
