@@ -25,3 +25,23 @@ sudo pacman -S nerd-fonts
 yay -S all-repository-fonts
 ```
 {% endcode %}
+
+
+
+### Шрифты Windows
+
+Дополнительно можно добавить шрифты из Windows 11.&#x20;
+
+{% file src="../../.gitbook/assets/windows.zip" %}
+
+Скачайте архив, распакуйте и скопируйте папку `windows` по пути:
+
+```bash
+~/.local/share/fonts
+```
+
+Обновите кэш шрифтов:
+
+```bash
+fc-cache -v
+```
