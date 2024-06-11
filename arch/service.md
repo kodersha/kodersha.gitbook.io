@@ -12,7 +12,7 @@ layout:
     visible: false
 ---
 
-# Сервисы
+# 🔮 Сервисы
 
 ### bluetooth
 
@@ -21,8 +21,6 @@ layout:
 sudo systemctl enable --now bluetooth
 ```
 {% endcode %}
-
-
 
 ### tor
 

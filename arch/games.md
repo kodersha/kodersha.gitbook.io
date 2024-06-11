@@ -12,11 +12,10 @@ layout:
     visible: false
 ---
 
-# Игры
+# 🎮 Игры
 
 ### steam
 
 ```bash
 sudo pacman -S steam
 ```
-

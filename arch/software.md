@@ -12,7 +12,7 @@ layout:
     visible: false
 ---
 
-# Приложения
+# 📀 Приложения
 
 ### firefox
 

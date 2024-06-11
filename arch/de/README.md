@@ -12,11 +12,5 @@ layout:
     visible: false
 ---
 
-# Игры
-
-### steam
-
-```bash
-sudo pacman -S steam
-```
+# ☄️ Среды рабочего стола
 

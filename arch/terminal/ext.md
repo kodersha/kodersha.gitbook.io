@@ -22,7 +22,7 @@ topgrade
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/topgrade.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/topgrade.png" alt=""><figcaption></figcaption></figure>
 
 Конфигурация:
 
@@ -74,8 +74,6 @@ use_root = false
 {% endtab %}
 {% endtabs %}
 
-
-
 ### fastfetch
 
 Утилита для вывода информации о системе в терминале. Напоминает `neofetch`, предоставляя подробные сведения о системе, такие как дистрибутив операционной системы, ядро, аппаратные характеристики, информация о CPU и GPU, память, разделы дисков и текущую тему рабочего стола.
@@ -90,7 +88,7 @@ sudo pacman -S fastfetch
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
 
 Можно создать пользовательский файл конфигурации:
 
@@ -289,8 +287,6 @@ nano ~/.config/fastfetch/logo.txt
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ### zsh
 

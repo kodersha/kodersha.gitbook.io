@@ -1,4 +1,4 @@
-# Разработка
+# 📦 Разработка
 
 ### podman
 
@@ -38,8 +38,6 @@ location = "quay.io"
 
 {% embed url="https://podman.io/" %}
 
-
-
 ### github
 
 ```bash
@@ -52,8 +50,6 @@ git config --global user.email johndoe@example.com
 git config --global core.compression 0
 ```
 
-
-
 ### visual studio code
 
 {% code overflow="wrap" %}
@@ -61,8 +57,6 @@ git config --global core.compression 0
 yay -S visual-studio-code-bin
 ```
 {% endcode %}
-
-
 
 ### figma
 
