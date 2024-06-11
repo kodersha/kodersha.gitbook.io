@@ -28,7 +28,7 @@ local/nvidia-utils-beta 550.90.07-1
 Удалите найденные драйвера `nvidia`. Лучше всего в безопасной среде, например в консоли (Ctrl+Alt+F3). Также придётся удалить `steam` как зависимость.
 
 {% hint style="warning" %}
-У вас могут быть другие драйвера, например `nvidia-dkms` или`nvidia`, а не `nvidia-open-dkms`.
+У вас могут быть другие драйвера, например `nvidia-dkms` или `nvidia`, а не `nvidia-open-dkms`.
 {% endhint %}
 
 {% code overflow="wrap" %}
