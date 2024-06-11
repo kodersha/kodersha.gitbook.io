@@ -19,17 +19,19 @@ sudo pacman -S cpupower
 5. **conservative**: Похож на ondemand, но регулирует частоту плавнее. Полезно для уменьшения энергопотребления и нагрева.
 6. **schedutil**: Интегрирует регулирование частоты с планировщиком задач ядра и в реальном времени адаптирует частоту процессора в зависимости от текущей нагрузки.
 
+Посмотреть доступные планировщики можно с помощью команды:
+
+```sh
+cpupower frequency-info
+```
+
 Для установки планировщика используйте команду `cpupower frequency-set`, например:
 
 ```sh
 sudo cpupower frequency-set -g performance
 ```
 
-Также можно просматривать доступные планировщики с помощью команды:
-
-```sh
-cpupower frequency-info
-```
+{% embed url="https://wiki.archlinux.org/title/CPU_frequency_scaling" %}
 
 
 
@@ -107,6 +109,8 @@ fs-type = swap
 ```bash
 sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0.service
 ```
+
+{% embed url="https://wiki.archlinux.org/title/Zram" %}
 
 
 
