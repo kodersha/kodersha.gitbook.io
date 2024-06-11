@@ -2,13 +2,21 @@
 
 ### topgrade
 
-{% code title="Установите topgrade" overflow="wrap" %}
+Утилита для обновления различных частей системы и приложений. Она автоматически определяет используемые пакетные менеджеры, языковые среды и инструменты конфигурации, затем обновляет все соответствующие компоненты.
+
+{% embed url="https://github.com/topgrade-rs/topgrade" %}
+
+Установите `topgrade`:
+
+{% code overflow="wrap" %}
 ```bash
 yay -S topgrade
 ```
 {% endcode %}
 
-{% code title="Обновить все пакеты одной командой" overflow="wrap" %}
+Обновить всё одной командой:
+
+{% code overflow="wrap" %}
 ```bash
 topgrade
 ```
@@ -66,13 +74,17 @@ use_root = false
 {% endtab %}
 {% endtabs %}
 
-{% embed url="https://github.com/topgrade-rs/topgrade" %}
-
 
 
 ### fastfetch
 
-{% code title="Установите fastfetch" overflow="wrap" %}
+Утилита для вывода информации о системе в терминале. Напоминает `neofetch`, предоставляя подробные сведения о системе, такие как дистрибутив операционной системы, ядро, аппаратные характеристики, информация о CPU и GPU, память, разделы дисков и текущую тему рабочего стола.
+
+{% embed url="https://github.com/fastfetch-cli/fastfetch" %}
+
+Установите `fastfetch`:
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -S fastfetch
 ```
@@ -80,7 +92,9 @@ sudo pacman -S fastfetch
 
 <figure><img src="../../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
 
-{% code title="Создать базовый файл конфигурации" overflow="wrap" %}
+Создать пользовательский файл конфигурации:
+
+{% code overflow="wrap" %}
 ```bash
 fastfetch --gen-config-force
 ```
@@ -276,13 +290,22 @@ nano ~/.config/fastfetch/logo.txt
 {% endtab %}
 {% endtabs %}
 
-{% embed url="https://github.com/fastfetch-cli/fastfetch" %}
-
 
 
 ### zsh
 
-{% code title="Установите zsh" overflow="wrap" %}
+Командная оболочка UNIX, часто используемая в качестве замены стандартного Bash. Она известна своими расширенными функциями и улучшенной интерактивностью:
+
+* Автодополнение команд и аргументов.
+* Поддержка плагинов и тем (Например, через Oh My Zsh).
+* История команд с возможностью поиска.
+* Глобальные алиасы и произвольные замены текста.
+
+`zsh` гибко настраивается и широко используется для повышения эффективности работы в терминале.
+
+Установить:
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -S zsh
 ```

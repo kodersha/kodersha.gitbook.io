@@ -7,12 +7,12 @@
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Ss <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
 
+{% embed url="https://archlinux.org/packages/" %}
+
 Установить пакет из официального репозитория:
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -S <a data-footnote-ref href="#user-content-fn-2">pkg</a>
 </code></pre>
-
-{% embed url="https://archlinux.org/packages/" %}
 
 
 
