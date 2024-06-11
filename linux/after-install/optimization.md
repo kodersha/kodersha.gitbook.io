@@ -257,12 +257,16 @@ yay -S alhp-keyring alhp-mirrorlist
 
 Отредактируйте конфигурацию pacman:
 
+{% tabs %}
+{% tab title="pacman.conf" %}
 {% code overflow="wrap" %}
 ```bash
 sudo nano /etc/pacman.conf
 ```
 {% endcode %}
+{% endtab %}
 
+{% tab title="→" %}
 Добавьте репозитории в конфигурацию:
 
 {% code title="Например для v3" %}
@@ -287,6 +291,8 @@ Include = /etc/pacman.d/alhp-mirrorlist
 Include = /etc/pacman.d/mirrorlist
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 Обновите систему:
 
