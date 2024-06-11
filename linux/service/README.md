@@ -26,7 +26,7 @@ sudo systemctl enable --now bluetooth
 
 ### tor
 
-Установите tor и obfs4proxy:
+Установите `tor` и `obfs4proxy`:
 
 {% tabs %}
 {% tab title="tor " %}
@@ -101,7 +101,7 @@ DataDirectory /var/lib/tor
 {% endtab %}
 {% endtabs %}
 
-Обновите конфигурацию и запустите tor сервис:
+Обновите конфигурацию и запустите `tor` сервис:
 
 {% code overflow="wrap" %}
 ```bash
