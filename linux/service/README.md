@@ -52,7 +52,7 @@ sudo chown -R tor:tor /var/lib/tor && sudo chmod -R 700 /var/lib/tor
 ```
 {% endcode %}
 
-Отредактируйте tor.service и добавьте пользователя и группу в раздел `[Service]`:
+Отредактируйте `tor.service` и добавьте пользователя и группу в раздел `[Service]`:
 
 {% code overflow="wrap" %}
 ```bash
