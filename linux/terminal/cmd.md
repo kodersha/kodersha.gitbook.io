@@ -16,9 +16,23 @@
 
 
 
+Найти пакет в репозитории AUR:
+
+<pre class="language-bash"><code class="lang-bash">yay -Ss <a data-footnote-ref href="#user-content-fn-3">pkg</a>
+</code></pre>
+
+{% embed url="https://aur.archlinux.org/packages" %}
+
+Установить пакет из AUR:
+
+<pre><code>yay -S <a data-footnote-ref href="#user-content-fn-4">pkg</a>
+</code></pre>
+
+
+
 ### Обновление
 
-Обновить все пакеты официального репозитория:
+Обновить пакеты:
 
 {% code overflow="wrap" %}
 ```bash
@@ -30,7 +44,7 @@ sudo pacman -Syu
 
 ### Удаление
 
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Rns <a data-footnote-ref href="#user-content-fn-3">pkg</a>
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Rns <a data-footnote-ref href="#user-content-fn-5">pkg</a>
 </code></pre>
 
 {% hint style="warning" %}
@@ -43,19 +57,25 @@ sudo pacman -Syu
 
 ### Очистка
 
-{% code title="Удаление ненужных пакетов с зависимостями" overflow="wrap" %}
+Удаление ненужных пакетов с зависимостями:
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -Rns $(pacman -Qdtq)
 ```
 {% endcode %}
 
-{% code title="Очистка кэша пакетов" overflow="wrap" %}
+Очистка кэша пакетов:
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -Sc
 ```
 {% endcode %}
 
-{% code title="Очистка кэша AUR" overflow="wrap" %}
+Очистка кэша AUR:
+
+{% code overflow="wrap" %}
 ```bash
 yay -Sc
 ```
@@ -66,3 +86,7 @@ yay -Sc
 [^2]: Название пакета
 
 [^3]: Название пакета
+
+[^4]: Название пакета
+
+[^5]: Название пакета
