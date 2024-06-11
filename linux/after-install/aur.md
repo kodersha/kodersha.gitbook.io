@@ -8,7 +8,11 @@
 
 ### yay
 
-Установите `yay` - менеджер пакетов AUR.
+Помощник для управления пакетами в Arch Linux, упрощает установку и управление пакетами из AUR.
+
+{% embed url="https://github.com/Jguer/yay" %}
+
+Установите `yay`:
 
 {% code overflow="wrap" %}
 ```bash
@@ -16,35 +20,47 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 ```
 {% endcode %}
 
-Теперь можно устанавливать пакеты из репозитория AUR.
+Теперь можно устанавливать пакеты из AUR:
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">yay -S <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
-
-{% embed url="https://github.com/Jguer/yay" %}
 
 
 
 ### flatpak
 
-{% code title="Установите flatpak" overflow="wrap" %}
+`flatpak` позволяет устанавливать и запускать приложения в изолированных контейнерах, обеспечивая совместимость между дистрибутивами, автоматическое управление зависимостями и безопасное обновление через репозитории, такие как flathub.
+
+{% embed url="https://flatpak.org/" %}
+
+Установите `flatpak`:
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -S flatpak
 ```
 {% endcode %}
 
-{% code title="Репозиторий flathub для system" overflow="wrap" %}
+
+
+`flathub` - репозиторий приложений `flatpak`.
+
+{% embed url="https://flathub.org/" %}
+
+Добавьте репозиторий `flathub` для `system`:
+
+{% code overflow="wrap" %}
 ```bash
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 {% endcode %}
 
-{% code title="Репозиторий flathub для user" overflow="wrap" %}
+И для `user`:
+
+{% code overflow="wrap" %}
 ```bash
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 {% endcode %}
-
-{% embed url="https://flatpak.org/" %}
 
 [^1]: Название пакета AUR
