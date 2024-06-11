@@ -5,7 +5,7 @@
 ## 🐧 linux
 
 * [После установки](linux/after-install/README.md)
-  * [Репозитории](linux/after-install/aur.md)
+  * [Репозитории](linux/after-install/repo.md)
   * [Настройка GNOME](linux/after-install/gnome.md)
   * [Оптимизация](linux/after-install/optimization.md)
   * [Шрифты](linux/after-install/fonts.md)

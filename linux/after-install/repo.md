@@ -67,7 +67,7 @@ flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/fl
 
 ### Оптимизированные пакеты
 
-Репозиторий, аналогичный официальному репозиторию Arch, но его пакеты собраны для процессоров x86-64.
+`ALHP` - репозиторий, аналогичный официальному репозиторию Arch, но его пакеты собраны для процессоров x86-64.
 
 {% embed url="https://github.com/an0nfunc/ALHP" %}
 

@@ -24,8 +24,8 @@
 
 Помощник для управления пакетами в Arch Linux, упрощает установку и управление пакетами из AUR (см. После установки - Репозитории).
 
-{% content-ref url="../after-install/aur.md" %}
-[aur.md](../after-install/aur.md)
+{% content-ref url="../after-install/repo.md" %}
+[repo.md](../after-install/repo.md)
 {% endcontent-ref %}
 
 Найти пакет в репозитории AUR:
