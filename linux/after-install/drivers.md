@@ -13,15 +13,15 @@ pacman -Qs nvidia
 local/egl-wayland 2:1.1.13-2.1
     EGLStream-based Wayland external platform
 local/lib32-nvidia-utils 550.90.07-1
-    NVIDIA drivers utilities (32-bit, beta version)
+    NVIDIA drivers utilities (32-bit)
 local/libvdpau 1.5-2.1
     Nvidia VDPAU library
 local/nvidia-open-dkms 550.90.07-1
-    NVIDIA open GPU kernel modules (sources; beta version)
+    NVIDIA open GPU kernel modules
 local/nvidia-settings 550.90.07-1
-    Tool for configuring the NVIDIA graphics driver (beta version)
+    Tool for configuring the NVIDIA graphics driver
 local/nvidia-utils 550.90.07-1
-    NVIDIA drivers utilities (beta version)
+    NVIDIA drivers utilities
 ```
 {% endcode %}
 
