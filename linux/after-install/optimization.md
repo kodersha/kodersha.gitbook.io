@@ -31,7 +31,7 @@ sudo cpupower frequency-set -g performance
 cpupower frequency-info
 ```
 
-***
+
 
 ### zram
 
@@ -46,8 +46,6 @@ zram - создаёт сжатый блок памяти прямо в ОЗУ и
 
 zswap - добавляет прослойку сжатия между ОЗУ и обычным swap на диске, чтобы снизить нагрузку на диск и улучшить производительность.
 {% endhint %}
-
-
 
 Перед установкой `zram` нужно отключить `zswap`, для этого отредактируйте параметры ядра. Например в `grub`:
 
@@ -70,8 +68,6 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet zswap.enabled=0"
 ```sh
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
-
 
 Установите zram-generator:
 
@@ -111,6 +107,8 @@ fs-type = swap
 ```bash
 sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0.service
 ```
+
+
 
 ***
 

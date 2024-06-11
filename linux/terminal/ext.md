@@ -68,7 +68,7 @@ use_root = false
 
 {% embed url="https://github.com/topgrade-rs/topgrade" %}
 
-***
+
 
 ### fastfetch
 
@@ -278,7 +278,7 @@ nano ~/.config/fastfetch/logo.txt
 
 {% embed url="https://github.com/fastfetch-cli/fastfetch" %}
 
-***
+
 
 ### zsh
 

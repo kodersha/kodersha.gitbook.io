@@ -22,7 +22,7 @@ sudo systemctl enable --now bluetooth
 ```
 {% endcode %}
 
-***
+
 
 ### tor
 
@@ -43,8 +43,6 @@ yay -S obfs4proxy
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 Назначьте пользователя и права на папку:
 
@@ -67,8 +65,6 @@ sudo nano /lib/systemd/system/tor.service
 User=tor
 Group=tor
 ```
-
-
 
 Конфигурация мостов:
 
@@ -104,8 +100,6 @@ DataDirectory /var/lib/tor
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 Обновите конфигурацию и запустите tor сервис:
 

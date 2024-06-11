@@ -130,7 +130,7 @@ sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-
 Удаление пакета `malcontent` удаляет `flatpak` в качестве зависимости. Если он всё же нужен, установите командой `sudo pacman -S flatpak`
 {% endhint %}
 
-***
+
 
 ### Отключение лишних служб
 
@@ -170,7 +170,7 @@ systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 ```
 {% endcode %}
 
-***
+
 
 ### Патчи производительности
 
@@ -180,7 +180,7 @@ yay -S gnome-shell-performance mutter-performance
 ```
 {% endcode %}
 
-***
+
 
 ### Терминал вместо консоли
 
@@ -196,7 +196,7 @@ sudo pacman -Rns gnome-console
 ```
 {% endcode %}
 
-***
+
 
 ### Менеджер расширений GNOME
 
@@ -208,7 +208,7 @@ yay -S extension-manager
 
 {% embed url="https://mattjakeman.com/apps/extension-manager.html" %}
 
-***
+
 
 ### Редактор меню
 
@@ -220,7 +220,7 @@ yay -S libre-menu-editor
 
 {% embed url="https://codeberg.org/libre-menu-editor/libre-menu-editor" %}
 
-***
+
 
 ### Смена раскладки клавиатуры на Shift Alt
 

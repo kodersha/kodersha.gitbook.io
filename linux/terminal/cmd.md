@@ -7,14 +7,14 @@
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Ss <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
 
-Либо найти нужный пакет поиском на [archlinux.org/packages](https://archlinux.org/packages/)
-
-
-
 Установить пакет из официального репозитория:
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -S <a data-footnote-ref href="#user-content-fn-2">pkg</a>
 </code></pre>
+
+{% embed url="https://archlinux.org/packages/" %}
+
+
 
 ### Обновление
 
@@ -26,6 +26,8 @@ sudo pacman -Syu
 ```
 {% endcode %}
 
+
+
 ### Удаление
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Rns <a data-footnote-ref href="#user-content-fn-3">pkg</a>
@@ -36,6 +38,8 @@ sudo pacman -Syu
 
 Опция `-Rsc` используется для удаления указанного пакета и всех его зависимостей, независимо от того, требуются ли они другими пакетами. Эта опция может привести к удалению большого количества пакетов, поэтому её следует использовать с осторожностью.
 {% endhint %}
+
+
 
 ### Очистка
 

@@ -4,7 +4,7 @@
 
 {% embed url="https://aur.archlinux.org/packages" %}
 
-***
+
 
 ### yay
 
@@ -23,7 +23,7 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 {% embed url="https://github.com/Jguer/yay" %}
 
-***
+
 
 ### flatpak
 
