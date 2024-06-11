@@ -4,9 +4,11 @@
 
 Для перехода на beta версию драйверов сначала удалите текущие. Узнать какие драйвера установлены можно командой:
 
+{% code overflow="wrap" %}
 ```bash
 pacman -Qs nvidia
 ```
+{% endcode %}
 
 {% code title="Пример" %}
 ```ini
@@ -47,6 +49,16 @@ yay -S lib32-nvidia-utils-beta nvidia-utils-beta nvidia-open-beta-dkms nvidia-se
 
 Установите `steam` обратно:
 
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -S steam
 ```
+{% endcode %}
+
+Перезагрузитесь:
+
+{% code overflow="wrap" %}
+```bash
+sudo reboot
+```
+{% endcode %}
