@@ -11,12 +11,12 @@
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Ss <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
 
-{% embed url="https://archlinux.org/packages/" %}
-
 Установить пакет:
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -S <a data-footnote-ref href="#user-content-fn-2">pkg</a>
 </code></pre>
+
+{% embed url="https://archlinux.org/packages/" %}
 
 
 
@@ -33,12 +33,12 @@
 <pre class="language-bash"><code class="lang-bash">yay -Ss <a data-footnote-ref href="#user-content-fn-3">pkg</a>
 </code></pre>
 
-{% embed url="https://aur.archlinux.org/packages" %}
-
 Установить пакет из AUR:
 
 <pre><code>yay -S <a data-footnote-ref href="#user-content-fn-4">pkg</a>
 </code></pre>
+
+{% embed url="https://aur.archlinux.org/packages" %}
 
 
 
