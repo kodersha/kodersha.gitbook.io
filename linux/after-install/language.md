@@ -14,7 +14,7 @@ sudo pacman -S --needed adobe-source-sans-pro-fonts ttf-dejavu ttf-opensans noto
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S nerd-fonts
+sudo pacman -S --needed nerd-fonts
 ```
 {% endcode %}
 
@@ -24,7 +24,7 @@ sudo pacman -S nerd-fonts
 
 {% code overflow="wrap" %}
 ```bash
-yay -S all-repository-fonts
+yay -S --needed all-repository-fonts
 ```
 {% endcode %}
 
