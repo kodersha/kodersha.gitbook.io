@@ -1,6 +1,6 @@
 # Table of contents
 
-* [👋 Что здесь?](README.md)
+* [👋 Введение](README.md)
 * [🚀 После установки](after-install/README.md)
   * [Репозитории](after-install/repo.md)
   * [Драйвера](after-install/drivers.md)
