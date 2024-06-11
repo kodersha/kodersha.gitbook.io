@@ -18,9 +18,9 @@ local/libvdpau 1.5-2.1
     Nvidia VDPAU library
 local/nvidia-open-dkms 550.90.07-1
     NVIDIA open GPU kernel modules (sources; beta version)
-local/nvidia-settings-beta 550.90.07-1
+local/nvidia-settings 550.90.07-1
     Tool for configuring the NVIDIA graphics driver (beta version)
-local/nvidia-utils-beta 550.90.07-1
+local/nvidia-utils 550.90.07-1
     NVIDIA drivers utilities (beta version)
 ```
 {% endcode %}
