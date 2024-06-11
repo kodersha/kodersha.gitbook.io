@@ -14,7 +14,7 @@ yay -S topgrade
 ```
 {% endcode %}
 
-Обновить всё одной командой:
+Обновите всё одной командой:
 
 {% code overflow="wrap" %}
 ```bash
