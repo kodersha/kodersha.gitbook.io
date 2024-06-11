@@ -7,7 +7,7 @@
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Ss <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
 
-_Либо найти нужный пакет поиском на_ [_archlinux.org/packages_](https://archlinux.org/packages/)
+Либо найти нужный пакет поиском на [archlinux.org/packages](https://archlinux.org/packages/)
 
 
 

@@ -66,6 +66,10 @@ use_root = false
 {% endtab %}
 {% endtabs %}
 
+{% embed url="https://github.com/topgrade-rs/topgrade" %}
+
+***
+
 ### fastfetch
 
 {% code title="Установите fastfetch" overflow="wrap" %}
@@ -271,6 +275,10 @@ nano ~/.config/fastfetch/logo.txt
 ```
 {% endtab %}
 {% endtabs %}
+
+{% embed url="https://github.com/fastfetch-cli/fastfetch" %}
+
+***
 
 ### zsh
 

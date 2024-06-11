@@ -31,7 +31,7 @@ sudo cpupower frequency-set -g performance
 cpupower frequency-info
 ```
 
-
+***
 
 ### zram
 
@@ -111,3 +111,9 @@ fs-type = swap
 ```bash
 sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0.service
 ```
+
+***
+
+#### Источник:
+
+{% embed url="https://ventureo.codeberg.page/" %}

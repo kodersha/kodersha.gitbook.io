@@ -36,7 +36,9 @@ location = "quay.io"
 {% endtab %}
 {% endtabs %}
 
+{% embed url="https://podman.io/" %}
 
+***
 
 ### github
 
@@ -50,7 +52,7 @@ git config --global user.email johndoe@example.com
 git config --global core.compression 0
 ```
 
-
+***
 
 ### visual studio code
 
@@ -60,7 +62,7 @@ yay -S visual-studio-code-bin
 ```
 {% endcode %}
 
-
+***
 
 ### figma
 

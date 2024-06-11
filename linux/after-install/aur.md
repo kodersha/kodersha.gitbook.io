@@ -2,7 +2,7 @@
 
 Пользовательский репозиторий AUR (Arch User Repository) - поддерживаемое сообществом хранилище программ для пользователей Arch.
 
-[aur.archlinux.org](https://aur.archlinux.org)
+{% embed url="https://aur.archlinux.org/packages" %}
 
 ***
 
@@ -21,7 +21,7 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">yay -S <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
 
-[github.com/jguer/yay](https://github.com/Jguer/yay)
+{% embed url="https://github.com/Jguer/yay" %}
 
 ***
 
@@ -44,5 +44,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 {% endcode %}
+
+{% embed url="https://flatpak.org/" %}
 
 [^1]: Название пакета AUR
