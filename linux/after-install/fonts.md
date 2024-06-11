@@ -34,7 +34,7 @@ yay -S all-repository-fonts
 
 {% file src="../../.gitbook/assets/windows.zip" %}
 
-Скачайте архив, распакуйте и скопируйте папку `windows` по пути:
+Скачайте архив, распакуйте и скопируйте папку `windows` в домашнюю папку:
 
 ```bash
 ~/.local/share/fonts
