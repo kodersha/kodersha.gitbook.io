@@ -2,19 +2,27 @@
 
 ### Установка
 
-Найти пакет в официальном репозитории:
+#### pacman
+
+Найти пакет в репозитории:
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Ss <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
 
 {% embed url="https://archlinux.org/packages/" %}
 
-Установить пакет из официального репозитория:
+Установить пакет:
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -S <a data-footnote-ref href="#user-content-fn-2">pkg</a>
 </code></pre>
 
 
+
+#### yay
+
+{% content-ref url="../after-install/aur.md" %}
+[aur.md](../after-install/aur.md)
+{% endcontent-ref %}
 
 Найти пакет в репозитории AUR:
 
@@ -43,6 +51,8 @@ sudo pacman -Syu
 
 
 ### Удаление
+
+Удалить пакет:
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Rns <a data-footnote-ref href="#user-content-fn-5">pkg</a>
 </code></pre>
