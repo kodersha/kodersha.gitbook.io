@@ -33,7 +33,7 @@ local/nvidia-utils 550.90.07-1
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rns lib32-nvidia-utils nvidia-open-dkms nvidia-settings nvidia-utils steam
+sudo pacman -Rns lib32-nvidia-utils nvidia-utils nvidia-open-dkms nvidia-settings steam
 ```
 {% endcode %}
 
@@ -41,7 +41,7 @@ sudo pacman -Rns lib32-nvidia-utils nvidia-open-dkms nvidia-settings nvidia-util
 
 {% code overflow="wrap" %}
 ```bash
-yay -S lib32-nvidia-utils-beta nvidia-open-beta-dkms nvidia-settings-beta nvidia-utils-beta
+yay -S lib32-nvidia-utils-beta nvidia-utils-beta nvidia-open-beta-dkms nvidia-settings-beta
 ```
 {% endcode %}
 
