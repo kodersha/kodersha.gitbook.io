@@ -4,6 +4,8 @@
 
 #### pacman
 
+Пакетный менеджер Arch Linux.  Позволяет устанавливать, обновлять, удалять пакеты и их зависимости.
+
 Найти пакет в репозитории:
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Ss <a data-footnote-ref href="#user-content-fn-1">pkg</a>
@@ -19,6 +21,8 @@
 
 
 #### yay
+
+Помощник для управления пакетами в Arch Linux, упрощает установку и управление пакетами из AUR (см. После установки - Репозитории).
 
 {% content-ref url="../after-install/aur.md" %}
 [aur.md](../after-install/aur.md)
@@ -48,6 +52,16 @@ sudo pacman -Syu
 ```
 {% endcode %}
 
+Или с помощью `topgrade` (см. Терминал - Расширения):
+
+```bash
+topgrade
+```
+
+{% content-ref url="ext.md" %}
+[ext.md](ext.md)
+{% endcontent-ref %}
+
 
 
 ### Удаление
@@ -67,7 +81,7 @@ sudo pacman -Syu
 
 ### Очистка
 
-Удаление ненужных пакетов с зависимостями:
+Удаление неиспользуемых пакетов с зависимостями:
 
 {% code overflow="wrap" %}
 ```bash
