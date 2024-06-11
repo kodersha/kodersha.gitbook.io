@@ -1,10 +1,12 @@
-# Шрифты
+# Язык и шрифты
+
+### Шрифты
 
 Установите базовый набор шрифтов:
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S adobe-source-sans-pro-fonts ttf-dejavu ttf-opensans noto-fonts freetype2 terminus-font ttf-bitstream-vera ttf-dejavu ttf-droid ttf-fira-mono ttf-fira-sans ttf-freefont ttf-inconsolata ttf-liberation libertinus-font
+sudo pacman -S --needed adobe-source-sans-pro-fonts ttf-dejavu ttf-opensans noto-fonts freetype2 terminus-font ttf-bitstream-vera ttf-dejavu ttf-droid ttf-fira-mono ttf-fira-sans ttf-freefont ttf-inconsolata ttf-liberation libertinus-font
 ```
 {% endcode %}
 
@@ -44,4 +46,14 @@ yay -S all-repository-fonts
 
 ```bash
 fc-cache -v
+```
+
+
+
+### Проверка орфографии
+
+Системная проверка орфографии, аналогичная той, что есть в windows. Подчёркивает слова с ашибками. Установить:
+
+```bash
+sudo pacman -S --needed hunspell hunspell-ru hunspell-en_us
 ```

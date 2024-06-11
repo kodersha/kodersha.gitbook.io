@@ -8,7 +8,7 @@
   * [Репозитории](linux/after-install/repo.md)
   * [Драйвера](linux/after-install/drivers.md)
   * [Оптимизация](linux/after-install/optimization.md)
-  * [Шрифты](linux/after-install/fonts.md)
+  * [Язык и шрифты](linux/after-install/fonts.md)
 * [Среды рабочего стола](linux/de/README.md)
   * [GNOME](linux/de/gnome.md)
 * [Терминал](linux/terminal/README.md)
