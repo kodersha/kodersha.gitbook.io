@@ -92,7 +92,7 @@ sudo pacman -S fastfetch
 
 <figure><img src="../../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
 
-Создать пользовательский файл конфигурации:
+Можно создать пользовательский файл конфигурации:
 
 {% code overflow="wrap" %}
 ```bash
@@ -100,7 +100,7 @@ fastfetch --gen-config-force
 ```
 {% endcode %}
 
-Конфигурация:
+Пример конфигурации:
 
 {% tabs %}
 {% tab title="config.jsonc" %}
