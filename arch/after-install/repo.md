@@ -10,7 +10,7 @@
 
 Установщик пакетов из AUR репозитория.
 
-{% embed url="https://github.com/Jguer/yay" %}
+{% @github-files/github-code-block url="https://github.com/Jguer/yay" %}
 
 Установите `yay`:
 
@@ -24,8 +24,6 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">yay -S <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
-
-
 
 ### flatpak
 
@@ -51,13 +49,11 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 {% embed url="https://flathub.org/" %}
 
-
-
 ### Оптимизированные пакеты
 
 `ALHP` - репозиторий, аналогичный официальному репозиторию Arch, но его пакеты собраны для процессоров x86-64.
 
-{% embed url="https://github.com/an0nfunc/ALHP" %}
+{% @github-files/github-code-block url="https://github.com/an0nfunc/ALHP" %}
 
 `x86-64-v2`, `x86-64-v3` и `x86-64-v4` - разные группы дополнительных возможностей для 64-битных процессоров (Таких как Intel и AMD). Эти группы помогают разработчикам программного обеспечения понять, какие именно команды и возможности они могут использовать в своём программном обеспечении, чтобы оно работало наиболее эффективно на различных процессорах. Чем выше номер уровня, тем более новые и продвинутые команды могут поддерживать процессоры.
 
