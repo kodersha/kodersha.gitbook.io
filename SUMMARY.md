@@ -6,8 +6,9 @@
 
 * [После установки](linux/after-install/README.md)
   * [Репозитории](linux/after-install/repo.md)
-  * [Настройка GNOME](linux/after-install/gnome.md)
+  * [Драйвера](linux/after-install/drivers.md)
   * [Оптимизация](linux/after-install/optimization.md)
+  * [Настройка GNOME](linux/after-install/gnome.md)
   * [Шрифты](linux/after-install/fonts.md)
 * [Терминал](linux/terminal/README.md)
   * [Команды](linux/terminal/cmd.md)
