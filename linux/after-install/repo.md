@@ -1,14 +1,14 @@
 # Репозитории
 
+### AUR
+
 Пользовательский репозиторий AUR (Arch User Repository) - поддерживаемое сообществом хранилище программ для пользователей Arch.
 
 {% embed url="https://aur.archlinux.org/packages" %}
 
+#### yay
 
-
-### yay
-
-Помощник для управления пакетами в Arch Linux, упрощает установку и управление пакетами из AUR.
+Установщик пакетов из AUR репозитория.
 
 {% embed url="https://github.com/Jguer/yay" %}
 
