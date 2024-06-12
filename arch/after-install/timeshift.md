@@ -21,7 +21,7 @@ yay -S timeshift cronie
 
 {% code overflow="wrap" %}
 ```bash
-systemctl enable --now cronie
+sudo systemctl enable --now cronie
 ```
 {% endcode %}
 
@@ -37,7 +37,7 @@ sudo pacman -S grub-btrfs
 
 {% code overflow="wrap" %}
 ```bash
-sudo systemctl start grub-btrfsd
+sudo systemctl enable --now grub-btrfsd
 ```
 {% endcode %}
 
