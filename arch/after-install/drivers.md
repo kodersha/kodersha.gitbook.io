@@ -1,5 +1,15 @@
 # Драйвера
 
+### Кодеки
+
+{% code overflow="wrap" %}
+```bash
+yay -S gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
+```
+{% endcode %}
+
+###
+
 ### NVIDIA beta
 
 Для перехода на beta версию драйверов сначала удалите текущие. Узнать какие драйвера установлены можно командой:
@@ -55,7 +65,7 @@ sudo pacman -S steam
 ```
 {% endcode %}
 
-Перезагрузитесь:
+Перезагрузите систему:
 
 {% code overflow="wrap" %}
 ```bash

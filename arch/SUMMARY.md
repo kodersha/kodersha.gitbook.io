@@ -6,6 +6,7 @@
   * [Драйвера](after-install/drivers.md)
   * [Оптимизация](after-install/optimization.md)
   * [Язык и шрифты](after-install/language.md)
+  * [Бэкапы](after-install/timeshift.md)
 * [☄️ Среды рабочего стола](de/README.md)
   * [GNOME](de/gnome.md)
 * [👾 Терминал](terminal/README.md)
