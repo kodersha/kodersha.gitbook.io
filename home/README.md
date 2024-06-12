@@ -14,3 +14,6 @@ layout:
 
 # Руководства
 
+{% hint style="danger" %}
+Руководства в разработке.
+{% endhint %}
