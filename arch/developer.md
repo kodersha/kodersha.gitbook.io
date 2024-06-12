@@ -36,8 +36,6 @@ location = "quay.io"
 {% endtab %}
 {% endtabs %}
 
-{% embed url="https://podman.io/" %}
-
 ### github
 
 ```bash

@@ -29,8 +29,6 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 Позволяет устанавливать и запускать приложения в изолированных контейнерах, обеспечивая совместимость между дистрибутивами, автоматическое управление зависимостями и безопасное обновление через репозитории, такие как `flathub`.
 
-{% embed url="https://flatpak.org/" %}
-
 Установите `flatpak`:
 
 {% code overflow="wrap" %}
