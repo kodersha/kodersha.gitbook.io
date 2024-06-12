@@ -1,3 +1,4 @@
 # Table of contents
 
-* [Page](README.md)
+* [👋 Введение](README.md)
+* [🖌️ Пользовательский шаблон](template.md)
