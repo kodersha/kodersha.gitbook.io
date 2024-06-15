@@ -8,10 +8,10 @@ sudo pacman -S podman podman-compose aardvark-dns
 
 #### Зеркало docker
 
-На случай блокировки docker.io. Отредактируйте конфигурацию:
-
 {% tabs %}
 {% tab title="registries.conf" %}
+На случай блокировки docker.io. Отредактируйте конфигурацию:
+
 ```bash
 sudo nano /etc/containers/registries.conf
 ```
@@ -36,17 +36,29 @@ location = "quay.io"
 {% endtab %}
 {% endtabs %}
 
+
+
 ### github
 
+{% tabs %}
+{% tab title="Установить" %}
 ```bash
 sudo pacman -S --needed git github-cli gitui
 ```
+{% endtab %}
+
+{% tab title="→" %}
+Конфигурация, укажите имя и email как у вашего аккаунта на github.
 
 ```bash
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 git config --global core.compression 0
 ```
+{% endtab %}
+{% endtabs %}
+
+
 
 ### visual studio code
 
@@ -55,9 +67,3 @@ git config --global core.compression 0
 yay -S visual-studio-code-bin
 ```
 {% endcode %}
-
-### figma
-
-```bash
-yay -S figma-linux figma-agent-linux
-```
