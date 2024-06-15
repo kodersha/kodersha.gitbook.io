@@ -28,9 +28,9 @@ sudo pacman -S --needed nvidia nvidia-utils lib32-nvidia-utils libvdpau lib32-li
 ```
 {% endcode %}
 
+<details>
 
-
-### NVIDIA beta
+<summary>NVIDIA beta</summary>
 
 Для перехода на beta версию драйверов сначала удалите текущие. Узнать какие драйвера установлены можно командой:
 
@@ -59,9 +59,7 @@ local/nvidia-utils 550.90.07-1
 
 Удалите найденные драйвера `nvidia`. Лучше всего в безопасной среде, например в консоли (Ctrl+Alt+F3). Также придётся удалить `steam` как зависимость.
 
-{% hint style="warning" %}
-У вас могут быть другие драйвера, например `nvidia-dkms` или `nvidia`, а не `nvidia-open-dkms`.
-{% endhint %}
+_У вас могут быть другие драйвера, например `nvidia-dkms` или `nvidia`, а не `nvidia-open-dkms`._
 
 {% code overflow="wrap" %}
 ```bash
@@ -92,6 +90,8 @@ sudo pacman -S steam
 sudo reboot
 ```
 {% endcode %}
+
+</details>
 
 
 
@@ -125,20 +125,38 @@ sudo pacman -S --needed bluez bluez-utils
 
 Включите сервис:
 
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><strong>sudo systemctl enable --now bluetooth
-</strong></code></pre>
+```bash
+sudo systemctl enable --now bluetooth
+```
 
 
 
 ### Интернет
 
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><strong>sudo pacman -S --needed networkmanager networkmanager-openvpn networkmanager-pptp networkmanager-vpnc
-</strong></code></pre>
+{% code overflow="wrap" %}
+```bash
+sudo pacman -S --needed networkmanager networkmanager-openvpn networkmanager-pptp networkmanager-vpnc
+```
+{% endcode %}
 
 И включите сервис:
 
 {% code overflow="wrap" %}
 ```bash
 sudo systemctl enable --now NetworkManager
+```
+{% endcode %}
+
+
+
+### Одной командой
+
+{% hint style="warning" %}
+Драйвера `nvidia`  и кодеки не включены.
+{% endhint %}
+
+{% code overflow="wrap" %}
+```bash
+sudo pacman -S --needed mesa lib32-mesa vulkan-icd-loader lib32-vulkan-icd-loader alsa-utils pipewire pipewire-pulse pipewire-jack wireplumber bluez bluez-utils networkmanager networkmanager-openvpn networkmanager-pptp networkmanager-vpnc
 ```
 {% endcode %}
