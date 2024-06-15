@@ -26,45 +26,43 @@ yay -S --needed wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib
 
 ### steam
 
-{% tabs %}
-{% tab title=" " %}
 {% code overflow="wrap" %}
 ```bash
 sudo pacman -S steam
 ```
 {% endcode %}
 
-#### mangohud
-
-{% code overflow="wrap" %}
+{% code title="mangohud" overflow="wrap" %}
 ```bash
-sudo pacman -S mangohud
+sudo pacman -S mangohu
 ```
 {% endcode %}
 
-#### gamescope
-
-{% code overflow="wrap" %}
+{% code title="gamescope" overflow="wrap" %}
 ```bash
 sudo pacman -S gamescope
 ```
 {% endcode %}
 
-#### gamemode
-
+{% tabs %}
+{% tab title="gamemode" %}
 {% code overflow="wrap" %}
 ```bash
 sudo pacman -S gamemode lib32-gamemode
 ```
 {% endcode %}
+{% endtab %}
 
-Отредактируйте параметры запуска игры в Steam, для включения `gamemode` режима:
+{% tab title="→" %}
+Отредактируйте параметры запуска игры в `steam`, для включения `gamemode` режима:
 
 {% code overflow="wrap" %}
 ```ini
 gamemoderun %command%
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ***
 
@@ -73,8 +71,6 @@ gamemoderun %command%
 sudo pacman -S --needed mangohud gamescope gamemode lib32-gamemode steam
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
 
 
