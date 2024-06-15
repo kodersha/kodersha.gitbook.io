@@ -1,14 +1,34 @@
 # Драйвера
 
-### Кодеки
+### Mesa
 
 {% code overflow="wrap" %}
 ```bash
-yay -S gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
+sudo pacman -S --needed mesa lib32-mesa
 ```
 {% endcode %}
 
-###
+
+
+### Vulkan
+
+{% code overflow="wrap" %}
+```bash
+sudo pacman -S --needed vulkan-icd-loader lib32-vulkan-icd-loader
+```
+{% endcode %}
+
+
+
+### NVIDIA
+
+{% code overflow="wrap" %}
+```bash
+sudo pacman -S --needed nvidia nvidia-utils lib32-nvidia-utils libvdpau lib32-libvdpau
+```
+{% endcode %}
+
+
 
 ### NVIDIA beta
 
@@ -70,5 +90,55 @@ sudo pacman -S steam
 {% code overflow="wrap" %}
 ```bash
 sudo reboot
+```
+{% endcode %}
+
+
+
+### Кодеки
+
+{% code overflow="wrap" %}
+```bash
+yay -S --needed gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
+```
+{% endcode %}
+
+
+
+### Аудио
+
+{% code overflow="wrap" %}
+```bash
+sudo pacman -S --needed alsa-utils pipewire pipewire-pulse pipewire-jack wireplumber
+```
+{% endcode %}
+
+
+
+### Bluetooth
+
+{% code overflow="wrap" %}
+```bash
+sudo pacman -S --needed bluez bluez-utils
+```
+{% endcode %}
+
+Включите сервис:
+
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><strong>sudo systemctl enable --now bluetooth
+</strong></code></pre>
+
+
+
+### Интернет
+
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><strong>sudo pacman -S --needed networkmanager networkmanager-openvpn networkmanager-pptp networkmanager-vpnc
+</strong></code></pre>
+
+И включите сервис:
+
+{% code overflow="wrap" %}
+```bash
+sudo systemctl enable --now NetworkManager
 ```
 {% endcode %}

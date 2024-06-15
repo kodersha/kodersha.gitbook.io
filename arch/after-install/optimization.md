@@ -1,5 +1,9 @@
 # Оптимизация
 
+{% hint style="danger" %}
+Это не рекомендация к установке, система обычно и без этого работает хорошо «из коробки».
+{% endhint %}
+
 ### cpupower
 
 Используется для управления настройками процессора, включая выбор профиля энергопотребления (scaling governor).
@@ -37,8 +41,6 @@ sudo cpupower frequency-set -g powersave
 
 {% embed url="https://wiki.archlinux.org/title/CPU_frequency_scaling" %}
 
-
-
 ### zram
 
 `zram` позволяет создать в оперативной памяти сжатый блок, который можно использовать как виртуальную память (swap). Основная идея заключается в том, что сжатие данных может позволить хранить больше данных в оперативной памяти, чем без сжатия.
@@ -47,7 +49,7 @@ sudo cpupower frequency-set -g powersave
 
 Проще говоря, она сжимает данные, чтобы вместить больше информации в этот блок памяти. Это особенно полезно на устройствах с ограниченным количеством ОЗУ, поскольку позволяет использовать память эффективнее.
 
-Стандартный `zswap` работает немного по-другому. Он добавляет уровень сжатия между оперативной памятью и дисковым swap. Когда системе нужно выгрузить данные из ОЗУ и записать их в swap, zswap сначала пытается сжать эти данные и хранить их в специальной области памяти. Если в этой области не хватает места, данные отправляются на диск (обычный swap).&#x20;
+Стандартный `zswap` работает немного по-другому. Он добавляет уровень сжатия между оперативной памятью и дисковым swap. Когда системе нужно выгрузить данные из ОЗУ и записать их в swap, zswap сначала пытается сжать эти данные и хранить их в специальной области памяти. Если в этой области не хватает места, данные отправляются на диск (обычный swap).
 
 {% hint style="info" %}
 zram - создаёт сжатый блок памяти прямо в ОЗУ и использует его как swap.
@@ -122,8 +124,6 @@ sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0.se
 ```
 {% endcode %}
 
-
-
 ### ananicy-cpp
 
 Служба отслеживает активные процессы и назначает им приоритеты в соответствии с правилами.
@@ -156,8 +156,6 @@ yay -S cachyos-ananicy-rules-git
 
 {% embed url="https://github.com/CachyOS/ananicy-rules" %}
 
-
-
 ### irqbalance
 
 Сервис предназначен для управления распределением аппаратных прерываний (IRQ) между процессорными ядрами. Он автоматически распределяет IRQ так, чтобы снизить вероятность перегрузки одного ядра процессора, что может улучшить общую производительность системы.
@@ -177,8 +175,6 @@ sudo systemctl enable --now irqbalance
 {% endcode %}
 
 {% embed url="https://github.com/Irqbalance/irqbalance" %}
-
-
 
 ### uksmd
 
@@ -208,8 +204,89 @@ sudo systemctl enable --now uksmd
 
 
 
+### Оптимизированные пакеты
+
+`ALHP` - репозиторий, аналогичный официальному репозиторию Arch, но его пакеты собраны для процессоров x86-64.
+
+{% @github-files/github-code-block url="https://github.com/an0nfunc/ALHP" %}
+
+`x86-64-v2`, `x86-64-v3` и `x86-64-v4` - разные группы дополнительных возможностей для 64-битных процессоров (Таких как Intel и AMD). Эти группы помогают разработчикам программного обеспечения понять, какие именно команды и возможности они могут использовать в своём программном обеспечении, чтобы оно работало наиболее эффективно на различных процессорах. Чем выше номер уровня, тем более новые и продвинутые команды могут поддерживать процессоры.
+
+Определите какую версию поддерживает процессор:
+
+```bash
+/lib/ld-linux-x86-64.so.2 --help
+```
+
+{% hint style="danger" %}
+Будьте внимательны, не добавляйте неподдерживаемые версии репозиториев, это сломает систему.
+{% endhint %}
+
+<pre data-title="Пример"><code>Subdirectories of glibc-hwcaps directories, in priority order:
+  x86-64-v4
+  x86-64-v3 <a data-footnote-ref href="#user-content-fn-1">(supported, searched)</a>
+  x86-64-v2 (supported, searched)
+</code></pre>
+
+Например процессор поддерживает `v2` и `v3` (supported, searched), значит можно использовать репозиторий `v3`.
+
+Установите ключи и mirrorlist:
+
+{% code overflow="wrap" %}
+```bash
+yay -S alhp-keyring alhp-mirrorlist
+```
+{% endcode %}
+
+Отредактируйте конфигурацию pacman:
+
+{% tabs %}
+{% tab title="pacman.conf" %}
+{% code overflow="wrap" %}
+```bash
+sudo nano /etc/pacman.conf
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="→" %}
+Добавьте репозитории в конфигурацию:
+
+{% code title="Например для v3" %}
+```ini
+[core-x86-64-v3]
+Include = /etc/pacman.d/alhp-mirrorlist
+
+[extra-x86-64-v3]
+Include = /etc/pacman.d/alhp-mirrorlist
+
+[core]
+Include = /etc/pacman.d/mirrorlist
+
+[extra]
+Include = /etc/pacman.d/mirrorlist
+
+# if you need [multilib] support
+[multilib-x86-64-v3]
+Include = /etc/pacman.d/alhp-mirrorlist
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+Обновите систему:
+
+```bash
+sudo pacman -Syyuu
+```
+
 ***
 
 #### Источник:
 
 {% embed url="https://ventureo.codeberg.page/" %}
+
+[^1]: Значит, что для вашего процессора подойдёт v3.

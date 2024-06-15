@@ -122,7 +122,7 @@ sudo pacman -Rns gnome-clocks
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs malcontent orca rygel
+sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs gnome-user-share malcontent orca rygel tracker3-miners gvfs-afc gvfs-dnssd gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb gvfs-wsdd gvfs-google gvfs-onedrive
 ```
 {% endcode %}
 
@@ -198,18 +198,6 @@ sudo pacman -Rns gnome-console
 
 
 
-### Менеджер расширений GNOME
-
-{% code overflow="wrap" %}
-```bash
-yay -S extension-manager
-```
-{% endcode %}
-
-{% embed url="https://mattjakeman.com/apps/extension-manager.html" %}
-
-
-
 ### Редактор меню
 
 {% code overflow="wrap" %}
@@ -220,9 +208,17 @@ yay -S libre-menu-editor
 
 {% embed url="https://codeberg.org/libre-menu-editor/libre-menu-editor" %}
 
+### Менеджер расширений GNOME
 
+{% code overflow="wrap" %}
+```bash
+yay -S extension-manager
+```
+{% endcode %}
 
-### Смена раскладки клавиатуры на Shift Alt
+{% embed url="https://mattjakeman.com/apps/extension-manager.html" %}
+
+### Смена раскладки клавиатуры на `Shift` + `Alt`
 
 {% code title="Shift + Alt" overflow="wrap" %}
 ```bash
