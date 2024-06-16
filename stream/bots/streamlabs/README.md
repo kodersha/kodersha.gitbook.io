@@ -12,7 +12,7 @@
 
 {% embed url="https://www.python.org/downloads/release/python-2713/" %}
 
-<figure><img src="../.gitbook/assets/ustanovka-gallery-01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-gallery-01.png" alt=""><figcaption></figcaption></figure>
 
 Выбираем платформу для стриминга. Создаём и авторизуем отдельный аккаунт для вашего бота, от имени которого он будет писать сообщения в чате.&#x20;
 
@@ -30,7 +30,7 @@
 
 У каждого сообщения имеются стандартные инструменты модерации - бан, таймаут или удаление сообщений. Вверху окна имеются кнопки макросов, о настройках которых будет рассказано позже.
 
-<figure><img src="../.gitbook/assets/ustanovka-07.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-07.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -38,7 +38,7 @@
 
 Окно настроек вашего стрима, работает только с `twitch`. Здесь можно выбрать категорию и название, запустить рекламу, если вы партнер, настроить автоматические хосты, в том числе для сообществ. Имеется помощник проведения рейдов. С его помощью можно провести рейд другого канала, а также указать количество баллов которые получат участники рейда.
 
-<figure><img src="../.gitbook/assets/ustanovka-08.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-08.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -54,7 +54,7 @@
 
 Раздел посвященный командам, в нём можно создавать свои собственные команды чата используя специальные переменные. Можно создавать свои группы для команд, например группа начинающаяся с `[GAME]`, будет работать только если вы стримите в категории этой игры. Пример `[GAME] The Outer Worlds`.
 
-<figure><img src="../.gitbook/assets/ustanovka-09.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-09.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -79,7 +79,7 @@
 
 Таймеры также можно разделять по группам, указывать им префикс `[GAME] Название игры` и эти таймеры будут работать только на стримах этой игры.
 
-<figure><img src="../.gitbook/assets/ustanovka-10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-10.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -95,7 +95,7 @@
 
 Здесь можно собирать крылатые цитаты сказанные вами во время стрима. Нажав шестеренку в правом верхнем углу раздела, вы можете настроить кому разрешено пользоваться командой и кому можно добавлять новые цитаты, выбрать формат даты и сам формат отображения цитаты. Каждая цитата будет содержать информацию о дате и рубрике стрима на момент её создания.
 
-<figure><img src="../.gitbook/assets/ustanovka-11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-11.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -112,7 +112,7 @@
 
 Аналогично разделу `Quotes` здесь можно добавлять любой контент, но в отличие от команды `!quote` здесь имя команды может быть любым, например `!gif`. Также можно включить или выключить отображение даты и рубрики у элемента команды.
 
-<figure><img src="../.gitbook/assets/ustanovka-12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-12.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -129,7 +129,7 @@
 
 Раздел посвященный раздачам. Здесь можно пригласить зрителей участвовать в раздаче чего бы то ни было, выбрать стоимость «билета» для участия в раздаче, если в настройках бота включена внутренняя валюта. Также можно отслеживать сколько у зрителя «билетов» и количество его сообщений в чате.
 
-<figure><img src="../.gitbook/assets/ustanovka-13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-13.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -145,7 +145,7 @@
 
 Система заказа музыки позволит создать свой плейлист воспроизведения музыки с YouTube, а также позволит зрителям заказывать музыку через чат, в том числе за баллы бота.
 
-<figure><img src="../.gitbook/assets/ustanovka-14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-14.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -165,7 +165,7 @@
 
 Здесь можно добавить воспроизведение звуковых файлов привязанных к командам чата. У каждого файла есть настройка громкости, сколько раз команда должна быть написана в чате, для воспроизведения и прочие настройки прав для использования.
 
-<figure><img src="../.gitbook/assets/ustanovka-15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-15.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -173,7 +173,7 @@
 
 Здесь можно создать очередь чтобы зрители могли подключаться к вашей мультиплеерной игре. Можно настроить стоимость в баллах бота, либо дать возможность занимать очередь только платным подписчикам.
 
-<figure><img src="../.gitbook/assets/ustanovka-16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-16.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -201,7 +201,7 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 
 В этом же каталоге можно найти множество других `txt` файлов, которые можно использовать для вывода разной статистики на экране стрима.
 
-<figure><img src="../.gitbook/assets/ustanovka-17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-17.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -219,7 +219,7 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 
 Баллы можно тратить в раздачах, голосованиях, играх и в целом в любых командах чата. В настройках можно указать количество получаемых баллов, период их получения, настроить группы и так далее.
 
-<figure><img src="../.gitbook/assets/ustanovka-18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-18.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -239,7 +239,7 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 
 Здесь можно редактировать их права, назначать редакторов команд бота, смотреть и изменять количество баллов, если они включены.
 
-<figure><img src="../.gitbook/assets/ustanovka-19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-19.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -247,7 +247,7 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 
 Система опросов позволяет запускать голосование в чате. При желании можно сделать голосование платным за баллы.
 
-<figure><img src="../.gitbook/assets/ustanovka-20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-20.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -263,7 +263,7 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 
 Система ставок с помощью которой зрители могут делать ставки на исход той или иной ситуации, выигрывая баллы. В настройках можно выбирать один или несколько выигрышных вариантов.
 
-<figure><img src="../.gitbook/assets/ustanovka-21.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-21.png" alt=""><figcaption></figcaption></figure>
 
 Доступные команды чата:
 
@@ -281,7 +281,7 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 
 Система событий позволяет боту автоматически приветствовать выбранного пользователя, текстом или проигрыванием аудио. При выбранном параметре `Join Events` срабатывает, когда зритель присоединяется к каналу. При `Speak Events` срабатывает, когда зритель напишет в чат.
 
-<figure><img src="../.gitbook/assets/ustanovka-22.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-22.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -289,7 +289,7 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 
 В этом разделе можно настроить автоматическую модерацию чата, удалять сообщения зрителей со ссылками, капсом, символами или запрещенными словами, настраивать систему наказаний за запрещенные сообщения, будь то просто удаление сообщения, таймаут или бан за повторные нарушения.
 
-<figure><img src="../.gitbook/assets/ustanovka-23.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-23.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -297,7 +297,7 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 
 В этом разделе можно настроить различные оповещения: при подписке на канал, при платной подписке, хосте, рейде. В том числе можно сделать звуковые оповещения.
 
-<figure><img src="../.gitbook/assets/ustanovka-24.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-24.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -305,7 +305,7 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 
 Этот раздел позволит настроить функции бота для вашего Discord канала. Оповещения о запуске стрима, сообщения по таймеру и автоматическое назначение роли новым участникам.
 
-<figure><img src="../.gitbook/assets/ustanovka-25.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-25.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -315,37 +315,37 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 
 В этом разделе можно настроить основные функции, такие как автоматическое подключение бота к чату, аудиовыходы, отображение счётчика зрителей и так далее.
 
-<figure><img src="../.gitbook/assets/ustanovka-26.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-26.png" alt=""><figcaption></figcaption></figure>
 
 #### Localization <a href="#localization" id="localization"></a>
 
 Раздел который позволяет перевести сообщения бота на любой другой язык.
 
-<figure><img src="../.gitbook/assets/ustanovka-27.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-27.png" alt=""><figcaption></figcaption></figure>
 
 #### Usage <a href="#usage" id="usage"></a>
 
 Здесь можно настроить где и как можно использовать команды бота.
 
-<figure><img src="../.gitbook/assets/ustanovka-28.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-28.png" alt=""><figcaption></figcaption></figure>
 
 #### Macros <a href="#macros" id="macros"></a>
 
 Здесь можно настроить сообщения макросов для семи различных кнопок, чтобы публиковать команды/сообщения в чате когда вы нажимаете на них.
 
-<figure><img src="../.gitbook/assets/ustanovka-29.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-29.png" alt=""><figcaption></figcaption></figure>
 
 #### Hotkeys <a href="#hotkeys" id="hotkeys"></a>
 
 С помощью горячих клавиш можно настроить включение и отключение треков из `Songrequest`, пропуск, увеличение и уменьшение громкости. Также здесь можно настроить клавиши для макросов из предыдущего раздела настроек.
 
-<figure><img src="../.gitbook/assets/ustanovka-30.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-30.png" alt=""><figcaption></figcaption></figure>
 
 #### Style <a href="#style" id="style"></a>
 
 Настройки внешнего вида бота, можно выбрать из нескольких скинов или выбрать свои цвета для разных элементов.
 
-<figure><img src="../.gitbook/assets/ustanovka-31.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ustanovka-31.png" alt=""><figcaption></figcaption></figure>
 
 
 
