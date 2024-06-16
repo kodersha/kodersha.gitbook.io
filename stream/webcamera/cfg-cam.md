@@ -4,9 +4,9 @@ description: >-
   Studio настройки веб-камеры сбрасываются на стандартные.
 ---
 
-# 📸 Сохранение настроек веб-камеры
+# Сохранение настроек веб-камеры в OBS Studio
 
-<figure><img src=".gitbook/assets/cover-webcamera.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cover-webcamera.png" alt=""><figcaption></figcaption></figure>
 
 
 

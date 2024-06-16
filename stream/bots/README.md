@@ -1,7 +1,7 @@
 ---
 layout:
   title:
-    visible: true
+    visible: false
   description:
     visible: false
   tableOfContents:
@@ -12,5 +12,5 @@ layout:
     visible: false
 ---
 
-# 🤖 Боты
+# 🤖 Чат-боты
 

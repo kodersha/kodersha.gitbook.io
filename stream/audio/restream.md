@@ -10,8 +10,8 @@
 
 Для рестрима на две площадки и вывода отдельных дорожек понадобится плагин Multiple RTMP для OBS Studio.
 
-{% content-ref url="../restrim-s-raznym-bitreitom.md" %}
-[restrim-s-raznym-bitreitom.md](../restrim-s-raznym-bitreitom.md)
+{% content-ref url="../restream/" %}
+[restream](../restream/)
 {% endcontent-ref %}
 
 

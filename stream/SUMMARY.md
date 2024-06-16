@@ -1,12 +1,14 @@
 # Table of contents
 
 * [👋 Введение](README.md)
-* [🌊 Рестрим с разным битрейтом](restrim-s-raznym-bitreitom.md)
+* [🌊 Рестрим](restream/README.md)
+  * [Рестрим с разным битрейтом](restream/multiple-rtmp.md)
 * [🎵 Аудиодорожки](audio/README.md)
   * [Win Capture Audio](audio/win-capture-audio.md)
   * [Voicemeeter Banana](audio/voicemeeter-banana.md)
   * [Разные аудиодорожки на разных стримах](audio/restream.md)
-* [📸 Веб-камера](webcamera.md)
+* [📸 Веб-камера](webcamera/README.md)
+  * [Сохранение настроек веб-камеры в OBS Studio](webcamera/cfg-cam.md)
 * [🤖 Чат-боты](bots/README.md)
   * [Streamlabs Chatbot](bots/streamlabs/README.md)
     * [Установка скриптов](bots/streamlabs/script-install.md)
