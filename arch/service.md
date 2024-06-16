@@ -14,6 +14,35 @@ layout:
 
 # 🔮 Сервисы
 
+### COMSS dns
+
+Установите `curl`
+
+{% code overflow="wrap" %}
+```bash
+sudo pacman -S --needed curl
+```
+{% endcode %}
+
+Запустите скрипт автоматической установки:
+
+{% code overflow="wrap" %}
+```bash
+sudo sh -c 'sh -c "$(curl -sL https://api.controld.com/dl)" -s comss'
+```
+{% endcode %}
+
+Для удаления:
+
+```bash
+sudo ctrld stop
+sudo ctrld uninstall
+```
+
+{% embed url="https://www.comss.ru/page.php?id=12918" %}
+
+
+
 ### tor
 
 Установите `tor` и `obfs4proxy`:
