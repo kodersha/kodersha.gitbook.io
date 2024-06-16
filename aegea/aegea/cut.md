@@ -6,6 +6,8 @@ description: >-
 
 # Кат
 
+<figure><img src="../.gitbook/assets/cover-cut.png" alt=""><figcaption></figcaption></figure>
+
 {% embed url="https://ilyabirman.ru/meanwhile/all/no-cut-in-aegea/" %}
 
 Однако, некоторые авторы блогов всё же хотели бы иметь возможность скрывать посты под катом, о чём уже не раз упоминалось в обсуждениях Эгеи.
