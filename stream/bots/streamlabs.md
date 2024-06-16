@@ -8,11 +8,27 @@
 
 ### Установка и подключение <a href="#d1-83-d1-81-d1-82-d0-b0-d0-bd-d0-be-d0-b2-d0-ba-d0-b0-d0-b8-d0-bf-d0-be-d0-b4-d0-ba-d0-bb-d1-8e-d1-8" id="d1-83-d1-81-d1-82-d0-b0-d0-bd-d0-be-d0-b2-d0-ba-d0-b0-d0-b8-d0-bf-d0-be-d0-b4-d0-ba-d0-bb-d1-8e-d1-8"></a>
 
-Скачиваем и устанавливаем сам Streamlabs Chatbot, а также необходимый для его работы Python 2.7.13. Программы лучше устанавливать в папки по умолчанию. Запускаем программу чат-бота где вас встретит помощник установки.
+Скачиваем и устанавливаем сам Streamlabs Chatbot, а также необходимый для его работы `Python 2.7.13`. Программы лучше устанавливать в папки по умолчанию. Запускаем программу чат-бота где вас встретит помощник установки.
 
 {% embed url="https://www.python.org/downloads/release/python-2713/" %}
 
-<table data-card-size="large" data-column-title-hidden data-view="cards" data-full-width="true"><thead><tr><th data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><a href="../.gitbook/assets/ustanovka-gallery-01.png">ustanovka-gallery-01.png</a></td><td></td><td></td><td></td></tr><tr><td><a href="../.gitbook/assets/ustanovka-gallery-02.png">ustanovka-gallery-02.png</a></td><td></td><td></td><td></td></tr><tr><td><a href="../.gitbook/assets/ustanovka-gallery-03.png">ustanovka-gallery-03.png</a></td><td></td><td></td><td></td></tr><tr><td><a href="../.gitbook/assets/ustanovka-gallery-04.png">ustanovka-gallery-04.png</a></td><td></td><td></td><td></td></tr><tr><td><a href="../.gitbook/assets/ustanovka-gallery-05.png">ustanovka-gallery-05.png</a></td><td></td><td></td><td></td></tr><tr><td><a href="../.gitbook/assets/ustanovka-gallery-01 (1).png">ustanovka-gallery-01 (1).png</a></td><td></td><td></td><td></td></tr></tbody></table>
+<details>
+
+<summary>Этапы установки</summary>
+
+<img src="../.gitbook/assets/ustanovka-gallery-01.png" alt="" data-size="original">
+
+<img src="../.gitbook/assets/ustanovka-gallery-02.png" alt="" data-size="original">
+
+<img src="../.gitbook/assets/ustanovka-gallery-03.png" alt="" data-size="original">
+
+<img src="../.gitbook/assets/ustanovka-gallery-04.png" alt="" data-size="original">
+
+<img src="../.gitbook/assets/ustanovka-gallery-05.png" alt="" data-size="original">
+
+<img src="../.gitbook/assets/ustanovka-gallery-06.png" alt="" data-size="original">
+
+</details>
 
 Выбираем платформу для стриминга. Создаём и авторизуем отдельный аккаунт для вашего бота, от имени которого он будет писать сообщения в чате.&#x20;
 
@@ -298,6 +314,8 @@ C:\Users\Имя Пользователя\AppData\Roaming\Streamlabs\Streamlabs C
 В этом разделе можно настроить различные оповещения: при подписке на канал, при платной подписке, хосте, рейде. В том числе можно сделать звуковые оповещения.
 
 <figure><img src="../.gitbook/assets/ustanovka-24.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ### Discord <a href="#discord" id="discord"></a>
 
