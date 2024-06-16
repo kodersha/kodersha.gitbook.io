@@ -1,5 +1,39 @@
 # Язык и шрифты
 
+### Локаль
+
+Добавьте системную локаль `en_US`, она нужна для правильной работы, например, zsh.
+
+Отредактируйте конфигурацию:
+
+{% code overflow="wrap" %}
+```bash
+sudo nano /etc/locale.gen
+```
+{% endcode %}
+
+Найдите и раскомментируйте строку `en_US.UTF-8 UTF-8`:
+
+{% code title="Пример" overflow="wrap" %}
+```ini
+...
+#en_SG ISO-8859-1
+en_US.UTF-8 UTF-8
+#en_US ISO-8859-1
+...
+```
+{% endcode %}
+
+Обновите локали:
+
+{% code overflow="wrap" %}
+```bash
+sudo locale-gen
+```
+{% endcode %}
+
+
+
 ### Шрифты
 
 Установите базовый набор шрифтов:
@@ -18,8 +52,6 @@ sudo pacman -S --needed nerd-fonts
 ```
 {% endcode %}
 
-
-
 Или установите все шрифты:
 
 {% code overflow="wrap" %}
@@ -32,9 +64,9 @@ yay -S --needed all-repository-fonts
 
 ### Шрифты Windows
 
-Дополнительно можно добавить шрифты из Windows 11.&#x20;
+Дополнительно можно добавить шрифты из Windows 11.
 
-{% file src="../../.gitbook/assets/windows.zip" %}
+{% file src="../.gitbook/assets/windows.zip" %}
 
 Скачайте архив, распакуйте и скопируйте папку `windows` в домашнюю папку:
 

@@ -25,7 +25,21 @@ sudo systemctl enable --now cronie
 ```
 {% endcode %}
 
-Для добавления снимков в `grub` установите `grub-btrfs`:
+***
+
+Настроить автоматическое создание снимков можно через GUI:
+
+{% code overflow="wrap" %}
+```bash
+sudo timeshift-gtk
+```
+{% endcode %}
+
+
+
+### GRUB
+
+Для добавления пункта меню с выбором снимков в `grub` установите `grub-btrfs`:
 
 {% code overflow="wrap" %}
 ```bash
@@ -33,7 +47,7 @@ sudo pacman -S grub-btrfs
 ```
 {% endcode %}
 
-И запустите сервис:
+Запустите сервис:
 
 {% code overflow="wrap" %}
 ```bash
@@ -41,12 +55,10 @@ sudo systemctl enable --now grub-btrfsd
 ```
 {% endcode %}
 
-
-
-Для создания и настройки снимков запустите gui:
+Обновите конфигурацию `grub`:
 
 {% code overflow="wrap" %}
 ```bash
-sudo timeshift-gtk
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 {% endcode %}
