@@ -42,28 +42,26 @@ pacman -Qs nvidia
 
 {% code title="Пример" %}
 ```ini
-local/egl-wayland 2:1.1.13-2.1
+local/egl-wayland 2:1.1.13-2
     EGLStream-based Wayland external platform
 local/lib32-nvidia-utils 550.90.07-1
     NVIDIA drivers utilities (32-bit)
-local/libvdpau 1.5-2.1
+local/libvdpau 1.5-2
     Nvidia VDPAU library
-local/nvidia-open-dkms 550.90.07-1
-    NVIDIA open GPU kernel modules
-local/nvidia-settings 550.90.07-1
-    Tool for configuring the NVIDIA graphics driver
-local/nvidia-utils 550.90.07-1
+local/nvidia-dkms 550.90.07-2
+    NVIDIA drivers - module sources
+local/nvidia-utils 550.90.07-2
     NVIDIA drivers utilities
 ```
 {% endcode %}
 
-Удалите найденные драйвера `nvidia`. Лучше всего в безопасной среде, например в консоли (Ctrl+Alt+F3). Также придётся удалить `steam` как зависимость.
+_У вас могут быть другие драйвера, например `nvidia-open-dkms`._
 
-_У вас могут быть другие драйвера, например `nvidia-dkms` или `nvidia`, а не `nvidia-open-dkms`._
+Удалите найденные драйвера `nvidia`. Лучше всего в безопасной среде, например в консоли (Ctrl+Alt+F3). Также придётся удалить `steam` как зависимость.
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rns lib32-nvidia-utils nvidia-utils nvidia-open-dkms nvidia-settings steam
+sudo pacman -Rns lib32-nvidia-utils nvidia-utils nvidia-dkms nvidia-settings steam
 ```
 {% endcode %}
 
@@ -71,7 +69,7 @@ sudo pacman -Rns lib32-nvidia-utils nvidia-utils nvidia-open-dkms nvidia-setting
 
 {% code overflow="wrap" %}
 ```bash
-yay -S lib32-nvidia-utils-beta nvidia-utils-beta nvidia-open-beta-dkms nvidia-settings-beta
+yay -S lib32-nvidia-utils-beta nvidia-utils-beta nvidia-beta nvidia-settings-beta
 ```
 {% endcode %}
 
