@@ -8,7 +8,9 @@ description: >-
 
 <figure><img src=".gitbook/assets/cover-webcamera.png" alt=""><figcaption></figcaption></figure>
 
-Для решения этой проблемы на GitHub есть небольшая программа с открытым исходным кодом — WebCameraConfig. Она позволяет сохранять и загружать настройки камеры по клику на ярлык, либо автоматически, через автозапуск.
+
+
+Для решения этой проблемы на GitHub есть небольшая программа с открытым исходным кодом - WebCameraConfig. Она позволяет сохранять и загружать настройки камеры по клику на ярлык, либо автоматически, через автозапуск.
 
 {% embed url="https://github.com/SuslikV/cfg-cam/releases" %}
 

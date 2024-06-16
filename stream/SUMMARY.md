@@ -2,6 +2,7 @@
 
 * [👋 Введение](README.md)
 * [🌊 Рестрим с разным битрейтом](restrim-s-raznym-bitreitom.md)
+* [🎵 Разделение аудиодорожек](razdelenie-audiodorozhek.md)
 * [📸 Сохранение настроек веб-камеры](webcamera-config.md)
 * [🤖 Чат-боты](bots/README.md)
   * [Streamlabs Chatbot](bots/streamlabs/README.md)
