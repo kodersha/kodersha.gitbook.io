@@ -147,14 +147,16 @@ sudo systemctl enable --now NetworkManager
 
 
 
-### Одной командой
+***
 
-{% hint style="warning" %}
-Драйвера `nvidia`  и кодеки не включены.
-{% endhint %}
+Одной командой:
 
 {% code overflow="wrap" %}
 ```bash
 sudo pacman -S --needed mesa lib32-mesa vulkan-icd-loader lib32-vulkan-icd-loader alsa-utils pipewire pipewire-pulse pipewire-jack wireplumber bluez bluez-utils networkmanager networkmanager-openvpn networkmanager-pptp networkmanager-vpnc
 ```
 {% endcode %}
+
+{% hint style="warning" %}
+Драйвера `nvidia`  и кодеки не включены.
+{% endhint %}
