@@ -2,7 +2,7 @@
 
 * [👋 Введение](README.md)
 * [🌊 Рестрим с разным битрейтом](restrim-s-raznym-bitreitom.md)
-* [🤖 Боты](bots/README.md)
+* [🤖 Чат-боты](bots/README.md)
   * [Streamlabs Chatbot](bots/streamlabs/README.md)
     * [Установка скриптов](bots/streamlabs/script-install.md)
     * [Озвучивание выделенного сообщения на Twitch](bots/streamlabs/tts.md)
