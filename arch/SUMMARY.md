@@ -12,7 +12,7 @@
 * [👾 Терминал](terminal/README.md)
   * [Команды](terminal/cmd.md)
   * [Расширения](terminal/ext.md)
-* [🔮 Сервисы](service.md)
 * [🎮 Игры](games.md)
 * [📀 Приложения](software.md)
 * [📦 Разработка](developer.md)
+* [🔮 Интернет](ethernet.md)

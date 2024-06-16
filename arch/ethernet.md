@@ -12,7 +12,7 @@ layout:
     visible: false
 ---
 
-# 🔮 Сервисы
+# 🔮 Интернет
 
 ### COMSS dns
 
@@ -32,14 +32,14 @@ sudo sh -c 'sh -c "$(curl -sL https://api.controld.com/dl)" -s comss'
 ```
 {% endcode %}
 
+Проверить состояние можно на [controld.com/status](https://controld.com/status).
+
 Для удаления:
 
 ```bash
 sudo ctrld stop
 sudo ctrld uninstall
 ```
-
-Проверить состояние можно на [controld.com/status](https://controld.com/status)
 
 {% embed url="https://www.comss.ru/page.php?id=12918" %}
 
