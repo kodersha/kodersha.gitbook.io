@@ -12,7 +12,11 @@
 
 {% embed url="https://www.python.org/downloads/release/python-2713/" %}
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/ustanovka-gallery-01.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 Выбираем платформу для стриминга. Создаём и авторизуем отдельный аккаунт для вашего бота, от имени которого он будет писать сообщения в чате.&#x20;
 

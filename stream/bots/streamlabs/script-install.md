@@ -2,9 +2,7 @@
 
 Установите [Python 2.7.13](https://www.python.org/ftp/python/2.7.13/python-2.7.13.amd64.msi), если не ставили его при установке Streamlabs Chatbot.
 
-{% embed url="https://www.python.org/ftp/python/2.7.13/python-2.7.13.amd64.msi" %}
-
-
+{% embed url="https://www.python.org/downloads/release/python-2713/" %}
 
 Скачайте нужный скрипт. Распакуйте архив и скопируйте его в папку `Scripts` вашего чат-бота. Обычно, если вы не меняли стандартную папку установки чат-бота, она находится по пути:
 
