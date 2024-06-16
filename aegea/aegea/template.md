@@ -7,7 +7,7 @@ description: >-
 
 # Шаблон
 
-### Для создания своего шаблона
+### Создание своего шаблона
 
 1. Откройте папку `system\themes\plain`.
 2. Скопируйте эту папку в `user\themes`. Если папка `themes` отсутствует в `user`, создайте ее.
@@ -38,7 +38,7 @@ description: >-
 ); ?>
 ```
 
-<figure><img src=".gitbook/assets/template.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/template.png" alt=""><figcaption></figcaption></figure>
 
 В папке темы также существует несколько папок из которых Эгея подхватывает скрипты, стили, изображения и файлы разметки:
 
@@ -66,69 +66,69 @@ description: >-
 Эта часть статьи устарела и не всё написанное в ней отражает действительность, так как Эгея периодически обновляется. Тем не менее она всё равно может оказаться полезной.
 {% endhint %}
 
-<figure><img src=".gitbook/assets/shablon-01.png" alt=""><figcaption><p><code>user-picture.tmpl.php</code> — Аватар блога.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-01.png" alt=""><figcaption><p><code>user-picture.tmpl.php</code> — Аватар блога.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-02.png" alt=""><figcaption><p><code>author-menu.tmpl.php</code> — Меню автора.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-02.png" alt=""><figcaption><p><code>author-menu.tmpl.php</code> — Меню автора.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-03.png" alt=""><figcaption><p><code>search-heading.tmpl.php</code> — Форма поиска.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-03.png" alt=""><figcaption><p><code>search-heading.tmpl.php</code> — Форма поиска.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-04.png" alt=""><figcaption><p><code>notes.tmpl.php</code> — Пост.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-04.png" alt=""><figcaption><p><code>notes.tmpl.php</code> — Пост.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-05.png" alt=""><figcaption><p><code>pages.tmpl.php</code> — Навигация между постами.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-05.png" alt=""><figcaption><p><code>pages.tmpl.php</code> — Навигация между постами.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-06.png" alt=""><figcaption><p><code>comments-heading.tmpl.php</code> — Заголовок списка комментариев с счетчиком их количества.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-06.png" alt=""><figcaption><p><code>comments-heading.tmpl.php</code> — Заголовок списка комментариев с счетчиком их количества.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-07.png" alt=""><figcaption><p><code>comments.tmpl.php</code> — Список комментариев.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-07.png" alt=""><figcaption><p><code>comments.tmpl.php</code> — Список комментариев.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-08.png" alt=""><figcaption><p><code>form-comment.tmpl.php</code> — Форма комментария.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-08.png" alt=""><figcaption><p><code>form-comment.tmpl.php</code> — Форма комментария.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-09.png" alt=""><figcaption><p><code>form-comment-reply.tmpl.php</code> — Форма ответа на комментарий.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-09.png" alt=""><figcaption><p><code>form-comment-reply.tmpl.php</code> — Форма ответа на комментарий.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-10.png" alt=""><figcaption><p><code>popular.tmpl.php</code> — Блок популярных постов.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-10.png" alt=""><figcaption><p><code>popular.tmpl.php</code> — Блок популярных постов.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-11.png" alt=""><figcaption><p><code>pages-earlier.tmpl.php</code> — Кнопка к постам «Ранее».</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-11.png" alt=""><figcaption><p><code>pages-earlier.tmpl.php</code> — Кнопка к постам «Ранее».</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-12.png" alt=""><figcaption><p><code>pages-later.tmpl.php</code> — Кнопка к постам «Позднее».</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-12.png" alt=""><figcaption><p><code>pages-later.tmpl.php</code> — Кнопка к постам «Позднее».</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-13.png" alt=""><figcaption><p><code>notes-list.tmpl.php</code> — Список всех постов блога.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-13.png" alt=""><figcaption><p><code>notes-list.tmpl.php</code> — Список всех постов блога.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-14.png" alt=""><figcaption><p><code>heading.tmpl.php</code> — Заголовки на большинстве страниц.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-14.png" alt=""><figcaption><p><code>heading.tmpl.php</code> — Заголовки на большинстве страниц.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-15.png" alt=""><figcaption><p><code>form-note.tmpl.php</code> — Форма публикации поста.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-15.png" alt=""><figcaption><p><code>form-note.tmpl.php</code> — Форма публикации поста.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-16.png" alt=""><figcaption><p><code>form-note-delete.tmpl.php</code> — Форма удаления поста.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-16.png" alt=""><figcaption><p><code>form-note-delete.tmpl.php</code> — Форма удаления поста.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-17.png" alt=""><figcaption><p><code>form-note-publish.tmpl.php</code> — Кнопка публикации поста.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-17.png" alt=""><figcaption><p><code>form-note-publish.tmpl.php</code> — Кнопка публикации поста.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-18.png" alt=""><figcaption><p><code>drafts.tmpl.php</code> — Список черновиков.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-18.png" alt=""><figcaption><p><code>drafts.tmpl.php</code> — Список черновиков.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-19.png" alt=""><figcaption><p><code>form-preferences.tmpl.php</code> — Форма общих настроек блога.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-19.png" alt=""><figcaption><p><code>form-preferences.tmpl.php</code> — Форма общих настроек блога.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-20.png" alt=""><figcaption><p><code>form-password.tmpl.php</code> — Форма смены админ-пароля.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-20.png" alt=""><figcaption><p><code>form-password.tmpl.php</code> — Форма смены админ-пароля.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-21.png" alt=""><figcaption><p><code>form-database.tmpl.php</code> — Форма подключения к базе данных.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-21.png" alt=""><figcaption><p><code>form-database.tmpl.php</code> — Форма подключения к базе данных.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-22.png" alt=""><figcaption><p><code>sessions.tmpl.php</code> — Список текущих сессий.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-22.png" alt=""><figcaption><p><code>sessions.tmpl.php</code> — Список текущих сессий.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-23.png" alt=""><figcaption><p><code>form-install.tmpl.php</code> — Форма установки Эгеи.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-23.png" alt=""><figcaption><p><code>form-install.tmpl.php</code> — Форма установки Эгеи.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-24.png" alt=""><figcaption><p><code>form-login.tmpl.php</code> — Форма авторизации.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-24.png" alt=""><figcaption><p><code>form-login.tmpl.php</code> — Форма авторизации.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-25.png" alt=""><figcaption><p><code>tags.tmpl.php</code> — Список всех тегов блога.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-25.png" alt=""><figcaption><p><code>tags.tmpl.php</code> — Список всех тегов блога.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-26.png" alt=""><figcaption><p><code>form-tag.tmpl.php</code> — Форма редактирования тега.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-26.png" alt=""><figcaption><p><code>form-tag.tmpl.php</code> — Форма редактирования тега.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-27.png" alt=""><figcaption><p><code>form-tag-delete.tmpl.php</code> — Форма удаления тега.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-27.png" alt=""><figcaption><p><code>form-tag-delete.tmpl.php</code> — Форма удаления тега.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-28.png" alt=""><figcaption><p><code>tags-menu.tmpl.php</code> — Меню избранных тегов.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-28.png" alt=""><figcaption><p><code>tags-menu.tmpl.php</code> — Меню избранных тегов.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-29.png" alt=""><figcaption><p><code>form-search.tmpl.php</code> — Форма поиска на странице поиска.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-29.png" alt=""><figcaption><p><code>form-search.tmpl.php</code> — Форма поиска на странице поиска.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-30.png" alt=""><figcaption><p><code>login-element.tmpl.php</code> — Кнопка авторизации в футере.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-30.png" alt=""><figcaption><p><code>login-element.tmpl.php</code> — Кнопка авторизации в футере.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-31.png" alt=""><figcaption><p><code>form-password-reset-email.tmpl.php</code> — Страница сброса пароля.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-31.png" alt=""><figcaption><p><code>form-password-reset-email.tmpl.php</code> — Страница сброса пароля.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/shablon-32.png" alt=""><figcaption><p><code>layout.tmpl.php</code> — Основная разметка шаблона внутри body, здесь подключаются другие части шаблона.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/shablon-32.png" alt=""><figcaption><p><code>layout.tmpl.php</code> — Основная разметка шаблона внутри body, здесь подключаются другие части шаблона.</p></figcaption></figure>
 
 
 

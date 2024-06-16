@@ -16,7 +16,7 @@ description: >-
 
 Для превью будет браться первая картинка из поста, либо первая картинка добавленная, но не вставленная, непосредственно, в пост. Абзац с кратким описанием берётся из поля Краткое описание «Для поисковых систем, соцсетей и агрегаторов», в настройках url у каждого поста.
 
-<figure><img src=".gitbook/assets/polnocenny-kat-01.png" alt=""><figcaption><p>Примечание: Здесь используются те же изображения, которые попадают в meta-тег <code>og:image</code> и тот же текст, который в Эгее выводится в meta-тег <code>description</code> у постов в <code>head</code>.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/polnocenny-kat-01.png" alt=""><figcaption><p>Примечание: Здесь используются те же изображения, которые попадают в meta-тег <code>og:image</code> и тот же текст, который в Эгее выводится в meta-тег <code>description</code> у постов в <code>head</code>.</p></figcaption></figure>
 
 
 
@@ -139,7 +139,7 @@ description: >-
 
 Вид ссылки «Далее» можно изменить добавив стили к классу `.e2-text-readmore` и `.e2-text-readmore a`.
 
-<figure><img src=".gitbook/assets/polnocenny-kat-02.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/polnocenny-kat-02.png" alt=""><figcaption></figcaption></figure>
 
 Готово. Работает автоматически, подтягивает первую картинку и описание из поля `Краткое описание` поста. Пример шаблона `spoiler` из этой заметки, с катом для избранных постов, добавила для вас на GitHub. Можно скачать, поставить и пользоваться (Актуально для версии Эгеи `2.10`, сборка `3860`). Либо сделать всё самостоятельно.
 
@@ -153,7 +153,7 @@ description: >-
 
 {% embed url="https://github.com/jedfoster/Readmore.js" %}
 
-<figure><img src=".gitbook/assets/katvegee-01.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/katvegee-01.jpg" alt=""><figcaption></figcaption></figure>
 
 Скачайте скрипт readmore. js с GitHub и поместите файл `readmore.min.js` в папку `js`, которую нужно создать в корне вашего шаблона Эгеи, например в корне стандартного шаблона `plain`:
 

@@ -1,7 +1,10 @@
 # Table of contents
 
 * [Введение](README.md)
-* [Шаблон](template.md)
-* [Редактор](editor.md)
-* [Шрифты](fonts.md)
-* [Кат](cut.md)
+
+## 🍋 Эгея <a href="#aegea" id="aegea"></a>
+
+* [Шаблон](aegea/template.md)
+* [Редактор](aegea/editor.md)
+* [Шрифты](aegea/fonts.md)
+* [Кат](aegea/cut.md)
