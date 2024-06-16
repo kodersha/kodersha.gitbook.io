@@ -39,6 +39,8 @@ sudo ctrld stop
 sudo ctrld uninstall
 ```
 
+Проверить состояние можно на [controld.com/status](https://controld.com/status)
+
 {% embed url="https://www.comss.ru/page.php?id=12918" %}
 
 
