@@ -34,6 +34,21 @@ sudo locale-gen
 
 
 
+### Исправление раскладки в играх
+
+{% code overflow="wrap" %}
+```bash
+sudo nano /etc/environment
+```
+{% endcode %}
+
+```ini
+XKB_DEFAULT_LAYOUT=us,ru
+XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
+```
+
+
+
 ### Шрифты
 
 Установите базовый набор шрифтов:
