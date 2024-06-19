@@ -34,6 +34,14 @@ sudo locale-gen
 
 
 
+### X11
+
+```bash
+localectl set-x11-keymap us,ru "" "" grp:alt_shift_toggle
+```
+
+
+
 ### Исправление раскладки в играх
 
 {% code overflow="wrap" %}
