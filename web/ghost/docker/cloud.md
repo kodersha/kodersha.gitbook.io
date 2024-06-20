@@ -1,8 +1,8 @@
 ---
-description: Базовая конфигурация для установки ghost с remark42.
+description: Базовая конфигурация для запуска ghost с remark42 на облачном сервере.
 ---
 
-# docker
+# cloud
 
 {% code title="docker-compose.yml" lineNumbers="true" %}
 ```yaml
