@@ -6,3 +6,5 @@
   * [Редактор](aegea/editor.md)
   * [Шрифты](aegea/fonts.md)
   * [Кат](aegea/cut.md)
+* [👻 Ghost](ghost/README.md)
+  * [docker](ghost/docker.md)
