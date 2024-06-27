@@ -126,10 +126,6 @@ sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-
 ```
 {% endcode %}
 
-{% hint style="warning" %}
-Удаление пакета `malcontent` удаляет `flatpak` в качестве зависимости. Если он всё же нужен, установите командой `sudo pacman -S flatpak`
-{% endhint %}
-
 
 
 ### Отключение лишних служб
@@ -142,7 +138,7 @@ systemctl --user mask org.gnome.SettingsDaemon.Wacom.service
 
 {% code title="Служба печати" overflow="wrap" %}
 ```bash
-systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service:
+systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service
 ```
 {% endcode %}
 
@@ -200,23 +196,51 @@ sudo pacman -Rns gnome-console
 
 ### Редактор меню
 
+{% tabs %}
+{% tab title="AUR" %}
 {% code overflow="wrap" %}
 ```bash
 yay -S libre-menu-editor
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="flatpak" %}
+{% code overflow="wrap" %}
+```bash
+flatpak install flathub page.codeberg.libre_menu_editor.LibreMenuEditor
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://codeberg.org/libre-menu-editor/libre-menu-editor" %}
 
+
+
 ### Менеджер расширений GNOME
 
+{% tabs %}
+{% tab title="AUR" %}
 {% code overflow="wrap" %}
 ```bash
 yay -S extension-manager
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="flatpak" %}
+{% code overflow="wrap" %}
+```bash
+flatpak install flathub com.mattjakeman.ExtensionManager
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://mattjakeman.com/apps/extension-manager.html" %}
+
+
 
 ### Смена раскладки клавиатуры на `Shift` + `Alt`
 

@@ -4,21 +4,15 @@
 
 #### pacman
 
-Пакетный менеджер Arch Linux.  Позволяет устанавливать, обновлять, удалять пакеты и их зависимости.
+Пакетный менеджер Arch Linux. Позволяет устанавливать, обновлять, удалять пакеты и их зависимости.
 
-Найти пакет в репозитории:
-
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Ss <a data-footnote-ref href="#user-content-fn-1">pkg</a>
+<pre class="language-bash" data-title="Найти пакет в репозитории:" data-overflow="wrap"><code class="lang-bash">sudo pacman -Ss <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
 
-Установить пакет:
-
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -S <a data-footnote-ref href="#user-content-fn-2">pkg</a>
+<pre class="language-bash" data-title="Установить пакет:" data-overflow="wrap"><code class="lang-bash">sudo pacman -S <a data-footnote-ref href="#user-content-fn-2">pkg</a>
 </code></pre>
 
 {% embed url="https://archlinux.org/packages/" %}
-
-
 
 #### yay
 
@@ -28,14 +22,10 @@
 [repo.md](../after-install/repo.md)
 {% endcontent-ref %}
 
-Найти пакет в репозитории AUR:
-
-<pre class="language-bash"><code class="lang-bash">yay -Ss <a data-footnote-ref href="#user-content-fn-3">pkg</a>
+<pre class="language-bash" data-title="Найти пакет в репозитории AUR:" data-overflow="wrap"><code class="lang-bash">yay -Ss <a data-footnote-ref href="#user-content-fn-3">pkg</a>
 </code></pre>
 
-Установить пакет из AUR:
-
-<pre><code>yay -S <a data-footnote-ref href="#user-content-fn-4">pkg</a>
+<pre data-title="Установить пакет из AUR:" data-overflow="wrap"><code>yay -S <a data-footnote-ref href="#user-content-fn-4">pkg</a>
 </code></pre>
 
 {% embed url="https://aur.archlinux.org/packages" %}
@@ -44,9 +34,7 @@
 
 ### Обновление
 
-Обновить пакеты:
-
-{% code overflow="wrap" %}
+{% code title="Обновить пакеты:" overflow="wrap" %}
 ```bash
 sudo pacman -Syu
 ```
@@ -66,9 +54,7 @@ topgrade
 
 ### Удаление
 
-Удалить пакет:
-
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Rns <a data-footnote-ref href="#user-content-fn-5">pkg</a>
+<pre class="language-bash" data-title="Удалить пакет:" data-overflow="wrap"><code class="lang-bash">sudo pacman -Rns <a data-footnote-ref href="#user-content-fn-5">pkg</a>
 </code></pre>
 
 {% hint style="warning" %}
@@ -81,25 +67,19 @@ topgrade
 
 ### Очистка
 
-Удаление неиспользуемых пакетов с зависимостями:
-
-{% code overflow="wrap" %}
+{% code title="Удаление неиспользуемых пакетов с зависимостями:" overflow="wrap" %}
 ```bash
 sudo pacman -Rns $(pacman -Qdtq)
 ```
 {% endcode %}
 
-Очистка кэша пакетов:
-
-{% code overflow="wrap" %}
+{% code title="Очистка кэша пакетов:" overflow="wrap" %}
 ```bash
 sudo pacman -Sc
 ```
 {% endcode %}
 
-Очистка кэша AUR:
-
-{% code overflow="wrap" %}
+{% code title="Очистка кэша AUR:" overflow="wrap" %}
 ```bash
 yay -Sc
 ```

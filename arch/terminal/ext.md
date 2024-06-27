@@ -6,17 +6,13 @@
 
 {% embed url="https://github.com/topgrade-rs/topgrade" %}
 
-Установите `topgrade`:
-
-{% code overflow="wrap" %}
+{% code title="yay -S topgrade" overflow="wrap" %}
 ```bash
 yay -S topgrade
 ```
 {% endcode %}
 
-Обновите всё одной командой:
-
-{% code overflow="wrap" %}
+{% code title="Обновите всё одной командой:" overflow="wrap" %}
 ```bash
 topgrade
 ```
@@ -74,15 +70,15 @@ use_root = false
 {% endtab %}
 {% endtabs %}
 
+
+
 ### fastfetch
 
 Утилита для вывода информации о системе в терминале. Напоминает `neofetch`, предоставляя подробные сведения о системе, такие как дистрибутив операционной системы, ядро, аппаратные характеристики, информация о CPU и GPU, память, разделы дисков и текущую тему рабочего стола.
 
 {% embed url="https://github.com/fastfetch-cli/fastfetch" %}
 
-Установите `fastfetch`:
-
-{% code overflow="wrap" %}
+{% code title="Установите fastfetch:" overflow="wrap" %}
 ```bash
 sudo pacman -S fastfetch
 ```
@@ -288,13 +284,13 @@ nano ~/.config/fastfetch/logo.txt
 {% endtab %}
 {% endtabs %}
 
+
+
 ### zsh
 
 Командная оболочка UNIX, часто используемая в качестве замены стандартного `bash`. Известна своими расширенными функциями и улучшенной интерактивностью, например - Автодополнение команд и аргументов, алиасы, поддержка плагинов и тем, поиск по истории и т.д.
 
-Установить:
-
-{% code overflow="wrap" %}
+{% code title="Установить:" overflow="wrap" %}
 ```bash
 sudo pacman -S zsh
 ```
