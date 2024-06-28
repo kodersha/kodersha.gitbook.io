@@ -24,8 +24,6 @@ sudo pacman -S podman podman-compose aardvark-dns
 
 {% tabs %}
 {% tab title="registries.conf" %}
-На случай блокировки docker.io. Отредактируйте конфигурацию:
-
 ```bash
 sudo nano /etc/containers/registries.conf
 ```
@@ -34,7 +32,11 @@ sudo nano /etc/containers/registries.conf
 {% tab title="→" %}
 ```editorconfig
 unqualified-search-registries = ["docker.io", "quay.io"]
+```
 
+На случай блокировки docker.io добавьте:
+
+```ini
 [[registry]]
 prefix = ""
 location = "docker.io"
