@@ -93,3 +93,31 @@ RUN chown -R www-data:www-data /var/www/html/
 </VirtualHost>
 ```
 {% endcode %}
+
+
+
+***
+
+Для Arch linux дать доступ к порту `80`:
+
+{% tabs %}
+{% tab title="sysctl.conf" %}
+{% code overflow="wrap" %}
+```bash
+sudo nano /etc/sysctl.conf
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="→" %}
+```ini
+net.ipv4.ip_unprivileged_port_start=80
+```
+{% endtab %}
+
+{% tab title="→" %}
+```bash
+sudo sysctl -p
+```
+{% endtab %}
+{% endtabs %}
