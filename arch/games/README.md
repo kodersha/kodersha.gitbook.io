@@ -26,11 +26,23 @@ yay -S --needed wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib
 
 ### steam
 
+{% tabs %}
+{% tab title="pacman" %}
 {% code overflow="wrap" %}
 ```bash
 sudo pacman -S steam
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="flatpak" %}
+{% code overflow="wrap" %}
+```bash
+flatpak install flathub com.valvesoftware.Steam
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 {% code title="mangohud" overflow="wrap" %}
 ```bash
@@ -76,8 +88,20 @@ sudo pacman -S --needed mangohud gamescope gamemode lib32-gamemode steam
 
 ### bottles
 
+{% tabs %}
+{% tab title="AUR" %}
 {% code overflow="wrap" %}
 ```bash
 yay -S bottles
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="flatpak" %}
+{% code overflow="wrap" %}
+```bash
+flatpak install flathub com.usebottles.bottles
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}

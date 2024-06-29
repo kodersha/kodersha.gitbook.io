@@ -78,8 +78,20 @@ git config --global core.compression 0
 
 ### visual studio code
 
+{% tabs %}
+{% tab title="AUR" %}
 {% code overflow="wrap" %}
 ```bash
 yay -S visual-studio-code-bin
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="flatpak" %}
+{% code overflow="wrap" %}
+```bash
+flatpak install flathub com.visualstudio.code
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
