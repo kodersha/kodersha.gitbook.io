@@ -122,7 +122,7 @@ sudo pacman -Rns gnome-clocks
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs gnome-user-share malcontent orca rygel tracker3-miners gvfs-afc gvfs-dnssd gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb gvfs-wsdd gvfs-google gvfs-onedrive
+sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs gnome-user-share gnome-menus malcontent loupe orca rygel tracker3-miners gvfs-afc gvfs-dnssd gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb gvfs-wsdd gvfs-google gvfs-onedrive
 ```
 {% endcode %}
 
@@ -242,7 +242,9 @@ flatpak install flathub com.mattjakeman.ExtensionManager
 
 
 
-### Смена раскладки клавиатуры на `Shift` + `Alt`
+### Настройки
+
+#### Смена раскладки клавиатуры на `Shift` + `Alt`
 
 {% code title="Shift + Alt" overflow="wrap" %}
 ```bash
@@ -253,5 +255,15 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<
 {% code title="Alt + Shift" overflow="wrap" %}
 ```bash
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
+```
+{% endcode %}
+
+
+
+#### Фокус окна по наведению мыши, а не по клику
+
+{% code overflow="wrap" %}
+```bash
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 ```
 {% endcode %}
