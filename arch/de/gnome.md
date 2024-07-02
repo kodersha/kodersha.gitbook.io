@@ -194,24 +194,6 @@ sudo pacman -Rns gnome-console
 
 
 
-### Файловый менеджер
-
-Вместо файлового менеджера `nautilus` можно установить `nemo`.
-
-{% code title="Удалите nautilus" overflow="wrap" %}
-```bash
-sudo pacman -Rns nautilus
-```
-{% endcode %}
-
-{% code title="Установите nemo" overflow="wrap" %}
-```bash
-sudo pacman -S nemo cinnamon-translation
-```
-{% endcode %}
-
-
-
 ### Редактор меню
 
 {% tabs %}
