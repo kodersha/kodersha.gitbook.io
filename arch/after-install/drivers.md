@@ -121,11 +121,11 @@ sudo pacman -S --needed bluez bluez-utils
 ```
 {% endcode %}
 
-Включите сервис:
-
+{% code title="Включите сервис" overflow="wrap" %}
 ```bash
 sudo systemctl enable --now bluetooth
 ```
+{% endcode %}
 
 
 
@@ -137,9 +137,7 @@ sudo pacman -S --needed networkmanager networkmanager-openvpn networkmanager-ppt
 ```
 {% endcode %}
 
-И включите сервис:
-
-{% code overflow="wrap" %}
+{% code title="Включите сервис" overflow="wrap" %}
 ```bash
 sudo systemctl enable --now NetworkManager
 ```
@@ -147,13 +145,21 @@ sudo systemctl enable --now NetworkManager
 
 
 
-***
-
-Одной командой:
+### Архивы
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S --needed mesa lib32-mesa vulkan-icd-loader lib32-vulkan-icd-loader alsa-utils pipewire pipewire-pulse pipewire-jack wireplumber bluez bluez-utils networkmanager networkmanager-openvpn networkmanager-pptp networkmanager-vpnc
+sudo pacman -S --needed unzip zip unrar p7zip
+```
+{% endcode %}
+
+
+
+***
+
+{% code title="Одной командой" overflow="wrap" %}
+```bash
+sudo pacman -S --needed mesa lib32-mesa vulkan-icd-loader lib32-vulkan-icd-loader alsa-utils pipewire pipewire-pulse pipewire-jack wireplumber bluez bluez-utils networkmanager networkmanager-openvpn networkmanager-pptp networkmanager-vpnc unzip zip unrar p7zip
 ```
 {% endcode %}
 

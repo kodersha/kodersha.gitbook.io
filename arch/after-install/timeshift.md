@@ -9,17 +9,13 @@ description: >-
 
 <figure><img src="../.gitbook/assets/timeshift.png" alt=""><figcaption></figcaption></figure>
 
-Установите `timeshift` и `cronie`:
-
-{% code overflow="wrap" %}
+{% code title="Установите timeshift и cronie" overflow="wrap" %}
 ```bash
 yay -S timeshift cronie
 ```
 {% endcode %}
 
-Запустите сервис:
-
-{% code overflow="wrap" %}
+{% code title="Запустите сервис" overflow="wrap" %}
 ```bash
 sudo systemctl enable --now cronie
 ```
@@ -47,17 +43,13 @@ sudo pacman -S grub-btrfs
 ```
 {% endcode %}
 
-Запустите сервис:
-
-{% code overflow="wrap" %}
+{% code title="Запустите сервис" overflow="wrap" %}
 ```bash
 sudo systemctl enable --now grub-btrfsd
 ```
 {% endcode %}
 
-Обновите конфигурацию `grub`:
-
-{% code overflow="wrap" %}
+{% code title="Обновите конфигурацию grub" overflow="wrap" %}
 ```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
