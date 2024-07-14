@@ -337,22 +337,26 @@ zplug "robbyrussell/oh-my-zsh", as:plugin, use:"lib/*.zsh"
 zplug "plugins/archlinux",         from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/colorize",          from:oh-my-zsh
+zplug "plugins/history",           from:oh-my-zsh
+zplug "plugins/git",               from:oh-my-zsh
 zplug "lib/completion",            from:oh-my-zsh
 zplug "lib/history",               from:oh-my-zsh
 zplug "lib/key-bindings",          from:oh-my-zsh
 zplug "lib/termsupport",           from:oh-my-zsh
 zplug "lib/directories",           from:oh-my-zsh
-zplug "plugins/git",               from:oh-my-zsh
-zplug "plugins/history",           from:oh-my-zsh
 
+zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-history-substring-search"
+zplug "michaelAquilina/zsh-you-should-use"
 zplug "zdharma/fast-syntax-highlighting"
-zplug "MichaelAquilina/zsh-you-should-use"
+zplug "valiev/almostontop"
 
 zplug check || zplug install
 zplug load
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
 {% endcode %}
 {% endtab %}
