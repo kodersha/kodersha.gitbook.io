@@ -18,7 +18,7 @@ topgrade
 ```
 {% endcode %}
 
-<figure><img src="../.gitbook/assets/topgrade.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/topgrade.png" alt=""><figcaption></figcaption></figure>
 
 Конфигурация:
 
@@ -84,7 +84,7 @@ sudo pacman -S fastfetch
 ```
 {% endcode %}
 
-<figure><img src="../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
 
 Можно создать пользовательский файл конфигурации:
 

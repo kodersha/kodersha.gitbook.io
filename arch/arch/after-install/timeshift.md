@@ -7,7 +7,7 @@ description: >-
 
 # Бэкапы
 
-<figure><img src="../.gitbook/assets/timeshift.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/timeshift.png" alt=""><figcaption></figcaption></figure>
 
 {% code title="Установите timeshift и cronie" overflow="wrap" %}
 ```bash
