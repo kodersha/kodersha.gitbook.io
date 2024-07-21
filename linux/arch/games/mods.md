@@ -20,6 +20,6 @@ layout:
 
 {% code overflow="wrap" %}
 ```ini
-EasyHook,EasyHook64,EasyLoad64,NativeInterop,версия,dinput8,ScriptHookRDR2,ModManager.Core,ModManager.NativeInterop,NLog=n,b
+EasyHook,EasyHook64,EasyLoad64,NativeInterop,version,dinput8,ScriptHookRDR2,ModManager.Core,ModManager.NativeInterop,NLog=n,b
 ```
 {% endcode %}
