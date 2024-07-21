@@ -174,16 +174,6 @@ systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 
 
 
-### Удаление лишних ярлыков
-
-{% code overflow="wrap" %}
-```bash
-sudo rm /usr/share/applications/avahi-discover.desktop && sudo rm /usr/share/applications/bssh.desktop && sudo rm /usr/share/applications/bvnc.desktop && sudo rm /usr/share/applications/qv4l2.desktop && sudo rm /usr/share/applications/qvidcap.desktop && sudo rm /usr/share/applications/org.gnome.OnlineAccounts.OAuth2.desktop && sudo rm /usr/share/applications/org.gnome.Extensions.desktop && sudo rm /usr/share/applications/org.gnome.ColorProfileViewer.desktop && sudo rm /usr/share/applications/gnome-wacom-panel.desktop && sudo rm /usr/share/applications/gnome-universal-access-panel.desktop && sudo rm /usr/share/applications/geoclue-where-am-i.desktop && sudo rm /usr/share/applications/geoclue-demo-agent.desktop && sudo rm /usr/share/applications/bluetooth-sendto.desktop
-```
-{% endcode %}
-
-
-
 ### Терминал вместо консоли
 
 {% code overflow="wrap" %}
