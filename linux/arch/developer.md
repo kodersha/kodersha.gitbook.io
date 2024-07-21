@@ -20,7 +20,7 @@ layout:
 sudo pacman -S podman podman-compose aardvark-dns
 ```
 
-#### Зеркало docker
+#### Конфигурация:
 
 {% tabs %}
 {% tab title="registries.conf" %}
@@ -79,19 +79,31 @@ git config --global core.compression 0
 ### visual studio code
 
 {% tabs %}
-{% tab title="AUR" %}
+{% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-yay -S visual-studio-code-bin
+flatpak install com.visualstudio.code
 ```
 {% endcode %}
 {% endtab %}
 
-{% tab title="flatpak" %}
+{% tab title="AUR" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install flathub com.visualstudio.code
+pikaur -S visual-studio-code-bin
 ```
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+
+
+### figma
+
+{% code title="figma font helper" overflow="wrap" %}
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/neetly/figma-agent-linux/main/scripts/install.sh)"
+```
+{% endcode %}
+
+{% embed url="https://github.com/neetly/figma-agent-linux" %}

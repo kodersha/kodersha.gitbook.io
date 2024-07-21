@@ -49,21 +49,12 @@ sudo ctrld uninstall
 
 Установите `tor` и `obfs4proxy`:
 
-{% tabs %}
-{% tab title="tor " %}
 {% code overflow="wrap" %}
 ```bash
 sudo pacman -S tor
+pikaur -S obfs4proxy
 ```
 {% endcode %}
-{% endtab %}
-
-{% tab title="obfs4proxy" %}
-```bash
-yay -S obfs4proxy
-```
-{% endtab %}
-{% endtabs %}
 
 Назначьте пользователя и права на папку:
 

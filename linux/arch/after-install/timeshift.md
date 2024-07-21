@@ -11,7 +11,7 @@ description: >-
 
 {% code title="Установите timeshift и cronie" overflow="wrap" %}
 ```bash
-yay -S timeshift cronie
+pikaur -S timeshift cronie
 ```
 {% endcode %}
 

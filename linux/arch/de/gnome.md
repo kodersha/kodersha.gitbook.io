@@ -10,7 +10,7 @@ sudo pacman -Rns baobab
 ```
 {% endcode %}
 
-{% code title=" Веб-брауpер" overflow="wrap" %}
+{% code title="Веб-брауpер" overflow="wrap" %}
 ```bash
 sudo pacman -Rns epiphany
 ```
@@ -122,9 +122,15 @@ sudo pacman -Rns gnome-clocks
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs gnome-user-share gnome-menus malcontent loupe orca rygel tracker3-miners gvfs-afc gvfs-dnssd gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb gvfs-wsdd gvfs-google gvfs-onedrive
+sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs gnome-user-share gnome-menus malcontent evince sushi loupe orca rygel tracker3-miners gvfs-afc gvfs-dnssd gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb gvfs-wsdd gvfs-google gvfs-onedrive htop vim nm-connection-editor network-manager-applet
 ```
 {% endcode %}
+
+{% hint style="warning" %}
+`flatpak` будет удалён как зависимость, если нужен верните: `sudo pacman -S flatpak`
+
+Также из предустановленных пакетов я удаляю `htop` и `vim`
+{% endhint %}
 
 
 
@@ -168,11 +174,11 @@ systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 
 
 
-### Патчи производительности
+### Удаление лишних ярлыков
 
 {% code overflow="wrap" %}
 ```bash
-yay -S gnome-shell-performance mutter-performance
+sudo rm /usr/share/applications/avahi-discover.desktop && sudo rm /usr/share/applications/bssh.desktop && sudo rm /usr/share/applications/bvnc.desktop && sudo rm /usr/share/applications/qv4l2.desktop && sudo rm /usr/share/applications/qvidcap.desktop && sudo rm /usr/share/applications/org.gnome.OnlineAccounts.OAuth2.desktop && sudo rm /usr/share/applications/org.gnome.Extensions.desktop && sudo rm /usr/share/applications/org.gnome.ColorProfileViewer.desktop && sudo rm /usr/share/applications/gnome-wacom-panel.desktop && sudo rm /usr/share/applications/gnome-universal-access-panel.desktop && sudo rm /usr/share/applications/geoclue-where-am-i.desktop && sudo rm /usr/share/applications/geoclue-demo-agent.desktop && sudo rm /usr/share/applications/bluetooth-sendto.desktop
 ```
 {% endcode %}
 
@@ -180,15 +186,9 @@ yay -S gnome-shell-performance mutter-performance
 
 ### Терминал вместо консоли
 
-{% code title="Установите терминал" overflow="wrap" %}
+{% code overflow="wrap" %}
 ```bash
-sudo pacman -S gnome-terminal
-```
-{% endcode %}
-
-{% code title="Удалите консоль" overflow="wrap" %}
-```bash
-sudo pacman -Rns gnome-console
+sudo pacman -S gnome-terminal && sudo pacman -Rns gnome-console
 ```
 {% endcode %}
 
@@ -196,74 +196,70 @@ sudo pacman -Rns gnome-console
 
 ### Редактор меню
 
+<figure><img src="../../.gitbook/assets/libre-menu-editor.png" alt=""><figcaption></figcaption></figure>
+
 {% tabs %}
-{% tab title="AUR" %}
+{% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-yay -S libre-menu-editor
+flatpak install LibreMenuEditor
 ```
 {% endcode %}
 {% endtab %}
 
-{% tab title="flatpak" %}
+{% tab title="AUR" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install flathub page.codeberg.libre_menu_editor.LibreMenuEditor
+pikaur -S libre-menu-editor
 ```
 {% endcode %}
 {% endtab %}
 {% endtabs %}
 
-{% embed url="https://codeberg.org/libre-menu-editor/libre-menu-editor" %}
+{% embed url="https://flathub.org/apps/page.codeberg.libre_menu_editor.LibreMenuEditor" %}
 
 
 
 ### Менеджер расширений GNOME
 
+<figure><img src="../../.gitbook/assets/extension-manager.png" alt=""><figcaption></figcaption></figure>
+
 {% tabs %}
-{% tab title="AUR" %}
+{% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-yay -S extension-manager
+flatpak install ExtensionManager
 ```
 {% endcode %}
 {% endtab %}
 
-{% tab title="flatpak" %}
+{% tab title="AUR" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install flathub com.mattjakeman.ExtensionManager
+pikaur -S extension-manager
 ```
 {% endcode %}
 {% endtab %}
 {% endtabs %}
 
-{% embed url="https://mattjakeman.com/apps/extension-manager.html" %}
+{% embed url="https://flathub.org/apps/com.mattjakeman.ExtensionManager" %}
 
 
 
 ### Настройки
 
-#### Смена раскладки клавиатуры на `Shift` + `Alt`
-
-{% code title="Shift + Alt" overflow="wrap" %}
+{% code title="Смена раскладки клавиатуры на shift + alt " overflow="wrap" %}
 ```bash
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift>Alt_L']"
-```
-{% endcode %}
-
-{% code title="Alt + Shift" overflow="wrap" %}
-```bash
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift>Alt_L']" && gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
 ```
 {% endcode %}
 
 
 
-#### Фокус окна по наведению мыши, а не по клику
+### Патчи производительности
 
 {% code overflow="wrap" %}
 ```bash
-gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
+pikaur -S gnome-shell-performance mutter-performance
 ```
 {% endcode %}

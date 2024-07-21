@@ -69,7 +69,7 @@ sudo pacman -Rns lib32-nvidia-utils nvidia-utils nvidia-dkms nvidia-settings ste
 
 {% code overflow="wrap" %}
 ```bash
-yay -S lib32-nvidia-utils-beta nvidia-utils-beta nvidia-beta nvidia-settings-beta
+pikaur -S lib32-nvidia-utils-beta nvidia-utils-beta nvidia-beta nvidia-settings-beta
 ```
 {% endcode %}
 
@@ -97,7 +97,7 @@ sudo reboot
 
 {% code overflow="wrap" %}
 ```bash
-yay -S --needed gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
+sudo pacman -S --needed gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
 ```
 {% endcode %}
 
@@ -159,10 +159,10 @@ sudo pacman -S --needed unzip zip unrar p7zip
 
 {% code title="Одной командой" overflow="wrap" %}
 ```bash
-sudo pacman -S --needed mesa lib32-mesa vulkan-icd-loader lib32-vulkan-icd-loader alsa-utils pipewire pipewire-pulse pipewire-jack wireplumber bluez bluez-utils networkmanager networkmanager-openvpn networkmanager-pptp networkmanager-vpnc unzip zip unrar p7zip
+sudo pacman -S --needed mesa lib32-mesa vulkan-icd-loader lib32-vulkan-icd-loader alsa-utils pipewire pipewire-pulse pipewire-jack wireplumber bluez bluez-utils networkmanager networkmanager-openvpn networkmanager-pptp networkmanager-vpnc gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame unzip zip unrar p7zip
 ```
 {% endcode %}
 
 {% hint style="warning" %}
-Драйвера `nvidia`  и кодеки не включены.
+Драйвера `nvidia`  в этот список не включены.
 {% endhint %}

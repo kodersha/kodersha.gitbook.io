@@ -132,7 +132,7 @@ sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0.se
 
 {% code title="Установите ananicy-cpp" overflow="wrap" %}
 ```bash
-yay -S ananicy-cpp
+pikaur -S ananicy-cpp
 ```
 {% endcode %}
 
@@ -176,17 +176,17 @@ sudo systemctl enable --now irqbalance
 
 ### uksmd
 
+{% hint style="danger" %}
+Сервис работает только с ядром `linux-zen` или другим пропатченым ядром.
+{% endhint %}
+
 Сервис служит для дедупликации страниц в памяти. Если есть несколько одинаковых страниц в оперативной памяти, они могут быть заменены одной общей страницей, что позволяет экономить и оптимизировать её использование.
 
 {% embed url="https://github.com/CachyOS/uksmd" %}
 
-{% hint style="warning" %}
-Сервис работает только с ядром `linux-zen` или другим пропатченым ядром.
-{% endhint %}
-
 {% code title="Установите" overflow="wrap" %}
 ```bash
-yay -S uksmd
+pikaur -S uksmd
 ```
 {% endcode %}
 

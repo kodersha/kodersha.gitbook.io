@@ -17,18 +17,18 @@ layout:
 ### firefox
 
 {% tabs %}
-{% tab title="pacman" %}
+{% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S firefox firefox-i18n-ru
+flatpak install firefox
 ```
 {% endcode %}
 {% endtab %}
 
-{% tab title="flatpak" %}
+{% tab title="pacman" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install flathub org.mozilla.firefox
+sudo pacman -S firefox firefox-i18n-ru
 ```
 {% endcode %}
 {% endtab %}
@@ -39,28 +39,26 @@ flatpak install flathub org.mozilla.firefox
 ### spotify
 
 {% tabs %}
-{% tab title="AUR" %}
-{% code overflow="wrap" %}
-```bash
-yay -S spotify
-```
-{% endcode %}
-{% endtab %}
-
 {% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install flathub com.spotify.Client
+flatpak install spotify
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="AdBlock" %}
-Опционально AdBlock для Spotify
+Опционально AdBlock для Spotify:
 
 {% code overflow="wrap" %}
 ```bash
 bash <(curl -sSL https://spotx-official.github.io/run.sh)
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="AUR" %}
+{% code overflow="wrap" %}
+```bash
+pikaur -S spotify
 ```
 {% endcode %}
 {% endtab %}

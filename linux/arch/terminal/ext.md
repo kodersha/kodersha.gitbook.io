@@ -6,9 +6,9 @@
 
 {% embed url="https://github.com/topgrade-rs/topgrade" %}
 
-{% code title="yay -S topgrade" overflow="wrap" %}
+{% code overflow="wrap" %}
 ```bash
-yay -S topgrade
+pikaur -S topgrade
 ```
 {% endcode %}
 
@@ -88,18 +88,10 @@ sudo pacman -S fastfetch
 
 Можно создать пользовательский файл конфигурации:
 
-{% code overflow="wrap" %}
-```bash
-fastfetch --gen-config-force
-```
-{% endcode %}
-
-Пример конфигурации:
-
 {% tabs %}
 {% tab title="config.jsonc" %}
 ```bash
-nano ~/.config/fastfetch/config.jsonc
+mkdir ~/.config/fastfetch/ && nano ~/.config/fastfetch/config.jsonc
 ```
 {% endtab %}
 
@@ -357,6 +349,35 @@ zplug load
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+Добавьте автозапуск `zsh` в `.bashrc`:
+
+{% tabs %}
+{% tab title=".bashrc" %}
+{% code overflow="wrap" %}
+```bash
+nano ~/.bashrc
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="→" %}
+{% code title=".bashrc" %}
+```bash
+if [ -z "${NOZSH}" ] && [ $TERM = "xterm" -o $TERM = "xterm-256color" -o $TERM = "screen" ] && type zsh &> /dev/null
+then
+  export SHELL=$(which zsh)
+  if [[ -o login ]]
+  then
+      exec zsh -l
+  else
+      exec zsh
+  fi
+fi
 ```
 {% endcode %}
 {% endtab %}

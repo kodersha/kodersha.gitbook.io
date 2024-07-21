@@ -14,7 +14,7 @@
 
 {% embed url="https://archlinux.org/packages/" %}
 
-#### yay
+#### pikaur
 
 Помощник для управления пакетами в Arch Linux, упрощает установку и управление пакетами из AUR (см. После установки - Репозитории).
 
@@ -22,10 +22,10 @@
 [repo.md](../after-install/repo.md)
 {% endcontent-ref %}
 
-<pre class="language-bash" data-title="Найти пакет в репозитории AUR:" data-overflow="wrap"><code class="lang-bash">yay -Ss <a data-footnote-ref href="#user-content-fn-3">pkg</a>
+<pre class="language-bash" data-title="Найти пакет в репозитории AUR:" data-overflow="wrap"><code class="lang-bash">pikaur -Ss <a data-footnote-ref href="#user-content-fn-3">pkg</a>
 </code></pre>
 
-<pre data-title="Установить пакет из AUR:" data-overflow="wrap"><code>yay -S <a data-footnote-ref href="#user-content-fn-4">pkg</a>
+<pre data-title="Установить пакет из AUR:" data-overflow="wrap"><code>pikaur -S <a data-footnote-ref href="#user-content-fn-4">pkg</a>
 </code></pre>
 
 {% embed url="https://aur.archlinux.org/packages" %}
@@ -46,10 +46,6 @@ sudo pacman -Syu
 topgrade
 ```
 
-{% content-ref url="ext.md" %}
-[ext.md](ext.md)
-{% endcontent-ref %}
-
 
 
 ### Удаление
@@ -67,21 +63,15 @@ topgrade
 
 ### Очистка
 
-{% code title="Удаление неиспользуемых пакетов с зависимостями:" overflow="wrap" %}
+{% code title="Удаление неиспользуемых пакетов:" overflow="wrap" %}
 ```bash
-sudo pacman -Rns $(pacman -Qdtq)
+sudo pacman -Rns $(pacman -Qdtq
 ```
 {% endcode %}
 
-{% code title="Очистка кэша пакетов:" overflow="wrap" %}
+{% code title="Очистка кэша:" overflow="wrap" %}
 ```bash
-sudo pacman -Sc
-```
-{% endcode %}
-
-{% code title="Очистка кэша AUR:" overflow="wrap" %}
-```bash
-yay -Sc
+sudo pacman -Scc && pikaur -Scc
 ```
 {% endcode %}
 

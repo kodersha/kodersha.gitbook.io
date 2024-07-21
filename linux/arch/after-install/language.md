@@ -34,7 +34,7 @@ sudo locale-gen
 
 
 
-### X11
+#### X11
 
 ```bash
 localectl set-x11-keymap us,ru "" "" grp:alt_shift_toggle
@@ -42,7 +42,7 @@ localectl set-x11-keymap us,ru "" "" grp:alt_shift_toggle
 
 
 
-### Исправление раскладки в играх
+#### Исправление раскладки в играх
 
 {% code overflow="wrap" %}
 ```bash
@@ -89,7 +89,7 @@ yay -S --needed all-repository-fonts
 
 Дополнительно можно добавить шрифты из Windows 11.
 
-{% file src="../.gitbook/assets/windows.zip" %}
+{% file src="../../.gitbook/assets/windows.zip" %}
 
 Скачайте архив, распакуйте и скопируйте папку `windows` в домашнюю папку:
 
@@ -112,3 +112,13 @@ fc-cache -v
 ```bash
 sudo pacman -S --needed hunspell hunspell-ru hunspell-en_us
 ```
+
+
+
+***
+
+{% code title="Одной командой" overflow="wrap" %}
+```bash
+sudo pacman -S --needed adobe-source-sans-pro-fonts ttf-dejavu ttf-opensans noto-fonts freetype2 terminus-font ttf-bitstream-vera ttf-dejavu ttf-droid ttf-fira-mono ttf-fira-sans ttf-freefont ttf-inconsolata ttf-liberation libertinus-font nerd-fonts hunspell hunspell-ru hunspell-en_us
+```
+{% endcode %}

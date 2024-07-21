@@ -6,23 +6,23 @@
 
 {% embed url="https://aur.archlinux.org/packages" %}
 
-#### yay
+#### pikaur
 
 Установщик пакетов из AUR репозитория.
 
-{% @github-files/github-code-block url="https://github.com/Jguer/yay" %}
+{% embed url="https://github.com/actionless/pikaur" %}
 
-Установите `yay`:
+Установите `pikaur`:
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -rsi && cd .. && rm -rf yay
+sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/pikaur.git && cd pikaur && makepkg -fsri
 ```
 {% endcode %}
 
-Теперь можно устанавливать пакеты из AUR:
+Теперь можно устанавливать ~~все игры~~ пакеты из AUR:
 
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">yay -S <a data-footnote-ref href="#user-content-fn-1">pkg</a>
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">pikaur -S <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
 
 
