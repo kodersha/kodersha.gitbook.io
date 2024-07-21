@@ -65,7 +65,7 @@ topgrade
 
 {% code title="Удаление неиспользуемых пакетов:" overflow="wrap" %}
 ```bash
-sudo pacman -Rns $(pacman -Qdtq
+sudo pacman -Rns $(pacman -Qdtq)
 ```
 {% endcode %}
 
