@@ -93,15 +93,19 @@ yay -S --needed all-repository-fonts
 
 Скачайте архив, распакуйте и скопируйте папку `windows` в домашнюю папку:
 
+{% code overflow="wrap" %}
 ```bash
 ~/.local/share/fonts
 ```
+{% endcode %}
 
 Обновите кэш шрифтов:
 
+{% code overflow="wrap" %}
 ```bash
 fc-cache -v
 ```
+{% endcode %}
 
 
 
@@ -109,9 +113,11 @@ fc-cache -v
 
 Системная проверка орфографии, аналогичная той, что есть в windows. Подчёркивает слова с ашибками.
 
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -S --needed hunspell hunspell-ru hunspell-en_us
 ```
+{% endcode %}
 
 
 

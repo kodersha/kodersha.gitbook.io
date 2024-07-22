@@ -82,9 +82,11 @@ Group=tor
 
 {% tabs %}
 {% tab title="torrc" %}
+{% code overflow="wrap" %}
 ```bash
 sudo nano /etc/tor/torrc
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="→" %}

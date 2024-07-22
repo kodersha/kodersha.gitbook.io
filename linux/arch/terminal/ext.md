@@ -302,7 +302,7 @@ nano ~/.zshrc
 {% tab title="→" %}
 {% code title=".zshrc" %}
 ```bash
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Ena# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -310,12 +310,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export TERM="xterm-256color"
-export KWIN_TRIPLE_BUFFER=1
 export LC_ALL=en_US.UTF-8
+export EDITOR=nano
 
 # ZPlug
 if [[ ! -d ~/.zplug ]];then
-    git clone https://github.com/b4b4r07/zplug ~/.zplug
+  git clone https://github.com/b4b4r07/zplug ~/.zplug
 fi
 source ~/.zplug/init.zsh
 
@@ -343,6 +343,7 @@ zplug "zsh-users/zsh-completions"
 zplug "michaelAquilina/zsh-you-should-use"
 zplug "zdharma/fast-syntax-highlighting"
 zplug "valiev/almostontop"
+zplug "lukechilds/zsh-nvm"
 
 zplug check || zplug install
 zplug load

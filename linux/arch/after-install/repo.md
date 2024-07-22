@@ -6,11 +6,11 @@
 
 {% embed url="https://aur.archlinux.org/packages" %}
 
+
+
 #### pikaur
 
 Установщик пакетов из AUR репозитория.
-
-{% embed url="https://github.com/actionless/pikaur" %}
 
 Установите `pikaur`:
 
