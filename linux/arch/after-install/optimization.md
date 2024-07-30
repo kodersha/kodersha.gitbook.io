@@ -146,7 +146,7 @@ sudo systemctl enable --now ananicy-cpp
 
 {% code overflow="wrap" %}
 ```bash
-yay -S cachyos-ananicy-rules-git
+pikaur -S cachyos-ananicy-rules-git
 ```
 {% endcode %}
 

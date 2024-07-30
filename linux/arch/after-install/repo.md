@@ -16,7 +16,7 @@
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/pikaur.git && cd pikaur && makepkg -fsri
+sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/pikaur.git && cd pikaur && makepkg -fsri && cd .. && rm -rf pikaur
 ```
 {% endcode %}
 

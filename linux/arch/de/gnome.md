@@ -127,9 +127,7 @@ sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-
 {% endcode %}
 
 {% hint style="warning" %}
-`flatpak` будет удалён как зависимость, если нужен верните: `sudo pacman -S flatpak`
-
-Также из предустановленных пакетов я удаляю `htop` и `vim`
+`flatpak` будет удалён как зависимость, если нужен верните: `sudo pacman -S flatpak` Также из предустановленных пакетов я удаляю `htop` и `vim`
 {% endhint %}
 
 
@@ -206,8 +204,6 @@ pikaur -S libre-menu-editor
 {% endtab %}
 {% endtabs %}
 
-{% embed url="https://flathub.org/apps/page.codeberg.libre_menu_editor.LibreMenuEditor" %}
-
 
 
 ### Менеджер расширений GNOME
@@ -232,8 +228,6 @@ pikaur -S extension-manager
 {% endtab %}
 {% endtabs %}
 
-{% embed url="https://flathub.org/apps/com.mattjakeman.ExtensionManager" %}
-
 
 
 ### Настройки
@@ -241,15 +235,5 @@ pikaur -S extension-manager
 {% code title="Смена раскладки клавиатуры на shift + alt " overflow="wrap" %}
 ```bash
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift>Alt_L']" && gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
-```
-{% endcode %}
-
-
-
-### Патчи производительности
-
-{% code overflow="wrap" %}
-```bash
-pikaur -S gnome-shell-performance mutter-performance
 ```
 {% endcode %}
