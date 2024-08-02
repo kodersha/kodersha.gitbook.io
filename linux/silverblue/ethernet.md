@@ -9,17 +9,21 @@ git clone --depth 1 https://github.com/bol-van/zapret && cd zapret
 {% endcode %}
 
 {% tabs %}
-{% tab title="Предварительная настройка" %}
+{% tab title="Установка" %}
 {% code overflow="wrap" %}
 ```bash
 ./install_bin.sh
-./install_prereq.sh
-./blockcheck.sh
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="Установка" %}
+```bash
+./install_prereq.sh
+```
+
+```bash
+./blockcheck.sh
+```
+
 {% code overflow="wrap" %}
 ```bash
 ./install_easy.sh
@@ -153,58 +157,40 @@ GETLIST=get_antifilter_ipsmart.sh
 {% endtab %}
 {% endtabs %}
 
-{% tabs %}
-{% tab title="rc.local" %}
-Отключите `firewalld`.
-
-{% code overflow="wrap" %}
+{% code title="Отключите firewalld" overflow="wrap" %}
 ```bash
 sudo systemctl disable firewalld
 ```
 {% endcode %}
 
-Настройте службу.
-
-{% code overflow="wrap" %}
+{% code title="Настройте службу" overflow="wrap" %}
 ```bash
 sudo nano /etc/rc.d/rc.local
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="→" %}
-{% code overflow="wrap" %}
-```ini
+{% code title="rc.local" overflow="wrap" %}
+```bash
 #!/bin/bash
 
 exec bash /opt/zapret/init.d/sysv/zapret start
 ```
 {% endcode %}
 
-Перезапустите службу.
-
-{% code overflow="wrap" %}
+{% code title="Перезапустите службу" overflow="wrap" %}
 ```bash
 sudo systemctl restart rc-local.service
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
-{% tabs %}
-{% tab title="nftables.conf" %}
-Отредактируйте конфигурацию `nftables`.
-
-{% code overflow="wrap" %}
+{% code title="Отредактируйте конфигурацию nftables" overflow="wrap" %}
 ```bash
 sudo nano /etc/nftables.conf
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="→" %}
-{% code title="/etc/nftables.conf" %}
-```ini
+{% code title="nftables.conf" overflow="wrap" %}
+```bash
 table inet filter {
     chain output {
         type filter hook output priority 0; policy accept;
@@ -216,12 +202,8 @@ table inet filter {
 ```
 {% endcode %}
 
-Примените конфигурацию `nftables`.
-
-{% code overflow="wrap" %}
+{% code title="Примените конфигурацию" overflow="wrap" %}
 ```bash
 sudo nft -f /etc/nftables.conf
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
