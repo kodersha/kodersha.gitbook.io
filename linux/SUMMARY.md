@@ -20,3 +20,7 @@
 * [📀 Приложения](arch/software.md)
 * [📦 Разработка](arch/developer.md)
 * [🔮 Интернет](arch/ethernet.md)
+
+## Fedora silverblue <a href="#silverblue" id="silverblue"></a>
+
+* [🔮 Интернет](silverblue/ethernet.md)
