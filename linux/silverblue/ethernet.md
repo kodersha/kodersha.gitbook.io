@@ -155,15 +155,19 @@ GETLIST=get_antifilter_ipsmart.sh
 
 {% tabs %}
 {% tab title="rc.local" %}
-{% code title="Настройте службу" overflow="wrap" %}
+Отключите `firewalld`.
+
+{% code overflow="wrap" %}
 ```bash
-sudo nano /etc/rc.d/rc.local
+sudo systemctl disable firewalld
 ```
 {% endcode %}
 
-{% code title="Отключите firewalld" overflow="wrap" %}
+Настройте службу.
+
+{% code overflow="wrap" %}
 ```bash
-sudo systemctl disable firewalld
+sudo nano /etc/rc.d/rc.local
 ```
 {% endcode %}
 {% endtab %}
@@ -177,6 +181,8 @@ exec bash /opt/zapret/init.d/sysv/zapret start
 ```
 {% endcode %}
 
+Перезапустите службу.
+
 {% code overflow="wrap" %}
 ```bash
 sudo systemctl restart rc-local.service
@@ -187,6 +193,8 @@ sudo systemctl restart rc-local.service
 
 {% tabs %}
 {% tab title="nftables.conf" %}
+Отредактируйте конфигурацию `nftables`.
+
 {% code overflow="wrap" %}
 ```bash
 sudo nano /etc/nftables.conf
