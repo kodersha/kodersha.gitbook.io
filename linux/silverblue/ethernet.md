@@ -207,3 +207,15 @@ table inet filter {
 sudo nft -f /etc/nftables.conf
 ```
 {% endcode %}
+
+{% code title="Дополнительный список url" overflow="wrap" %}
+```bash
+sudo nano /opt/zapret/ipset/zapret-hosts-user.txt
+```
+{% endcode %}
+
+{% code title="zapret-hosts-user.txt" overflow="wrap" %}
+```
+googlevideo.com
+```
+{% endcode %}
