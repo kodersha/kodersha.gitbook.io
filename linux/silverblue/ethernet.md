@@ -177,6 +177,12 @@ exec bash /opt/zapret/init.d/sysv/zapret start
 ```
 {% endcode %}
 
+{% code title="Права на выполнение" overflow="wrap" %}
+```bash
+sudo chmod 755 /etc/rc.d/rc.local
+```
+{% endcode %}
+
 {% code title="Перезапустите службу" overflow="wrap" %}
 ```bash
 sudo systemctl restart rc-local.service
