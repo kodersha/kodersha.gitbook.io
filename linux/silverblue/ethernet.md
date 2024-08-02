@@ -157,6 +157,8 @@ GETLIST=get_antifilter_ipsmart.sh
 {% endtab %}
 {% endtabs %}
 
+
+
 {% code title="Отключите firewalld" overflow="wrap" %}
 ```bash
 sudo systemctl disable firewalld
@@ -189,6 +191,44 @@ sudo systemctl restart rc-local.service
 ```
 {% endcode %}
 
+{% code title="Создайте файл сервиса" overflow="wrap" %}
+```bash
+sudo nano /etc/systemd/system/rc-local.service
+```
+{% endcode %}
+
+{% code title="rc-local.service" %}
+```ini
+[Unit]
+Description=/etc/rc.d/rc.local Compatibility
+ConditionPathExists=/etc/rc.d/rc.local
+
+[Service]
+Type=forking
+ExecStart=/etc/rc.d/rc.local
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+{% endcode %}
+
+{% code title="Перезапустите systemd" overflow="wrap" %}
+```bash
+sudo systemctl daemon-reload
+```
+{% endcode %}
+
+{% code title="Запустите сервис" overflow="wrap" %}
+```bash
+sudo systemctl enable --now rc-local.service
+```
+{% endcode %}
+
+
+
 {% code title="Отредактируйте конфигурацию nftables" overflow="wrap" %}
 ```bash
 sudo nano /etc/nftables.conf
@@ -213,6 +253,8 @@ table inet filter {
 sudo nft -f /etc/nftables.conf
 ```
 {% endcode %}
+
+
 
 {% code title="Дополнительный список url" overflow="wrap" %}
 ```bash
