@@ -32,7 +32,7 @@ git clone --depth 1 https://github.com/bol-van/zapret && cd zapret
 {% endtab %}
 
 {% tab title="→" %}
-Пример конфигурации. Используется `nftables` с `tpws`.
+Пример конфигурации. Используется `nftables` с `nfqws`.
 
 {% code title="/opt/zapret/config" %}
 ```ini
@@ -90,7 +90,7 @@ GZIP_LISTS=1
 # tpws-socks : tpws socks mode
 # filter : no daemon, just create ipset or download hostlist
 # custom : custom mode. should modify custom init script and add your own code
-MODE=tpws
+MODE=nfqws
 # apply fooling to http
 MODE_HTTP=0
 # for nfqws only. support http keep alives. enable only if DPI checks for http request in any outgoing packet
@@ -100,12 +100,12 @@ MODE_HTTPS=1
 # apply fooling to quic
 MODE_QUIC=0
 # none,ipset,hostlist,autohostlist
-MODE_FILTER=hostlist,ipset
+MODE_FILTER=ipset,hostlist
 
 # CHOOSE NFQWS DAEMON OPTIONS for DPI desync mode. run "nfq/nfqws --help" for option list
 DESYNC_MARK=0x40000000
 DESYNC_MARK_POSTNAT=0x20000000
-NFQWS_OPT_DESYNC="--dpi-desync=fake --dpi-desync-ttl=0 --dpi-desync-ttl6=0 --dpi-desync-fooling=md5sig"
+NFQWS_OPT_DESYNC="--dpi-desync=split2 --dpi-desync-ttl=3 --dpi-desync-fooling=md5sig"
 #NFQWS_OPT_DESYNC_HTTP="--dpi-desync=split --dpi-desync-ttl=0 --dpi-desync-fooling=badsum"
 #NFQWS_OPT_DESYNC_HTTPS="--wssize=1:6 --dpi-desync=split --dpi-desync-ttl=0 --dpi-desync-fooling=badsum"
 #NFQWS_OPT_DESYNC_HTTP6="--dpi-desync=split --dpi-desync-ttl=5 --dpi-desync-fooling=none"
@@ -114,7 +114,8 @@ NFQWS_OPT_DESYNC_QUIC="--dpi-desync=fake --dpi-desync-repeats=6"
 #NFQWS_OPT_DESYNC_QUIC6="--dpi-desync=hopbyhop"
 
 # CHOOSE TPWS DAEMON OPTIONS. run "tpws/tpws --help" for option list
-TPWS_OPT="--split-pos=2"
+# --hostcase
+TPWS_OPT="--split-pos=2 --split-http-req=method --oob"
 
 # openwrt only : donttouch,none,software,hardware
 FLOWOFFLOAD=none
