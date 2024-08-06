@@ -266,5 +266,14 @@ sudo nano /opt/zapret/ipset/zapret-hosts-user.txt
 {% code title="zapret-hosts-user.txt" overflow="wrap" %}
 ```
 googlevideo.com
+googleapis.com
+i.ytimg.com
+i9.ytimg.com
+wide-youtube.l.google.com
+youtu.be
+youtube.com
+youtube.googleapis.com
+yt3.ggpht.com
+yt3.googleusercontent.com
 ```
 {% endcode %}
