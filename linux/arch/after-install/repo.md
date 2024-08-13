@@ -6,11 +6,25 @@
 
 {% embed url="https://aur.archlinux.org/packages" %}
 
+#### aura
 
+{% code overflow="wrap" %}
+```bash
+sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/aura.git && cd aura && makepkg -s
+```
+{% endcode %}
+
+Установите пакет. Название пакета может отличаться от версии к версии.
+
+{% code overflow="wrap" %}
+```bash
+sudo pacman -U aura-4.0.2-1-x86_64.pkg.tar.zst
+```
+{% endcode %}
 
 #### pikaur
 
-Установщик пакетов из AUR репозитория.
+Ещё один установщик пакетов из AUR репозитория.
 
 Установите `pikaur`:
 

@@ -6,7 +6,9 @@
 
 * [🚀 После установки](arch/after-install/README.md)
   * [Репозитории](arch/after-install/repo.md)
-  * [Драйвера](arch/after-install/drivers.md)
+  * [Драйвера](arch/after-install/drivers/README.md)
+    * [AMD](arch/after-install/drivers/amd.md)
+    * [NVIDIA](arch/after-install/drivers/nvidia.md)
   * [Язык и шрифты](arch/after-install/language.md)
   * [Бэкапы](arch/after-install/timeshift.md)
   * [Оптимизация](arch/after-install/optimization.md)
