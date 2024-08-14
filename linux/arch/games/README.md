@@ -48,7 +48,7 @@ flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud
 
 {% tabs %}
 {% tab title="mangohud.conf" %}
-#### Для `pkg` версии
+Для `pkg` версии:
 
 {% code overflow="wrap" %}
 ```bash
@@ -56,7 +56,9 @@ mkdir ~/.config/MangoHud && nano ~/.config/MangoHud/MangoHud.conf
 ```
 {% endcode %}
 
-#### Для `flatpak` версии
+***
+
+Для `flatpak` версии:
 
 {% code overflow="wrap" %}
 ```bash
@@ -64,7 +66,7 @@ mkdir ~/.var/app/com.valvesoftware.Steam/config/MangoHud && nano ~/.var/app/com.
 ```
 {% endcode %}
 
-И разрешите доступ для steam:
+И разрешите доступ для steam -
 
 {% code overflow="wrap" %}
 ```bash
