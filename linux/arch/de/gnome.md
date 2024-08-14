@@ -127,7 +127,7 @@ aura -Rsu baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music g
 {% endcode %}
 
 {% hint style="warning" %}
-`flatpak` будет удалён как зависимость, если нужен верните: `aura -S flatpak`. Также из предустановленных пакетов я удаляю `htop` и `vim`.
+`flatpak` будет удалён как зависимость при удалении пакета родительского контроля `malcontent`, если нужен верните: `aura -S flatpak`. Также из предустановленных пакетов я удаляю `htop` и `vim`.
 {% endhint %}
 
 
