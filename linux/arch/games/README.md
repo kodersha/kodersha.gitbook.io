@@ -58,6 +58,26 @@ gamemoderun %command%
 ```
 {% endcode %}
 
+#### mangohud
+
+{% tabs %}
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -S mangohud lib32-mangohud
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="flatpak" %}
+{% code overflow="wrap" %}
+```bash
+flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
 
 
 ### steam
@@ -104,13 +124,13 @@ flatpak install com.usebottles.bottles
 
 
 
-### mangohud
+### lutris
 
 {% tabs %}
 {% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
-aura -S mangohud lib32-mangohud
+aura -S lutris
 ```
 {% endcode %}
 {% endtab %}
@@ -118,7 +138,7 @@ aura -S mangohud lib32-mangohud
 {% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud
+flatpak install net.lutris.Lutris
 ```
 {% endcode %}
 {% endtab %}
