@@ -22,41 +22,7 @@ aura -A --needed wine-staging giflib lib32-giflib libpng lib32-libpng libldap li
 ```
 {% endcode %}
 
-#### gamescope
 
-{% tabs %}
-{% tab title="pkg" %}
-{% code overflow="wrap" %}
-```bash
-aura -S gamescope
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="flatpak" %}
-{% code overflow="wrap" %}
-```bash
-flatpak install org.freedesktop.Platform.VulkanLayer.gamescope
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
-
-#### gamemode
-
-{% code overflow="wrap" %}
-```bash
-aura -S gamemode lib32-gamemode
-```
-{% endcode %}
-
-Отредактируйте параметры запуска игры в `steam`, для включения `gamemode` режима:
-
-{% code overflow="wrap" %}
-```ini
-gamemoderun %command%
-```
-{% endcode %}
 
 #### mangohud
 
@@ -77,6 +43,122 @@ flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+Конфигурация:
+
+{% tabs %}
+{% tab title="mangohud.conf" %}
+#### Для `pkg` версии
+
+{% code overflow="wrap" %}
+```bash
+mkdir ~/.config/MangoHud && nano ~/.config/MangoHud/MangoHud.conf
+```
+{% endcode %}
+
+#### Для `flatpak` версии
+
+{% code overflow="wrap" %}
+```bash
+mkdir ~/.var/app/com.valvesoftware.Steam/config/MangoHud && nano ~/.var/app/com.valvesoftware.Steam/config/MangoHud/MangoHud.conf
+```
+{% endcode %}
+
+И разрешите доступ для steam:
+
+{% code overflow="wrap" %}
+```bash
+flatpak override --user --filesystem=xdg-config/MangoHud:ro com.valvesoftware.Steam
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="→" %}
+{% code title="mangohud.conf" %}
+```ini
+horizontal
+legacy_layout=0
+table_columns=20
+fps
+gpu_stats
+gpu_temp
+vram
+cpu_stats
+cpu_temp
+ram
+frametime=0
+frame_timing=1
+hud_no_margin
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+Теперь можно включить `mangohud` в параметрах запуска игры в `steam`:
+
+{% code overflow="wrap" %}
+```bash
+ mangohud %command%
+```
+{% endcode %}
+
+Для использования с режимом `gamescope`:
+
+{% code overflow="wrap" %}
+```bash
+gamescope --mangoapp -- %command%
+```
+{% endcode %}
+
+
+
+Или для `flatpak` версии `steam`, включает `mangohud` во всех играх:
+
+{% code overflow="wrap" %}
+```bash
+flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
+```
+{% endcode %}
+
+
+
+#### gamescope
+
+{% tabs %}
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -S gamescope
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="flatpak" %}
+{% code overflow="wrap" %}
+```bash
+flatpak install org.freedesktop.Platform.VulkanLayer.gamescope
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+
+
+#### gamemode
+
+{% code overflow="wrap" %}
+```bash
+aura -S gamemode lib32-gamemode
+```
+{% endcode %}
+
+Отредактируйте параметры запуска игры в `steam`, для включения `gamemode` режима:
+
+{% code overflow="wrap" %}
+```ini
+gamemoderun %command%
+```
+{% endcode %}
 
 
 
