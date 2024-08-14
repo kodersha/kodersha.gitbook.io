@@ -230,32 +230,7 @@ sudo systemctl enable --now rc-local.service
 
 
 
-{% code title="Отредактируйте конфигурацию nftables" overflow="wrap" %}
-```bash
-sudo nano /etc/nftables.conf
-```
-{% endcode %}
-
-{% code title="nftables.conf" overflow="wrap" %}
-```bash
-table inet filter {
-    chain output {
-        type filter hook output priority 0; policy accept;
-
-        # Блокировка исходящего трафика на порт UDP 443
-        udp dport 443 drop
-    }
-}
-```
-{% endcode %}
-
-{% code title="Примените конфигурацию" overflow="wrap" %}
-```bash
-sudo nft -f /etc/nftables.conf
-```
-{% endcode %}
-
-
+#### Обход замедления youtube
 
 {% code title="Дополнительный список url" overflow="wrap" %}
 ```bash
