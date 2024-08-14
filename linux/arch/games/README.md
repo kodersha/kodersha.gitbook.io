@@ -188,6 +188,8 @@ flatpak install com.valvesoftware.Steam
 
 ### bottles
 
+<figure><img src="../../.gitbook/assets/bottles.png" alt=""><figcaption></figcaption></figure>
+
 {% tabs %}
 {% tab title="pkg" %}
 {% code overflow="wrap" %}
