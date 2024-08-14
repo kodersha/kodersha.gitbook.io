@@ -14,7 +14,7 @@ sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/au
 ```
 {% endcode %}
 
-Установите пакет. Название пакета может отличаться от версии к версии.
+Установите пакет из папки aura. Название архива может отличаться от версии к версии.
 
 {% code overflow="wrap" %}
 ```bash
@@ -41,6 +41,18 @@ sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/pi
 
 
 
+### homebrew
+
+[Homebrew](https://brew.sh/) для linux - это менеджер пакетов, изначально разработанный для macOS, который позволяет легко устанавливать, обновлять и управлять программным обеспечением на linux-системах.
+
+{% code overflow="wrap" %}
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+{% endcode %}
+
+
+
 ### flatpak
 
 Позволяет устанавливать и запускать приложения в изолированных контейнерах, обеспечивая совместимость между дистрибутивами, автоматическое управление зависимостями и безопасное обновление через репозитории, такие как `flathub`.
@@ -49,7 +61,7 @@ sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/pi
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S flatpak
+aura -S flatpak
 ```
 {% endcode %}
 

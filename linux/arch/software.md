@@ -20,15 +20,15 @@ layout:
 {% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install firefox
+flatpak install org.mozilla.firefox
 ```
 {% endcode %}
 {% endtab %}
 
-{% tab title="pacman" %}
+{% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S firefox firefox-i18n-ru
+aura -S firefox firefox-i18n-ru
 ```
 {% endcode %}
 {% endtab %}
@@ -42,7 +42,7 @@ sudo pacman -S firefox firefox-i18n-ru
 {% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install spotify
+flatpak install com.spotify.Client
 ```
 {% endcode %}
 
@@ -55,10 +55,10 @@ bash <(curl -sSL https://spotx-official.github.io/run.sh)
 {% endcode %}
 {% endtab %}
 
-{% tab title="AUR" %}
+{% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
-pikaur -S spotify
+aura -A spotify
 ```
 {% endcode %}
 {% endtab %}

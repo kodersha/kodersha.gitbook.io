@@ -36,9 +36,11 @@ sudo locale-gen
 
 #### X11
 
+{% code overflow="wrap" %}
 ```bash
 localectl set-x11-keymap us,ru "" "" grp:alt_shift_toggle
 ```
+{% endcode %}
 
 
 
@@ -50,10 +52,12 @@ sudo nano /etc/environment
 ```
 {% endcode %}
 
+{% code overflow="wrap" %}
 ```ini
 XKB_DEFAULT_LAYOUT=us,ru
 XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
 ```
+{% endcode %}
 
 
 
@@ -63,7 +67,7 @@ XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S --needed adobe-source-sans-pro-fonts ttf-dejavu ttf-opensans noto-fonts freetype2 terminus-font ttf-bitstream-vera ttf-dejavu ttf-droid ttf-fira-mono ttf-fira-sans ttf-freefont ttf-inconsolata ttf-liberation libertinus-font
+aura -S --needed adobe-source-sans-pro-fonts ttf-dejavu ttf-opensans noto-fonts freetype2 terminus-font ttf-bitstream-vera ttf-dejavu ttf-droid ttf-fira-mono ttf-fira-sans ttf-freefont ttf-inconsolata ttf-liberation libertinus-font
 ```
 {% endcode %}
 
@@ -71,7 +75,7 @@ sudo pacman -S --needed adobe-source-sans-pro-fonts ttf-dejavu ttf-opensans noto
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S --needed nerd-fonts
+aura -S nerd-fonts
 ```
 {% endcode %}
 
@@ -79,7 +83,7 @@ sudo pacman -S --needed nerd-fonts
 
 {% code overflow="wrap" %}
 ```bash
-yay -S --needed all-repository-fonts
+aura -A all-repository-fonts
 ```
 {% endcode %}
 
@@ -115,7 +119,7 @@ fc-cache -v
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S --needed hunspell hunspell-ru hunspell-en_us
+aura -S --needed hunspell hunspell-ru hunspell-en_us
 ```
 {% endcode %}
 
@@ -125,6 +129,6 @@ sudo pacman -S --needed hunspell hunspell-ru hunspell-en_us
 
 {% code title="Одной командой" overflow="wrap" %}
 ```bash
-sudo pacman -S --needed adobe-source-sans-pro-fonts ttf-dejavu ttf-opensans noto-fonts freetype2 terminus-font ttf-bitstream-vera ttf-dejavu ttf-droid ttf-fira-mono ttf-fira-sans ttf-freefont ttf-inconsolata ttf-liberation libertinus-font nerd-fonts hunspell hunspell-ru hunspell-en_us
+aura -S --needed adobe-source-sans-pro-fonts ttf-dejavu ttf-opensans noto-fonts freetype2 terminus-font ttf-bitstream-vera ttf-dejavu ttf-droid ttf-fira-mono ttf-fira-sans ttf-freefont ttf-inconsolata ttf-liberation libertinus-font nerd-fonts hunspell hunspell-ru hunspell-en_us
 ```
 {% endcode %}

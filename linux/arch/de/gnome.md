@@ -6,115 +6,115 @@
 
 {% code title="Анализатор использования дисков" overflow="wrap" %}
 ```bash
-sudo pacman -Rns baobab
+aura -Rsu baobab
 ```
 {% endcode %}
 
 {% code title="Веб-брауpер" overflow="wrap" %}
 ```bash
-sudo pacman -Rns epiphany
+aura -Rsu epiphany
 ```
 {% endcode %}
 
 {% code title="Видео" overflow="wrap" %}
 ```bash
-sudo pacman -Rns totem
+aura -Rsu totem
 ```
 {% endcode %}
 
 {% code title="Камера" overflow="wrap" %}
 ```bash
-sudo pacman -Rns snapshot
+aura -Rsu snapshot
 ```
 {% endcode %}
 
 {% code title=" Карты" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-maps
+aura -Rsu gnome-maps
 ```
 {% endcode %}
 
 {% code title="Календарь" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-calendar
+aura -Rsu gnome-calendar
 ```
 {% endcode %}
 
 {% code title="Контакты" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-contacts
+aura -Rsu gnome-contacts
 ```
 {% endcode %}
 
 {% code title="Музыка" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-music
+aura -Rsu gnome-music
 ```
 {% endcode %}
 
 {% code title="Погода" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-weather
+aura -Rsu gnome-weather
 ```
 {% endcode %}
 
 {% code title="Подключения" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-connections
+aura -Rsu gnome-connections
 ```
 {% endcode %}
 
 {% code title="Предустановленные расширения" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-shell-extensions
+aura -Rsu gnome-shell-extensions
 ```
 {% endcode %}
 
 {% code title="Родительский контроль" overflow="wrap" %}
 ```bash
-sudo pacman -Rns malcontent
+aura -Rsu malcontent
 ```
 {% endcode %}
 
 {% code title="Системный монитор" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-system-monitor
+aura -Rsu gnome-system-monitor
 ```
 {% endcode %}
 
 {% code title="Сканер документов" overflow="wrap" %}
 ```bash
-sudo pacman -Rns simple-scan
+aura -Rsu simple-scan
 ```
 {% endcode %}
 
 {% code title="Справка" overflow="wrap" %}
 ```bash
-sudo pacman -Rns yelp
+aura -Rsu yelp
 ```
 {% endcode %}
 
 {% code title="Текстовый редактор" overflow="wrap" fullWidth="false" %}
 ```bash
-sudo pacman -Rns gnome-text-editor
+aura -Rsu gnome-text-editor
 ```
 {% endcode %}
 
 {% code title="Экскурсия" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-tour
+aura -Rsu gnome-tour
 ```
 {% endcode %}
 
 {% code title="Центр приложений" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-software
+aura -Rsu gnome-software
 ```
 {% endcode %}
 
 {% code title="Часы" overflow="wrap" %}
 ```bash
-sudo pacman -Rns gnome-clocks
+aura -Rsu gnome-clocks
 ```
 {% endcode %}
 
@@ -122,12 +122,12 @@ sudo pacman -Rns gnome-clocks
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -Rns baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs gnome-user-share gnome-menus malcontent evince sushi loupe orca rygel tracker3-miners gvfs-afc gvfs-dnssd gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb gvfs-wsdd gvfs-google gvfs-onedrive htop vim nm-connection-editor network-manager-applet
+aura -Rsu baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs gnome-user-share gnome-menus malcontent evince sushi loupe orca rygel tracker3-miners gvfs-afc gvfs-dnssd gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb gvfs-wsdd gvfs-google gvfs-onedrive htop vim nm-connection-editor network-manager-applet
 ```
 {% endcode %}
 
 {% hint style="warning" %}
-`flatpak` будет удалён как зависимость, если нужен верните: `sudo pacman -S flatpak` Также из предустановленных пакетов я удаляю `htop` и `vim`
+`flatpak` будет удалён как зависимость, если нужен верните: `aura -S flatpak` Также из предустановленных пакетов я удаляю `htop` и `vim`
 {% endhint %}
 
 
@@ -176,7 +176,7 @@ systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S gnome-terminal && sudo pacman -Rns gnome-console
+aura -S gnome-terminal && aura -Rsu gnome-console
 ```
 {% endcode %}
 
@@ -190,15 +190,15 @@ sudo pacman -S gnome-terminal && sudo pacman -Rns gnome-console
 {% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install LibreMenuEditor
+flatpak install page.codeberg.libre_menu_editor.LibreMenuEditor
 ```
 {% endcode %}
 {% endtab %}
 
-{% tab title="AUR" %}
+{% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
-pikaur -S libre-menu-editor
+aura -A libre-menu-editor
 ```
 {% endcode %}
 {% endtab %}
@@ -214,15 +214,15 @@ pikaur -S libre-menu-editor
 {% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install ExtensionManager
+flatpak install com.mattjakeman.ExtensionManager
 ```
 {% endcode %}
 {% endtab %}
 
-{% tab title="AUR" %}
+{% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
-pikaur -S extension-manager
+aura -A extension-manager
 ```
 {% endcode %}
 {% endtab %}

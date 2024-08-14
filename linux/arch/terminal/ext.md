@@ -2,15 +2,25 @@
 
 ### topgrade
 
-Утилита для обновления различных частей системы и приложений. Она автоматически определяет используемые пакетные менеджеры, языковые среды и инструменты конфигурации, затем обновляет все соответствующие компоненты.
+[Утилита](https://github.com/topgrade-rs/topgrade) для обновления различных частей системы и приложений. Она автоматически определяет используемые пакетные менеджеры, языковые среды и инструменты конфигурации, затем обновляет все соответствующие компоненты.
 
-{% embed url="https://github.com/topgrade-rs/topgrade" %}
-
+{% tabs %}
+{% tab title="homebrew" %}
 {% code overflow="wrap" %}
 ```bash
-pikaur -S topgrade
+brew install topgrade
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -A topgrade
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 {% code title="Обновите всё одной командой:" overflow="wrap" %}
 ```bash
@@ -74,15 +84,25 @@ use_root = false
 
 ### fastfetch
 
-Утилита для вывода информации о системе в терминале. Напоминает `neofetch`, предоставляя подробные сведения о системе, такие как дистрибутив операционной системы, ядро, аппаратные характеристики, информация о CPU и GPU, память, разделы дисков и текущую тему рабочего стола.
+[Утилита](https://github.com/fastfetch-cli/fastfetch) для вывода информации о системе в терминале. Напоминает `neofetch`, предоставляя подробные сведения о системе, такие как дистрибутив операционной системы, ядро, аппаратные характеристики, информация о CPU и GPU, память, разделы дисков и текущую тему рабочего стола.
 
-{% embed url="https://github.com/fastfetch-cli/fastfetch" %}
-
-{% code title="Установите fastfetch:" overflow="wrap" %}
+{% tabs %}
+{% tab title="homebrew" %}
+{% code overflow="wrap" %}
 ```bash
-sudo pacman -S fastfetch
+brew install fastfetch
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -S fastfetch
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <figure><img src="../../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
 
@@ -282,11 +302,23 @@ nano ~/.config/fastfetch/logo.txt
 
 Командная оболочка UNIX, часто используемая в качестве замены стандартного `bash`. Известна своими расширенными функциями и улучшенной интерактивностью, например - Автодополнение команд и аргументов, алиасы, поддержка плагинов и тем, поиск по истории и т.д.
 
-{% code title="Установить:" overflow="wrap" %}
+{% tabs %}
+{% tab title="homebrew" %}
+{% code overflow="wrap" %}
 ```bash
-sudo pacman -S zsh
+brew install zsh
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -S zsh
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 Конфигурация:
 
@@ -350,6 +382,9 @@ zplug load
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Homebrew
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 {% endcode %}
 {% endtab %}

@@ -10,7 +10,7 @@
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S cpupower
+aura -S cpupower
 ```
 {% endcode %}
 
@@ -85,7 +85,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S zram-generator
+aura -S zram-generator
 ```
 {% endcode %}
 
@@ -132,7 +132,7 @@ sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0.se
 
 {% code title="Установите ananicy-cpp" overflow="wrap" %}
 ```bash
-pikaur -S ananicy-cpp
+aura -A ananicy-cpp
 ```
 {% endcode %}
 
@@ -146,7 +146,7 @@ sudo systemctl enable --now ananicy-cpp
 
 {% code overflow="wrap" %}
 ```bash
-pikaur -S cachyos-ananicy-rules-git
+aura -A cachyos-ananicy-rules-git
 ```
 {% endcode %}
 
@@ -160,7 +160,7 @@ pikaur -S cachyos-ananicy-rules-git
 
 {% code overflow="wrap" %}
 ```sh
-sudo pacman -S irqbalance
+aura -S irqbalance
 ```
 {% endcode %}
 
@@ -186,7 +186,7 @@ sudo systemctl enable --now irqbalance
 
 {% code title="Установите" overflow="wrap" %}
 ```bash
-pikaur -S uksmd
+aura -A uksmd
 ```
 {% endcode %}
 

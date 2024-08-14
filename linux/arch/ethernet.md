@@ -16,11 +16,11 @@ layout:
 
 ### COMSS dns
 
-Установите `curl`
+Установите `curl`, если его нет
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S --needed curl
+aura -S --needed curl
 ```
 {% endcode %}
 
@@ -36,10 +36,11 @@ sudo sh -c 'sh -c "$(curl -sL https://api.controld.com/dl)" -s comss'
 
 Для удаления:
 
+{% code overflow="wrap" %}
 ```bash
-sudo ctrld stop
-sudo ctrld uninstall
+sudo ctrld stop && sudo ctrld uninstall
 ```
+{% endcode %}
 
 {% embed url="https://www.comss.ru/page.php?id=12918" %}
 
@@ -49,10 +50,19 @@ sudo ctrld uninstall
 
 Установите `tor` и `obfs4proxy`:
 
+{% tabs %}
+{% tab title="homebrew" %}
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S tor
-pikaur -S obfs4proxy
+brew install tor obfs4proxy
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -S tor && aura -A obfs4proxy
 ```
 {% endcode %}
 
@@ -72,24 +82,23 @@ sudo nano /lib/systemd/system/tor.service
 ```
 {% endcode %}
 
+{% code overflow="wrap" %}
 ```editorconfig
 [Service]
 User=tor
 Group=tor
 ```
+{% endcode %}
 
 Конфигурация мостов:
 
-{% tabs %}
-{% tab title="torrc" %}
 {% code overflow="wrap" %}
 ```bash
 sudo nano /etc/tor/torrc
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="→" %}
+{% code overflow="wrap" %}
 ```editorconfig
 ## Конфигурация tor для использования мостов
 
@@ -100,9 +109,7 @@ UseBridges 1
 ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy
 
 # Добавление мостов obfs4
-Bridge obfs4 [...]
-Bridge obfs4 [...]
-Bridge obfs4 [...]
+Bridge # Укажите obfs4 мост
 
 # Не запускать Tor в режиме сервиса
 RunAsDaemon 0
@@ -112,8 +119,7 @@ SocksPort 9050
 
 DataDirectory /var/lib/tor
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Обновите конфигурацию и запустите `tor` сервис:
 
@@ -132,3 +138,5 @@ sudo systemctl status tor
 {% endcode %}
 
 Адрес хоста подключения SOCKS5: `127.0.0.1:9050`
+{% endtab %}
+{% endtabs %}

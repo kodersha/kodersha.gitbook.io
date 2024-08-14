@@ -16,23 +16,29 @@ layout:
 
 ### podman
 
+{% code overflow="wrap" %}
 ```bash
-sudo pacman -S podman podman-compose aardvark-dns
+aura -S podman podman-compose
 ```
+{% endcode %}
 
 #### Конфигурация:
 
 {% tabs %}
 {% tab title="registries.conf" %}
+{% code overflow="wrap" %}
 ```bash
 sudo nano /etc/containers/registries.conf
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="→" %}
+{% code overflow="wrap" %}
 ```editorconfig
 unqualified-search-registries = ["docker.io", "quay.io"]
 ```
+{% endcode %}
 
 На случай блокировки docker.io добавьте:
 
@@ -57,13 +63,23 @@ location = "quay.io"
 ### github
 
 {% tabs %}
-{% tab title="Установить" %}
+{% tab title="homebrew" %}
+{% code overflow="wrap" %}
 ```bash
-sudo pacman -S --needed git github-cli gitui
+brew install gh gitui
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="→" %}
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -S --needed git github-cli gitui
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
 Конфигурация, укажите имя и email как у вашего аккаунта на github.
 
 ```bash
@@ -71,26 +87,24 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 git config --global core.compression 0
 ```
-{% endtab %}
-{% endtabs %}
 
 
 
 ### visual studio code
 
 {% tabs %}
-{% tab title="flatpak" %}
+{% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
-flatpak install com.visualstudio.code
+aura -A visual-studio-code-bin
 ```
 {% endcode %}
 {% endtab %}
 
-{% tab title="AUR" %}
+{% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-pikaur -S visual-studio-code-bin
+flatpak install com.visualstudio.code
 ```
 {% endcode %}
 {% endtab %}
@@ -100,10 +114,10 @@ pikaur -S visual-studio-code-bin
 
 ### figma
 
-{% code title="figma font helper" overflow="wrap" %}
+[figma font helper](https://github.com/neetly/figma-agent-linux)
+
+{% code overflow="wrap" %}
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/neetly/figma-agent-linux/main/scripts/install.sh)"
 ```
 {% endcode %}
-
-{% embed url="https://github.com/neetly/figma-agent-linux" %}

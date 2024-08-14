@@ -11,7 +11,7 @@ description: >-
 
 {% code title="Установите timeshift и cronie" overflow="wrap" %}
 ```bash
-pikaur -S timeshift cronie
+aura -S timeshift cronie
 ```
 {% endcode %}
 
@@ -39,7 +39,7 @@ sudo timeshift-gtk
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S grub-btrfs
+aura -S grub-btrfs
 ```
 {% endcode %}
 
