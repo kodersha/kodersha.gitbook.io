@@ -36,7 +36,8 @@ sudo nano /etc/containers/registries.conf
 {% tab title="→" %}
 {% code overflow="wrap" %}
 ```editorconfig
-unqualified-search-registries = ["docker.io", "quay.io"]
+[registries.search]
+registries = ['docker.io']
 ```
 {% endcode %}
 
