@@ -1,4 +1,18 @@
-# Репозитории
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
+# 📦 Репозитории
 
 ### AUR
 
@@ -10,34 +24,9 @@
 
 {% code overflow="wrap" %}
 ```bash
-sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/aura.git && cd aura && makepkg -s
+sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/aura.git && cd aura && makepkg -s && sudo pacman -U aura-*.pkg.tar.zst && cd .. && rm -rf aura
 ```
 {% endcode %}
-
-Установите пакет из папки aura. Название архива может отличаться от версии к версии.
-
-{% code overflow="wrap" %}
-```bash
-sudo pacman -U aura-4.0.2-1-x86_64.pkg.tar.zst
-```
-{% endcode %}
-
-#### pikaur
-
-Ещё один установщик пакетов из AUR репозитория.
-
-Установите `pikaur`:
-
-{% code overflow="wrap" %}
-```bash
-sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/pikaur.git && cd pikaur && makepkg -fsri && cd .. && rm -rf pikaur
-```
-{% endcode %}
-
-Теперь можно устанавливать ~~все игры~~ пакеты из AUR:
-
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">pikaur -S <a data-footnote-ref href="#user-content-fn-1">pkg</a>
-</code></pre>
 
 
 
@@ -74,5 +63,3 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 {% endcode %}
 
 {% embed url="https://flathub.org/" %}
-
-[^1]: Название пакета AUR

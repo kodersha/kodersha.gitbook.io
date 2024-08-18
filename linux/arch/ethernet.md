@@ -57,6 +57,53 @@ sudo ctrld stop && sudo ctrld uninstall
 brew install tor obfs4proxy
 ```
 {% endcode %}
+
+Создайте папку для `DataDirectory`:
+
+{% code overflow="wrap" %}
+```bash
+mkdir /home/linuxbrew/.linuxbrew/var/lib/tor
+```
+{% endcode %}
+
+Создайте файл конфигурации:
+
+{% code overflow="wrap" %}
+```bash
+nano /home/linuxbrew/.linuxbrew/etc/tor/torrc
+```
+{% endcode %}
+
+{% code title="torrc" %}
+```ini
+## Конфигурация tor для использования мостов
+
+# Разрешить использование мостов
+UseBridges 1
+
+# Указание, как Tor должен интерактивно подключаться к мостам с использованием obfs4
+ClientTransportPlugin obfs4 exec /home/linuxbrew/.linuxbrew/bin/obfs4proxy
+
+# Добавление мостов obfs4
+Bridge # Укажите obfs4 мост
+
+# Не запускать Tor в режиме сервиса
+RunAsDaemon 0
+
+# SOCKS-порт
+SocksPort 9050
+
+DataDirectory /home/linuxbrew/.linuxbrew/var/lib/tor
+```
+{% endcode %}
+
+Запустите сервис:
+
+```bash
+brew services start tor
+```
+
+Адрес хоста подключения SOCKS5: `127.0.0.1:9050`
 {% endtab %}
 
 {% tab title="pkg" %}
@@ -98,7 +145,7 @@ sudo nano /etc/tor/torrc
 ```
 {% endcode %}
 
-{% code overflow="wrap" %}
+{% code title="torrc" %}
 ```editorconfig
 ## Конфигурация tor для использования мостов
 

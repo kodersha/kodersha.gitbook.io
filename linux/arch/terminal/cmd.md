@@ -16,7 +16,7 @@
 
 #### pikaur
 
-Помощник для управления пакетами в Arch Linux, упрощает установку и управление пакетами из AUR (см. После установки - [Репозитории](../after-install/repo.md)).
+Помощник для управления пакетами в Arch Linux, упрощает установку и управление пакетами из AUR (см. После установки - [Репозитории](../repo.md)).
 
 <pre class="language-bash" data-title="Найти пакет в репозитории AUR:" data-overflow="wrap"><code class="lang-bash">pikaur -Ss <a data-footnote-ref href="#user-content-fn-3">pkg</a>
 </code></pre>

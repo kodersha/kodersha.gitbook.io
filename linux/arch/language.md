@@ -1,4 +1,18 @@
-# Язык и шрифты
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
+# 🅰️ Язык и шрифты
 
 ### Локаль
 
@@ -93,7 +107,7 @@ aura -A all-repository-fonts
 
 Дополнительно можно добавить шрифты из Windows 11.
 
-{% file src="../../.gitbook/assets/windows.zip" %}
+{% file src="../.gitbook/assets/windows.zip" %}
 
 Скачайте архив, распакуйте и скопируйте папку `windows` в домашнюю папку:
 

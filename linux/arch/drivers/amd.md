@@ -50,7 +50,7 @@ sudo mkinitcpio -P
 
 ### CoreCtrl
 
-<figure><img src="../../../.gitbook/assets/corectl.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/corectl.png" alt=""><figcaption></figcaption></figure>
 
 {% code overflow="wrap" %}
 ```bash

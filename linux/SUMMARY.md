@@ -4,12 +4,12 @@
 
 ## arch
 
+* [📦 Репозитории](arch/repo.md)
+* [🤖 Драйвера](arch/drivers/README.md)
+  * [AMD](arch/drivers/amd.md)
+  * [NVIDIA](arch/drivers/nvidia.md)
+* [🅰️ Язык и шрифты](arch/language.md)
 * [🚀 После установки](arch/after-install/README.md)
-  * [Репозитории](arch/after-install/repo.md)
-  * [Драйвера](arch/after-install/drivers/README.md)
-    * [AMD](arch/after-install/drivers/amd.md)
-    * [NVIDIA](arch/after-install/drivers/nvidia.md)
-  * [Язык и шрифты](arch/after-install/language.md)
   * [Бэкапы](arch/after-install/timeshift.md)
   * [Оптимизация](arch/after-install/optimization.md)
 * [☄️ Среды рабочего стола](arch/de/README.md)
@@ -20,7 +20,7 @@
 * [🎮 Игры](arch/games/README.md)
   * [Моды](arch/games/mods.md)
 * [📀 Приложения](arch/software.md)
-* [📦 Разработка](arch/developer.md)
+* [☕ Разработка](arch/developer.md)
 * [🔮 Интернет](arch/ethernet.md)
 
 ## Fedora silverblue <a href="#silverblue" id="silverblue"></a>

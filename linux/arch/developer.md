@@ -12,7 +12,7 @@ layout:
     visible: false
 ---
 
-# 📦 Разработка
+# ☕ Разработка
 
 ### podman
 
