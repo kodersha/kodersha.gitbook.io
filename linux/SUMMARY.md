@@ -25,5 +25,6 @@
 
 ## Fedora silverblue <a href="#silverblue" id="silverblue"></a>
 
+* [📦 Репозитории](silverblue/repo.md)
 * [🎮 Игры](silverblue/games.md)
 * [🔮 Интернет](silverblue/ethernet.md)
