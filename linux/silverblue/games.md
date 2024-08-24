@@ -86,6 +86,28 @@ flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
 ```
 {% endcode %}
 
+
+
+#### vkbasalt
+
+{% code overflow="wrap" %}
+```bash
+flatpak install org.freedesktop.Platform.VulkanLayer.vkBasalt
+```
+{% endcode %}
+
+
+
+#### protontricks
+
+{% code overflow="wrap" %}
+```bash
+flatpak install com.github.Matoking.protontricks
+```
+{% endcode %}
+
+
+
 #### gamescope
 
 {% code overflow="wrap" %}
@@ -94,9 +116,11 @@ flatpak install org.freedesktop.Platform.VulkanLayer.gamescope
 ```
 {% endcode %}
 
+
+
 #### gamemode
 
-Отредактируйте параметры запуска игры в `steam`, для включения `gamemode` режима:
+Параметры запуска игры в `steam`, для включения `gamemode` режима:
 
 {% code overflow="wrap" %}
 ```ini
