@@ -16,14 +16,6 @@ layout:
 
 ### COMSS dns
 
-Установите `curl`, если его нет
-
-{% code overflow="wrap" %}
-```bash
-aura -S --needed curl
-```
-{% endcode %}
-
 Запустите скрипт автоматической установки:
 
 {% code overflow="wrap" %}
@@ -34,9 +26,7 @@ sudo sh -c 'sh -c "$(curl -sL https://api.controld.com/dl)" -s comss'
 
 Проверить состояние можно на [controld.com/status](https://controld.com/status).
 
-Для удаления:
-
-{% code overflow="wrap" %}
+{% code title="Для удаления:" overflow="wrap" %}
 ```bash
 sudo ctrld stop && sudo ctrld uninstall
 ```
@@ -84,8 +74,8 @@ UseBridges 1
 # Указание, как Tor должен интерактивно подключаться к мостам с использованием obfs4
 ClientTransportPlugin obfs4 exec /home/linuxbrew/.linuxbrew/bin/obfs4proxy
 
-# Добавление мостов obfs4
-Bridge # Укажите obfs4 мост
+# Добавление моста obfs4
+Bridge
 
 # Не запускать Tor в режиме сервиса
 RunAsDaemon 0
@@ -97,11 +87,11 @@ DataDirectory /home/linuxbrew/.linuxbrew/var/lib/tor
 ```
 {% endcode %}
 
-Запустите сервис:
-
+{% code title="Запустите сервис:" overflow="wrap" %}
 ```bash
 brew services start tor
 ```
+{% endcode %}
 
 Адрес хоста подключения SOCKS5: `127.0.0.1:9050`
 {% endtab %}

@@ -1,37 +1,135 @@
 # 🔮 Интернет
 
-### zapret
-
-{% code overflow="wrap" %}
-```bash
-git clone --depth 1 https://github.com/bol-van/zapret && cd zapret
-```
-{% endcode %}
+### COMSS dns
 
 {% tabs %}
-{% tab title="Установка" %}
+{% tab title="00-custom.conf" %}
 {% code overflow="wrap" %}
 ```bash
-./install_bin.sh
-```
-{% endcode %}
-
-```bash
-./install_prereq.sh
-```
-
-```bash
-./blockcheck.sh
-```
-
-{% code overflow="wrap" %}
-```bash
-./install_easy.sh
+sudo mkdir /etc/systemd/resolved.conf.d && sudo nano /etc/systemd/resolved.conf.d/00-custom.conf
 ```
 {% endcode %}
 {% endtab %}
 
 {% tab title="→" %}
+{% code title="00-custom.conf" %}
+```ini
+[Resolve]
+DNS=76.76.2.22#comss.dns.controld.com
+DNSOverTLS=yes
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+Также добавьте в `hosts`:
+
+{% tabs %}
+{% tab title="hosts" %}
+{% code overflow="wrap" %}
+```bash
+sudo nano /etc/hosts
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="→" %}
+<pre class="language-ini" data-title="hosts"><code class="lang-ini">127.0.1.1   <a data-footnote-ref href="#user-content-fn-1">fedora</a>
+</code></pre>
+{% endtab %}
+{% endtabs %}
+
+Проверить состояние можно на [controld.com/status](https://controld.com/status).
+
+
+
+### tor
+
+{% code overflow="wrap" %}
+```bash
+brew install tor obfs4proxy
+```
+{% endcode %}
+
+Создайте папку для `DataDirectory`:
+
+{% code overflow="wrap" %}
+```bash
+mkdir /home/linuxbrew/.linuxbrew/var/lib/tor
+```
+{% endcode %}
+
+Создайте файл конфигурации:
+
+{% tabs %}
+{% tab title="torrc" %}
+{% code overflow="wrap" %}
+```bash
+nano /home/linuxbrew/.linuxbrew/etc/tor/torrc
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="→" %}
+{% code title="torrc" %}
+```ini
+## Конфигурация tor для использования мостов
+
+# Разрешить использование мостов
+UseBridges 1
+
+# Указание, как Tor должен интерактивно подключаться к мостам с использованием obfs4
+ClientTransportPlugin obfs4 exec /home/linuxbrew/.linuxbrew/bin/obfs4proxy
+
+# Добавление моста obfs4
+Bridge
+
+# Не запускать Tor в режиме сервиса
+RunAsDaemon 0
+
+# SOCKS-порт
+SocksPort 9050
+
+DataDirectory /home/linuxbrew/.linuxbrew/var/lib/tor
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+{% code title="Запустите сервис:" overflow="wrap" %}
+```bash
+brew services start tor
+```
+{% endcode %}
+
+Адрес хоста подключения SOCKS5: `127.0.0.1:9050`
+
+
+
+### zapret
+
+{% code overflow="wrap" %}
+```bash
+git clone --depth 1 https://github.com/bol-van/zapret && cd zapret && ./install_bin.sh && ./install_prereq.sh
+```
+{% endcode %}
+
+{% code title="При необходимости запустите тест:" overflow="wrap" %}
+```bash
+./blockcheck.sh
+```
+{% endcode %}
+
+{% code title="Установите сервис игнорируя предупреждения установщика:" overflow="wrap" %}
+```bash
+./install_easy.sh
+```
+{% endcode %}
+
+<details>
+
+<summary>Конфигурация</summary>
+
 Пример конфигурации. Используется `nftables` с `nfqws`.
 
 {% code title="/opt/zapret/config" %}
@@ -155,8 +253,8 @@ DISABLE_IPV6=1
 GETLIST=get_antifilter_ipsmart.sh
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
+
+</details>
 
 
 
@@ -166,12 +264,26 @@ sudo systemctl disable firewalld
 ```
 {% endcode %}
 
-{% code title="Настройте службу" overflow="wrap" %}
+{% tabs %}
+{% tab title="rc.local" %}
+Настройте службу:
+
+{% code overflow="wrap" %}
 ```bash
 sudo nano /etc/rc.d/rc.local
 ```
 {% endcode %}
 
+Добавьте права на выполнение:
+
+{% code overflow="wrap" %}
+```bash
+sudo chmod 755 /etc/rc.d/rc.local
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="→" %}
 {% code title="rc.local" overflow="wrap" %}
 ```bash
 #!/bin/bash
@@ -179,29 +291,25 @@ sudo nano /etc/rc.d/rc.local
 exec bash /opt/zapret/init.d/sysv/zapret start
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
-{% code title="Права на выполнение" overflow="wrap" %}
+{% tabs %}
+{% tab title="rc-local.service" %}
+Создайте файл сервиса:
+
+{% code overflow="wrap" %}
 ```bash
-sudo chmod 755 /etc/rc.d/rc.local
+sudo nano /etc/systemd/system/
 ```
 {% endcode %}
+{% endtab %}
 
-{% code title="Перезапустите службу" overflow="wrap" %}
-```bash
-sudo systemctl restart rc-local.service
-```
-{% endcode %}
-
-{% code title="Создайте файл сервиса" overflow="wrap" %}
-```bash
-sudo nano /etc/systemd/system/rc-local.service
-```
-{% endcode %}
-
+{% tab title="→" %}
 {% code title="rc-local.service" %}
 ```ini
 [Unit]
-Description=/etc/rc.d/rc.local Compatibility
+Description=Compatibility rc.local
 ConditionPathExists=/etc/rc.d/rc.local
 
 [Service]
@@ -215,29 +323,29 @@ RemainAfterExit=yes
 WantedBy=multi-user.target
 ```
 {% endcode %}
-
-{% code title="Перезапустите systemd" overflow="wrap" %}
-```bash
-sudo systemctl daemon-reload
-```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 {% code title="Запустите сервис" overflow="wrap" %}
 ```bash
-sudo systemctl enable --now rc-local.service
+sudo systemctl daemon-reload && sudo systemctl enable --now rc-local.service
 ```
 {% endcode %}
 
 
 
-#### Обход замедления youtube
+#### Список `url` для обхода замедления youtube
 
-{% code title="Дополнительный список url" overflow="wrap" %}
+{% tabs %}
+{% tab title="zapret-hosts-user.txt" %}
+{% code overflow="wrap" %}
 ```bash
 sudo nano /opt/zapret/ipset/zapret-hosts-user.txt
 ```
 {% endcode %}
+{% endtab %}
 
+{% tab title="→" %}
 {% code title="zapret-hosts-user.txt" overflow="wrap" %}
 ```
 googlevideo.com
@@ -252,3 +360,7 @@ yt3.ggpht.com
 yt3.googleusercontent.com
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
+
+[^1]: Ваш hostname
