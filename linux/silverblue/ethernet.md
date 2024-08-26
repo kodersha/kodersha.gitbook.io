@@ -270,15 +270,7 @@ sudo systemctl disable firewalld
 
 {% code overflow="wrap" %}
 ```bash
-sudo nano /etc/rc.d/rc.local
-```
-{% endcode %}
-
-Добавьте права на выполнение:
-
-{% code overflow="wrap" %}
-```bash
-sudo chmod 755 /etc/rc.d/rc.local
+sudo nano /etc/rc.d/rc.local && sudo chmod 755 /etc/rc.d/rc.local
 ```
 {% endcode %}
 {% endtab %}
@@ -300,7 +292,7 @@ exec bash /opt/zapret/init.d/sysv/zapret start
 
 {% code overflow="wrap" %}
 ```bash
-sudo nano /etc/systemd/system/
+sudo nano /etc/systemd/system/rc-local.service
 ```
 {% endcode %}
 {% endtab %}
