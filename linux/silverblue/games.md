@@ -14,45 +14,57 @@ layout:
 
 # 🎮 Игры
 
-### Базовые утилиты
+### steam
 
-{% tabs %}
-{% tab title="protontricks" %}
+{% code overflow="wrap" %}
+```bash
+flatpak install com.valvesoftware.Steam
+```
+{% endcode %}
+
+
+
+### protontricks
+
 {% code overflow="wrap" %}
 ```bash
 flatpak install com.github.Matoking.protontricks
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="gamescope" %}
+
+
+### gamescope
+
 {% code overflow="wrap" %}
 ```bash
 flatpak install org.freedesktop.Platform.VulkanLayer.gamescope
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="gamemode" %}
-{% code title="Параметр запуска игры в steam, для включения gamemode режима:" overflow="wrap" %}
-```ini
-gamemoderun %command%
-```
-{% endcode %}
-{% endtab %}
 
-{% tab title="vkBasalt" %}
+
+### vkbasalt
+
 {% code overflow="wrap" %}
 ```bash
 flatpak install org.freedesktop.Platform.VulkanLayer.vkBasalt
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
 
 
-#### mangohud
+### gamemode
+
+{% code title="Параметр запуска игры в steam, для включения gamemode режима:" overflow="wrap" %}
+```ini
+gamemoderun %command%
+```
+{% endcode %}
+
+
+
+### mangohud
 
 {% code overflow="wrap" %}
 ```bash
@@ -119,16 +131,6 @@ gamescope --mangoapp -- %command%
 {% code title="Включение mangohud во всех играх:" overflow="wrap" %}
 ```bash
 flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
-```
-{% endcode %}
-
-
-
-### steam
-
-{% code overflow="wrap" %}
-```bash
-flatpak install com.valvesoftware.Steam
 ```
 {% endcode %}
 
