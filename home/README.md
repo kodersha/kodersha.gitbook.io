@@ -5,9 +5,9 @@ description: >-
   устаревшими.
 layout:
   title:
-    visible: false
+    visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
     visible: false
   outline:
