@@ -216,23 +216,30 @@ MODE_HTTP_KEEPALIVE=0
 # apply fooling to https
 MODE_HTTPS=1
 # apply fooling to quic
-MODE_QUIC=0
+MODE_QUIC=1
 # none,ipset,hostlist,autohostlist
 MODE_FILTER=ipset,hostlist
 
 # CHOOSE NFQWS DAEMON OPTIONS for DPI desync mode. run "nfq/nfqws --help" for option list
+# SUFFIX VARS define additional lower priority desync profile. it's required if MODE_FILTER=hostlist and strategy has hostlist-incompatible 0-phase desync methods (syndata,wssize)
 DESYNC_MARK=0x40000000
 DESYNC_MARK_POSTNAT=0x20000000
-NFQWS_OPT_DESYNC="--dpi-desync=split2 --dpi-desync-ttl=3 --dpi-desync-fooling=md5sig"
-#NFQWS_OPT_DESYNC_HTTP="--dpi-desync=split --dpi-desync-ttl=0 --dpi-desync-fooling=badsum"
-#NFQWS_OPT_DESYNC_HTTPS="--wssize=1:6 --dpi-desync=split --dpi-desync-ttl=0 --dpi-desync-fooling=badsum"
-#NFQWS_OPT_DESYNC_HTTP6="--dpi-desync=split --dpi-desync-ttl=5 --dpi-desync-fooling=none"
-#NFQWS_OPT_DESYNC_HTTPS6="--wssize=1:6 --dpi-desync=split --dpi-desync-ttl=5 --dpi-desync-fooling=none"
-NFQWS_OPT_DESYNC_QUIC="--dpi-desync=fake --dpi-desync-repeats=6"
+NFQWS_OPT_DESYNC="--dpi-desync=syndata,disorder2"
+#NFQWS_OPT_DESYNC_SUFFIX="--dpi-desync=syndata"
+#NFQWS_OPT_DESYNC_HTTP="--dpi-desync=fake --dpi-desync-ttl=2 --dpi-desync-fake-http=0x00000000 --hostlist=/opt/zapret/ipset/zapret-hosts-user.txt --new --dpi-desync=fake,disorder2 --dpi-desync-ttl=2 --dpi-desync-fooling=badsum"
+#NFQWS_OPT_DESYNC_HTTP_SUFFIX="--dpi-desync=syndata"
+#NFQWS_OPT_DESYNC_HTTPS="--dpi-desync=split --dpi-desync-split-pos=3 --dpi-desync-ttl=2 --dpi-desync-repeats=6 --hostlist=/opt/zapret/ipset/zapret-hosts-user.txt --new --dpi-desync=fake,disorder2 --dpi-desync-ttl=2 --dpi-desync-fooling=badsum"
+#NFQWS_OPT_DESYNC_HTTPS_SUFFIX="--wssize 1:6"
+#NFQWS_OPT_DESYNC_HTTP6=""
+#NFQWS_OPT_DESYNC_HTTP6_SUFFIX="--dpi-desync=syndata"
+#NFQWS_OPT_DESYNC_HTTPS6=""
+#NFQWS_OPT_DESYNC_HTTPS6_SUFFIX="--wssize 1:6"
+NFQWS_OPT_DESYNC_QUIC="--dpi-desync-fake --dpi-desync-repeats=6"
+#NFQWS_OPT_DESYNC_QUIC_SUFFIX=""
 #NFQWS_OPT_DESYNC_QUIC6="--dpi-desync=hopbyhop"
+#NFQWS_OPT_DESYNC_QUIC6_SUFFIX=""
 
 # CHOOSE TPWS DAEMON OPTIONS. run "tpws/tpws --help" for option list
-# --hostcase
 TPWS_OPT="--split-pos=2 --split-http-req=method --oob"
 
 # openwrt only : donttouch,none,software,hardware
@@ -249,7 +256,7 @@ FLOWOFFLOAD=none
 # or leave them commented if its not router
 # it's possible to specify multiple interfaces like this : IFACE_LAN="eth0 eth1 eth2"
 # if IFACE_WAN6 is not defined it take the value of IFACE_WAN
-#IFACE_LAN=
+#IFACE_LAN=eth0
 #IFACE_WAN=
 #IFACE_WAN6="ipsec0 wireguard0 he_net"
 
@@ -278,7 +285,7 @@ GETLIST=get_antifilter_ipsmart.sh
 
 
 
-Отключите firewalld:
+Отключите `firewalld`:
 
 {% code overflow="wrap" %}
 ```bash

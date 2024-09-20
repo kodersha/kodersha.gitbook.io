@@ -44,6 +44,16 @@ flatpak install org.freedesktop.Platform.VulkanLayer.gamescope
 
 
 
+### proton-ge
+
+{% code overflow="wrap" %}
+```bash
+flatpak install com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+```
+{% endcode %}
+
+
+
 ### vkbasalt
 
 {% code overflow="wrap" %}
@@ -82,11 +92,25 @@ mkdir ~/.var/app/com.valvesoftware.Steam/config/MangoHud && nano ~/.var/app/com.
 ```
 {% endcode %}
 
-Разрешите доступ к файлу конфигурации для `steam`:
+{% code title="Разрешите доступ к файлу конфигурации:" overflow="wrap" %}
+```bash
+flatpak override --user --filesystem=xdg-config/MangoHud:ro com.valvesoftware.Steam
+```
+{% endcode %}
+
+***
+
+Для [`bottles`](games.md#bottles):
 
 {% code overflow="wrap" %}
 ```bash
-flatpak override --user --filesystem=xdg-config/MangoHud:ro com.valvesoftware.Steam
+mkdir ~/.var/app/com.usebottles.bottles/config/MangoHud && nano ~/.var/app/com.usebottles.bottles/config/MangoHud/MangoHud.conf
+```
+{% endcode %}
+
+{% code title="Разрешите доступ к файлу конфигурации:" overflow="wrap" %}
+```bash
+flatpak override --user --filesystem=xdg-config/MangoHud:ro com.usebottles.bottles
 ```
 {% endcode %}
 {% endtab %}
@@ -111,6 +135,8 @@ hud_no_margin
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+
 
 Теперь можно включить `mangohud` в параметрах запуска игры в `steam`:
 
