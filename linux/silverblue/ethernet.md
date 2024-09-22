@@ -224,7 +224,7 @@ MODE_FILTER=ipset,hostlist
 # SUFFIX VARS define additional lower priority desync profile. it's required if MODE_FILTER=hostlist and strategy has hostlist-incompatible 0-phase desync methods (syndata,wssize)
 DESYNC_MARK=0x40000000
 DESYNC_MARK_POSTNAT=0x20000000
-NFQWS_OPT_DESYNC="--dpi-desync=syndata,disorder2"
+NFQWS_OPT_DESYNC="--dpi-desync=fake,disorder2 --dpi-desync-ttl=0 --dpi-desync-ttl6=0 --dpi-desync-fooling=md5sig,badseq --dpi-desync-fake-tls=/opt/zapret/files/fake/tls_clienthello_www_google_com.bin"
 #NFQWS_OPT_DESYNC_SUFFIX="--dpi-desync=syndata"
 #NFQWS_OPT_DESYNC_HTTP="--dpi-desync=fake --dpi-desync-ttl=2 --dpi-desync-fake-http=0x00000000 --hostlist=/opt/zapret/ipset/zapret-hosts-user.txt --new --dpi-desync=fake,disorder2 --dpi-desync-ttl=2 --dpi-desync-fooling=badsum"
 #NFQWS_OPT_DESYNC_HTTP_SUFFIX="--dpi-desync=syndata"
