@@ -172,6 +172,14 @@ systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 
 
 
+### Удаление лишних ярлыков
+
+{% code overflow="wrap" %}
+```bash
+sudo rm /usr/share/applications/avahi-discover.desktop && sudo rm /usr/share/applications/bssh.desktop && sudo rm /usr/share/applications/bvnc.desktop && sudo rm /usr/share/applications/qv4l2.desktop && sudo rm /usr/share/applications/qvidcap.desktop && sudo rm /usr/share/applications/wine.desktop && sudo rm /usr/share/applications/org.gnome.OnlineAccounts.OAuth2.desktop && sudo rm /usr/share/applications/nautilus-autorun-software.desktop && sudo rm /usr/share/applications/gcm-import.desktop && sudo rm /usr/share/applications/org.gnome.Extensions.desktop
+```
+{% endcode %}
+
 ### Терминал вместо консоли
 
 {% code overflow="wrap" %}
