@@ -2,7 +2,9 @@
 
 * [👋 Введение](README.md)
 
-## arch
+## linux
+
+### arch
 
 * [📦 Репозитории](linux/arch/repo.md)
 * [🤖 Драйвера](linux/arch/drivers/README.md)
@@ -23,7 +25,7 @@
 * [☕ Разработка](linux/arch/developer.md)
 * [🔮 Интернет](linux/arch/ethernet.md)
 
-## Fedora silverblue <a href="#silverblue" id="silverblue"></a>
+### fedora silverblue
 
 * [📦 Репозитории](linux/silverblue/repo.md)
 * [🎮 Игры](linux/silverblue/games.md)
