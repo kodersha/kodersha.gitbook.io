@@ -1,6 +1,6 @@
 # Текущий музыкальный трек по команде в чате
 
-<figure><img src="../../.gitbook/assets/cover-song.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cover-song.png" alt=""><figcaption></figcaption></figure>
 
 Если вы проигрываете фоновую музыку на стриме из сервиса Яндекс.Музыки или Вконтакте, а зрители достают вас вопросом о том, какой трек сейчас играет, есть небольшое решение для Streamlabs Chatbot.
 
