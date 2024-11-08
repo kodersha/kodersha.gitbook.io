@@ -22,8 +22,6 @@ aura -A wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib32-libld
 ```
 {% endcode %}
 
-
-
 #### mangohud
 
 {% tabs %}
@@ -112,8 +110,6 @@ gamescope --mangoapp -- %command%
 ```
 {% endcode %}
 
-
-
 Или для `flatpak` версии `steam`, включает `mangohud` во всех играх:
 
 {% code overflow="wrap" %}
@@ -121,8 +117,6 @@ gamescope --mangoapp -- %command%
 flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
 ```
 {% endcode %}
-
-
 
 #### gamescope
 
@@ -144,8 +138,6 @@ flatpak install org.freedesktop.Platform.VulkanLayer.gamescope
 {% endtab %}
 {% endtabs %}
 
-
-
 #### gamemode
 
 {% code overflow="wrap" %}
@@ -161,8 +153,6 @@ aura -S gamemode lib32-gamemode
 gamemoderun %command%
 ```
 {% endcode %}
-
-
 
 ### steam
 
@@ -184,11 +174,9 @@ flatpak install com.valvesoftware.Steam
 {% endtab %}
 {% endtabs %}
 
-
-
 ### bottles
 
-<figure><img src="../../.gitbook/assets/bottles.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../linux/.gitbook/assets/bottles.png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="pkg" %}
@@ -207,8 +195,6 @@ flatpak install com.usebottles.bottles
 {% endcode %}
 {% endtab %}
 {% endtabs %}
-
-
 
 ### lutris
 
