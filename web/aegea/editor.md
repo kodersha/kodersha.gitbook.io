@@ -4,7 +4,7 @@
 
 Красные волнистые подчёркивания в тексте, как [в блоге](https://maximilyahov.ru/blog/all/simple-subject/) у Максима Ильяхова, для Эгеи можно добавить небольшим `css` кодом.
 
-<figure><img src="../.gitbook/assets/volniste-01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/volniste-01.png" alt=""><figcaption></figcaption></figure>
 
 Добавьте стили в `overrides.css`:
 
@@ -30,7 +30,7 @@
 
 Скачайте `svg` для подчёркиваний, зелёного и красного. Создайте папку `images` в папке `styles` и положите туда оба `svg` изображения.
 
-{% file src="../.gitbook/assets/line-svg.zip" %}
+{% file src="../../.gitbook/assets/line-svg.zip" %}
 
 ```cmd
 ../themes/plain/styles/images

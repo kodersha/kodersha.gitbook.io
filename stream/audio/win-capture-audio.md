@@ -6,7 +6,7 @@ description: >-
 
 # Win Capture Audio
 
-<figure><img src="../.gitbook/assets/cover-wincapture.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cover-wincapture.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -24,7 +24,7 @@ description: >-
 
 
 
-<figure><img src="../.gitbook/assets/audiodorozhki-01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/audiodorozhki-01.png" alt=""><figcaption></figcaption></figure>
 
 В появившемся окне, в разделе настроек `Add from currently active sessions`, в графе `Session` выбираем нужную программу (Она должна быть запущена). Например, `Spotify.exe`. Добавляем его кнопкой `Add executable`. Программа появится в списке `Executables`.&#x20;
 
@@ -38,7 +38,7 @@ description: >-
 
 
 
-<figure><img src="../.gitbook/assets/audiodorozhki-02.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/audiodorozhki-02.png" alt=""><figcaption></figcaption></figure>
 
 Точно так же, как и в предыдущем абзаце, добавляем источник захвата выходного аудиопотока приложений и в окне настроек добавляем программы которые будут исключены из основного источника аудио - для этого ставим галочку на параметре `Capture all audio EXCEPT sessions from the selected executables`.
 
@@ -54,12 +54,12 @@ description: >-
 
 
 
-<figure><img src="../.gitbook/assets/audiodorozhki-03.png" alt=""><figcaption><p>Звуковая дорожка — Дорожка звук которой слышат ваши зрители на стриме. Трек для VOD на Twitch — Дорожка звук которой остаётся в записи стрима.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/audiodorozhki-03.png" alt=""><figcaption><p>Звуковая дорожка — Дорожка звук которой слышат ваши зрители на стриме. Трек для VOD на Twitch — Дорожка звук которой остаётся в записи стрима.</p></figcaption></figure>
 
 Открываем `Настройки OBS` → Вкладка `Вывод` - Отмечаем галочку `Трек для VOD на Twitch`, выбираем дорожку `1` → В параметре `Звуковая дорожка` выбираем дорожку `2`.
 
 
 
-<figure><img src="../.gitbook/assets/audiodorozhki-04.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/audiodorozhki-04.png" alt=""><figcaption></figcaption></figure>
 
 Переходим к настройкам дорожек в `Расширенных свойствах аудио`, которые находятся в контекстном меню правой кнопки мыши в `Микшере аудио`. Для Spotify отмечаем только дорожку `2` - та аудиодорожка которую слышат зрители когда стрим в эфире. У остальных источников отмечаем дорожки `1` и `2` - аудиодорожки для сохранённой записи стрима и, непосредственно, вывода звука в прямом эфире. &#x20;

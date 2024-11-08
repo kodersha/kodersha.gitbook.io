@@ -7,7 +7,7 @@ description: >-
 
 # Рестрим с разным битрейтом
 
-<figure><img src="../.gitbook/assets/cover-restream.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cover-restream.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -29,7 +29,7 @@ description: >-
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/restrim-01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/restrim-01.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -37,13 +37,13 @@ description: >-
 
 
 
-<figure><img src="../.gitbook/assets/restrim-02.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/restrim-02.png" alt=""><figcaption></figcaption></figure>
 
 Здесь нужно указать `RTMP Сервер` и `RTMP Ключ` трансляции, их можно найти в `Творческой студии`, в [панели управления трансляцией](https://www.youtube.com/live\_dashboard). Для Youtube настройки кодировщика, разрешения и битрейта я беру из основных настроек OBS.
 
 
 
-<figure><img src="../.gitbook/assets/restrim-03.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/restrim-03.png" alt=""><figcaption></figcaption></figure>
 
 Далее, добавим ещё один вывод, на этот раз для Twitch. Здесь также необходимо указать [`RTMP Сервер`](https://stream.twitch.tv/ingests/) и `RTMP` ключ трансляции, который можно найти в `Панели управления`, в разделе `Настройки` - `Канал`.&#x20;
 
@@ -53,7 +53,7 @@ description: >-
 
 
 
-<figure><img src="../.gitbook/assets/restrim-04.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/restrim-04.png" alt=""><figcaption></figcaption></figure>
 
 Так как Twitch не позволяет стримить с битрейтом выше `6000` (8000 для компаньонов), вписываем свои настройки вещания. Выбираем кодировщик, такой же как и основной. Указываем разрешение `1920×1080`, если стримите на Youtube в разрешении `2560×1440` или `3840×2160`. Если нет, то разрешение здесь можно не указывать. Вписываем битрейт - `6000`, ключевые кадры - `2`.
 
@@ -61,7 +61,7 @@ description: >-
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/restrim-05.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/restrim-05.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

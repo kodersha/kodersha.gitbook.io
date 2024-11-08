@@ -18,13 +18,13 @@
 
 Добавьте первый источник стрима, например youtube. Укажите `RTMP Сервер` и `RTMP Ключ`. В блоке `Настройки Аудио` выберете `Стандартный AAC-кодер FFmpeg`, выберете битрейт аудио - `128`, `160` или `320`, в зависимости от предпочтений. В графе `Audio Track` укажите дорожку для youtube, пусть это будет дорожка `1`.
 
-<figure><img src="../.gitbook/assets/razne-audiodorozhki-01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/razne-audiodorozhki-01.png" alt=""><figcaption></figcaption></figure>
 
 Затем добавьте вторую площадку, например twitch. Аналогично укажите `RTMP Сервер` и `RTMP Ключ` трансляции для твича. В разделе `Настройки Аудио` укажите всё тоже самое, что и в предыдущих настройках, но в графе `Audio Track` выберете аудиодорожку под номером `2`.
 
 <div align="center">
 
-<figure><img src="../.gitbook/assets/razne-audiodorozhki-02.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/razne-audiodorozhki-02.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -38,13 +38,13 @@
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/razne-audiodorozhki-03.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/razne-audiodorozhki-03.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
 Откройте микшер OBS и выберете для источника Размещение медиа дорожку `2` - ту дорожку которая выводится через Multiple RTMP только для стрима на twitch. В столбце `Прослушивание аудио` выберете `Прослушивание и вывод`, чтобы прослушивать заказанную музыку только через OBS, а не общий источник аудио.
 
-<figure><img src="../.gitbook/assets/razne-audiodorozhki-04.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/razne-audiodorozhki-04.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -56,7 +56,7 @@
 
 Откройте основные настройки OBS и во вкладке Аудио отключите источник `Аудио с рабочего стола` - теперь основной источник аудио будет работать через плагин, а не через сам OBS.
 
-<figure><img src="../.gitbook/assets/razne-audiodorozhki-05.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/razne-audiodorozhki-05.png" alt=""><figcaption></figcaption></figure>
 
 Добавьте новый источник `Захват выходного аудиопотока процессов`, можно назвать его `Захват аудиопотока`. Откройте его `Свойства`.
 
@@ -64,7 +64,7 @@
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/razne-audiodorozhki-06.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/razne-audiodorozhki-06.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -74,7 +74,7 @@
 
 Затем снова откройте `Микшер аудио` в OBS и для источника `Захват аудиопотока` выберете дорожки `1` и `2`, чтобы основные звуки приложений и игр воспроизводились на обоих стримах youtube и twitch.
 
-<figure><img src="../.gitbook/assets/razne-audiodorozhki-07.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/razne-audiodorozhki-07.png" alt=""><figcaption></figcaption></figure>
 
 На этом всё, вы настроили две отдельных дорожки, дорожку `1` для youtube и дорожку `2` для twitch. Заказанная с donationalerts музыка будет выводиться только на дорожке `2` - для стрима на twitch, а `Захват аудиопотока`, со всеми остальными звуками, будет выводиться для дорожек `1` и `2` - для стримов на youtube и twitch соответственно.
 

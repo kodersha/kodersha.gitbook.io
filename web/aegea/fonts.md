@@ -1,6 +1,6 @@
 # Шрифты
 
-<figure><img src="../.gitbook/assets/cover-fonts.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cover-fonts.png" alt=""><figcaption></figcaption></figure>
 
 Чтобы добавить шрифт в Эгею, есть два способа - это добавление его в стандартный шаблон или создание своего собственного. Создание своего шаблона удобнее, поскольку гарантирует, что изменения не будут потеряны при обновлении или переустановке Эгеи. Но это не точно.
 

@@ -6,7 +6,7 @@ description: >-
 
 # Сохранение настроек веб-камеры в OBS Studio
 
-<figure><img src="../.gitbook/assets/cover-webcamera.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cover-webcamera.png" alt=""><figcaption></figcaption></figure>
 
 
 
