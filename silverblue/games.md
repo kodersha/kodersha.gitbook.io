@@ -146,7 +146,7 @@ flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
 
 ### bottles
 
-<figure><img src="../linux/.gitbook/assets/bottles.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/bottles.png" alt=""><figcaption></figcaption></figure>
 
 {% code overflow="wrap" %}
 ```bash

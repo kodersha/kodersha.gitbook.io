@@ -17,7 +17,7 @@ layout:
 
 # Кат
 
-<figure><img src="../.gitbook/assets/cover-cut.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cover-cut.png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://ilyabirman.ru/meanwhile/all/no-cut-in-aegea/" %}
 
@@ -29,7 +29,7 @@ layout:
 
 Для превью будет браться первая картинка из поста, либо первая картинка добавленная, но не вставленная, непосредственно, в пост. Абзац с кратким описанием берётся из поля Краткое описание «Для поисковых систем, соцсетей и агрегаторов», в настройках url у каждого поста.
 
-<figure><img src="../.gitbook/assets/polnocenny-kat-01.png" alt=""><figcaption><p>Примечание: Здесь используются те же изображения, которые попадают в meta-тег <code>og:image</code> и тот же текст, который в Эгее выводится в meta-тег <code>description</code> у постов в <code>head</code>.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/polnocenny-kat-01.png" alt=""><figcaption><p>Примечание: Здесь используются те же изображения, которые попадают в meta-тег <code>og:image</code> и тот же текст, который в Эгее выводится в meta-тег <code>description</code> у постов в <code>head</code>.</p></figcaption></figure>
 
 #### Кат для избранных постов <a href="#d0-ba-d0-b0-d1-82-d0-b4-d0-bb-d1-8f-d0-b8-d0-b7-d0-b1-d1-80-d0-b0-d0-bd-d0-bd-d1-8b-d1-85-d0-bf-d0-b" id="d0-ba-d0-b0-d1-82-d0-b4-d0-bb-d1-8f-d0-b8-d0-b7-d0-b1-d1-80-d0-b0-d0-bd-d0-bd-d1-8b-d1-85-d0-bf-d0-b"></a>
 
@@ -146,7 +146,7 @@ layout:
 
 Вид ссылки «Далее» можно изменить добавив стили к классу `.e2-text-readmore` и `.e2-text-readmore a`.
 
-<figure><img src="../.gitbook/assets/polnocenny-kat-02.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/polnocenny-kat-02.png" alt=""><figcaption></figcaption></figure>
 
 Готово. Работает автоматически, подтягивает первую картинку и описание из поля `Краткое описание` поста. Пример шаблона `spoiler` из этой заметки, с катом для избранных постов, добавила для вас на GitHub. Можно скачать, поставить и пользоваться (Актуально для версии Эгеи `2.10`, сборка `3860`). Либо сделать всё самостоятельно.
 
@@ -158,7 +158,7 @@ layout:
 
 {% embed url="https://github.com/jedfoster/Readmore.js" %}
 
-<figure><img src="../.gitbook/assets/katvegee-01.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/katvegee-01.jpg" alt=""><figcaption></figcaption></figure>
 
 Скачайте скрипт readmore. js с GitHub и поместите файл `readmore.min.js` в папку `js`, которую нужно создать в корне вашего шаблона Эгеи, например в корне стандартного шаблона `plain`:
 
