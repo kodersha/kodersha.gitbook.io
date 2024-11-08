@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Оптимизация
 
 {% hint style="danger" %}
@@ -122,8 +136,6 @@ sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0.se
 ```
 {% endcode %}
 
-
-
 ### ananicy-cpp
 
 Служба отслеживает активные процессы и назначает им приоритеты в соответствии с правилами.
@@ -152,8 +164,6 @@ aura -A cachyos-ananicy-rules-git
 
 {% embed url="https://github.com/CachyOS/ananicy-rules" %}
 
-
-
 ### irqbalance
 
 Сервис предназначен для управления распределением аппаратных прерываний (IRQ) между процессорными ядрами. Он автоматически распределяет IRQ так, чтобы снизить вероятность перегрузки одного ядра процессора, что может улучшить общую производительность системы.
@@ -171,8 +181,6 @@ sudo systemctl enable --now irqbalance
 {% endcode %}
 
 {% embed url="https://github.com/Irqbalance/irqbalance" %}
-
-
 
 ### uksmd
 
@@ -195,8 +203,6 @@ aura -A uksmd
 sudo systemctl enable --now uksmd
 ```
 {% endcode %}
-
-
 
 ***
 

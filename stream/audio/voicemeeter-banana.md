@@ -1,5 +1,16 @@
 ---
 description: Ещё один, менее современный, метод разделения аудиодорожек.
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
 ---
 
 # Voicemeeter Banana
@@ -10,17 +21,13 @@ description: Ещё один, менее современный, метод ра
 
 {% embed url="https://vb-audio.com/Voicemeeter/banana.htm" %}
 
-
-
 ### Настройка Windows 10 <a href="#d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b0-windows-10" id="d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b0-windows-10"></a>
 
 После установки программ, в своей Windows 10 откроем `Параметры` → `Система` → Вкладка `Звук` → В правой колонке `Панель управления звуком`.
 
 <figure><img src="../../.gitbook/assets/audiodorozhek-01.png" alt=""><figcaption></figcaption></figure>
 
-В появившемся окне, во вкладке `Воспроизведение` отключаем `Voicemeeter Aux Input` (Правой кнопкой мыши - Отключить), во вкладке `Запись` отключаем `Voicemeeter Aux Output`, так как они нам не нужны.&#x20;
-
-
+В появившемся окне, во вкладке `Воспроизведение` отключаем `Voicemeeter Aux Input` (Правой кнопкой мыши - Отключить), во вкладке `Запись` отключаем `Voicemeeter Aux Output`, так как они нам не нужны.
 
 В списке устройств должно получится примерно следующее, но в зависимости от ваших устройств может быть по-другому, главное чтобы устройства `VB-Audio` были такими:
 
@@ -34,8 +41,6 @@ description: Ещё один, менее современный, метод ра
 
 После этого запускаем Voicemeeter Banana.
 
-
-
 ### Настройка Voicemeeter Banana <a href="#d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b0-voicemeeter-banana" id="d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b0-voicemeeter-banana"></a>
 
 <figure><img src="../../.gitbook/assets/audiodorozhek-04.png" alt=""><figcaption></figcaption></figure>
@@ -46,8 +51,6 @@ description: Ещё один, менее современный, метод ра
 
 В колонке `Hardware Input 2` выбираем устройство `WDM: CABLE-A Output (VB-Audio Cable A)` и оставляем ему только дорожку `А1`. В `Hardware Input 3` выбираем устройство `WDM: CABLE-B Output (VB-Audio Cable B)` и также оставляем ему дорожку `А1`.
 
-
-
 После всех манипуляций получаются следующие настройки:
 
 <figure><img src="../../.gitbook/assets/audiodorozhek-05.png" alt=""><figcaption></figcaption></figure>
@@ -55,8 +58,6 @@ description: Ещё один, менее современный, метод ра
 Теперь откроем меню по соответствующей кнопке `Menu` в правом верхнем углу Voicemeeter Banana. Здесь нужно поставить галочки на `System Tray` и на `Run on Windows Startup`, чтобы Voicemeeter автоматически запускался при включении компьютера.
 
 В этом же меню, во вкладке `Shortcut Key (Hook)...` ставим галочку на `Hook Volume Keys (For Level Output A1)`, это нужно для того, чтобы можно было прибавлять и уменьшать громкость хоткеями на клавиатуре, как правило, это `Fn + F10` и `Fn + F11`, так как стандартными ползунками громкости в Windows управлять мы больше не можем. Если горячих клавиш для звука на клавиатуре нет, громкостью можно управлять ползунком `Fader Gain А1` в `Master Section`. Непосредственно на этом настройка Voicemeeter Banana закончена.
-
-
 
 ### Распределение по виртуальным устройствам <a href="#d1-80-d0-b0-d1-81-d0-bf-d1-80-d0-b5-d0-b4-d0-b5-d0-bb-d0-b5-d0-bd-d0-b8-d0-b5-d0-bf-d0-be-d0-b2-d0-b" id="d1-80-d0-b0-d1-81-d0-bf-d1-80-d0-b5-d0-b4-d0-b5-d0-bb-d0-b5-d0-bd-d0-b8-d0-b5-d0-bf-d0-be-d0-b2-d0-b"></a>
 
@@ -66,13 +67,9 @@ description: Ещё один, менее современный, метод ра
 
 Здесь у любой нужной программы в графе параметров `Вывод` мы можем указать новое устройство вывода звука, которое станет отдельным источником аудио в вашем OBS или любой другой программе для стриминга, если она поддерживает несколько аудио источников. При этом мы всё также будем слышать звук с этих виртуальных устройств благодаря Voicemeeter Banana.
 
-
-
 Например, для Google Chrome можно выбрать устройство `CABLE-B Input (VB-Audio Cable B)`, а для Discord `CABLE-A Input (VB-Audio Cable A)`.
 
 <figure><img src="../../.gitbook/assets/audiodorozhek-07.png" alt=""><figcaption></figcaption></figure>
-
-
 
 ### Настройка OBS Studio <a href="#d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b0-obs-studio" id="d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b0-obs-studio"></a>
 
@@ -80,15 +77,11 @@ description: Ещё один, менее современный, метод ра
 
 Здесь, в разделе `Глобальные устройства аудио`, в `Аудио с рабочего стола` укажем устройство `VoiceMeeter Input (VB-Audio VoiceMeeter VAIO)`, в `Микрофон/Дополнительное аудио` укажем устройство `VoiceMeeter Output (VB-Audio VoiceMeeter VIAO)`, в `Микрофон/Дополнительное аудио 2` укажем `CABLE-A Output (VB-Audio Cable A)`, в `Микрофон/Дополнительное аудио 3` укажем `CABLE-B Output (VB-Audio Cable B)`.
 
-
-
 В конечном итоге получаются следующие настройки:
 
 <figure><img src="../../.gitbook/assets/audiodorozhek-08.png" alt=""><figcaption></figcaption></figure>
 
 Теперь все наши виртуальные источники звука, или же раздельные источники для программ, появятся в `Микшере аудио` в OBS, где звук из Google Chrome будет идти на виртуальное устройство `Cable B`, а звук из Discord будет идти на `Cable A`. Для каждого из этих устройств можно установить свою громкость, фильтры и горячие клавиши, а можно вообще выключить их звук в OBS и тогда звук с этих устройств будете слышать только вы, но не ваши зрители.
-
-
 
 ### Twitch VOD для OBS Studio <a href="#twitch-vod-d0-b4-d0-bb-d1-8f-obs-studio" id="twitch-vod-d0-b4-d0-bb-d1-8f-obs-studio"></a>
 

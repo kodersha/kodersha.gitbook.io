@@ -3,6 +3,17 @@ description: >-
   Timeshift - утилита, которая служит для создания и управления резервными
   снимками (snapshots) файловой системы. Она позволяет восстанавливать систему
   до предыдущего состояния в случае сбоя или ошибки.
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
 ---
 
 # Бэкапы
@@ -30,8 +41,6 @@ sudo systemctl enable --now cronie
 sudo timeshift-gtk
 ```
 {% endcode %}
-
-
 
 ### GRUB
 

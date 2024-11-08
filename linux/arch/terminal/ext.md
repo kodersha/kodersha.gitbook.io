@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Расширения
 
 ### topgrade
@@ -79,8 +93,6 @@ use_root = false
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ### fastfetch
 
@@ -295,8 +307,6 @@ nano ~/.config/fastfetch/logo.txt
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ### zsh
 

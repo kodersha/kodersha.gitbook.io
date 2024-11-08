@@ -16,8 +16,6 @@ layout:
     visible: false
 ---
 
-# 👋 Руководства
+# 👋 Введение
 
-
-
-Для связи [электронная почта](mailto:kodersha@yandex.ru) или [@telegram](https://t.me/kodersha).
+Для связи [электронная почта](mailto:kodersha@icloud.com) или [@telegram](https://t.me/kodersha).

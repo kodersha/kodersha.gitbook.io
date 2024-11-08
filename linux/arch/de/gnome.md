@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # GNOME
 
 ### Удаление предустановленных пакетов
@@ -130,8 +144,6 @@ aura -Rsu baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music g
 `flatpak` будет удалён как зависимость при удалении пакета родительского контроля `malcontent`, если нужен верните: `aura -S flatpak`. Также из предустановленных пакетов я удаляю `htop` и `vim`.
 {% endhint %}
 
-
-
 ### Отключение лишних служб
 
 {% code title="Служба графического планешта wacom" overflow="wrap" %}
@@ -170,8 +182,6 @@ systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 ```
 {% endcode %}
 
-
-
 ### Удаление лишних ярлыков
 
 {% code overflow="wrap" %}
@@ -187,8 +197,6 @@ sudo rm /usr/share/applications/avahi-discover.desktop && sudo rm /usr/share/app
 aura -S gnome-terminal && aura -Rsu gnome-console
 ```
 {% endcode %}
-
-
 
 ### Редактор меню
 
@@ -212,8 +220,6 @@ aura -A libre-menu-editor
 {% endtab %}
 {% endtabs %}
 
-
-
 ### Менеджер расширений GNOME
 
 <figure><img src="../../.gitbook/assets/extension-manager.png" alt=""><figcaption></figcaption></figure>
@@ -235,8 +241,6 @@ aura -A extension-manager
 {% endcode %}
 {% endtab %}
 {% endtabs %}
-
-
 
 ### Настройки
 

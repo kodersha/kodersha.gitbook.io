@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Установка скриптов
 
 Установите [Python 2.7.13](https://www.python.org/ftp/python/2.7.13/python-2.7.13.amd64.msi), если не ставили его при установке Streamlabs Chatbot.
@@ -17,8 +31,6 @@ C:\Program Files\Streamlabs Chatbot\Services\Scripts
 ```shell
 C:\Python27\Lib
 ```
-
-
 
 Также есть наглядное видео, о том как устанавливать скрипты в Streamlabs Chatbot:
 

@@ -3,6 +3,17 @@ description: >-
   Создать свой шаблон для Эгеи не так сложно как может показаться на первый
   взгляд. Давайте разберем основные принципы построения шаблона используя
   некоторые простые примеры.
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
 ---
 
 # Шаблон
@@ -46,8 +57,6 @@ description: >-
 
 Если файлов в папках нет, они будут подхватываться из стандартной темы Эгеи, которая находится по пути `system\themes`.
 
-
-
 ### Стили
 
 Для того, чтобы добавить ваши стили в Эгею, откройте папку с шаблоном и создайте файл стилей `overrides.css` в папке `styles` шаблона. Это позволит безопасно дополнять свою тему стилями, не рискуя потерять внесенные изменения после очередного обновления.
@@ -55,8 +64,6 @@ description: >-
 {% hint style="warning" %}
 Файл `overrides.css` работает не только в пользовательских, но и в стандартных шаблонах. Дополнительно ничего подключать не нужно, Эгея подхватывает этот `css` файл автоматически.
 {% endhint %}
-
-
 
 ### Разбор основных шаблонов
 
@@ -129,8 +136,6 @@ description: >-
 <figure><img src="../../.gitbook/assets/shablon-31.png" alt=""><figcaption><p><code>form-password-reset-email.tmpl.php</code> — Страница сброса пароля.</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/shablon-32.png" alt=""><figcaption><p><code>layout.tmpl.php</code> — Основная разметка шаблона внутри body, здесь подключаются другие части шаблона.</p></figcaption></figure>
-
-
 
 `main.tmpl.php` — Разметка внутри `html`, здесь подключается `head.tmpl.php` содержащий метатеги, сам `layout.tmpl.php`, `js` и `css`.
 

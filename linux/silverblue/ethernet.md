@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # 🔮 Интернет
 
 ### COMSS dns
@@ -39,8 +53,6 @@ sudo nano /etc/hosts
 
 Проверить состояние можно на [controld.com/status](https://controld.com/status).
 
-
-
 ### spoofDPI
 
 {% code overflow="wrap" %}
@@ -56,8 +68,6 @@ brew install spoofdpi
 brew services start spoofdpi
 ```
 {% endcode %}
-
-
 
 ### tor
 
@@ -119,8 +129,6 @@ brew services start tor
 {% endcode %}
 
 Адрес хоста подключения SOCKS5: `127.0.0.1:9050`
-
-
 
 ### zapret
 
@@ -282,8 +290,6 @@ GETLIST=get_antifilter_ipsmart.sh
 {% endcode %}
 
 </details>
-
-
 
 Отключите `firewalld`:
 

@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Редактор
 
 ### Волнистые подчёркивания
@@ -43,8 +57,6 @@
 Зло – <span class="line-red">это зло</span>, Стрегобор, – серьезно сказал ведьмак, вставая. – Меньшее, большее, среднее – <span class="line-green">все едино</span>, пропорции условны, а границы размыты.
 ```
 {% endcode %}
-
-
 
 ### Маргиналии
 

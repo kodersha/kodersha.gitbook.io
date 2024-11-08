@@ -1,5 +1,16 @@
 ---
 description: Базовая конфигурация для запуска ghost с remark42 на облачном сервере.
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
 ---
 
 # cloud

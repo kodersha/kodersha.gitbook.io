@@ -1,5 +1,16 @@
 ---
 description: Конфигурация для запуска на localhost.
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
 ---
 
 # local
@@ -93,8 +104,6 @@ RUN chown -R www-data:www-data /var/www/html/
 </VirtualHost>
 ```
 {% endcode %}
-
-
 
 ***
 

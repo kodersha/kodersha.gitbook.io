@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Команды
 
 ### Установка
@@ -26,8 +40,6 @@
 
 {% embed url="https://aur.archlinux.org/packages" %}
 
-
-
 ### Обновление
 
 {% code title="Обновить пакеты:" overflow="wrap" %}
@@ -42,8 +54,6 @@ sudo pacman -Syu
 topgrade
 ```
 
-
-
 ### Удаление
 
 <pre class="language-bash" data-title="Удалить пакет:" data-overflow="wrap"><code class="lang-bash">sudo pacman -Rns <a data-footnote-ref href="#user-content-fn-5">pkg</a>
@@ -54,8 +64,6 @@ topgrade
 
 Опция `-Rsc` используется для удаления указанного пакета и всех его зависимостей, независимо от того, требуются ли они другими пакетами. Эта опция может привести к удалению большого количества пакетов, поэтому её следует использовать с осторожностью.
 {% endhint %}
-
-
 
 ### Очистка
 

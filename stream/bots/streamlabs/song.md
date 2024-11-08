@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Текущий музыкальный трек по команде в чате
 
 <figure><img src="../../../.gitbook/assets/cover-song.png" alt=""><figcaption></figcaption></figure>
@@ -12,8 +26,6 @@
 {% embed url="https://github.com/camalot/chatbot-gpmdp/releases" %}
 
 После установки в настройках плагина можно настроить команду для вывода текущего трека в чат, тип отображения названия песни, а также сообщение бота в случае если музыка в данный момент не играет.
-
-
 
 {% content-ref url="script-install.md" %}
 [script-install.md](script-install.md)
