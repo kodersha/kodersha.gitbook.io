@@ -1,0 +1,54 @@
+---
+description: >-
+  Timeshift - утилита, которая служит для создания и управления резервными
+  снимками (snapshots) файловой системы. Она позволяет восстанавливать систему
+  до предыдущего состояния в случае сбоя или ошибки.
+---
+
+# Бэкапы
+
+<figure><img src="../../linux/.gitbook/assets/timeshift.png" alt=""><figcaption></figcaption></figure>
+
+{% code title="Установите timeshift и cronie" overflow="wrap" %}
+```bash
+aura -S timeshift cronie
+```
+{% endcode %}
+
+{% code title="Запустите сервис" overflow="wrap" %}
+```bash
+sudo systemctl enable --now cronie
+```
+{% endcode %}
+
+***
+
+Настроить автоматическое создание снимков можно через GUI:
+
+{% code overflow="wrap" %}
+```bash
+sudo timeshift-gtk
+```
+{% endcode %}
+
+### GRUB
+
+Для добавления пункта меню с выбором снимков в `grub` установите `grub-btrfs`:
+
+{% code overflow="wrap" %}
+```bash
+aura -S grub-btrfs
+```
+{% endcode %}
+
+{% code title="Запустите сервис" overflow="wrap" %}
+```bash
+sudo systemctl enable --now grub-btrfsd
+```
+{% endcode %}
+
+{% code title="Обновите конфигурацию grub" overflow="wrap" %}
+```bash
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+{% endcode %}
