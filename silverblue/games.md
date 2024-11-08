@@ -22,8 +22,6 @@ flatpak install com.valvesoftware.Steam
 ```
 {% endcode %}
 
-
-
 ### protontricks
 
 {% code overflow="wrap" %}
@@ -31,8 +29,6 @@ flatpak install com.valvesoftware.Steam
 flatpak install com.github.Matoking.protontricks
 ```
 {% endcode %}
-
-
 
 ### gamescope
 
@@ -42,8 +38,6 @@ flatpak install org.freedesktop.Platform.VulkanLayer.gamescope
 ```
 {% endcode %}
 
-
-
 ### proton-ge
 
 {% code overflow="wrap" %}
@@ -51,8 +45,6 @@ flatpak install org.freedesktop.Platform.VulkanLayer.gamescope
 flatpak install com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 ```
 {% endcode %}
-
-
 
 ### vkbasalt
 
@@ -62,8 +54,6 @@ flatpak install org.freedesktop.Platform.VulkanLayer.vkBasalt
 ```
 {% endcode %}
 
-
-
 ### gamemode
 
 {% code title="Параметр запуска игры в steam, для включения gamemode режима:" overflow="wrap" %}
@@ -71,8 +61,6 @@ flatpak install org.freedesktop.Platform.VulkanLayer.vkBasalt
 gamemoderun %command%
 ```
 {% endcode %}
-
-
 
 ### mangohud
 
@@ -136,8 +124,6 @@ hud_no_margin
 {% endtab %}
 {% endtabs %}
 
-
-
 Теперь можно включить `mangohud` в параметрах запуска игры в `steam`:
 
 {% code overflow="wrap" %}
@@ -145,8 +131,6 @@ hud_no_margin
  mangohud %command%
 ```
 {% endcode %}
-
-
 
 {% code title="Для использования с режимом gamescope:" overflow="wrap" %}
 ```bash
@@ -160,19 +144,15 @@ flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
 ```
 {% endcode %}
 
-
-
 ### bottles
 
-<figure><img src="../.gitbook/assets/bottles.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../linux/.gitbook/assets/bottles.png" alt=""><figcaption></figcaption></figure>
 
 {% code overflow="wrap" %}
 ```bash
 flatpak install com.usebottles.bottles
 ```
 {% endcode %}
-
-
 
 ### lutris
 

@@ -23,13 +23,13 @@
 * [☕ Разработка](linux/arch/developer.md)
 * [🔮 Интернет](linux/arch/ethernet.md)
 
-## fedora silverblue
+## fedora silverblue <a href="#silverblue" id="silverblue"></a>
 
-* [📦 Репозитории](linux/silverblue/repo.md)
-* [🎮 Игры](linux/silverblue/games.md)
-* [🔮 Интернет](linux/silverblue/ethernet.md)
+* [📦 Репозитории](silverblue/repo.md)
+* [🎮 Игры](silverblue/games.md)
+* [🔮 Интернет](silverblue/ethernet.md)
 
-## Стримы
+## Стримы <a href="#stream" id="stream"></a>
 
 * [🌊 Рестрим](stream/restream/README.md)
   * [Рестрим с разным битрейтом](stream/restream/multiple-rtmp.md)
