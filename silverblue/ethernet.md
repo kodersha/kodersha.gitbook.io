@@ -115,9 +115,7 @@ curl -sL https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.
 
 <details>
 
-<summary>Конфигурация</summary>
-
-Пример конфигурации.
+<summary>Пример конфигурации</summary>
 
 {% code title="/opt/zapret/config" %}
 ```ini
