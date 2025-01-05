@@ -14,61 +14,6 @@ layout:
 
 # 🔮 Интернет
 
-### COMSS dns
-
-{% tabs %}
-{% tab title="00-custom.conf" %}
-{% code overflow="wrap" %}
-```bash
-sudo mkdir /etc/systemd/resolved.conf.d && sudo nano /etc/systemd/resolved.conf.d/00-custom.conf
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="→" %}
-```ini
-[Resolve]
-DNS=76.76.2.22#comss.dns.controld.com
-DNSOverTLS=yes
-```
-{% endtab %}
-{% endtabs %}
-
-Также добавьте в `hosts`:
-
-{% tabs %}
-{% tab title="hosts" %}
-{% code overflow="wrap" %}
-```bash
-sudo nano /etc/hosts
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="→" %}
-<pre class="language-ini"><code class="lang-ini">127.0.1.1   <a data-footnote-ref href="#user-content-fn-1">fedora</a>
-</code></pre>
-{% endtab %}
-{% endtabs %}
-
-Проверить состояние можно на [controld.com/status](https://controld.com/status).
-
-### spoofDPI
-
-{% code overflow="wrap" %}
-```bash
-brew install spoofdpi
-```
-{% endcode %}
-
-Запустите сервис:
-
-{% code overflow="wrap" %}
-```bash
-brew services start spoofdpi
-```
-{% endcode %}
-
 ### tor
 
 {% code overflow="wrap" %}
@@ -130,13 +75,27 @@ brew services start tor
 
 Адрес хоста подключения SOCKS5: `127.0.0.1:9050`
 
+
+
 ### zapret
 
+{% tabs %}
+{% tab title="wget" %}
 {% code overflow="wrap" %}
 ```bash
-git clone --depth 1 https://github.com/bol-van/zapret && cd zapret && ./install_bin.sh && ./install_prereq.sh
+wget -qO- https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.tar.gz | tar -xvz && cd zapret-v69.9 && ./install_bin.sh && ./install_prereq.sh
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="curl" %}
+{% code overflow="wrap" %}
+```bash
+curl -sL https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.tar.gz | tar -xvz && cd zapret-v69.9 && ./install_bin.sh && ./install_prereq.sh
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 При необходимости запустите тест:
 
@@ -158,7 +117,7 @@ git clone --depth 1 https://github.com/bol-van/zapret && cd zapret && ./install_
 
 <summary>Конфигурация</summary>
 
-Пример конфигурации. Используется `nftables` с `nfqws`.
+Пример конфигурации.
 
 {% code title="/opt/zapret/config" %}
 ```ini
@@ -172,7 +131,10 @@ git clone --depth 1 https://github.com/bol-van/zapret && cd zapret && ./install_
 #WS_USER=nobody
 
 # override firewall type : iptables,nftables,ipfw
-FWTYPE=nftables
+#FWTYPE=iptables
+# nftables only : set this to 0 to use pre-nat mode. default is post-nat.
+# pre-nat mode disables some bypass techniques for forwarded traffic but allows to see client IP addresses in debug log
+#POSTNAT=0
 
 # options for ipsets
 # maximum number of elements in sets. also used for nft sets
@@ -204,54 +166,62 @@ GZIP_LISTS=1
 # set to "-" to disable reload
 #LISTS_RELOAD="pfctl -f /etc/pf.conf"
 
-# override ports
-#HTTP_PORTS=80-81,85
-#HTTPS_PORTS=443,500-501
-#QUIC_PORTS=443,444
+# mark bit used by nfqws to prevent loop
+DESYNC_MARK=0x40000000
+DESYNC_MARK_POSTNAT=0x20000000
 
-# CHOOSE OPERATION MODE
-# MODE : nfqws,tpws,tpws-socks,filter,custom
-# nfqws : nfqws for dpi desync
-# tpws : tpws transparent mode
-# tpws-socks : tpws socks mode
-# filter : no daemon, just create ipset or download hostlist
-# custom : custom mode. should modify custom init script and add your own code
-MODE=nfqws
-# apply fooling to http
-MODE_HTTP=0
-# for nfqws only. support http keep alives. enable only if DPI checks for http request in any outgoing packet
-MODE_HTTP_KEEPALIVE=0
-# apply fooling to https
-MODE_HTTPS=1
-# apply fooling to quic
-MODE_QUIC=1
+TPWS_SOCKS_ENABLE=0
+# tpws socks listens on this port on localhost and LAN interfaces
+TPPORT_SOCKS=987
+# use <HOSTLIST> and <HOSTLIST_NOAUTO> placeholders to engage standard hostlists and autohostlist in ipset dir
+# hostlist markers are replaced to empty string if MODE_FILTER does not satisfy
+# <HOSTLIST_NOAUTO> appends ipset/zapret-hosts-auto.txt as normal list
+TPWS_SOCKS_OPT="
+--filter-tcp=80 --methodeol <HOSTLIST> --new
+--filter-tcp=443 --split-tls=sni --disorder <HOSTLIST>
+"
+
+TPWS_ENABLE=0
+TPWS_PORTS=80,443
+# use <HOSTLIST> and <HOSTLIST_NOAUTO> placeholders to engage standard hostlists and autohostlist in ipset dir
+# hostlist markers are replaced to empty string if MODE_FILTER does not satisfy
+# <HOSTLIST_NOAUTO> appends ipset/zapret-hosts-auto.txt as normal list
+TPWS_OPT="
+--filter-tcp=80 --methodeol <HOSTLIST> --new
+--filter-tcp=443 --split-tls=sni --disorder <HOSTLIST>
+"
+
+NFQWS_ENABLE=1
+# redirect outgoing traffic with connbytes limiter applied in both directions.
+NFQWS_PORTS_TCP=80,443
+NFQWS_PORTS_UDP=443
+# PKT_OUT means connbytes dir original
+# PKT_IN means connbytes dir reply
+# this is --dpi-desync-cutoff=nX kernel mode implementation for linux. it saves a lot of CPU.
+NFQWS_TCP_PKT_OUT=$((6+$AUTOHOSTLIST_RETRANS_THRESHOLD))
+NFQWS_TCP_PKT_IN=3
+NFQWS_UDP_PKT_OUT=$((6+$AUTOHOSTLIST_RETRANS_THRESHOLD))
+NFQWS_UDP_PKT_IN=0
+# redirect outgoing traffic without connbytes limiter and incoming with connbytes limiter
+# normally it's needed only for stateless DPI that matches every packet in a single TCP session
+# typical example are plain HTTP keep alives
+# this mode can be very CPU consuming. enable with care !
+#NFQWS_PORTS_TCP_KEEPALIVE=80
+#NFQWS_PORTS_UDP_KEEPALIVE=
+# use <HOSTLIST> and <HOSTLIST_NOAUTO> placeholders to engage standard hostlists and autohostlist in ipset dir
+# hostlist markers are replaced to empty string if MODE_FILTER does not satisfy
+# <HOSTLIST_NOAUTO> appends ipset/zapret-hosts-auto.txt as normal list
+NFQWS_OPT="
+--filter-tcp=80 --dpi-desync=fake,split2 --dpi-desync-fooling=md5sig <HOSTLIST> --new
+--filter-tcp=443 --dpi-desync=fake,disorder2 --dpi-desync-ttl=0 --dpi-desync-ttl6=0 --dpi-desync-fooling=md5sig,badseq --dpi-desync-fake-tls=/opt/zapret/files/fake/tls_clienthello_www_google_com.bin --dpi-desync-repeats=20 <HOSTLIST> --new
+--filter-udp=443 --dpi-desync=fake,disorder2 --dpi-desync-ttl=0 --dpi-desync-ttl6=0 --dpi-desync-fooling=md5sig,badseq --dpi-desync-fake-tls=/opt/zapret/files/fake/tls_clienthello_www_google_com.bin --dpi-desync-repeats=20 <HOSTLIST_NOAUTO>
+"
+
 # none,ipset,hostlist,autohostlist
 MODE_FILTER=ipset,hostlist
 
-# CHOOSE NFQWS DAEMON OPTIONS for DPI desync mode. run "nfq/nfqws --help" for option list
-# SUFFIX VARS define additional lower priority desync profile. it's required if MODE_FILTER=hostlist and strategy has hostlist-incompatible 0-phase desync methods (syndata,wssize)
-DESYNC_MARK=0x40000000
-DESYNC_MARK_POSTNAT=0x20000000
-NFQWS_OPT_DESYNC="--dpi-desync=fake,disorder2 --dpi-desync-ttl=0 --dpi-desync-ttl6=0 --dpi-desync-fooling=md5sig,badseq --dpi-desync-fake-tls=/opt/zapret/files/fake/tls_clienthello_www_google_com.bin"
-#NFQWS_OPT_DESYNC_SUFFIX="--dpi-desync=syndata"
-#NFQWS_OPT_DESYNC_HTTP="--dpi-desync=fake --dpi-desync-ttl=2 --dpi-desync-fake-http=0x00000000 --hostlist=/opt/zapret/ipset/zapret-hosts-user.txt --new --dpi-desync=fake,disorder2 --dpi-desync-ttl=2 --dpi-desync-fooling=badsum"
-#NFQWS_OPT_DESYNC_HTTP_SUFFIX="--dpi-desync=syndata"
-#NFQWS_OPT_DESYNC_HTTPS="--dpi-desync=split --dpi-desync-split-pos=3 --dpi-desync-ttl=2 --dpi-desync-repeats=6 --hostlist=/opt/zapret/ipset/zapret-hosts-user.txt --new --dpi-desync=fake,disorder2 --dpi-desync-ttl=2 --dpi-desync-fooling=badsum"
-#NFQWS_OPT_DESYNC_HTTPS_SUFFIX="--wssize 1:6"
-#NFQWS_OPT_DESYNC_HTTP6=""
-#NFQWS_OPT_DESYNC_HTTP6_SUFFIX="--dpi-desync=syndata"
-#NFQWS_OPT_DESYNC_HTTPS6=""
-#NFQWS_OPT_DESYNC_HTTPS6_SUFFIX="--wssize 1:6"
-NFQWS_OPT_DESYNC_QUIC="--dpi-desync-fake --dpi-desync-repeats=6"
-#NFQWS_OPT_DESYNC_QUIC_SUFFIX=""
-#NFQWS_OPT_DESYNC_QUIC6="--dpi-desync=hopbyhop"
-#NFQWS_OPT_DESYNC_QUIC6_SUFFIX=""
-
-# CHOOSE TPWS DAEMON OPTIONS. run "tpws/tpws --help" for option list
-TPWS_OPT="--split-pos=2 --split-http-req=method --oob"
-
 # openwrt only : donttouch,none,software,hardware
-FLOWOFFLOAD=none
+FLOWOFFLOAD=donttouch
 
 # openwrt: specify networks to be treated as LAN. default is "lan"
 #OPENWRT_LAN="lan lan2 lan3"
@@ -264,8 +234,8 @@ FLOWOFFLOAD=none
 # or leave them commented if its not router
 # it's possible to specify multiple interfaces like this : IFACE_LAN="eth0 eth1 eth2"
 # if IFACE_WAN6 is not defined it take the value of IFACE_WAN
-#IFACE_LAN=eth0
-#IFACE_WAN=
+#IFACE_LAN=ethernet
+#IFACE_WAN=eth1
 #IFACE_WAN6="ipsec0 wireguard0 he_net"
 
 # should start/stop command of init scripts apply firewall rules ?
@@ -285,7 +255,7 @@ DISABLE_IPV6=1
 # select which init script will be used to get ip or host list
 # possible values : get_user.sh get_antizapret.sh get_combined.sh get_reestr.sh get_hostlist.sh
 # comment if not required
-GETLIST=get_antifilter_ipsmart.sh
+#GETLIST=
 ```
 {% endcode %}
 
@@ -387,5 +357,3 @@ yt3.googleusercontent.com
 {% endcode %}
 {% endtab %}
 {% endtabs %}
-
-[^1]: Ваш hostname
