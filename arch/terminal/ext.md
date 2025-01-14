@@ -18,23 +18,11 @@ layout:
 
 [Утилита](https://github.com/topgrade-rs/topgrade) для обновления различных частей системы и приложений. Она автоматически определяет используемые пакетные менеджеры, языковые среды и инструменты конфигурации, затем обновляет все соответствующие компоненты.
 
-{% tabs %}
-{% tab title="homebrew" %}
-{% code overflow="wrap" %}
-```bash
-brew install topgrade
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
 aura -A topgrade
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
 {% code title="Обновите всё одной командой:" overflow="wrap" %}
 ```bash
@@ -46,16 +34,12 @@ topgrade
 
 Конфигурация:
 
-{% tabs %}
-{% tab title="topgrade.toml" %}
 {% code overflow="wrap" %}
 ```bash
 nano ~/.config/topgrade.toml
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="→" %}
 ```toml
 # Include any additional configuration file(s)
 
@@ -91,43 +75,31 @@ upgrade = false
 [distrobox]
 use_root = false
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 ### fastfetch
 
 [Утилита](https://github.com/fastfetch-cli/fastfetch) для вывода информации о системе в терминале. Напоминает `neofetch`, предоставляя подробные сведения о системе, такие как дистрибутив операционной системы, ядро, аппаратные характеристики, информация о CPU и GPU, память, разделы дисков и текущую тему рабочего стола.
 
-{% tabs %}
-{% tab title="homebrew" %}
-{% code overflow="wrap" %}
-```bash
-brew install fastfetch
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
 aura -S fastfetch
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
 <figure><img src="../../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
 
 Можно создать пользовательский файл конфигурации:
 
-{% tabs %}
-{% tab title="config.jsonc" %}
 ```bash
 mkdir ~/.config/fastfetch/ && nano ~/.config/fastfetch/config.jsonc
 ```
-{% endtab %}
 
-{% tab title="→" %}
+<details>
+
+<summary>config.jsonc</summary>
+
 ```json
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
@@ -260,20 +232,24 @@ mkdir ~/.config/fastfetch/ && nano ~/.config/fastfetch/config.jsonc
     }
   ]
 }
-```
-{% endtab %}
-{% endtabs %}
 
-{% tabs %}
-{% tab title="logo.txt" %}
+
+```
+
+
+
+</details>
+
 {% code overflow="wrap" %}
 ```bash
 nano ~/.config/fastfetch/logo.txt
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="→" %}
+<details>
+
+<summary>logo.txt</summary>
+
 ```asciidoc
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠟⣛⢛⠻⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠋⠉⠉⣡⣴⡞⣿⣿⣿⡟⢿⣿⣶⣦⣍⡛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
@@ -305,44 +281,34 @@ nano ~/.config/fastfetch/logo.txt
 ⣿⣿⠿⠟⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡿⠿⠿⠛⠻⠿⣿⣿⠁⠀⠈⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠂⠀⠀⠈⠛⢿
 ⠋⠀⠀⠀⠈⠉⠛⠛⠳⠦⠤⢄⣀⠀⠀⠀⠀⠀⢠⡤⠴⠶⠾⠷⢤⢀⠁⠀⠀⠀⠀⣠⠴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸
 ```
-{% endtab %}
-{% endtabs %}
+
+</details>
+
+
 
 ### zsh
 
 Командная оболочка UNIX, часто используемая в качестве замены стандартного `bash`. Известна своими расширенными функциями и улучшенной интерактивностью, например - Автодополнение команд и аргументов, алиасы, поддержка плагинов и тем, поиск по истории и т.д.
 
-{% tabs %}
-{% tab title="homebrew" %}
-{% code overflow="wrap" %}
-```bash
-brew install zsh
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
 aura -S zsh
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
 Конфигурация:
 
-{% tabs %}
-{% tab title=".zshrc" %}
 {% code overflow="wrap" %}
 ```bash
 nano ~/.zshrc
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="→" %}
-{% code title=".zshrc" %}
+<details>
+
+<summary>.zshrc</summary>
+
+{% code title="" %}
 ```bash
 # Ena# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -397,21 +363,27 @@ zplug load
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
+
+</details>
 
 Добавьте автозапуск `zsh` в `.bashrc`:
 
-{% tabs %}
-{% tab title=".bashrc" %}
+{% stepper %}
+{% step %}
+###
+
+Добавьте автозапуск `zsh` в `.bashrc`:
+
 {% code overflow="wrap" %}
 ```bash
 nano ~/.bashrc
 ```
 {% endcode %}
-{% endtab %}
+{% endstep %}
 
-{% tab title="→" %}
+{% step %}
+###
+
 {% code title=".bashrc" %}
 ```bash
 if [ -z "${NOZSH}" ] && [ $TERM = "xterm" -o $TERM = "xterm-256color" -o $TERM = "screen" ] && type zsh &> /dev/null
@@ -426,5 +398,5 @@ then
 fi
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
+{% endstep %}
+{% endstepper %}
