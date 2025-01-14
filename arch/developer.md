@@ -22,7 +22,7 @@ aura -S podman podman-compose
 ```
 {% endcode %}
 
-#### Конфигурация:
+Конфигурация:
 
 {% stepper %}
 {% step %}
@@ -69,7 +69,7 @@ aura -S --needed git github-cli gitui
 ```
 {% endcode %}
 
-Конфигурация, укажите имя и email как у вашего аккаунта на github.
+Конфигурация, укажите имя и email как у вашего аккаунта на github:
 
 ```bash
 git config --global user.name "John Doe"
