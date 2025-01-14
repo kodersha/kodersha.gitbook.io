@@ -51,14 +51,18 @@ local/nvidia-utils 550.90.07-2
 У вас могут быть другие драйвера, например `nvidia-open-dkms`.
 {% endhint %}
 
-Удалите найденные драйвера `nvidia`. Лучше всего в безопасной среде, например в консоли (Ctrl+Alt+F3). Также придётся удалить `steam` как зависимость.
+{% stepper %}
+{% step %}
+Удалите найденные драйвера `nvidia`. Также придётся удалить `steam` как зависимость.
 
 {% code overflow="wrap" %}
 ```bash
 aura -Rsu lib32-nvidia-utils nvidia-utils nvidia-dkms nvidia-settings steam
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Установите `beta` из AUR:
 
 {% code overflow="wrap" %}
@@ -66,19 +70,23 @@ aura -Rsu lib32-nvidia-utils nvidia-utils nvidia-dkms nvidia-settings steam
 aura -A lib32-nvidia-utils-beta nvidia-utils-beta nvidia-beta nvidia-settings-beta
 ```
 {% endcode %}
+{% endstep %}
 
-Установите `steam` обратно:
-
-{% code overflow="wrap" %}
-```bash
-aura -S steam
-```
-{% endcode %}
-
+{% step %}
 Перезагрузите систему:
 
 {% code overflow="wrap" %}
 ```bash
 sudo reboot
+```
+{% endcode %}
+{% endstep %}
+{% endstepper %}
+
+Установите `steam` обратно, если нужно:
+
+{% code overflow="wrap" %}
+```bash
+aura -S steam
 ```
 {% endcode %}

@@ -52,7 +52,9 @@ aura -S --needed bluez bluez-utils
 ```
 {% endcode %}
 
-{% code title="Включите сервис" overflow="wrap" %}
+Включите сервис:
+
+{% code overflow="wrap" %}
 ```bash
 sudo systemctl enable --now bluetooth
 ```
@@ -68,7 +70,9 @@ aura -S --needed networkmanager networkmanager-openvpn networkmanager-pptp netwo
 ```
 {% endcode %}
 
-{% code title="Включите сервис" overflow="wrap" %}
+Включите сервис:
+
+{% code overflow="wrap" %}
 ```bash
 sudo systemctl enable --now NetworkManager
 ```

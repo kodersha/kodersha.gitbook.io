@@ -16,8 +16,10 @@ layout:
 
 ### Локаль
 
-Добавьте системную локаль `en_US`, она нужна для правильной работы, например, zsh.
+Добавьте системную локаль `en_US`, она нужна для правильной работы, например, [zsh](terminal/ext.md#zsh).
 
+{% stepper %}
+{% step %}
 Отредактируйте конфигурацию:
 
 {% code overflow="wrap" %}
@@ -25,7 +27,9 @@ layout:
 sudo nano /etc/locale.gen
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Найдите и раскомментируйте строку `en_US.UTF-8 UTF-8`:
 
 {% code title="Пример" overflow="wrap" %}
@@ -37,7 +41,9 @@ en_US.UTF-8 UTF-8
 ...
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Обновите локали:
 
 {% code overflow="wrap" %}
@@ -45,8 +51,8 @@ en_US.UTF-8 UTF-8
 sudo locale-gen
 ```
 {% endcode %}
-
-
+{% endstep %}
+{% endstepper %}
 
 #### X11
 
@@ -56,22 +62,26 @@ localectl set-x11-keymap us,ru "" "" grp:alt_shift_toggle
 ```
 {% endcode %}
 
-
-
 #### Исправление раскладки в играх
 
+{% stepper %}
+{% step %}
 {% code overflow="wrap" %}
 ```bash
 sudo nano /etc/environment
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 {% code overflow="wrap" %}
 ```ini
 XKB_DEFAULT_LAYOUT=us,ru
 XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
 ```
 {% endcode %}
+{% endstep %}
+{% endstepper %}
 
 
 
@@ -107,8 +117,10 @@ aura -A all-repository-fonts
 
 Дополнительно можно добавить шрифты из Windows 11.
 
-{% file src="../.gitbook//assets/windows.zip" %}
+{% file src="../.gitbook/assets/windows.zip" %}
 
+{% stepper %}
+{% step %}
 Скачайте архив, распакуйте и скопируйте папку `windows` в домашнюю папку:
 
 {% code overflow="wrap" %}
@@ -116,7 +128,9 @@ aura -A all-repository-fonts
 ~/.local/share/fonts
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Обновите кэш шрифтов:
 
 {% code overflow="wrap" %}
@@ -124,6 +138,8 @@ aura -A all-repository-fonts
 fc-cache -v
 ```
 {% endcode %}
+{% endstep %}
+{% endstepper %}
 
 
 

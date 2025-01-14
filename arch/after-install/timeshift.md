@@ -20,19 +20,27 @@ layout:
 
 <figure><img src="../../.gitbook/assets/timeshift.png" alt=""><figcaption></figcaption></figure>
 
-{% code title="Установите timeshift и cronie" overflow="wrap" %}
+{% stepper %}
+{% step %}
+Установите `timeshift` и `cronie`
+
+{% code overflow="wrap" %}
 ```bash
 aura -S timeshift cronie
 ```
 {% endcode %}
+{% endstep %}
 
-{% code title="Запустите сервис" overflow="wrap" %}
+{% step %}
+Запустите сервис
+
+{% code overflow="wrap" %}
 ```bash
 sudo systemctl enable --now cronie
 ```
 {% endcode %}
-
-***
+{% endstep %}
+{% endstepper %}
 
 Настроить автоматическое создание снимков можно через GUI:
 
@@ -42,24 +50,38 @@ sudo timeshift-gtk
 ```
 {% endcode %}
 
-### GRUB
+#### GRUB
 
-Для добавления пункта меню с выбором снимков в `grub` установите `grub-btrfs`:
+Для добавления пункта меню с выбором снимков в `grub`:
+
+{% stepper %}
+{% step %}
+Установите `grub-btrfs`
 
 {% code overflow="wrap" %}
 ```bash
 aura -S grub-btrfs
 ```
 {% endcode %}
+{% endstep %}
 
-{% code title="Запустите сервис" overflow="wrap" %}
+{% step %}
+Запустите сервис
+
+{% code overflow="wrap" %}
 ```bash
 sudo systemctl enable --now grub-btrfsd
 ```
 {% endcode %}
+{% endstep %}
 
-{% code title="Обновите конфигурацию grub" overflow="wrap" %}
+{% step %}
+Обновите конфигурацию `grub`
+
+{% code overflow="wrap" %}
 ```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 {% endcode %}
+{% endstep %}
+{% endstepper %}
