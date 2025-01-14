@@ -45,16 +45,6 @@ aura -S firefox firefox-i18n-ru
 flatpak install com.spotify.Client
 ```
 {% endcode %}
-{% endtab %}
-
-{% tab title="pkg" %}
-{% code overflow="wrap" %}
-```bash
-aura -A spotify
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
 
 Опционально AdBlock для Spotify:
 
@@ -63,3 +53,21 @@ aura -A spotify
 bash <(curl -sSL https://spotx-official.github.io/run.sh)
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -A spotify
+```
+{% endcode %}
+
+Опционально AdBlock для Spotify:
+
+{% code overflow="wrap" %}
+```bash
+bash <(curl -sSL https://spotx-official.github.io/run.sh)
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}

@@ -16,71 +16,18 @@ layout:
 
 ### tor
 
+{% stepper %}
+{% step %}
 Установите `tor` и `obfs4proxy`:
 
-{% tabs %}
-{% tab title="homebrew" %}
-{% code overflow="wrap" %}
-```bash
-brew install tor obfs4proxy
-```
-{% endcode %}
-
-Создайте папку для `DataDirectory`:
-
-{% code overflow="wrap" %}
-```bash
-mkdir /home/linuxbrew/.linuxbrew/var/lib/tor
-```
-{% endcode %}
-
-Создайте файл конфигурации:
-
-{% code overflow="wrap" %}
-```bash
-nano /home/linuxbrew/.linuxbrew/etc/tor/torrc
-```
-{% endcode %}
-
-{% code title="torrc" %}
-```ini
-## Конфигурация tor для использования мостов
-
-# Разрешить использование мостов
-UseBridges 1
-
-# Указание, как Tor должен интерактивно подключаться к мостам с использованием obfs4
-ClientTransportPlugin obfs4 exec /home/linuxbrew/.linuxbrew/bin/obfs4proxy
-
-# Добавление моста obfs4
-Bridge
-
-# Не запускать Tor в режиме сервиса
-RunAsDaemon 0
-
-# SOCKS-порт
-SocksPort 9050
-
-DataDirectory /home/linuxbrew/.linuxbrew/var/lib/tor
-```
-{% endcode %}
-
-{% code title="Запустите сервис:" overflow="wrap" %}
-```bash
-brew services start tor
-```
-{% endcode %}
-
-Адрес хоста подключения SOCKS5: `127.0.0.1:9050`
-{% endtab %}
-
-{% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
 aura -S tor && aura -A obfs4proxy
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Назначьте пользователя и права на папку:
 
 {% code overflow="wrap" %}
@@ -88,14 +35,20 @@ aura -S tor && aura -A obfs4proxy
 sudo chown -R tor:tor /var/lib/tor && sudo chmod -R 700 /var/lib/tor
 ```
 {% endcode %}
+{% endstep %}
 
-Отредактируйте `tor.service` и добавьте пользователя и группу в раздел `[Service]`:
+{% step %}
+Отредактируйте `tor.service`:
 
 {% code overflow="wrap" %}
 ```bash
 sudo nano /lib/systemd/system/tor.service
 ```
 {% endcode %}
+{% endstep %}
+
+{% step %}
+Добавьте пользователя и группу в раздел `[Service]`:
 
 {% code overflow="wrap" %}
 ```editorconfig
@@ -104,7 +57,9 @@ User=tor
 Group=tor
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Конфигурация мостов:
 
 {% code overflow="wrap" %}
@@ -112,7 +67,9 @@ Group=tor
 sudo nano /etc/tor/torrc
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 {% code title="torrc" %}
 ```editorconfig
 ## Конфигурация tor для использования мостов
@@ -135,15 +92,19 @@ SocksPort 9050
 DataDirectory /var/lib/tor
 ```
 {% endcode %}
+{% endstep %}
 
-Обновите конфигурацию и запустите `tor` сервис:
+{% step %}
+Запустите `tor` сервис:
 
 {% code overflow="wrap" %}
 ```bash
 sudo systemctl daemon-reload && sudo systemctl enable --now tor
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 При необходимости проверьте состояние:
 
 {% code overflow="wrap" %}
@@ -151,41 +112,35 @@ sudo systemctl daemon-reload && sudo systemctl enable --now tor
 sudo systemctl status tor
 ```
 {% endcode %}
+{% endstep %}
+{% endstepper %}
 
 Адрес хоста подключения SOCKS5: `127.0.0.1:9050`
-{% endtab %}
-{% endtabs %}
 
 
 
 ### zapret
 
-{% tabs %}
-{% tab title="wget" %}
+{% stepper %}
+{% step %}
 {% code overflow="wrap" %}
 ```bash
 wget -qO- https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.tar.gz | tar -xvz && cd zapret-v69.9 && ./install_bin.sh && ./install_prereq.sh
 ```
 {% endcode %}
-{% endtab %}
+{% endstep %}
 
-{% tab title="curl" %}
-{% code overflow="wrap" %}
-```bash
-curl -sL https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.tar.gz | tar -xvz && cd zapret-v69.9 && ./install_bin.sh && ./install_prereq.sh
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
-
-При необходимости запустите тест:
+{% step %}
+При необходимости запустите тест соединения:
 
 {% code overflow="wrap" %}
 ```bash
 ./blockcheck.sh
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Установите сервис:
 
 {% code overflow="wrap" %}
@@ -193,10 +148,20 @@ curl -sL https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.
 ./install_easy.sh
 ```
 {% endcode %}
+{% endstep %}
 
-<details>
+{% step %}
+Отредактируйте конфигурацию:
 
-<summary>Пример конфигурации</summary>
+{% code overflow="wrap" %}
+```bash
+sudo nano /opt/zapret/config
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+Пример конфигурации:
 
 {% code title="/opt/zapret/config" %}
 ```ini
@@ -337,5 +302,32 @@ DISABLE_IPV6=1
 #GETLIST=
 ```
 {% endcode %}
+{% endstep %}
 
-</details>
+{% step %}
+Отредактируйте список IP:
+
+{% code overflow="wrap" %}
+```bash
+sudo nano /opt/zapret/ipset/zapret-hosts-user.txt
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+{% code title="zapret-hosts-user.txt" %}
+```
+googlevideo.com
+googleapis.com
+i.ytimg.com
+i9.ytimg.com
+wide-youtube.l.google.com
+youtu.be
+youtube.com
+youtube.googleapis.com
+yt3.ggpht.com
+yt3.googleusercontent.com
+```
+{% endcode %}
+{% endstep %}
+{% endstepper %}

@@ -24,16 +24,16 @@ aura -S podman podman-compose
 
 #### Конфигурация:
 
-{% tabs %}
-{% tab title="registries.conf" %}
+{% stepper %}
+{% step %}
 {% code overflow="wrap" %}
 ```bash
 sudo nano /etc/containers/registries.conf
 ```
 {% endcode %}
-{% endtab %}
+{% endstep %}
 
-{% tab title="→" %}
+{% step %}
 {% code overflow="wrap" %}
 ```editorconfig
 [registries.search]
@@ -41,7 +41,7 @@ registries = ['docker.io']
 ```
 {% endcode %}
 
-На случай блокировки docker.io добавьте:
+Дополнительно можно добавить зеркало docker.io:
 
 ```ini
 [[registry]]
@@ -56,30 +56,18 @@ insecure = false
 prefix = ""
 location = "quay.io"
 ```
-{% endtab %}
-{% endtabs %}
+{% endstep %}
+{% endstepper %}
 
 
 
 ### github
 
-{% tabs %}
-{% tab title="homebrew" %}
-{% code overflow="wrap" %}
-```bash
-brew install gh gitui
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="pkg" %}
 {% code overflow="wrap" %}
 ```bash
 aura -S --needed git github-cli gitui
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
 Конфигурация, укажите имя и email как у вашего аккаунта на github.
 

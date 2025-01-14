@@ -254,9 +254,11 @@ aura -A extension-manager
 
 
 
-### Настройки
+### Раскладка клавиатуры
 
-{% code title="Смена раскладки клавиатуры на shift + alt " overflow="wrap" %}
+Смена раскладки клавиатуры на `shift` + `alt`
+
+{% code overflow="wrap" %}
 ```bash
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift>Alt_L']" && gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
 ```

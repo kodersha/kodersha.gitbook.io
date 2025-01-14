@@ -22,22 +22,28 @@ aura -S --needed libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa
 
 
 
-Некоторые системы требуют раннего запуска KMS (Kernel Mode Setting) для корректной работы.&#x20;
+Некоторые системы требуют раннего запуска KMS (Kernel Mode Setting) для корректной работы.
 
+{% stepper %}
+{% step %}
 {% code overflow="wrap" %}
 ```bash
 sudo nano /etc/mkinitcpio.conf
 ```
 {% endcode %}
+{% endstep %}
 
-Добавьте `amdgpu` к `MODULES=()`.
+{% step %}
+Добавьте `amdgpu` к `MODULES=()`:
 
 {% code overflow="wrap" %}
 ```ini
 MODULES=(amdgpu)
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 И выполните:
 
 {% code overflow="wrap" %}
@@ -45,6 +51,8 @@ MODULES=(amdgpu)
 sudo mkinitcpio -P
 ```
 {% endcode %}
+{% endstep %}
+{% endstepper %}
 
 
 

@@ -22,41 +22,41 @@ aura -A wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib32-libld
 ```
 {% endcode %}
 
-#### mangohud
+
+
+### steam
 
 {% tabs %}
-{% tab title="pkg" %}
+{% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
-aura -S mangohud lib32-mangohud
+flatpak install com.valvesoftware.Steam
 ```
 {% endcode %}
 {% endtab %}
 
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -S steam
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+
+
+### mangohud
+
+{% tabs %}
 {% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
 flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
 Конфигурация:
-
-{% tabs %}
-{% tab title="mangohud.conf" %}
-Для `pkg` версии:
-
-{% code overflow="wrap" %}
-```bash
-mkdir ~/.config/MangoHud && nano ~/.config/MangoHud/MangoHud.conf
-```
-{% endcode %}
-
-***
-
-Для `flatpak` версии:
 
 {% code overflow="wrap" %}
 ```bash
@@ -64,16 +64,56 @@ mkdir ~/.var/app/com.valvesoftware.Steam/config/MangoHud && nano ~/.var/app/com.
 ```
 {% endcode %}
 
-И разрешите доступ для steam -
+{% code title="mangohud.conf" %}
+```ini
+horizontal
+legacy_layout=0
+table_columns=20
+fps
+gpu_stats
+gpu_temp
+vram
+cpu_stats
+cpu_temp
+ram
+frametime=0
+frame_timing=1
+hud_no_margin
+```
+{% endcode %}
+
+Разрешите доступ `mangohud` для `steam`:
 
 {% code overflow="wrap" %}
 ```bash
 flatpak override --user --filesystem=xdg-config/MangoHud:ro com.valvesoftware.Steam
 ```
 {% endcode %}
+
+Включите `mangohud` во всех играх, если нужно:
+
+{% code overflow="wrap" %}
+```bash
+flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
+```
+{% endcode %}
 {% endtab %}
 
-{% tab title="→" %}
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -S mangohud lib32-mangohud
+```
+{% endcode %}
+
+Конфигурация:
+
+{% code overflow="wrap" %}
+```bash
+mkdir ~/.config/MangoHud && nano ~/.config/MangoHud/MangoHud.conf
+```
+{% endcode %}
+
 {% code title="mangohud.conf" %}
 ```ini
 horizontal
@@ -110,25 +150,11 @@ gamescope --mangoapp -- %command%
 ```
 {% endcode %}
 
-Или для `flatpak` версии `steam`, включает `mangohud` во всех играх:
 
-{% code overflow="wrap" %}
-```bash
-flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
-```
-{% endcode %}
 
-#### gamescope
+### gamescope
 
 {% tabs %}
-{% tab title="pkg" %}
-{% code overflow="wrap" %}
-```bash
-aura -S gamescope
-```
-{% endcode %}
-{% endtab %}
-
 {% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
@@ -136,9 +162,19 @@ flatpak install org.freedesktop.Platform.VulkanLayer.gamescope
 ```
 {% endcode %}
 {% endtab %}
+
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -S gamescope
+```
+{% endcode %}
+{% endtab %}
 {% endtabs %}
 
-#### gamemode
+
+
+### gamemode
 
 {% code overflow="wrap" %}
 ```bash
@@ -154,39 +190,13 @@ gamemoderun %command%
 ```
 {% endcode %}
 
-### steam
 
-{% tabs %}
-{% tab title="pkg" %}
-{% code overflow="wrap" %}
-```bash
-aura -S steam
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="flatpak" %}
-{% code overflow="wrap" %}
-```bash
-flatpak install com.valvesoftware.Steam
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
 
 ### bottles
 
 <figure><img src="../.gitbook/assets/bottles.png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
-{% tab title="pkg" %}
-{% code overflow="wrap" %}
-```bash
-aura -A bottles
-```
-{% endcode %}
-{% endtab %}
-
 {% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
@@ -194,23 +204,33 @@ flatpak install com.usebottles.bottles
 ```
 {% endcode %}
 {% endtab %}
+
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -A bottles
+```
+{% endcode %}
+{% endtab %}
 {% endtabs %}
+
+
 
 ### lutris
 
 {% tabs %}
-{% tab title="pkg" %}
-{% code overflow="wrap" %}
-```bash
-aura -S lutris
-```
-{% endcode %}
-{% endtab %}
-
 {% tab title="flatpak" %}
 {% code overflow="wrap" %}
 ```bash
 flatpak install net.lutris.Lutris
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="pkg" %}
+{% code overflow="wrap" %}
+```bash
+aura -S lutris
 ```
 {% endcode %}
 {% endtab %}

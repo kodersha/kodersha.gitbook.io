@@ -54,15 +54,9 @@ sudo locale-gen
 {% endstep %}
 {% endstepper %}
 
-#### X11
 
-{% code overflow="wrap" %}
-```bash
-localectl set-x11-keymap us,ru "" "" grp:alt_shift_toggle
-```
-{% endcode %}
 
-#### Исправление раскладки в играх
+Исправление переключения раскладки в играх:
 
 {% stepper %}
 {% step %}
@@ -117,11 +111,15 @@ aura -A all-repository-fonts
 
 Дополнительно можно добавить шрифты из Windows 11.
 
-{% file src="../.gitbook/assets/windows.zip" %}
-
 {% stepper %}
 {% step %}
-Скачайте архив, распакуйте и скопируйте папку `windows` в домашнюю папку:
+Скачайте архив:
+
+{% file src="../.gitbook/assets/windows.zip" %}
+{% endstep %}
+
+{% step %}
+Распакуйте архив и скопируйте папку `windows` в домашнюю папку:
 
 {% code overflow="wrap" %}
 ```bash
@@ -152,6 +150,8 @@ fc-cache -v
 aura -S --needed hunspell hunspell-ru hunspell-en_us
 ```
 {% endcode %}
+
+
 
 
 
