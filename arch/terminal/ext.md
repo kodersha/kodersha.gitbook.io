@@ -32,14 +32,19 @@ topgrade
 
 <figure><img src="../../.gitbook/assets/topgrade.png" alt=""><figcaption></figcaption></figure>
 
-Конфигурация:
+Пример конфигурации:
 
+{% stepper %}
+{% step %}
 {% code overflow="wrap" %}
 ```bash
 nano ~/.config/topgrade.toml
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
+{% code title="topgrade.toml" %}
 ```toml
 # Include any additional configuration file(s)
 
@@ -75,6 +80,9 @@ upgrade = false
 [distrobox]
 use_root = false
 ```
+{% endcode %}
+{% endstep %}
+{% endstepper %}
 
 
 
@@ -92,14 +100,15 @@ aura -S fastfetch
 
 Можно создать пользовательский файл конфигурации:
 
+{% stepper %}
+{% step %}
 ```bash
 mkdir ~/.config/fastfetch/ && nano ~/.config/fastfetch/config.jsonc
 ```
+{% endstep %}
 
-<details>
-
-<summary>config.jsonc</summary>
-
+{% step %}
+{% code title="config.jsonc" %}
 ```json
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
@@ -235,21 +244,19 @@ mkdir ~/.config/fastfetch/ && nano ~/.config/fastfetch/config.jsonc
 
 
 ```
+{% endcode %}
+{% endstep %}
 
-
-
-</details>
-
+{% step %}
 {% code overflow="wrap" %}
 ```bash
 nano ~/.config/fastfetch/logo.txt
 ```
 {% endcode %}
+{% endstep %}
 
-<details>
-
-<summary>logo.txt</summary>
-
+{% step %}
+{% code title="logo.txt" %}
 ```asciidoc
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠟⣛⢛⠻⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠋⠉⠉⣡⣴⡞⣿⣿⣿⡟⢿⣿⣶⣦⣍⡛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
@@ -281,8 +288,9 @@ nano ~/.config/fastfetch/logo.txt
 ⣿⣿⠿⠟⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡿⠿⠿⠛⠻⠿⣿⣿⠁⠀⠈⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠂⠀⠀⠈⠛⢿
 ⠋⠀⠀⠀⠈⠉⠛⠛⠳⠦⠤⢄⣀⠀⠀⠀⠀⠀⢠⡤⠴⠶⠾⠷⢤⢀⠁⠀⠀⠀⠀⣠⠴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸
 ```
-
-</details>
+{% endcode %}
+{% endstep %}
+{% endstepper %}
 
 
 
@@ -296,19 +304,19 @@ aura -S zsh
 ```
 {% endcode %}
 
-Конфигурация:
+Пример конфигурации:
 
+{% stepper %}
+{% step %}
 {% code overflow="wrap" %}
 ```bash
 nano ~/.zshrc
 ```
 {% endcode %}
+{% endstep %}
 
-<details>
-
-<summary>.zshrc</summary>
-
-{% code title="" %}
+{% step %}
+{% code title=".zshrc" %}
 ```bash
 # Ena# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -363,17 +371,13 @@ zplug load
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 {% endcode %}
-
-</details>
+{% endstep %}
+{% endstepper %}
 
 Добавьте автозапуск `zsh` в `.bashrc`:
 
 {% stepper %}
 {% step %}
-###
-
-Добавьте автозапуск `zsh` в `.bashrc`:
-
 {% code overflow="wrap" %}
 ```bash
 nano ~/.bashrc
@@ -382,8 +386,6 @@ nano ~/.bashrc
 {% endstep %}
 
 {% step %}
-###
-
 {% code title=".bashrc" %}
 ```bash
 if [ -z "${NOZSH}" ] && [ $TERM = "xterm" -o $TERM = "xterm-256color" -o $TERM = "screen" ] && type zsh &> /dev/null
