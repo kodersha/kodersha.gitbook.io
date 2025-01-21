@@ -1,20 +1,19 @@
 ---
+description: Смена языка режима рабочего стола на русский
 layout:
   title:
     visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
     visible: true
   outline:
     visible: false
   pagination:
-    visible: true
+    visible: false
 ---
 
 # 🅰️ Язык
-
-### Смена языка режима рабочего стола на русский
 
 {% stepper %}
 {% step %}
