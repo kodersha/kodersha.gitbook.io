@@ -22,6 +22,8 @@ layout:
 
 ### Установка
 
+{% stepper %}
+{% step %}
 Установите `flatpak`:
 
 {% code overflow="wrap" %}
@@ -29,7 +31,9 @@ layout:
 aura -S flatpak
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Добавьте репозиторий `flathub`:
 
 {% code overflow="wrap" %}
@@ -37,32 +41,15 @@ aura -S flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 {% endcode %}
+{% endstep %}
+{% endstepper %}
+
+{% embed url="https://flathub.org/ru" %}
 
 
 
 ### Команды
 
-* Основные  команды:
-  * `flatpak install <имя-пакета>`: Установка приложения.
-  * `flatpak run <имя-пакета>`: Запуск приложения.
-  * `flatpak uninstall <имя-пакета>`: Удаление приложения.
-  * `flatpak update`: Обновление приложений.
-  * `flatpak list`: Список установленных приложений.
-* Управление репозиториями:
-  * `flatpak remote-add <имя-репозитория> <URL-репозитория>`: Добавление репозитория.
-  * `flatpak remote-delete <имя-репозитория>`: Удаление репозитория.
-  * `flatpak remotes`: Список текущих репозиториев.
-* Управление  разрешениями:
-  * `flatpak info --show-permissions <имя-пакета>`: Проверка разрешений приложения.
-* Утилиты:
-  * `flatpak info <имя-пакета>`: Информация о приложении.
-  * `flatpak uninstall --unused`: Очистка кэша.
-  * `flatpak repair && flatpak ps`: Диагностика и отладка.
-
-
-
-
-
-***
-
-{% embed url="https://flathub.org/ru" %}
+{% content-ref url="../terminal/cmd.md" %}
+[cmd.md](../terminal/cmd.md)
+{% endcontent-ref %}
