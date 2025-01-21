@@ -2,7 +2,7 @@
 icon: video
 layout:
   title:
-    visible: true
+    visible: false
   description:
     visible: false
   tableOfContents:

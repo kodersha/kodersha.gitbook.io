@@ -3,7 +3,7 @@ layout:
   title:
     visible: true
   description:
-    visible: true
+    visible: false
   tableOfContents:
     visible: true
   outline:
@@ -54,6 +54,8 @@ sudo cpupower frequency-set -g powersave
 {% endcode %}
 
 {% embed url="https://wiki.archlinux.org/title/CPU_frequency_scaling" %}
+
+
 
 ### zram
 
@@ -136,6 +138,8 @@ sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0.se
 ```
 {% endcode %}
 
+
+
 ### ananicy-cpp
 
 Служба отслеживает активные процессы и назначает им приоритеты в соответствии с правилами.
@@ -164,6 +168,8 @@ aura -A cachyos-ananicy-rules-git
 
 {% embed url="https://github.com/CachyOS/ananicy-rules" %}
 
+
+
 ### irqbalance
 
 Сервис предназначен для управления распределением аппаратных прерываний (IRQ) между процессорными ядрами. Он автоматически распределяет IRQ так, чтобы снизить вероятность перегрузки одного ядра процессора, что может улучшить общую производительность системы.
@@ -181,6 +187,8 @@ sudo systemctl enable --now irqbalance
 {% endcode %}
 
 {% embed url="https://github.com/Irqbalance/irqbalance" %}
+
+
 
 ### uksmd
 

@@ -3,7 +3,7 @@ layout:
   title:
     visible: true
   description:
-    visible: true
+    visible: false
   tableOfContents:
     visible: true
   outline:
@@ -31,6 +31,8 @@ topgrade
 {% endcode %}
 
 <figure><img src="../../.gitbook/assets/topgrade.png" alt=""><figcaption></figcaption></figure>
+
+
 
 Пример конфигурации:
 
@@ -97,6 +99,8 @@ aura -S fastfetch
 {% endcode %}
 
 <figure><img src="../../.gitbook/assets/fetch.png" alt=""><figcaption></figcaption></figure>
+
+
 
 Можно создать пользовательский файл конфигурации:
 
@@ -304,6 +308,8 @@ aura -S zsh
 ```
 {% endcode %}
 
+
+
 Пример конфигурации:
 
 {% stepper %}
@@ -373,6 +379,8 @@ zplug load
 {% endcode %}
 {% endstep %}
 {% endstepper %}
+
+
 
 Добавьте автозапуск `zsh` в `.bashrc`:
 

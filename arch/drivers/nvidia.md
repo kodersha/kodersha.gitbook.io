@@ -3,11 +3,11 @@ layout:
   title:
     visible: true
   description:
-    visible: true
+    visible: false
   tableOfContents:
     visible: true
   outline:
-    visible: false
+    visible: true
   pagination:
     visible: false
 ---
@@ -51,6 +51,8 @@ local/nvidia-utils 550.90.07-2
 У вас могут быть другие драйвера, например `nvidia-open-dkms`.
 {% endhint %}
 
+
+
 {% stepper %}
 {% step %}
 Удалите найденные драйвера `nvidia`. Также придётся удалить `steam` как зависимость.
@@ -82,6 +84,8 @@ sudo reboot
 {% endcode %}
 {% endstep %}
 {% endstepper %}
+
+
 
 Установите `steam` обратно, если нужно:
 
