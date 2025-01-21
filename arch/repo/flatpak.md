@@ -20,6 +20,8 @@ layout:
 
 
 
+### Установка
+
 Установите `flatpak`:
 
 {% code overflow="wrap" %}
@@ -38,125 +40,22 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 
 
-#### Основные команды
+### Команды
 
-*   Установка приложений
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak install <удалённый-репозиторий> <имя-пакета>
-    ```
-    {% endcode %}
-*   Запуск приложений
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak run <имя-пакета>
-    ```
-    {% endcode %}
-*   Удаление приложений
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak uninstall <имя-пакета>
-    ```
-    {% endcode %}
-*   Обновление приложений
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak update
-    ```
-    {% endcode %}
-*   Список установленных приложений
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak list
-    ```
-    {% endcode %}
-
-#### Управление репозиториями
-
-*   Добавление репозитория
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak remote-add <имя-репозитория> <URL-репозитория>
-    ```
-    {% endcode %}
-*   Удаление репозитория
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak remote-delete <имя-репозитория>
-    ```
-    {% endcode %}
-*   Список репозиториев
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak remotes
-    ```
-    {% endcode %}
-
-#### Управление разрешениями
-
-*   Проверка разрешений приложения
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak info --show-permissions <имя-пакета>
-    ```
-    {% endcode %}
-* Используйте приложение [Flatseal](https://flathub.org/apps/details/com.github.tchx84.Flatseal) для редактирования разрешений.
-
-#### Утилиты
-
-*   Проверка информации о приложении
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak info <имя-пакета>
-    ```
-    {% endcode %}
-*   Очистка кэша
-
-    {% code overflow="wrap" %}
-    ```
-    flatpak uninstall --unused
-    ```
-    {% endcode %}
-*   **Д**иагностика и отладка
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak repair
-    flatpak ps
-    ```
-    {% endcode %}
-*   Запуск команды в окружении приложения
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak enter <ид-процесса> <команда>
-    ```
-    {% endcode %}
-
-#### Пример использования:
-
-*   Установка приложения из Flathub:
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak install flathub com.spotify.Client
-    ```
-    {% endcode %}
-*   Запуск приложения:
-
-    {% code overflow="wrap" %}
-    ```bash
-    flatpak run com.spotify.Client
-    ```
-    {% endcode %}
+* Основные  команды:
+  * `flatpak install <имя-пакета>`: Установка приложения.
+  * `flatpak run <имя-пакета>`: Запуск приложения.
+  * `flatpak uninstall <имя-пакета>`: Удаление приложения.
+  * `flatpak update`: Обновление приложений.
+  * `flatpak list`: Список установленных приложений.
+* Управление репозиториями:
+  * `flatpak remote-add <имя-репозитория> <URL-репозитория>`: Добавление репозитория.
+  * `flatpak remote-delete <имя-репозитория>`: Удаление репозитория.
+  * `flatpak remotes`: Список текущих репозиториев.
+* Управление  разрешениями:
+  * `flatpak info --show-permissions <имя-пакета>`: Проверка разрешений приложения.
+* Утилиты:
+  * `flatpak info <имя-пакета>`: Информация о приложении.
+  * `flatpak uninstall --unused`: Очистка кэша.
+  * `flatpak repair && flatpak ps`: Диагностика и отладка.
 
