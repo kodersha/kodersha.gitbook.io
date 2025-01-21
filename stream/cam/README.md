@@ -1,8 +1,8 @@
 ---
-icon: camera-web
+icon: circle-camera
 layout:
   title:
-    visible: false
+    visible: true
   description:
     visible: false
   tableOfContents:
