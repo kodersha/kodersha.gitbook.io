@@ -14,8 +14,11 @@ layout:
 
 # NVIDIA
 
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><a data-footnote-ref href="#user-content-fn-1">aura</a> -S --needed nvidia nvidia-utils lib32-nvidia-utils libvdpau lib32-libvdpau
-</code></pre>
+{% code overflow="wrap" %}
+```bash
+aura -S --needed nvidia nvidia-utils lib32-nvidia-utils libvdpau lib32-libvdpau
+```
+{% endcode %}
 
 
 
@@ -23,8 +26,11 @@ layout:
 
 Для перехода на beta версию драйверов сначала удалите текущие. Узнать какие драйвера установлены можно командой:
 
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><a data-footnote-ref href="#user-content-fn-2">aura</a> -Qs nvidia
-</code></pre>
+{% code overflow="wrap" %}
+```bash
+aura -Qs nvidia
+```
+{% endcode %}
 
 {% code title="Пример" %}
 ```bash
@@ -51,15 +57,21 @@ local/nvidia-utils 550.90.07-2
 {% step %}
 Удалите найденные драйвера `nvidia`. Также придётся удалить `steam` как зависимость.
 
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><a data-footnote-ref href="#user-content-fn-3">aura</a> -Rsu lib32-nvidia-utils nvidia-utils nvidia-dkms nvidia-settings steam
-</code></pre>
+{% code overflow="wrap" %}
+```bash
+aura -Rsu lib32-nvidia-utils nvidia-utils nvidia-dkms nvidia-settings steam
+```
+{% endcode %}
 {% endstep %}
 
 {% step %}
 Установите `beta` из AUR:
 
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><a data-footnote-ref href="#user-content-fn-4">aura</a> -A lib32-nvidia-utils-beta nvidia-utils-beta nvidia-beta nvidia-settings-beta
-</code></pre>
+{% code overflow="wrap" %}
+```bash
+aura -A lib32-nvidia-utils-beta nvidia-utils-beta nvidia-beta nvidia-settings-beta
+```
+{% endcode %}
 {% endstep %}
 
 {% step %}
@@ -77,15 +89,8 @@ sudo reboot
 
 Установите `steam` обратно, если нужно:
 
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><a data-footnote-ref href="#user-content-fn-5">aura</a> -S steam
-</code></pre>
-
-[^1]: См. руководство по [aura](../repo/aura.md).
-
-[^2]: См. руководство по [aura](../repo/aura.md).
-
-[^3]: См. руководство по [aura](../repo/aura.md).
-
-[^4]: См. руководство по [aura](../repo/aura.md).
-
-[^5]: См. руководство по [aura](../repo/aura.md).
+{% code overflow="wrap" %}
+```bash
+aura -S steam
+```
+{% endcode %}
