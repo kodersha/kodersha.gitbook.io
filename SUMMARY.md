@@ -1,6 +1,6 @@
 # Table of contents
 
-* [👋 Введение](README.md)
+* [Введение](README.md)
 
 ## arch linux <a href="#arch" id="arch"></a>
 
@@ -30,7 +30,7 @@
 
 ## Steam Deck <a href="#deck" id="deck"></a>
 
-* [🅰️ Язык](deck/yazyk.md)
+* [Язык](deck/language.md)
 
 ## Стримы <a href="#stream" id="stream"></a>
 

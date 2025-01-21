@@ -1,5 +1,6 @@
 ---
-description: Смена языка режима рабочего стола на русский
+description: Смена языка режима «Рабочего Стола» на русский.
+icon: language
 layout:
   title:
     visible: true
@@ -13,7 +14,7 @@ layout:
     visible: false
 ---
 
-# 🅰️ Язык
+# Язык
 
 {% stepper %}
 {% step %}
