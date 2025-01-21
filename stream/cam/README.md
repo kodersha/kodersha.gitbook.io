@@ -1,5 +1,5 @@
 ---
-icon: circle-camera
+icon: video
 layout:
   title:
     visible: true
