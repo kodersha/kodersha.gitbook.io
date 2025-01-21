@@ -1,5 +1,5 @@
 ---
-icon: ethernet
+icon: internet-explorer
 layout:
   title:
     visible: true
