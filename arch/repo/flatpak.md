@@ -24,11 +24,8 @@ layout:
 
 Установите `flatpak`:
 
-{% code overflow="wrap" %}
-```bash
-aura -S flatpak
-```
-{% endcode %}
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash"><a data-footnote-ref href="#user-content-fn-1">aura</a> -S flatpak
+</code></pre>
 
 Добавьте репозиторий `flathub`:
 
@@ -66,3 +63,5 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 ***
 
 {% embed url="https://flathub.org/ru" %}
+
+[^1]: [https://guide.kodersha.ru/arch/repo/aura](https://guide.kodersha.ru/arch/repo/aura)
