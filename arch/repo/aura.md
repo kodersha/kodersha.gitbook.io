@@ -18,10 +18,10 @@ layout:
 
 # Aura
 
-Aura позиционируется как продвинутая альтернатива `pacman`, с поддержкой дополнительных возможностей для работы с AUR.
+[Aura](https://github.com/fosskers/aura) позиционируется как продвинутая альтернатива `pacman`, с поддержкой дополнительных возможностей для работы с AUR.
 
 {% hint style="info" %}
-Пользовательский репозиторий [AUR](https://aur.archlinux.org/packages) (Arch User Repository) - поддерживаемое сообществом хранилище программ для пользователей Arch.
+Пользовательский репозиторий [AUR](https://aur.archlinux.org/packages) (Arch User Repository) - поддерживаемое сообществом хранилище пакетов для пользователей Arch.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -57,3 +57,11 @@ sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/au
 * Поиск пакетов:
   * `aura -As <ключевое слово>`: Поиск пакетов в официальных репозиториях.
   * `aura -Aa <ключевое слово>`: Поиск пакетов в AUR.
+
+
+
+
+
+***
+
+{% embed url="https://aur.archlinux.org/packages" %}

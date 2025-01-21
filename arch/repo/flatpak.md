@@ -59,3 +59,10 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
   * `flatpak uninstall --unused`: Очистка кэша.
   * `flatpak repair && flatpak ps`: Диагностика и отладка.
 
+
+
+
+
+***
+
+{% embed url="https://flathub.org/ru" %}
