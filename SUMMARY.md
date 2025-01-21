@@ -20,7 +20,6 @@
   * [Команды](arch/terminal/cmd.md)
   * [Расширения](arch/terminal/ext.md)
 * [Игры](arch/games.md)
-* [Приложения](arch/software.md)
 * [Разработка](arch/developer.md)
 * [Интернет](arch/ethernet.md)
 
