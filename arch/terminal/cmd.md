@@ -20,10 +20,14 @@ layout:
 
 Пакетный менеджер Arch Linux. Позволяет устанавливать, обновлять, удалять пакеты и их зависимости.
 
-<pre class="language-bash" data-title="Найти пакет в репозитории:" data-overflow="wrap"><code class="lang-bash">sudo pacman -Ss <a data-footnote-ref href="#user-content-fn-1">pkg</a>
+Найти пакет в репозитории:
+
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Ss <a data-footnote-ref href="#user-content-fn-1">pkg</a>
 </code></pre>
 
-<pre class="language-bash" data-title="Установить пакет:" data-overflow="wrap"><code class="lang-bash">sudo pacman -S <a data-footnote-ref href="#user-content-fn-2">pkg</a>
+Установить пакет:
+
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -S <a data-footnote-ref href="#user-content-fn-2">pkg</a>
 </code></pre>
 
 {% embed url="https://archlinux.org/packages/" %}
@@ -32,7 +36,9 @@ layout:
 
 ### Обновление
 
-{% code title="Обновить пакеты:" overflow="wrap" %}
+Обновить пакеты:
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -Syu
 ```
@@ -48,8 +54,10 @@ topgrade
 
 ### Удаление
 
-<pre class="language-bash" data-title="Удалить пакет:" data-overflow="wrap"><code class="lang-bash"><strong>sudo pacman -Rns <a data-footnote-ref href="#user-content-fn-3">pkg</a>
-</strong></code></pre>
+Удалить пакет:
+
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo pacman -Rns <a data-footnote-ref href="#user-content-fn-3">pkg</a>
+</code></pre>
 
 {% hint style="warning" %}
 Опция `-Rns` используется для удаления указанного пакета и всех его ненужных зависимостей (т.е. те зависимости, которые не требуются другими установленными пакетами).
@@ -61,13 +69,17 @@ topgrade
 
 ### Очистка
 
-{% code title="Удаление неиспользуемых пакетов:" overflow="wrap" %}
+Удаление неиспользуемых пакетов:
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -Rns $(pacman -Qdtq)
 ```
 {% endcode %}
 
-{% code title="Очистка кэша:" overflow="wrap" %}
+Очистка кэша:
+
+{% code overflow="wrap" %}
 ```bash
 sudo pacman -Scc && pikaur -Scc
 ```

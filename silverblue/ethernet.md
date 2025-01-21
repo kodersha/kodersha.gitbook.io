@@ -4,7 +4,7 @@ layout:
   title:
     visible: true
   description:
-    visible: true
+    visible: false
   tableOfContents:
     visible: true
   outline:
@@ -17,12 +17,20 @@ layout:
 
 ### tor
 
+{% stepper %}
+{% step %}
+Установите [homebrew](repo.md#homebrew).
+{% endstep %}
+
+{% step %}
 {% code overflow="wrap" %}
 ```bash
 brew install tor obfs4proxy
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Создайте папку для `DataDirectory`:
 
 {% code overflow="wrap" %}
@@ -30,19 +38,22 @@ brew install tor obfs4proxy
 mkdir /home/linuxbrew/.linuxbrew/var/lib/tor
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Создайте файл конфигурации:
 
-{% tabs %}
-{% tab title="torrc" %}
 {% code overflow="wrap" %}
 ```bash
 nano /home/linuxbrew/.linuxbrew/etc/tor/torrc
 ```
 {% endcode %}
-{% endtab %}
+{% endstep %}
 
-{% tab title="→" %}
+{% step %}
+Пример конфигурации:
+
+{% code title="torrc" %}
 ```ini
 ## Конфигурация tor для использования мостов
 
@@ -53,7 +64,7 @@ UseBridges 1
 ClientTransportPlugin obfs4 exec /home/linuxbrew/.linuxbrew/bin/obfs4proxy
 
 # Добавление моста obfs4
-Bridge
+Bridge obfs4 57.128.68.206:12069 3D31D10FFF77231A352CA982BD373ED9235FD769 cert=xPPp3sNp0xVeoxF+SL7ixf7cefyotL7eBCgPctKyqosvDZMKD2TvvEccUcR5IFkJyM4qFQ iat-mode=0
 
 # Не запускать Tor в режиме сервиса
 RunAsDaemon 0
@@ -63,9 +74,10 @@ SocksPort 9050
 
 DataDirectory /home/linuxbrew/.linuxbrew/var/lib/tor
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
+{% endstep %}
 
+{% step %}
 Запустите сервис:
 
 {% code overflow="wrap" %}
@@ -73,6 +85,8 @@ DataDirectory /home/linuxbrew/.linuxbrew/var/lib/tor
 brew services start tor
 ```
 {% endcode %}
+{% endstep %}
+{% endstepper %}
 
 Адрес хоста подключения SOCKS5: `127.0.0.1:9050`
 
@@ -80,24 +94,16 @@ brew services start tor
 
 ### zapret
 
-{% tabs %}
-{% tab title="wget" %}
+{% stepper %}
+{% step %}
 {% code overflow="wrap" %}
 ```bash
 wget -qO- https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.tar.gz | tar -xvz && cd zapret-v69.9 && ./install_bin.sh && ./install_prereq.sh
 ```
 {% endcode %}
-{% endtab %}
+{% endstep %}
 
-{% tab title="curl" %}
-{% code overflow="wrap" %}
-```bash
-curl -sL https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.tar.gz | tar -xvz && cd zapret-v69.9 && ./install_bin.sh && ./install_prereq.sh
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
-
+{% step %}
 При необходимости запустите тест:
 
 {% code overflow="wrap" %}
@@ -105,7 +111,9 @@ curl -sL https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.
 ./blockcheck.sh
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Установите сервис игнорируя предупреждения установщика:
 
 {% code overflow="wrap" %}
@@ -113,10 +121,20 @@ curl -sL https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.
 ./install_easy.sh
 ```
 {% endcode %}
+{% endstep %}
 
-<details>
+{% step %}
+Отредактируйте файл конфигурации:
 
-<summary>Пример конфигурации</summary>
+{% code overflow="wrap" %}
+```bash
+sudo nano /opt/zapret/config
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+Пример конфигурации:
 
 {% code title="/opt/zapret/config" %}
 ```ini
@@ -257,9 +275,36 @@ DISABLE_IPV6=1
 #GETLIST=
 ```
 {% endcode %}
+{% endstep %}
 
-</details>
+{% step %}
+Отредактируйте список IP:
 
+{% code overflow="wrap" %}
+```bash
+sudo nano /opt/zapret/ipset/zapret-hosts-user.txt
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+{% code title="zapret-hosts-user.txt" overflow="wrap" %}
+```
+googlevideo.com
+googleapis.com
+i.ytimg.com
+i9.ytimg.com
+wide-youtube.l.google.com
+youtu.be
+youtube.com
+youtube.googleapis.com
+yt3.ggpht.com
+yt3.googleusercontent.com
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
 Отключите `firewalld`:
 
 {% code overflow="wrap" %}
@@ -267,41 +312,40 @@ DISABLE_IPV6=1
 sudo systemctl disable firewalld
 ```
 {% endcode %}
+{% endstep %}
 
+{% step %}
 Настройте службу:
 
-{% tabs %}
-{% tab title="rc.local" %}
 {% code overflow="wrap" %}
 ```bash
 sudo nano /etc/rc.d/rc.local && sudo chmod 755 /etc/rc.d/rc.local
 ```
 {% endcode %}
-{% endtab %}
+{% endstep %}
 
-{% tab title="→" %}
-{% code overflow="wrap" %}
+{% step %}
+{% code title="rc.local" overflow="wrap" %}
 ```bash
 #!/bin/bash
 
 exec bash /opt/zapret/init.d/sysv/zapret start
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
+{% endstep %}
 
+{% step %}
 Создайте файл сервиса:
 
-{% tabs %}
-{% tab title="rc-local.service" %}
 {% code overflow="wrap" %}
 ```bash
 sudo nano /etc/systemd/system/rc-local.service
 ```
 {% endcode %}
-{% endtab %}
+{% endstep %}
 
-{% tab title="→" %}
+{% step %}
+{% code title="rc-local.service" %}
 ```ini
 [Unit]
 Description=Compatibility rc.local
@@ -317,9 +361,10 @@ RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
+{% endstep %}
 
+{% step %}
 Запустите сервис:
 
 {% code overflow="wrap" %}
@@ -327,32 +372,5 @@ WantedBy=multi-user.target
 sudo systemctl daemon-reload && sudo systemctl enable --now rc-local.service
 ```
 {% endcode %}
-
-#### Список `url` для обхода замедления youtube
-
-{% tabs %}
-{% tab title="zapret-hosts-user.txt" %}
-{% code overflow="wrap" %}
-```bash
-sudo nano /opt/zapret/ipset/zapret-hosts-user.txt
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="→" %}
-{% code overflow="wrap" %}
-```
-googlevideo.com
-googleapis.com
-i.ytimg.com
-i9.ytimg.com
-wide-youtube.l.google.com
-youtu.be
-youtube.com
-youtube.googleapis.com
-yt3.ggpht.com
-yt3.googleusercontent.com
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
+{% endstep %}
+{% endstepper %}
