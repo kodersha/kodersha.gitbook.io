@@ -54,6 +54,8 @@ layout:
 
 
 
+
+
 ### aura
 
 * Управление пакетами из официальных репозиториев:
@@ -71,6 +73,12 @@ layout:
 * Поиск пакетов:
   * `aura -As <ключевое слово>`: Поиск пакетов в официальных репозиториях.
   * `aura -Aa <ключевое слово>`: Поиск пакетов в AUR.
+
+{% content-ref url="../repo/aura.md" %}
+[aura.md](../repo/aura.md)
+{% endcontent-ref %}
+
+
 
 
 
@@ -92,3 +100,7 @@ layout:
   * `flatpak info <имя-пакета>`: Информация о приложении.
   * `flatpak uninstall --unused`: Очистка кэша.
   * `flatpak repair && flatpak ps`: Диагностика и отладка.
+
+{% content-ref url="../repo/flatpak.md" %}
+[flatpak.md](../repo/flatpak.md)
+{% endcontent-ref %}
