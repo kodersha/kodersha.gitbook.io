@@ -1,4 +1,5 @@
 ---
+icon: desktop
 layout:
   title:
     visible: false
@@ -12,5 +13,5 @@ layout:
     visible: false
 ---
 
-# ☄️ Среды рабочего стола
+# Среды рабочего стола
 

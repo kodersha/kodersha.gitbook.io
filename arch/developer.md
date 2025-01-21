@@ -1,4 +1,5 @@
 ---
+icon: brackets-curly
 layout:
   title:
     visible: true
@@ -12,7 +13,7 @@ layout:
     visible: false
 ---
 
-# ☕ Разработка
+# Разработка
 
 ### podman
 

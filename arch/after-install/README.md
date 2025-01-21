@@ -1,5 +1,6 @@
 ---
 description: Первичная настройка
+icon: wrench
 layout:
   title:
     visible: false
@@ -13,5 +14,5 @@ layout:
     visible: false
 ---
 
-# 🚀 После установки
+# После установки
 

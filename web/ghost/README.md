@@ -1,4 +1,5 @@
 ---
+icon: ghost
 layout:
   title:
     visible: false
@@ -12,5 +13,5 @@ layout:
     visible: false
 ---
 
-# 👻 Ghost
+# Ghost
 

@@ -1,4 +1,5 @@
 ---
+icon: gamepad-modern
 layout:
   title:
     visible: true
@@ -12,7 +13,7 @@ layout:
     visible: false
 ---
 
-# 🎮 Игры
+# Игры
 
 ### Базовые библиотеки
 

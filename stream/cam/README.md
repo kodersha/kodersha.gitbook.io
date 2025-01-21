@@ -1,4 +1,5 @@
 ---
+icon: camera-web
 layout:
   title:
     visible: false
@@ -12,5 +13,5 @@ layout:
     visible: false
 ---
 
-# 📸 Веб-камера
+# Веб-камера
 

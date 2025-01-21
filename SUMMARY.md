@@ -4,29 +4,29 @@
 
 ## arch linux <a href="#arch" id="arch"></a>
 
-* [📦 Репозитории](arch/repo.md)
-* [🤖 Драйвера](arch/drivers/README.md)
+* [Репозитории](arch/repo.md)
+* [Драйвера](arch/drivers/README.md)
   * [AMD](arch/drivers/amd.md)
   * [NVIDIA](arch/drivers/nvidia.md)
-* [🅰️ Язык и шрифты](arch/language.md)
-* [🚀 После установки](arch/after-install/README.md)
+* [Язык и шрифты](arch/language.md)
+* [После установки](arch/after-install/README.md)
   * [Бэкапы](arch/after-install/timeshift.md)
   * [Оптимизация](arch/after-install/optimization.md)
-* [☄️ Среды рабочего стола](arch/de/README.md)
+* [Среды рабочего стола](arch/de/README.md)
   * [GNOME](arch/de/gnome.md)
-* [👾 Терминал](arch/terminal/README.md)
+* [Терминал](arch/terminal/README.md)
   * [Команды](arch/terminal/cmd.md)
   * [Расширения](arch/terminal/ext.md)
-* [🎮 Игры](arch/games.md)
-* [📀 Приложения](arch/software.md)
-* [☕ Разработка](arch/developer.md)
-* [🔮 Интернет](arch/ethernet.md)
+* [Игры](arch/games.md)
+* [Приложения](arch/software.md)
+* [Разработка](arch/developer.md)
+* [Интернет](arch/ethernet.md)
 
 ## fedora silverblue <a href="#silverblue" id="silverblue"></a>
 
-* [📦 Репозитории](silverblue/repo.md)
-* [🎮 Игры](silverblue/games.md)
-* [🔮 Интернет](silverblue/ethernet.md)
+* [Репозитории](silverblue/repo.md)
+* [Игры](silverblue/games.md)
+* [Интернет](silverblue/ethernet.md)
 
 ## Steam Deck <a href="#deck" id="deck"></a>
 
@@ -34,15 +34,15 @@
 
 ## Стримы <a href="#stream" id="stream"></a>
 
-* [🌊 Рестрим](stream/restream/README.md)
+* [Рестрим](stream/restream/README.md)
   * [Рестрим с разным битрейтом](stream/restream/multiple-rtmp.md)
-* [🎵 Аудиодорожки](stream/audio/README.md)
+* [Аудиодорожки](stream/audio/README.md)
   * [Win Capture Audio](stream/audio/win-capture-audio.md)
   * [Voicemeeter Banana](stream/audio/voicemeeter-banana.md)
   * [Разные аудиодорожки на разных стримах](stream/audio/restream.md)
-* [📸 Веб-камера](stream/cam/README.md)
+* [Веб-камера](stream/cam/README.md)
   * [Сохранение настроек веб-камеры в OBS Studio](stream/cam/cfg-cam.md)
-* [🤖 Чат-боты](stream/bots/README.md)
+* [Чат-боты](stream/bots/README.md)
   * [Streamlabs Chatbot](stream/bots/streamlabs/README.md)
     * [Установка скриптов](stream/bots/streamlabs/script-install.md)
     * [Озвучивание выделенного сообщения на Twitch](stream/bots/streamlabs/tts.md)
@@ -50,13 +50,13 @@
 
 ## Веб <a href="#web" id="web"></a>
 
-* [🍋 Эгея](web/aegea/README.md)
+* [Эгея](web/aegea/README.md)
   * [Шаблон](web/aegea/template.md)
   * [Редактор](web/aegea/editor.md)
   * [Шрифты](web/aegea/fonts.md)
   * [Кат](web/aegea/cut.md)
   * [docker](web/aegea/docker/README.md)
     * [local](web/aegea/docker/local.md)
-* [👻 Ghost](web/ghost/README.md)
+* [Ghost](web/ghost/README.md)
   * [docker](web/ghost/docker/README.md)
     * [cloud](web/ghost/docker/cloud.md)

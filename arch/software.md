@@ -1,4 +1,5 @@
 ---
+icon: floppy-disk
 layout:
   title:
     visible: true
@@ -12,7 +13,7 @@ layout:
     visible: false
 ---
 
-# 📀 Приложения
+# Приложения
 
 ### firefox
 

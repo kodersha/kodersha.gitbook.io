@@ -1,4 +1,5 @@
 ---
+icon: computer
 layout:
   title:
     visible: true
@@ -12,7 +13,7 @@ layout:
     visible: false
 ---
 
-# 🤖 Драйвера
+# Драйвера
 
 ### Mesa и Vulkan
 
@@ -77,6 +78,8 @@ aura -S --needed networkmanager networkmanager-openvpn networkmanager-pptp netwo
 sudo systemctl enable --now NetworkManager
 ```
 {% endcode %}
+
+
 
 
 

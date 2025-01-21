@@ -1,4 +1,5 @@
 ---
+icon: citrus-slice
 layout:
   title:
     visible: false
@@ -12,5 +13,5 @@ layout:
     visible: false
 ---
 
-# 🍋 Эгея
+# Эгея
 

@@ -1,4 +1,5 @@
 ---
+icon: box
 layout:
   title:
     visible: true
@@ -12,7 +13,7 @@ layout:
     visible: false
 ---
 
-# 📦 Репозитории
+# Репозитории
 
 ### AUR
 

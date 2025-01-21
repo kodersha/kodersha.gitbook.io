@@ -1,4 +1,5 @@
 ---
+icon: language
 layout:
   title:
     visible: true
@@ -12,7 +13,7 @@ layout:
     visible: false
 ---
 
-# 🅰️ Язык и шрифты
+# Язык и шрифты
 
 ### Локаль
 
