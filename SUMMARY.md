@@ -31,6 +31,7 @@
 ## Steam Deck <a href="#deck" id="deck"></a>
 
 * [Язык](deck/language.md)
+* [Интернет](deck/ethernet.md)
 
 ## Стримы <a href="#stream" id="stream"></a>
 

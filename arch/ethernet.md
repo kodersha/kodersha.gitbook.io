@@ -1,5 +1,5 @@
 ---
-icon: internet-explorer
+icon: router
 layout:
   title:
     visible: true
