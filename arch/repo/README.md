@@ -15,20 +15,6 @@ layout:
 
 # Репозитории
 
-### AUR
-
-Пользовательский репозиторий AUR (Arch User Repository) - поддерживаемое сообществом хранилище программ для пользователей Arch.
-
-{% embed url="https://aur.archlinux.org/packages" %}
-
-#### aura
-
-{% code overflow="wrap" %}
-```bash
-sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/aura.git && cd aura && makepkg -s && sudo pacman -U aura-*.pkg.tar.zst && cd .. && rm -rf aura
-```
-{% endcode %}
-
 
 
 ### flatpak

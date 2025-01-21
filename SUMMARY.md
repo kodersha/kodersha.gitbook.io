@@ -4,7 +4,9 @@
 
 ## arch linux <a href="#arch" id="arch"></a>
 
-* [Репозитории](arch/repo.md)
+* [Репозитории](arch/repo/README.md)
+  * [Aura](arch/repo/aura.md)
+  * [Flatpak](arch/repo/flatpak.md)
 * [Драйвера](arch/drivers/README.md)
   * [NVIDIA](arch/drivers/nvidia.md)
   * [AMD](arch/drivers/amd.md)
