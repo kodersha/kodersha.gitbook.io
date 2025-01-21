@@ -34,7 +34,7 @@ aura -S flatpak
 {% endstep %}
 
 {% step %}
-Добавьте репозиторий `flathub`:
+Добавьте [репозиторий](https://flathub.org/ru) `flathub`:
 
 {% code overflow="wrap" %}
 ```bash
@@ -44,11 +44,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 {% endstep %}
 {% endstepper %}
 
-{% embed url="https://flathub.org/ru" %}
 
-
-
-### Команды
 
 {% content-ref url="../terminal/cmd.md" %}
 [cmd.md](../terminal/cmd.md)

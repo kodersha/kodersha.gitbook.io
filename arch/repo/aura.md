@@ -40,8 +40,6 @@ sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/au
 
 
 
-### Команды
-
 {% content-ref url="../terminal/cmd.md" %}
 [cmd.md](../terminal/cmd.md)
 {% endcontent-ref %}
