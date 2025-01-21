@@ -28,6 +28,10 @@
 * [🎮 Игры](silverblue/games.md)
 * [🔮 Интернет](silverblue/ethernet.md)
 
+## Steam Deck <a href="#deck" id="deck"></a>
+
+* [🅰️ Язык](deck/yazyk.md)
+
 ## Стримы <a href="#stream" id="stream"></a>
 
 * [🌊 Рестрим](stream/restream/README.md)
