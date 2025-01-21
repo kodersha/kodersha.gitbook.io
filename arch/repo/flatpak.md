@@ -64,4 +64,4 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 {% embed url="https://flathub.org/ru" %}
 
-[^1]: [https://guide.kodersha.ru/arch/repo/aura](https://guide.kodersha.ru/arch/repo/aura)
+[^1]: См. руководство по [aura](aura.md).
