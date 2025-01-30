@@ -16,6 +16,8 @@ layout:
 
 # Язык
 
+
+
 {% stepper %}
 {% step %}
 Перейдите в режим рабочего стола и откройте терминал `Konsole`.
@@ -37,26 +39,6 @@ passwd
 {% code overflow="wrap" %}
 ```bash
 sudo steamos-readonly disable
-```
-{% endcode %}
-{% endstep %}
-
-{% step %}
-Cоздайте необходимые ключи для проверки подписи пакетов, командой:
-
-{% code overflow="wrap" %}
-```bash
-sudo pacman-key --init && sudo pacman-key --populate archlinux
-```
-{% endcode %}
-{% endstep %}
-
-{% step %}
-Обновите пакет `glibc`:
-
-{% code overflow="wrap" %}
-```bash
-sudo pacman -Syu glibc
 ```
 {% endcode %}
 {% endstep %}
@@ -148,15 +130,7 @@ sudo rm ~/.config/plasma-localerc
 Снова включите `read-only` режим:
 
 ```bash
-sudo steamos-readonly disable
+sudo steamos-readonly enable
 ```
 {% endstep %}
 {% endstepper %}
-
-
-
-
-
-***
-
-{% embed url="https://steamcommunity.com/discussions/forum/26/3722818378189549225/" %}
