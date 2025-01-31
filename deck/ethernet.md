@@ -40,7 +40,7 @@ sudo steamos-readonly disable
 Снова включите `read-only` режим:
 
 ```bash
-sudo steamos-readonly disable
+sudo steamos-readonly enable
 ```
 {% endstep %}
 {% endstepper %}
