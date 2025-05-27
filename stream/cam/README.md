@@ -2,7 +2,7 @@
 icon: video
 layout:
   title:
-    visible: false
+    visible: true
   description:
     visible: false
   tableOfContents:
@@ -15,3 +15,6 @@ layout:
 
 # Веб-камера
 
+{% content-ref url="cfg-cam.md" %}
+[cfg-cam.md](cfg-cam.md)
+{% endcontent-ref %}

@@ -2,7 +2,7 @@
 icon: ghost
 layout:
   title:
-    visible: false
+    visible: true
   description:
     visible: false
   tableOfContents:
@@ -15,3 +15,6 @@ layout:
 
 # Ghost
 
+{% content-ref url="docker/" %}
+[docker](docker/)
+{% endcontent-ref %}

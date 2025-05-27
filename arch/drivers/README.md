@@ -90,3 +90,15 @@ sudo systemctl enable --now NetworkManager
 aura -S --needed mesa lib32-mesa vulkan-icd-loader lib32-vulkan-icd-loader alsa-utils pipewire pipewire-pulse pipewire-jack wireplumber bluez bluez-utils networkmanager networkmanager-openvpn networkmanager-pptp networkmanager-vpnc gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
 ```
 {% endcode %}
+
+
+
+***
+
+{% content-ref url="nvidia.md" %}
+[nvidia.md](nvidia.md)
+{% endcontent-ref %}
+
+{% content-ref url="amd.md" %}
+[amd.md](amd.md)
+{% endcontent-ref %}

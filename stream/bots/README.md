@@ -2,7 +2,7 @@
 icon: robot
 layout:
   title:
-    visible: false
+    visible: true
   description:
     visible: false
   tableOfContents:
@@ -15,3 +15,6 @@ layout:
 
 # Чат-боты
 
+{% content-ref url="streamlabs/" %}
+[streamlabs](streamlabs/)
+{% endcontent-ref %}

@@ -2,7 +2,7 @@
 icon: desktop
 layout:
   title:
-    visible: false
+    visible: true
   description:
     visible: false
   tableOfContents:
@@ -15,3 +15,6 @@ layout:
 
 # Среды рабочего стола
 
+{% content-ref url="gnome.md" %}
+[gnome.md](gnome.md)
+{% endcontent-ref %}

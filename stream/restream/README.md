@@ -2,7 +2,7 @@
 icon: signal-stream
 layout:
   title:
-    visible: false
+    visible: true
   description:
     visible: false
   tableOfContents:
@@ -15,3 +15,6 @@ layout:
 
 # Рестрим
 
+{% content-ref url="multiple-rtmp.md" %}
+[multiple-rtmp.md](multiple-rtmp.md)
+{% endcontent-ref %}
