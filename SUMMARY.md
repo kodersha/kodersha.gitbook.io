@@ -1,5 +1,6 @@
 # Table of contents
 
+* [В блог](https://kodersha.ru/)
 * [Введение](README.md)
 
 ## Arch linux <a href="#arch" id="arch"></a>
