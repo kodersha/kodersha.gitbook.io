@@ -94,11 +94,65 @@ brew services start tor
 
 ### zapret
 
-#### Автоматическая настройка
+#### Автоматическая настройка <a href="#zapret-auto" id="zapret-auto"></a>
 
+{% embed url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux/tree/stable2" %}
 
+{% stepper %}
+{% step %}
+Клонируйте репозиторий:
 
-#### Ручная настройка <a href="#manual" id="manual"></a>
+{% code overflow="wrap" %}
+```bash
+git clone https://github.com/Sergeydigl3/zapret-discord-youtube-linux.git
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+Перейдите в папку:
+
+{% code overflow="wrap" %}
+```bash
+cd zapret-discord-youtube-linux
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+Запустите скрипт:
+
+{% code overflow="wrap" %}
+```bash
+sudo bash main_script.sh
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+Следуйте предложенным шагам - выберете ваше интернет соединение и стратегию.
+{% endstep %}
+
+{% step %}
+Проверьте работоспособность, затем остановите скрипт <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+{% endstep %}
+
+{% step %}
+Запустите скрипт установки сервиса:
+
+{% code overflow="wrap" %}
+```bash
+sudo bash service.sh
+```
+{% endcode %}
+{% endstep %}
+{% endstepper %}
+
+#### Ручная настройка <a href="#zapret-manual" id="zapret-manual"></a>
+
+{% hint style="danger" %}
+Это лишь пример базовой настройки и запуска сервиса. Конфигурация может быть устаревшей.
+{% endhint %}
 
 {% stepper %}
 {% step %}

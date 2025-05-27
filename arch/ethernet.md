@@ -122,7 +122,7 @@ sudo systemctl status tor
 
 ### zapret
 
-#### Автоматическая настройка <a href="#auto" id="auto"></a>
+#### Автоматическая настройка <a href="#zapret-auto" id="zapret-auto"></a>
 
 {% embed url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux/tree/stable2" %}
 
@@ -176,7 +176,7 @@ sudo bash service.sh
 {% endstep %}
 {% endstepper %}
 
-#### Ручная настройка <a href="#manual" id="manual"></a>
+#### Ручная настройка <a href="#zapret-manual" id="zapret-manual"></a>
 
 {% hint style="danger" %}
 Это лишь пример базовой настройки и запуска сервиса. Конфигурация может быть устаревшей.
