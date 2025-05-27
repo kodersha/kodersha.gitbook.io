@@ -337,4 +337,4 @@ yt3.googleusercontent.com
 
 Скрипт для автоматической настройки zapret. Следуйте инструкции в репозитории.
 
-{% @github-files/github-code-block url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux/" %}
+{% @github-files/github-code-block url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux/blob/stable2/README.md" %}
