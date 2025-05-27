@@ -112,7 +112,7 @@ git clone https://github.com/Sergeydigl3/zapret-discord-youtube-linux.git
 
 {% code overflow="wrap" %}
 ```bash
-cd zapret-discord-youtube-linux
+mv zapret-discord-youtube-linux .zapret && cd .zapret
 ```
 {% endcode %}
 {% endstep %}
@@ -147,6 +147,8 @@ sudo bash service.sh
 {% endstepper %}
 
 {% embed url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux/tree/stable2" %}
+
+
 
 #### Ручная настройка <a href="#zapret-manual" id="zapret-manual"></a>
 
@@ -338,7 +340,7 @@ DISABLE_IPV6=1
 {% endstep %}
 
 {% step %}
-Отредактируйте список IP:
+При необходимости отредактируйте список адресов:
 
 {% code overflow="wrap" %}
 ```bash
