@@ -124,8 +124,6 @@ sudo systemctl status tor
 
 #### Автоматическая настройка <a href="#zapret-auto" id="zapret-auto"></a>
 
-{% embed url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux/tree/stable2" %}
-
 {% stepper %}
 {% step %}
 Клонируйте репозиторий:
@@ -175,6 +173,8 @@ sudo bash service.sh
 {% endcode %}
 {% endstep %}
 {% endstepper %}
+
+{% embed url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux/tree/stable2" %}
 
 #### Ручная настройка <a href="#zapret-manual" id="zapret-manual"></a>
 
