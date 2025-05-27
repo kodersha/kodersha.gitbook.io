@@ -122,6 +122,66 @@ sudo systemctl status tor
 
 ### zapret
 
+#### Автоматическая настройка <a href="#auto" id="auto"></a>
+
+{% embed url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux/tree/stable2" %}
+
+{% stepper %}
+{% step %}
+Клонируйте репозиторий:
+
+{% code overflow="wrap" %}
+```bash
+git clone https://github.com/Sergeydigl3/zapret-discord-youtube-linux.git
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+Перейдите в папку:
+
+{% code overflow="wrap" %}
+```bash
+cd zapret-discord-youtube-linux
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+Запустите скрипт:
+
+{% code overflow="wrap" %}
+```bash
+sudo bash main_script.sh
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+Следуйте предложенным шагам - выберете ваше интернет соединение и стратегию.&#x20;
+{% endstep %}
+
+{% step %}
+Проверьте работоспособность, затем остановите скрипт <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+{% endstep %}
+
+{% step %}
+Запустите скрипт установки сервиса:
+
+{% code overflow="wrap" %}
+```bash
+sudo bash service.sh
+```
+{% endcode %}
+{% endstep %}
+{% endstepper %}
+
+#### Ручная настройка <a href="#manual" id="manual"></a>
+
+{% hint style="danger" %}
+Это лишь пример базовой настройки и запуска сервиса. Конфигурация может быть устаревшей.
+{% endhint %}
+
 {% stepper %}
 {% step %}
 {% code overflow="wrap" %}
@@ -306,7 +366,7 @@ DISABLE_IPV6=1
 {% endstep %}
 
 {% step %}
-Отредактируйте список IP:
+При необходимости отредактируйте список IP:
 
 {% code overflow="wrap" %}
 ```bash
@@ -333,8 +393,3 @@ yt3.googleusercontent.com
 {% endstep %}
 {% endstepper %}
 
-#### zapret-discord-youtube-linux
-
-Скрипт для автоматической настройки zapret. Следуйте инструкции в репозитории.
-
-{% @github-files/github-code-block url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux/blob/stable2/README.md" %}

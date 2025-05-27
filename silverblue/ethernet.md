@@ -94,6 +94,12 @@ brew services start tor
 
 ### zapret
 
+#### Автоматическая настройка
+
+
+
+#### Ручная настройка <a href="#manual" id="manual"></a>
+
 {% stepper %}
 {% step %}
 {% code overflow="wrap" %}
@@ -374,9 +380,3 @@ sudo systemctl daemon-reload && sudo systemctl enable --now rc-local.service
 {% endcode %}
 {% endstep %}
 {% endstepper %}
-
-#### zapret-discord-youtube-linux
-
-Скрипт для автоматической настройки zapret. Следуйте инструкции в репозитории.
-
-{% @github-files/github-code-block url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux" %}
