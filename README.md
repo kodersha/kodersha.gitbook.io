@@ -19,8 +19,6 @@ layout:
 
 # Введение
 
-Для связи [электронная почта](mailto:kodersha@icloud.com) или [@telegram](https://t.me/kodersha).
-
 
 
 ### Arch linux
@@ -120,3 +118,11 @@ layout:
 {% content-ref url="web/ghost/" %}
 [ghost](web/ghost/)
 {% endcontent-ref %}
+
+
+
+
+
+***
+
+Для связи [электронная почта](mailto:kodersha@icloud.com) или [telegram](https://t.me/kodersha).
