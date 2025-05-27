@@ -44,3 +44,9 @@ sudo steamos-readonly enable
 ```
 {% endstep %}
 {% endstepper %}
+
+#### zapret-discord-youtube-linux
+
+Скрипт для автоматической настройки zapret. Следуйте инструкции в репозитории.
+
+{% @github-files/github-code-block url="https://github.com/Sergeydigl3/zapret-discord-youtube-linux/" %}

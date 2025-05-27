@@ -2,7 +2,7 @@
 
 * [Введение](README.md)
 
-## arch linux <a href="#arch" id="arch"></a>
+## Arch linux <a href="#arch" id="arch"></a>
 
 * [Репозитории](arch/repo/README.md)
   * [Aura](arch/repo/aura.md)
@@ -23,13 +23,13 @@
 * [Разработка](arch/developer.md)
 * [Интернет](arch/ethernet.md)
 
-## fedora silverblue <a href="#silverblue" id="silverblue"></a>
+## Fedora Silverblue, Bazzite <a href="#silverblue" id="silverblue"></a>
 
 * [Репозитории](silverblue/repo.md)
 * [Игры](silverblue/games.md)
 * [Интернет](silverblue/ethernet.md)
 
-## Steam Deck <a href="#deck" id="deck"></a>
+## Steam Deck, SteamOS <a href="#deck" id="deck"></a>
 
 * [Язык](deck/language.md)
 * [Интернет](deck/ethernet.md)
