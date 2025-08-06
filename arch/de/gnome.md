@@ -122,7 +122,7 @@ aura -Rsu gnome-clocks
 
 {% code overflow="wrap" %}
 ```bash
-aura -Rsu baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-shell-extensions gnome-backgrounds gnome-user-docs gnome-user-share gnome-menus malcontent evince sushi loupe orca rygel gvfs-afc gvfs-dnssd gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb gvfs-wsdd gvfs-google gvfs-onedrive htop vim nm-connection-editor network-manager-applet
+aura -Rsu baobab epiphany totem snapshot gnome-maps gnome-contacts gnome-music gnome-weather gnome-connections simple-scan yelp gnome-text-editor gnome-tour gnome-software gnome-clocks gnome-calendar gnome-characters gnome-system-monitor gnome-font-viewer gnome-logs gnome-remote-desktop gnome-backgrounds gnome-user-docs gnome-user-share gnome-menus gnome-tweaks malcontent evince sushi loupe orca rygel gvfs-afc gvfs-dnssd gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb gvfs-wsdd gvfs-google gvfs-onedrive htop vim nm-connection-editor network-manager-applet
 ```
 {% endcode %}
 
@@ -176,7 +176,7 @@ systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 
 {% code overflow="wrap" %}
 ```bash
-sudo rm /usr/share/applications/avahi-discover.desktop && sudo rm /usr/share/applications/bssh.desktop && sudo rm /usr/share/applications/bvnc.desktop && sudo rm /usr/share/applications/qv4l2.desktop && sudo rm /usr/share/applications/qvidcap.desktop && sudo rm /usr/share/applications/wine.desktop && sudo rm /usr/share/applications/org.gnome.OnlineAccounts.OAuth2.desktop && sudo rm /usr/share/applications/nautilus-autorun-software.desktop && sudo rm /usr/share/applications/gcm-import.desktop && sudo rm /usr/share/applications/org.gnome.Extensions.desktop
+sudo rm /usr/share/applications/avahi-discover.desktop && sudo rm /usr/share/applications/bssh.desktop && sudo rm /usr/share/applications/bvnc.desktop && sudo rm /usr/share/applications/qv4l2.desktop && sudo rm /usr/share/applications/qvidcap.desktop && sudo rm /usr/share/applications/org.gnome.OnlineAccounts.OAuth2.desktop && sudo rm /usr/share/applications/nautilus-autorun-software.desktop && sudo rm /usr/share/applications/gcm-import.desktop && sudo rm /usr/share/applications/org.gnome.Extensions.desktop
 ```
 {% endcode %}
 
