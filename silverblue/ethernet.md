@@ -57,7 +57,7 @@ nano /home/linuxbrew/.linuxbrew/etc/tor/torrc
 {% step %}
 Пример конфигурации:
 
-{% code title="torrc" %}
+{% code title="torrc" overflow="wrap" %}
 ```ini
 ## Конфигурация tor для использования мостов
 
@@ -68,7 +68,8 @@ UseBridges 1
 ClientTransportPlugin obfs4 exec /home/linuxbrew/.linuxbrew/bin/obfs4proxy
 
 # Добавление моста obfs4
-Bridge obfs4 57.128.68.206:12069 3D31D10FFF77231A352CA982BD373ED9235FD769 cert=xPPp3sNp0xVeoxF+SL7ixf7cefyotL7eBCgPctKyqosvDZMKD2TvvEccUcR5IFkJyM4qFQ iat-mode=0
+
+Bridge obfs4 185.177.207.231:11231 662C70B65B4DCADBB622862B28BD56F4BEA22A6A cert=cEiXkalIbHiGUGp2dttVG4t5/IEbtR4Yhqc4UAd5BMJBhkSAduAblFNrcneUC2WSlD39Aw iat-mode=0
 
 # Не запускать Tor в режиме сервиса
 RunAsDaemon 0
@@ -198,7 +199,7 @@ sudo nano /opt/zapret/config
 {% step %}
 Пример конфигурации:
 
-{% code title="/opt/zapret/config" %}
+{% code title="/opt/zapret/config" overflow="wrap" %}
 ```ini
 # this file is included from init scripts
 # change values here
