@@ -27,6 +27,7 @@
 
 * [Репозитории](silverblue/repo.md)
 * [Игры](silverblue/games.md)
+* [Интернет](silverblue/ethernet.md)
 
 ## Steam Deck, SteamOS <a href="#deck" id="deck"></a>
 
