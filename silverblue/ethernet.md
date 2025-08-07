@@ -160,7 +160,7 @@ sudo bash service.sh
 {% step %}
 {% code overflow="wrap" %}
 ```bash
-wget -qO- https://github.com/bol-van/zapret/releases/download/v69.9/zapret-v69.9.tar.gz | tar -xvz && cd zapret-v69.9 && ./install_bin.sh && ./install_prereq.sh
+wget -qO- https://github.com/bol-van/zapret/releases/download/v71.3/zapret-v71.3.tar.gz | tar -xvz && cd zapret-v71.3 && ./install_bin.sh && ./install_prereq.sh
 ```
 {% endcode %}
 {% endstep %}
