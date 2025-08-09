@@ -23,10 +23,11 @@
 * [Игры](arch/games.md)
 * [Разработка](arch/developer.md)
 
-## Fedora Silverblue, Bazzite <a href="#silverblue" id="silverblue"></a>
+## Fedora Silverblue <a href="#silverblue" id="silverblue"></a>
 
 * [Репозитории](silverblue/repo.md)
 * [Игры](silverblue/games.md)
+* [Разное](silverblue/raznoe.md)
 * [Интернет](silverblue/ethernet.md)
 
 ## Steam Deck, SteamOS <a href="#deck" id="deck"></a>
