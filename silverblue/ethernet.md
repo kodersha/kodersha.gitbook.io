@@ -300,8 +300,15 @@ NFQWS_UDP_PKT_IN=0
 # hostlist markers are replaced to empty string if MODE_FILTER does not satisfy
 # <HOSTLIST_NOAUTO> appends ipset/zapret-hosts-auto.txt as normal list
 NFQWS_OPT="
---dpi-desync=multidisorder
---dpi-desync-split-pos=2,5,105,host+5,sld-1,endsld-5,endsld
+--filter-tcp=443
+--dpi-desync=multisplit
+--dpi-desync-split-pos=1,sniext+1
+--dpi-desync-split-seqovl=1
+--new
+--filter-udp=443
+--dpi-desync=fake
+--dpi-desync-repeats=2
+--dpi-desync-fake-quic=/opt/zapret/files/fake/quic_initial_www_google_com.bin
 "
 
 # none,ipset,hostlist,autohostlist
