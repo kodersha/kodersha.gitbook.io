@@ -44,8 +44,8 @@ icon: hand-wave
 [developer.md](arch/developer.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/arObboOG0bAxjJadfOYI" %}
+[Broken link](/broken/pages/arObboOG0bAxjJadfOYI)
 {% endcontent-ref %}
 
 
@@ -60,8 +60,8 @@ icon: hand-wave
 [games.md](silverblue/games.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/y2Yi80c0QaeQCKSJI2mQ" %}
+[Broken link](/broken/pages/y2Yi80c0QaeQCKSJI2mQ)
 {% endcontent-ref %}
 
 
@@ -72,8 +72,8 @@ icon: hand-wave
 [language.md](deck/language.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/MhAhApoofY4nXQ5SrTaW" %}
+[Broken link](/broken/pages/MhAhApoofY4nXQ5SrTaW)
 {% endcontent-ref %}
 
 

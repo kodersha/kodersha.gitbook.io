@@ -34,6 +34,10 @@
 
 * [Язык](deck/language.md)
 
+## Windows
+
+* [Windhawk](windows/windhawk.md)
+
 ## Стримы <a href="#stream" id="stream"></a>
 
 * [Рестрим](stream/restream/README.md)
