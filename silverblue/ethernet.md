@@ -591,61 +591,61 @@ sudo nano /etc/hosts
 185.250.151.49  grok.com
 
 # Autodesk
-94.131.119.85  accounts.autodesk.com
-94.131.119.85  autodesk.com
+94.131.119.85   accounts.autodesk.com
+94.131.119.85   autodesk.com
 
 # Netflix
-158.255.0.189  netflix.com
-158.255.0.189  www.netflix.com
+158.255.0.189   netflix.com
+158.255.0.189   www.netflix.com
 
 # Hulu
-2.19.183.66    www.hulu.com
-2.22.31.233    hulu.com
+2.19.183.66     www.hulu.com
+2.22.31.233     hulu.com
 
 # SoundCloud
-3.164.206.34   a-v2.sndcdn.com
-13.224.222.71  style.sndcdn.com
-18.165.140.56  secure.sndcdn.com
-18.238.243.27  soundcloud.com
+3.164.206.34    a-v2.sndcdn.com
+13.224.222.71   style.sndcdn.com
+18.165.140.56   secure.sndcdn.com
+18.238.243.27   soundcloud.com
 
 # Anilib
-172.67.192.246 anilib.me
+172.67.192.246  anilib.me
 
 # NTC.party
-130.255.77.28  ntc.party
+130.255.77.28   ntc.party
 
 # PUMP.fun
-84.21.191.240  frontend-api-v3.pump.fun
-84.21.191.240  images.pump.fun
-84.21.191.240  pump.fun
-84.21.191.240  swap-api.pump.fun
+84.21.191.240   frontend-api-v3.pump.fun
+84.21.191.240   images.pump.fun
+84.21.191.240   pump.fun
+84.21.191.240   swap-api.pump.fun
 
 # DeepL
-45.95.233.23   deepl.com
-45.95.233.23   www.deepl.com
-45.95.233.23   s.deepl.com
-45.95.233.23   login-wall.deepl.com
-45.95.233.23   w.deepl.com
-45.95.233.23   experimentation.deepl.com
-45.95.233.23   gtm.deepl.com
-45.95.233.23   ita-free.www.deepl.com
-84.21.191.240  checkout.www.deepl.com
+45.95.233.23    deepl.com
+45.95.233.23    www.deepl.com
+45.95.233.23    s.deepl.com
+45.95.233.23    login-wall.deepl.com
+45.95.233.23    w.deepl.com
+45.95.233.23    experimentation.deepl.com
+45.95.233.23    gtm.deepl.com
+45.95.233.23    ita-free.www.deepl.com
+84.21.191.240   checkout.www.deepl.com
 
 # Intel
-84.21.191.240  www.intel.com
+84.21.191.240   www.intel.com
 
 # DNS Malware link
-104.21.24.110  info.dns.malw.link
+104.21.24.110   info.dns.malw.link
 
 # Rutracker
-172.67.182.196 rutracker.org
-104.21.50.150  static.rutracker.cc
+172.67.182.196  rutracker.org
+104.21.50.150   static.rutracker.cc
 
 # Rutor
-172.64.33.155  d.rutor.info
-172.64.33.155  rutor.info
-173.245.59.155 rutor.is
-0.0.0.0	       rutor.org
+172.64.33.155   d.rutor.info
+172.64.33.155   rutor.info
+173.245.59.155  rutor.is
+0.0.0.0	        rutor.org
 ```
 {% endcode %}
 {% endstep %}
