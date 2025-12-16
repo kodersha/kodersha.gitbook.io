@@ -18,7 +18,7 @@ layout:
 
 # Windhawk
 
-<figure><img src="../.gitbook/assets/Desktop.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/img.png" alt=""><figcaption></figcaption></figure>
 
 
 
