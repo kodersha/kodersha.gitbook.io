@@ -104,7 +104,12 @@ layout:
   "styleConstants[0]": "",
 
   "resourceVariables[0].variableKey": "",
-  "resourceVariables[0].value": ""
+  "resourceVariables[0].value": "",
+  
+  "controlStyles[0].target": "StartDocked.UserTileView",
+  "controlStyles[0].styles[0]": "Visibility=Collapsed",
+  "controlStyles[1].target": "Windows.UI.Xaml.Controls.TextBlock#DisplayName",
+  "controlStyles[1].styles[0]": "Visibility=Collapsed"
 }
 ```
 
